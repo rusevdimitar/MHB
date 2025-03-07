@@ -409,5 +409,6 @@ FodyWeavers.xsd
 /MHB.Installer/Installer.7z
 /MHB.Installer/NDP452-KB2901907-x86-x64-AllOS-ENU.exe
 /MHB.Web/temp/
-/MHB.Web/WebCharts/
+/MHB.Web/WebCharts/*.png
 /MHB.Licensing/.svn/
+/MHB.Web/Images/Receipts/
