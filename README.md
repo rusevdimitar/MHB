@@ -11,7 +11,7 @@ Various statistics and reports are generated.
 # Some technical details
 
 - Machine bound custom licensing is implemented /MHB.Licensing
-- Scanning and parsing of different receipt formats based on Tesseract OCR engine https://github.com/charlesw/tesseract/
+- Scanning and parsing of different receipt formats based on Tesseract OCR engine https://github.com/charlesw/tesseract/ and Microsoft.Office.Interop.Word /MHB.ReceiptScanner
 
 
 # Requirements
