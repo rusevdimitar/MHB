@@ -3,6 +3,7 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+
 # User-specific files
 *.rsuser
 *.suo
@@ -394,7 +395,7 @@ FodyWeavers.xsd
 
 # Windows Installer files from build outputs
 *.cab
-*.msi
+#*.msi
 *.msix
 *.msm
 *.msp
@@ -412,3 +413,4 @@ FodyWeavers.xsd
 /MHB.Web/WebCharts/*.png
 /MHB.Licensing/.svn/
 /MHB.Web/Images/Receipts/
+!/Prerequisites
