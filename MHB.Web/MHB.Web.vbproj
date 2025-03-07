@@ -67,10 +67,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Assemblies\itextsharp.dll</HintPath>
     </Reference>
-    <Reference Include="MHB.Licensing, Version=2016.12.19.2, Culture=neutral, PublicKeyToken=12f2806b3142d5ff, processorArchitecture=MSIL">
-      <HintPath>..\packages\MHB.Licensing.2016.12.19.2\lib\net452\MHB.Licensing.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
@@ -629,7 +625,7 @@
     <Content Include="Certificates\MyHomeBills_IIS_Certificate.pfx" />
     <Content Include="Certificates\MyHomeBill_SVN_Certificate.crt" />
     <Content Include="Certificates\MyHomeBills_IE_Certificate.cer" />
-    <Content Include="packages.config" />
+    <None Include="packages.config" />
     <None Include="Sql\spMaintainDbIndexes.sql" />
     <Content Include="Sql\EmptyDatabase.sql" />
     <Content Include="Sql\FindAndFixCategoryDuplicatesForAllUsers.sql" />
@@ -1409,6 +1405,10 @@
     <ProjectReference Include="..\MHB.IPGeoLocation\MHB.IPGeoLocation.vbproj">
       <Project>{EE4F3592-A0F1-4489-BD8E-94F4DC38C173}</Project>
       <Name>MHB.IPGeoLocation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MHB.Licensing\MHB.Licensing\MHB.Licensing.csproj">
+      <Project>{29e6f2a9-03a2-4904-92aa-0057141f6eab}</Project>
+      <Name>MHB.Licensing</Name>
     </ProjectReference>
     <ProjectReference Include="..\MHB.Logging\MHB.Logging.vbproj">
       <Project>{0A386C37-4902-4F08-B92B-B8AB2711AD58}</Project>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <iconUrl>https://nexus.televic.com/repository/televic/televic_logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <copyright>$copyright$</copyright>
+    <language>en-US</language>
+    <references>
+      <reference file="Portable.Licensing.dll" />
+      <reference file="Televic.Licensing.dll" />
+      <reference file="BouncyCastle.Crypto.dll" />
+    </references>
+  </metadata>
+  <files>
+    <file src="bin\Release\$id$.pdb" target="lib\net45" />
+    <file src="bin\Release\Portable.Licensing.dll" target="lib\net452" />
+    <file src="bin\Release\Televic.Licensing.dll" target="lib\net452" />
+    <file src="bin\Release\BouncyCastle.Crypto.dll" target="lib\net452" />
+  </files>
+</package>

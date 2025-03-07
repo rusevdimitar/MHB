@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<License>
+  <Id>00000000-0000-0000-0000-000000000000</Id>
+  <Type>Standard</Type>
+  <Quantity>1</Quantity>
+  <Expiration>Sun, 01 Nov 2020 22:00:00 GMT</Expiration>
+  <Customer>
+    <Name>MyHomeBills</Name>
+    <Email>support@myhomebills.info</Email>
+    <Company>MyHomeBills</Company>
+  </Customer>
+  <ProductFeatures />
+  <LicenseAttributes>
+    <Attribute name="MachineKey">E5519DFF27EEF7AE896AD2914358D211</Attribute>
+  </LicenseAttributes>
+  <Signature>MEQCIEIjol/pkH9JjiPU7EGG/tdKlrI/qN44cNJ+GvrmrZUhAiAOjY/IcvteRn8nBL5ldfvKdunktLxAG9rXKqBBysBzaQ==</Signature>
+</License>
