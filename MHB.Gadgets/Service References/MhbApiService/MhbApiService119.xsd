@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MHB.BL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MHB.BL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MHB.UserManager" />
+  <xs:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="Enums.SearchOptions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SearchBySum" />
+      <xs:enumeration value="SearchByText" />
+      <xs:enumeration value="SearchByDetails" />
+      <xs:enumeration value="AllOfAbove" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.SearchOptions" nillable="true" type="tns:Enums.SearchOptions" />
+  <xs:simpleType name="Enums.SortOptions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Price" />
+      <xs:enumeration value="Date" />
+      <xs:enumeration value="Category" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.SortOptions" nillable="true" type="tns:Enums.SortOptions" />
+  <xs:simpleType name="Enums.SortDirection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ASC" />
+      <xs:enumeration value="DESC" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.SortDirection" nillable="true" type="tns:Enums.SortDirection" />
+  <xs:complexType name="ArrayOfExpenditure">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Expenditure" nillable="true" type="tns:Expenditure" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpenditure" nillable="true" type="tns:ArrayOfExpenditure" />
+  <xs:complexType name="Expenditure">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpenditureBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Expenditure" nillable="true" type="tns:Expenditure" />
+  <xs:complexType name="ExpenditureBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Attachment" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="AttachmentFileType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="tns:Category" />
+      <xs:element minOccurs="0" name="CategoryID" type="xs:int" />
+      <xs:element minOccurs="0" name="DateRecordCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateRecordUpdated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfExpenditureDetail" />
+      <xs:element minOccurs="0" name="DueDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FieldDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldExpectedValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FieldInitialValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldOldValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FieldPreviousValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FieldValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Flagged" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasAttachment" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasDetails" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPaid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsShared" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Month" type="xs:int" />
+      <xs:element minOccurs="0" name="NotificationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Notified" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OrderID" type="xs:int" />
+      <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+      <xs:element minOccurs="0" name="ProductID" type="xs:int" />
+      <xs:element minOccurs="0" name="Transactions" nillable="true" type="tns:ArrayOfTransaction" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MHB.UserManager" minOccurs="0" name="User" nillable="true" type="q1:User" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="Year" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExpenditureBase" nillable="true" type="tns:ExpenditureBase" />
+  <xs:complexType name="Category">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CategoryBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Category" nillable="true" type="tns:Category" />
+  <xs:complexType name="CategoryBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryKeywords" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="tns:ArrayOfCategoryComment" />
+      <xs:element minOccurs="0" name="CommentsCount" type="xs:int" />
+      <xs:element minOccurs="0" name="ConnectionString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IconPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsPayIconVisible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsShared" type="xs:boolean" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Keywords" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CategoryBase" nillable="true" type="tns:CategoryBase" />
+  <xs:complexType name="ArrayOfCategoryComment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CategoryComment" nillable="true" type="tns:CategoryComment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCategoryComment" nillable="true" type="tns:ArrayOfCategoryComment" />
+  <xs:complexType name="CategoryComment">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CategoryCommentBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CategoryComment" nillable="true" type="tns:CategoryComment" />
+  <xs:complexType name="CategoryCommentBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryID" type="xs:int" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConnectionString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateModified" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NegativeVotesCount" type="xs:int" />
+      <xs:element minOccurs="0" name="PositiveVotesCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Poster" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UsersVoted" nillable="true" type="q3:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CategoryCommentBase" nillable="true" type="tns:CategoryCommentBase" />
+  <xs:complexType name="ArrayOfExpenditureDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpenditureDetail" nillable="true" type="tns:ExpenditureDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpenditureDetail" nillable="true" type="tns:ArrayOfExpenditureDetail" />
+  <xs:complexType name="ExpenditureDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExpenditureDetailBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ForceUpdate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsOcrScanned" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSurplus" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpenditureDetail" nillable="true" type="tns:ExpenditureDetail" />
+  <xs:complexType name="ExpenditureDetailBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Attachment" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="AttachmentFileType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConnectionString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DetailDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DetailDateCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DetailDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DetailInitialValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DetailName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DetailValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DetailsTableName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpenditureID" type="xs:int" />
+      <xs:element minOccurs="0" name="HasAttachment" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasProductParameters" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="InitialAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="InitialMeasureType" type="tns:Enums.MeasureType" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsShared" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MainTableName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MeasureType" type="tns:Enums.MeasureType" />
+      <xs:element minOccurs="0" name="Parent" nillable="true" type="tns:Expenditure" />
+      <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+      <xs:element minOccurs="0" name="ProductID" type="xs:int" />
+      <xs:element minOccurs="0" name="Supplier" nillable="true" type="tns:Supplier" />
+      <xs:element minOccurs="0" name="SupplierID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExpenditureDetailBase" nillable="true" type="tns:ExpenditureDetailBase" />
+  <xs:simpleType name="Enums.MeasureType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Weight" />
+      <xs:enumeration value="Volume" />
+      <xs:enumeration value="Count" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.MeasureType" nillable="true" type="tns:Enums.MeasureType" />
+  <xs:complexType name="Product">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProductBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Product" nillable="true" type="tns:Product" />
+  <xs:complexType name="ProductBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Category" nillable="true" type="tns:Category" />
+      <xs:element minOccurs="0" name="CategoryID" type="xs:int" />
+      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConnectionString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateModified" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DefaultMeasureType" type="tns:Enums.MeasureType" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsFixedMeasureType" type="xs:boolean" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="KeyWords" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element minOccurs="0" name="ListPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="OcrKeyWords" nillable="true" type="q5:ArrayOfstring" />
+      <xs:element minOccurs="0" name="PackageUnitsCount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Parameters" nillable="true" type="tns:ArrayOfProductParameter" />
+      <xs:element minOccurs="0" name="Parent" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="ParentID" type="xs:int" />
+      <xs:element minOccurs="0" name="Picture" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="PrevailingMeasureType" type="tns:Enums.MeasureType" />
+      <xs:element minOccurs="0" name="StandardCost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Supplier" nillable="true" type="tns:Supplier" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="VendorID" type="xs:int" />
+      <xs:element minOccurs="0" name="Volume" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductBase" nillable="true" type="tns:ProductBase" />
+  <xs:complexType name="ArrayOfProductParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductParameter" nillable="true" type="tns:ProductParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductParameter" nillable="true" type="tns:ArrayOfProductParameter" />
+  <xs:complexType name="ProductParameter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProductParameterBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductParameter" nillable="true" type="tns:ProductParameter" />
+  <xs:complexType name="ProductParameterBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Parent" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="ParentID" type="xs:int" />
+      <xs:element minOccurs="0" name="Product" nillable="true" type="tns:Product" />
+      <xs:element minOccurs="0" name="ProductID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductParameterType" nillable="true" type="tns:ProductParameterType" />
+      <xs:element minOccurs="0" name="ProductParameterTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductParameterBase" nillable="true" type="tns:ProductParameterBase" />
+  <xs:complexType name="ProductParameterType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProductParameterTypeBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductParameterType" nillable="true" type="tns:ProductParameterType" />
+  <xs:complexType name="ProductParameterTypeBase">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="ProductParameterTypeBase" nillable="true" type="tns:ProductParameterTypeBase" />
+  <xs:complexType name="Supplier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SupplierBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Opacity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalPurchasesCount" type="xs:int" />
+          <xs:element minOccurs="0" name="TotalPurchasesSharePercentage" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalPurchasesSum" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalPurchasesSumPercentage" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Supplier" nillable="true" type="tns:Supplier" />
+  <xs:complexType name="SupplierBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActiveFlag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConnectionString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreditRating" type="xs:int" />
+      <xs:element minOccurs="0" name="DateModified" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreferredVendorStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PurchasingWebServiceURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="WebSiteURL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SupplierBase" nillable="true" type="tns:SupplierBase" />
+  <xs:complexType name="ArrayOfTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Transaction" nillable="true" type="tns:Transaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransaction" nillable="true" type="tns:ArrayOfTransaction" />
+  <xs:complexType name="Transaction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TransactionBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Transaction" nillable="true" type="tns:Transaction" />
+  <xs:complexType name="TransactionBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConnectionString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateModified" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExpenseID" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="NewValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OldValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TransactionText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionBase" nillable="true" type="tns:TransactionBase" />
+  <xs:complexType name="ArrayOfIncome">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Income" nillable="true" type="tns:Income" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIncome" nillable="true" type="tns:ArrayOfIncome" />
+  <xs:complexType name="Income">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:IncomeBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Income" nillable="true" type="tns:Income" />
+  <xs:complexType name="IncomeBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConnectionString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Month" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Year" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IncomeBase" nillable="true" type="tns:IncomeBase" />
+  <xs:complexType name="ExpensesProMonth">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SumApril" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SumAugust" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SumDecember" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SumFebruary" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SumJanuary" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SumJuly" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SumJune" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SumMarch" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SumMay" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SumNovember" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SumOctober" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SumSeptember" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExpensesProMonth" nillable="true" type="tns:ExpensesProMonth" />
+</xs:schema>

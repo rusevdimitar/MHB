@@ -1,0 +1,19 @@
+﻿- Budget Transaction Logging
+- How many people use my category counter in Categories Management
+- Sorting by category etc on mainform in GridView1
+- Extend search: search in subbills - OK
+- Bug in sum label alignment in budgets control
+- add sum of all income and spending in the yearly charts section
+- Add default enter key to detailed bills and when adding - OK
+- unify popups
+- add comments to shared user-defined categories
+- log daily currency rates - OK
+- increment date when using copy
+- copy details
+- Add site to Google Apps
+- Store currency exchange rates on disk and refresh twice a day
+- Rebuild database indexes only if fragmentation above 30% - OK
+- Maybe Implement NLog
+- Add 'Flag All' option in context menu
+- Add 'Mark all paid' option in context menu
+

@@ -1,0 +1,1342 @@
+﻿20091227 20:11 - Bug fix .Replace("'","") for add and update of details table
+20091227 20:24 - Bug fix .Replace("'","") for update of main table
+20091227 20:40 - UPLOAD
+20100109 15:19 - Added epay icon to categorized bills, shown only when display language is set to bulgarian
+20100109 15:49 - Added window.scrollTo(0,99999999) function to details link in GridView1 and add details button
+                 and window.scrollTo(0,0) to Close button of details table
+20100109 15:49 - Fixed html table syntax for piechart table: <td colspan="2">    
+20100109 16:05 - UPLOAD      
+20100122 20:48 - Added action log functionality   
+20100131 15:19 - Bug fix .Replace(" ","") on TextBoxes holding numeric values for add and update functionality; caused the Incorrect syntax near 000. exception, when 1 000 (with blank space inserted)
+20100202 18:58 - Bug fix UPDATE [dbo].[tbMonthlySavings] SET [SavingsJan] "[SavingsJan]" was entered for all months
+20100202 19:06 - UPLOAD
+20100202 20:48 - Added sum paid last updated tooltip on fieldname
+20100203 11:42 - Changed queries formating with String.Format in GridView1 Update action
+20100203 11:42 - UPLOAD
+20100216 19:07 - Fixed password case recognition in Login.aspx.vb  CAST('" & TextBoxPassword.Text.Trim() & "' AS VARBINARY)"
+20100216 19:07 - UPLOAD
+20100217 09:55 - Fixed saving budget for the month when GridView1 has no rows. Seting local variable put outside the if check for GridView1 rows count.
+20100217 09:55 - Added ToolTip to budget textbox
+20100217 09:55 - Fixed: When users choose language on the main page and then register, english was set by default in the tbUsers table overriding their initial choise.
+20100217 10:21 - Fixed: ToolTip Control Page.FindControl replaced with > Page.Master.FindControl("ContentPlaceHolder1").FindControl(ctl)
+20100217 10:22 - UPLOAD
+20100217 16:55 - Added email due date reminder functionality in Global.asax 
+20100217 16:55 - UPLOAD
+20100306 13:17 - Added Request.QueryString("lang") functionality to change
+20100306 13:18 - UPLOAD
+20100306 14:21 - Edited Environment.vb method LogAction() - removed select case, edited [spGetDueDateEmailReminderMessage] for all tbMainTable tables,
+                 Fixed bug "Request is not available in this context" on LogAction() LogOut
+20100306 15:04 - UPLOAD
+20100314 13:51 - Fixed: CInt(action) in LogAction(ByVal action As HistoryAction) As Boolean
+20100314 14:06 - Added new enumarations to HistoryAction: 
+                    RecoverPassword = 14
+                    VideoTutorial = 15
+                    ScreenShots = 16
+                    ChangeCurrentLanguageEnglish = 17
+                    ChangeCurrentLanguageDeutsch = 18
+                    ChangeCurrentLanguageBulgarian = 19
+                    ChangeCurrency = 20
+                    ChangePassword = 21
+20100314 14:20 - UPLOAD      
+20100412 21:56 - Added a demo account, UserID = 25, Added procedure spDeleteDemoEntries
+20100412 22:59 - UPLOAD   
+20100412 16:00 - Added income table (Budgets.ascx); new logaction enums added;
+20100412 16:00 - UPLOAD
+20100412 15:32 - fixed budget grid refresh on month tab selection changed; Added AjaxControlToolkit.dll, calendarextender, textbox watermark and password strength indicator
+20100412 15:32 - UPLOAD
+20100414 19:52 - Added ModalPopupExtender to calculator iframe window. Added an introductionary message to demo account.
+20100414 19:52 - UPLOAD
+20100415 21:48 - Added Regex.Replace(txtNewIncomeValue.Text, "[A-Za-z;'%^!@#$%&*()_+-]", String.Empty)
+20100415 21:48 - fixed bug notification email one day earlier
+20100415 21:48 - UPLOAD
+20100415 00:30 - Main page redesign; blue backgroung for expected sum panel, pie chart etc.
+20100415 00:30 - UPLOAD
+20100417 19:44 - Added Notes.ascx.vb
+20100417 19:44 - UPLOAD
+20100427 21:39 - Added flags
+20100427 22:29 - UPLOAD
+20100513 23:49 - Added Search option (CustomControls\SearchControl.ascx.vb)
+20100513 23:49 - UPLOAD
+20100514 09:23 - Bug fix, Request is not available in this context for LogAction PerformSearch
+20100514 09:30 - UPLOAD
+20100514 16:30 - Added Microsoft.Practices.EnterpriseLibrary; changed MHB.DAL.vb functions. Optimisation queries added together for a single execution. Added transaction to ExecuteQuery function.
+20100514 17:00 - UPLOAD
+20100514 21:00 - New function in MHB.DAL.vb - GetDataReader As IDataReader; replace all previous occurunces of SqlDataReader;
+20100515 12:13 - Added translation of radiobuttonlist items.
+20100515 23:09 - Added CustomPage.ascx
+20100515 23:09 - UPLOAD
+20100517 19:43 - Bug fix in ExecuteQuery function; using Microsoft.Practices.Enterprise lib;
+20100517 19:43 - UPLOAD
+20100522 10:34 - Bug fix in CalculateAndDisplaySum() method rewrite instead of loop through gridview rows used a query from database.
+                    some fixes in the beta custom page.
+20100522 10:34 - UPLOAD                    
+20100524 10:41 - Bug fix GetMonthBudget() check IsNumeric() else return 0. Error was: GetMonthBudget(): Conversion from string "" to type Double is not valid.qry=SELECT [BudgetJune] FROM [dbo].[tbMonthlyBudget] WHERE [UserID] = 533 AND Year = 2010
+20100524 10:45 - UPLOAD
+20100530 13:10 - Bug fix: There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement. Added FilterNumericString() method to Environment class.
+20100530 13:10 - UPLOAD
+20100604 20:11 - Bug fix: ButtonUpdate_Click() when updating DateRecordUpdated, forgot qry &=; added Public Sub PerformSearch() in searchcontrol
+20100604 20:15 - UPLOAD
+20100611 15:07 - ButtonRegister_Click make use of new enterprise lib dataaccess functions; some optimisations in RebindDetailsGrid() method because of out of index exception.
+                    fix of ExecuteQuery() function because of the "The value can not be null or an empty string.  Parameter name: query error"
+                    use Session variable in GetUserName() in Environment.vb
+20100615 17:00 - Added new project for generating captcha. The class is written in C#. 
+20100615 19:15 - UPLOAD      
+20100615 19:47 - Fix view CAPTCHA in firefox; added ~ char to image path
+20100615 19:47 - UPLOAD     
+20100616 12:00 - Added a new C# project for data access functions. Deleted the old MHB.DAL.vb class in folder Classes;
+20100616 12:05 - Added Exit Select in GetMonthBudget();
+20100616 12:10 - UPLOAD  
+20100616 17:06 - Added a C# project UserManager instead of the old class UserDetails.vb in the classes folder. Added a VB.NET class Logging holding the Log and ActionLog functions from the Environment class.
+                    added MailManaged C# Project instead of the the MailManager.vb class.
+20100616 17:10 - UPLOAD
+20100616 17:45 - Added GetUserID(string email, string password, string connectionString) method to UserManager project
+20100616 17:45 - UPLOAD
+20100616 19:08 - BUG FIX: in GetMonthlyBudget() input string was not in the correct format. Added Double.TryParse check;
+                    added a try catch block to MHB.Mail.Mail.SendWelcomeMail() and sendmail methods, because it threw an exception when registering and then the user won't be redirected to the MainForm.aspx page;
+20100616 19:15 - UPLOAD     
+20100617 19:58 - Added GetLastIPAddress method to UserManager lib. Edited the userLastIPAddress property in Environment
+20100617 20:00 - UPLOAD   
+20100618 15:26 - Added MHB.BL project and methods for getting expenses grid datasource and detailsgriddatasource. Added GetCategoryID method and UpdateBudgets method
+20100618 16:20 - UPLOAD
+20100622 10:02 - Converted to Visual Studio 2010
+20100622 11:43 - Added Add method to the BillManager class
+20100622 11:43 - UPLOAD
+20100623 09:58 - BUG FIX in AddNewParentExpense():
+                    INSERT INTO [dbo].[tbMainTable01]([UserID],[Month],[Year],[FieldName],[FieldDescription],[FieldValue],[FieldExpectedValue],[DueDate],[OrderID]) VALUES   (704,6,2010,захар,,0 ,44.00, ,23197)
+20100623 10:00 - UPLOAD
+20100623 11:06 - Added DeleteParentExpense method to Expense.cs class
+20100623 11:28 - Added DeleteChildExpenses method to Expense.cs class
+20100623 11:52 - UPLOAD
+20100624 09:40 - Bug Fix: Conversion from string "" to type Double is not valid. in ButtonUpdate_Click()
+20100624 09:42 - UPLOAD
+20100624 12:01 - Bug Fix: ButtonDeleteSelectedRow_Click; optimize code, user LINQ instead of loops;
+20010624 12:05 - UPLOAD
+20100624 12:16 - Bug Fix: expected sum of costs was incorrect, because of modification of the delete method, to just update the IsDeleted flag in the database. The budgets calculations included those deleted fields and thus calculations were incorrect.
+20100624 12:20 - UPLOAD
+20100624 12:35 - Bug Fix: in GetCategoryID - int.TryParse(cat.ToString(), out cat)) replaced with int.TryParse(result.ToString(), out cat))
+20100624 12:36 - UPLOAD
+20100624 15:43 - Added  BillManager.GetMonthlySavings(Month, Year, UserID, GetConnectionString)
+20100624 15:45 - UPLOAD
+20100624 17:39 - Optimize CalculateAndDisplaySum() use DataReader instead of 3 queries;
+20100625 11:32 - Optimize CalculateAndDisplaySum() new method BillManager.GetMonthlyBudgets combining savings and monthly budget got with a datareader;
+20100625 11:32 - UPLOAD
+20100625 15:04 - Optimize translatecontrols method in environment. Add new table Languages and an enumaration in Environment.changed [spGetSumsForCategoriesPerMonth] procedure;
+20100625 15:05 - UPLOAD
+20100702 21:13 - Bug fix in AddNewParentExpense - expectedValue.Replace(",", ".")
+20100702 21:15 - UPLOAD
+20100705 22:45 - Bug fix when deleting child expenses. Put a check to get only rows where select checkbox is checked and declared the array after counting the selected rows.
+20100705 22:47 - UPLOAD
+20100708 19:04 - Bug fix added .Replace(",", string.Empty).Replace("--", string.Empty); in MHB.BL AddParentExpense
+20100708 19:05 - UPLOAD
+20100727 19:27 - Changed smtp server address to mail.myhomebills.info
+20100727 19:27 - UPLOAD
+20100909 20:22 - Bug fix in GetMonthlySavingsAndBudget there was a UNION in the statement by mistake. It wasn't an UNION statement at all; left over from the previous logic;
+20100909 20:25 - UPLOAD
+20100927 22:55 - Added two new methods in Expense.cs: GetParentExpensesDataSource() and GetChildExpensesDataSource(); edited the RebindDetailsGrid() and RebindGrid() methods to use those methods;
+20100927 22:58 - UPLOAD
+20100927 23:15 - Shortened the throw statements in the db.cs class. added an exit for in a loop in page_load in mainform.aspx.vb;
+20100927 23:18 - UPLOAD
+20100928 20:06 - Fixed mail smtp server address for recovery password, send mail on new user and send welcome mail;
+20100928 20:09 - UPLOAD
+20100929 22:06 - Move the admin/settings/log out links to the right of the screen;
+20100929 22:07 - Partial upload - master page; 
+20100929 23:01 - corrected the cyrillic meta tags on the master page; added invisible keywords to all pages;
+20100929 23:02 - UPLOAD
+20101001 20:03 - Bug Fix in CalculateAndDisplaySum in query there was a name of the table instead of the maintable session variable
+20101001 20:16 - Added new history action to enum in logging class - ChangeMonth = 30
+20101001 20:20 - UPLOAD
+20101006 10:07 - Bug fix in MHB.BL Expense.cs - fieldName.Replace("'", string.Empty).Replace(",", string.Empty).Replace("--", string.Empty); statement moved up, so that it could affect single row inserts;
+20101006 10:07 - UPLOAD (just MHB.BL.dll)
+20101006 12:11 - Optimisation - changed the build configuration to Release on all projects in the solution
+        new static method UpdateParentExpenses which takes List<Expense> expensesToUpdate and string qryUpdateLastDateUpdated and executes the query in one go;
+20101006 12:11 - UPLOAD
+20101007 21:01 - Bug fix added Response.Redirect(Request.Url.AbsoluteUri) and Catch ex As Threading.ThreadAbortException to change language buttons on masterpage;
+20101007 21:03 - UPLOAD
+20101024 20:09 - Bug fix ButtonUpdate_Click - IIf(IsNumeric(fieldExpectedValue), fieldExpectedValue, 0)
+		change in throw exception block in MHB.DAL -  throw new Exception(String.Format("GetDataReader:{0} qry:{1}",ex.Message, qry), ex);
+		added Catch ex As ThreadAbortException to GridView1_RowEditing and GridViewDetails_RowEditing
+20101024 20:33 - UPLOAD
+20101024 21:11 - Bug fix in RebindGrid added the DisplayFlaggedSums parameter to GetParentExpensesDataSource
+20101024 21:13 - UPLOAD
+20101025 20:57 - Bug fix added Replace(",",".") to ButtonAddField_Click
+20101025 20:59 - UPLOAD
+20101028 23:20 - Bug fix added  Session.Clear() to ButtonRegister_Click; when user has the demo started in another tab it and registers in another, it uses the same session and uses tbMainTable01 for a main table, as it was set in the demo account;
+20101028 23:22 - UPLOAD
+20101122 19:46 - The loading div is moving down when the details of a bill are opened; two new methods in Environment.vb: SetLoadingDivUp, RestoreLoadingDivPosition
+20101122 19:48 - UPLOAD
+20101209 20:25 - All FindControl declared in the begging of the DataBound EventHandler, hope to increase performance.
+20101209 20:30 - UPLOAD
+20101210 20:49 - Optimised the CalculateAndDisplaySum; added a new stored procedure spGetBudgetsSavingsSumExpenses;
+20101212 20:50 - UPLOAD
+20101211 18:28 - Added new procedure: spGetGategoryMatchingKeywords which returns a DataTable of all category keywords; added a Linq expression instead of running spSetCostCategory on each row;
+20101211 19:31 - UPLOAD
+20101212 11:02 - Added new function GetCategoryID to Environment.vb;
+20101212 12:00 - Added two new javascript functions to MasterPage.master: SelectAllIsPaid and SelectAllRows which tick all checkboxes for paid and selected rows;
+20101212 12:02 - UPLOAD
+20101216 21:11 - Added new details table bottom buttons; new db script
+20101216 21:11 - UPLOAD
+20101222 21:51 - Changed   filter = key.ToUpper & "*" in GetCategoryID()
+20101222 21:52 - UPLOAD
+20110303 13:44 - Added two new properties to Environment and two appSetting tags; SMTPServerAddress; SenderEmailAddress;
+		Added a new admin page for sending mass emails; Forms/MassEmail.aspx;
+20110303 15:33 - UPLOAD
+20110304 11:21 - Added two new properties to Environment SenderEmailAddress and EmailTemplatePlaceHolderCode; added EmailTemplate.html
+		Added two new key value pairs to Web.config - emailTemplatePath and emailTemplatePlaceHolderCode
+20110304 11:25 - UPLOAD
+20110304 15:11 - Added divAddToSum and <img id="ImmageButtonShowAddToSumDiv"; two new JS functions in MasterPage: EnableAddToSumDiv and AddToCurrentSum; 
+		Edited the RowDataBound EventHandler;
+20110304 15:15 - UPLOAD
+20110311 20:21 - Added DirectCast(e.Row.FindControl("ImmageButtonShowAddToSumDiv"), HtmlImage).Src = "../Images/edit_add_placeholder.gif"
+                    DirectCast(e.Row.FindControl("ImmageButtonShowAddToSumDiv"), HtmlImage).Attributes.Add("onclick", "javascript:alert('" & TextBoxValue.ToolTip & "')")
+					in RowDataBound EventHandler. Added alt attributes to images.
+20110312 13:20 - REWRITE of translation methods TranslateControls and GetTranslatedValue in Environment.vb - now using Cache instead of Session
+20110312 13:20 - UPLOAD
+20110317 19:09 - Added lots of JQuery functions to the JQuery_functions.js script file. Transformed the AddNew div and some animations in rowdatabound for ImmageButtonShowAddToSumDiv;
+					EnableAddToSumDiv and AddToCurrentSum functions in MasterPage;
+20110317 17:09 - UPLOAD
+20110317 17:21 - Added to translation methods in Environment If ex.Message.Contains("Cache is not available")
+20110317 17:21 - UPLOAD
+20110317 22:48 - Added   __doPostBack('ButtonCancelAddField', '');  to  $("[id$='ButtonCancelAddField']").live("click"
+20110317 22:48 - UPLOAD
+20110318 15:07 - Added UNDO Button to MainForm.aspx
+20110318 15:08 - UPLOAD
+20110319 11:13 - Added support for IE 9 and changed JQuery_functions.js > $("[id$='btnPickCategory']").live("click", function () {
+					and Style.css > .ButtonAdd etc.
+20110319 11:15 - PARTIAL UPDATE
+20110320 14:11 - Added real undo functionality for the actual sum field. New js function: RevertToLastSum, on MasterPage. New textboxes in ItemTemplate section in GridView1;
+20110320 15:42 - Added new fadeTo code block: imgs = document.getElementsByTagName('img'); loops through IMG elements.
+20110320 15:43 - UPLOAD
+20110321 16:44 - REWRITE of the ToolTip control using JQuery;
+20110321 16:44 - UPLOAD
+20110321 18:28 - Change the spDeleteDemoEntries Stored Procedure;
+20110321 23:20 - Changed the border of the login page to #EAF1FF;
+20110321 23:23 - PARTIAL UPDATE
+20110322 11:44 - Added a tooltip to the undo icon;
+20110322 11:45 - UPLOAD
+20110421 11:59 - Fixed bug in FadeOutUndoIcons in MasterPage; Fixed width of main GridView container div to 100%;
+20100421 12:00 - PARTIAL UPDATE
+20100422 12:09 - Easter logo
+20100422 12:23 - REWRITE RebindDetailsGrid get detailsSum using LINQ query;
+20100422 12:30 - UPLOAD
+20110504 17:40 - REWRITE New method in Page_load of MainForm.aspx - OpenSubGrid(); replaces the old functionallity with a for loop in the Page_load
+20110519 16:30 - REWRITE Environment get rid of for loops in LINQ queries - using FirstOrDefault instead; added finally clause and dispose() to objects
+20110519 16:39 - REWRITE Set current month dropdown in Page_Load of MainForm.aspx rewritten using LINQ
+20110520 13:19 - New Transaction class in BL; New page Transactions.aspx; changes in Environment.vb; new LinkButton on GridView1; new entry in RowDataBound eventhandler;
+20110520 13:30 - UPLOAD
+20110520 16:44 - Added return false; to window.open in RowDataBound; Fixed with of billdetails GridView in popup;
+20110520 16:46 - UPLOAD
+20110531 11:45 - ToolTip.ascx getting coordinates fixed: var x = ev.pageX || ev.clientX;
+20110610 16:02 - New Project HttpModules; Added reference in MHB.Web; Url rewriting of all pages;
+20110610 16:16 - Added new class to HttpModules - GZip.cs;
+20110610 16:25 - UPLOAD TEST SITE
+20110607 15:43 - Moved js functions from MasterPage to Javascript\JQuery_functions.js
+20110707 16:04 - REDESIGN - GRAY THEME! New classes in MHB.BL - UrlRewriter - UrlRewriter.GetLink() method to all ResponseRedirects.
+20110707 16:05 - UPLOAD LIVE
+20110708 15:00 - REDASIGN - BLUEISH THEME! New Login.aspx page logo
+20110708 15:00 - UPLOAD LIVE
+20110709 15:23 - New class Category.cs in MHB.BL; new table in db - tbCategories; new property Categories in Environment.vb
+20110713 21:08 - Three new classes added today to MHB.BL: ExpenditureManager, Expenditure, ExpenditureDetail, Expense.cs DELETED and Add, Delete and Update methods moved to ExpenditureManager
+20110713 21:10 - LIVE UPDATE
+20110805 21:58 - css changes in colours and move up down icons restored to original green;
+20110805 21:58 - LIVE UPDATE
+20110819 17:15 - Added new pages - Mobile.aspx, LoginMobile.aspx; new stylesheet MobileStyles.css; new entries in URLRewrite.xml; 
+20110819 17:15 - UPLOAD TEST
+20110829 15:05 - Added new function to JQuery_functions.js - function SelectRow(rowid, chkid); added new css class in Styles.css - MarkedRow
+20110829 15:10 - LIVE UPDATE
+20110920 13:48 - Added baseclasses to Category, URLRewrite and Transaction and actual classes inheriting from them. 
+20110920 17:18 - Added new js function to JQuery_functions.js - AddCellValue
+20110920 17:19 - UPLOAD LIVE
+20110921 14:43 - Changes to SelectRow js function; onclick trigger for function attached to select row checkbox; added onclick eventhandler to differencesum textbox on maingrid-AddCellValue()
+20110921 14:45 - UPLOAD LIVE
+20110927 13:25 - Remove SetLoadingDivDown() and SetSelectedRowStyle() methods; new style - DetailsGrid addded to PanelDetailsTable;
+20110927 14:11 - UPLOAD LIVE
+20110927 14:35 - SEO optimizations; new keywords, title meta tag, h1 tag;
+20110927 14:35 - PARTIAL UPDATE
+20110928 10:47 - Short goo.gl link and a barcode added to masterpage under webextreme logo;
+20110928 10:50 - PARTIAL UPDATE
+20110928 13:45 - CostsCompare.aspx - new column in chart - Difference to previous month; new script: 20110928.001.sql; new translations;
+20110928 14:05 - UPLOAD LIVE
+20110930 14:26 - new image: detailsgrid_bg.jpg background for detailsgrid; new css class DetailsGridLabel
+20111011 17:00 - Replaced all Bind and Eval calls with CType(Container.DataItem, Expenditure).[PropertyName]
+20111011 17:00 - UPLOAD LIVE
+20111011 11:05 - Commented ContentPlaceHolder1.FindControl("PanelIntroBG").Visible = True on masterpage;
+20111027 15:11 - Added Addresses.cs. New methods in GetDeserializedAddresses() and T Deserialize<T> in MHB.BL\URLRewriter.cs
+20111027 16:02 - UPLOAD LIVE
+20111028 19:29 - New stored procedure - spDuplicateMonthRecords; new table in db - tbMainTableTemp; integrate fancybox; new method - ButtonStartDuplicate_Click;
+20111028 19:29 - UPLOAD LIVE
+20111028 22:43 - Changed css of RegisterPanel and LoginPanel - added borders;
+20111028 22:43 - UPLOAD LIVE
+20111031 19:58 - BUG FIX: SearchControl.ascx.vb.PerformSearch() return List(Of MHB.BL.Expenditure) instead of DataTable; New method in ExpenditureManagerBase.cs - SearchUserExpenditures();
+20111031 20:00 - UPLOAD LIVE
+20111101 11:52 - New class in MHB.BL - Enums.cs. New method in ExpenditureManager.cs - FillExpenditureList; Changed GetUserExpenditures() and SearchUserExpenditures(); Changed PerformSearch() in SearchControls.ascs.vb;
+20111101 12:34 - UPLOAD LIVE
+20111102 21:39 - Added PayPal and EPay buttons; new class GhostForm.vb; Refactoring - Login.aspx (html had a lot of unclosed tr and td tags);
+20111102 21:45 - UPLOAD LIVE 
+20111102 23:26 - Added SetUserLanguageByGeoIP() method to master page and a call to it in Page_Init EventHandler;
+20111102 23:26 - UPLOAD LIVE
+20111103 12:08 - New vb project added to solution - GeoIPLocation; changes to web.config; added new ServerWeb.config file;
+20111103 12:10 - UPLOAD LIVE
+20111103 20:41 - Added AndAlso en.UserID = 0 to master page's Page_Init
+20111103 20:41 - UPLOAD LIVE
+20111103 21:19 - Refer to db script 20111103.001.sql; added <%= GetTranslatedValue("LoginPageText", CurrentLanguage)%> to Login.aspx;
+20111103 21:19 - UPLOAD LIVE
+20111111 20:02 - Added CurrentLanguage = Nothing to ButtonLogin_Click
+20111111 20:02 - UPLOAD LIVE
+20111124 13:38 - Change in function SelectRow(rowid, chkid, chkispaid); Change the logo in PrivacyPolicy.htm and PrivacyPolicyBG.htm
+20111207 13:28 - Add snowstorm.js to Javascript folder and <add key="SnowFallEnabled" value="True"/> to web.config. RegisterStartupScript in Login.aspx Page_Load
+20111207 13:28 - UPLOAD LIVE
+20111207 21:00 - Transfer smetki.eu domain to superhosting.bg; add  EnableViewStateMac="false" to MainForm.aspx, Login.aspx and Admin.aspx
+20120104 15:03 - Added check to CalculateAndDisplaySum method: i.e. If Not reader.IsDBNull(reader.GetOrdinal("sumExpenses"))
+					Added check to User.cs.GetMonthlyBudget.
+				Added smtp server section to web.config
+20120106 12:14 - Added  If Not IsPostBack Then in Page_Load in SearchControl.ascx.cs
+					Added LabelSum.Text = String.Format(GetTranslatedValue("ExpensesSum", CurrentLanguage), Sum, Currency, (MonthBudget - Sum).ToString(), Currency) to CalculateAndDisplaySum()
+20120106 12:49 - BUG FIX Added Session("CostCategoriesKeywords") = Nothing to ImageButtonDE_Click etc. Lost Categories after change language
+20120106 12:50 - UPLOAD LIVE
+20120106 16:13 - Added alert to ButtonRecoverPassword_Click that email has been sent.
+					New Stored Procedure: [spCheckAndInsertBudgetsSavingsExpensesPlaceHolderRows]
+20120106 09:40 - Added Mass Email ImageButton in admin; added <%= Date.Now.Year%> to footer in master page
+20120110 11:03 - Added If UserID = 0 Then to DownloadAttachment.aspx.vb; Added  If Request.QueryString("userid") <> UserID Then to Reports.aspx.vb
+					Added dir=d:\inetpub\vhosts\smetki.eu\httpdocs\temp; to <add key="ChartImageHandler"
+20120110 16:29 - Changed Version=10.0.0.0 to Version=9.0.0.0 in <add verb="*" path="Reserved.ReportViewerWebControl.axd" in <system.web><httpHandlers> and <system.webServer><handlers>
+20120110 16:29 - UPLOAD LIVE
+20120124 13:19 - Added UpdateUserGeoLocationInfo() to User.cs; New class GeoData in IPGeoLocation project;  new method GetGeoData() in GeoLocation.vb; new table in db - tbUsersGeoLocationData; new sp - spAddUserGeoLocationInfo
+20120125 13:00 - Added a FORUM - http://yetanotherforum.net/ YAF-v1.9.5.5-RTW-SRC. Links in master page footer and top of page.
+20120127 17:34 - Added javascript context menu from http://www.ifadey.com/2011/07/context-menu-using-raw-javascript/ 8 new methods in CONTEXT MENU region in MainForm.aspx.vb; CopyParentExpense() and DeleteAttachment() methods in ExpenditureManagerBase.cs; contextmenu.js and event_util.js files; ContextMenu.css in Styles folder
+20120127 17:34 - UPLOAD LIVE
+20120127 21:54 - Added all linkbuttons of context menu as triggers of updatepanel; restyle header stripe of masterpage;
+20120128 19:47 - BUG FIX in InitContextMenu() in MainForm.aspx.vb; changed: Dim script As String = String.Format("var myContextMenu = new ContextMenu('{0}', 'contextMenu', '{1}', function (e) {{ }})", GridView1.ClientID, HiddenRowID.ClientID)
+20120128 19:50 - UPLOAD LIVE
+20120129 13:04 - Added icons to context menu
+20120202 20:04 - BUG FIX Select change [CInt] to [CDbl](CType(row.FindControl("TextBoxDetailsTableFieldValue"), TextBox).Text)).Sum() in RebindDetailsGrid()
+20120202 20:04 - UPLOAD LIVE
+20120203 12:03 - BUG FIX move DisplayCaptcha() method in Not IsPostBack code block in Page_Load of Login.aspx.vb;
+20120203 12:03 - UPLOAD LIVE
+20120212 13:13 - Changed divContentBody -  width: 1287px;
+20120212 13:15 - PARTIAL UPDATE - Style.css
+20120215 12:26 - BUG FIX Addded [IsDeleted] = 0 to queries in SearchUserExpenditures() method
+20120215 12:26 - UPLOAD LIVE
+20120215 16:08 - Added new search option - new dropdownlist category in search control; edit ExpenditureManagerBase.SearchUserExpenditures()
+20120216 15:33 - Added two new classes - SortOption.cs and SortOptionBase.cs; Two new dropdowns to Search control -> order by and order direction; two new tables in db;new record in Languages table;
+20120216 15:40 - UPLOAD LIVE
+20120217 11:20 - Moved GetCategoryKeyWords() from ExpenditureManager to CategoryBase.cs; modify [spGetCategoriesTable] and make just one universal method in CategoryBase.cs, remove all calls to spGetCategoriesTable;
+					Added SqlParameter[] to ExecuteQuery in MHB.DAL
+20120217 12:04 - UPLOAD LIVE
+20120217 17:07 - New stored procedure: spGetSumsForCategoryPerYear; New button annual category reports on mainpage.aspx; new entry in UrlRewriter.xml; new entry in actionlog enum; new page:CategoriesYearlyCharts.aspx
+20120223 15:24 - Rewrite PlotChart() in CostsCompare.aspx and spGetUsersAverageExpensesForCategory
+20120311 13:56 - Added ButtonHidePaidExpenses_Click() in MainForm.aspx.vb
+20120312 11:32 - Edit ButtonHidePaidExpenses_Click(), GetUserExpenditures() in ExpenditureManagerBase.cs, RebindGrid() - added new parameter: hidePaid; new property: PaidExpensesHidden in Environment.cs
+20120329 14:49 - New css style: AlternatingRowBudgets; Edit Budgets.ascx (width of GridView, added alternating row style); Rename projects in solution. Rename all namespaces;
+20120330 14:43 - Rename namespaces - User.cs - namespace UserManager to MHB.UserManager, Mail.cs...; UpdateUser() in User.cs add SqlParameters; New project - MHB.Entities - EntityFramework; New project MHB.Test
+20120415 23:40 - Added LabelDifference in Transactions.aspx and ItemDataBound handler to Repeater.
+20120415 23:40 - UPLOAD
+20120415 12:22 - BUG FIX - REMOVE SQLPARAMETERS FROM User.cs.GetUserID() Did not return any result because of sqlparameter being used in CAST statement probably
+20120415 12:22 - UPLOAD
+20120421 10:36 - BUG FIX - when hiding paid expenses; when new record is entered IsPaid column in tbMainTable is NULL so added  qry += " AND (IsPaid = 0 OR IsPaid IS NULL)"; to MHB.BL.SQLHelper.cs.GetExpense()
+20120421 10:38 - Changes in Style.css; Change add new div window style. Change grid cells styles;
+20120421 11:10 - UPLOAD
+20120422 11:27 - New classes in MHB.BL - TransactionManager.cs and TransactionManagerBase.cs; New method in TransactionManagerBase.cs - RecordTransactions(List<Transaction>); Remove static keyword from methods in ExpenditureManagerBase.cs;
+					Two new readonly properties in Environment.vb - ExpenseManager and TransactManager; Replaced all static calls to ExpenditureManagerBase methods with instance calls of ExpenseManager in MainForm.aspx.vb;
+					Edit transaction recording in Page_Init of MainForm.aspx.vb.
+					New footer row in GridView in Budgets.ascx for sum of incomes.
+20120422 12:36 - UPLOAD
+20120424 11:11 - BUG FIX - CRITICAL - Session.Clear() to Login.aspx.vb ButtonLogin_Click() otherwise users no matter the whether the UserID is higher than 1000 would always use tbMainTable01;
+					New method in MainForm.aspx.vb - SetCurrentMonth(); DropDownListYear_SelectedIndexChanged added call to SetCurrentMonth
+20120424 11:15 - UPLOAD
+20120424 11:46 - BUG FIX - If lblSum IsNot Nothing Then in Budgets.ascx.vb;
+20120424 11:47 - UPLOAD
+20120425 16:39 - Added new GridView in Admin.aspx - GridViewActionLog; New class in MHB.Logging - ActionLog; New stored procedure - spGetActionLogData; New db script - 20120425.001.sql; New image - admin_action_log.png;
+20120425 16:40 - UPLOAD
+20120425 18:41 - Edit spGetActionLogData; Add LEFT JOIN to TransactionLog table; Edit Admin.aspx add new column to GridViewActionLog;
+20120425 18:41 - UPLOAD
+20120426 10:20 - New GridView in Admin.aspx - GridViewUniqueVisitors; New Stored Procedure - [spGetActionLogData];
+20120426 10:25 - UPLOAD
+20120426 16:21 - fieldsets (Groupboxes) aroung budgets control, pie chart and calculations; new script for translations - 20120426.002.sql; New rule fieldset in Styles.css
+20120426 16:28 - UPLOAD
+20120427 15:10 - New screenshots in simpleviewer folder - TODO: add descriptions in classic.xml in simpleviewer folder.
+20120427 15:15 - UPLOAD
+20120503 16:21 - BUG FIX - added If GridViewBudgets.FooterRow in BindGrid() in Budgets.ascx.vb;
+20120503 16:25 - UPLOAD
+20120515 12:13 - New stored procedure - spAddNewUserCategory; new methods in MHB.BL SQLHelper.cs and CategoryBase.cs - AddNewCategory() and Add();
+20120516 16:56 - BUG FIX - added If exp IsNot Nothing AndAlso exp.FieldValue <> fieldValue Then in Button_Update() in MainForm.aspx.vb - Now we can update search results and modify them :)
+20120516 16:56 - UPLOAD
+20120528 10:15 - Added new translation: LabelSpentTodayText; Edit [spGetBudgetsSavingsSumExpenses] - @sumSpentToday; new style: PlainTextExtraLargePink;
+20120528 10:15 - UPLOAD
+20120531 15:20 - New Page - Events.aspx; New button on MainForm.aspx - ButtonEventsCalendar; New entry in URLRewrite.xml; New eventhandler in MainForm.aspx.vb - ButtonEventsCalendar_Click
+20120531 15:32 - UPLOAD
+20120531 18:49 - BUG FIX: Removed GetExpenditures() method from Events.aspx.vb and added a new property named MainTableDataSource in Environment.vb. Timout expired exception due to too many calls to GetExpenditures() in CalendarEvents_DayRender() - Connection Pool FULL!!
+20120531 18:49 - UPLOAD
+20120601 15:45 - Page.RegisterAsyncTask(task) in MasterPage.master.vb; new class in MHB.BL - Income.cs and methods in SQLHelper; Changed all inline sql queries in CustomControls\Budgets.ascx.vb with Income methods; new sql script: 20120601.001.sql;
+20120601 15:45 - !!! IMPORTANT !!! - SWITCH TO .NET FRAMEWORK 4.0; CHANGED VERION NUMER OF: System.Web.DataVisualization, Version=4.0.0.0 IN WEBCONFIG AND MAINPAGE.ASPX;
+20120601 16:00 - UPLOAD
+20120601 16:59 - BUG FIX - Change web.config on server - remove debug=true; missed Return keyword in IncomeSum property of Budgets.ascx.vb; removed call to CalculateAndDisplaySum from ButtonTab_Click in MainPage.aspx.vb;
+20120601 17:05 - UPLOAD
+20120612 10:42 - Moved GetExchangeRates method to Global.asax.vb file; Added new property ExchangeRates in Environment.vb;
+20120612 10:50 - UPLOAD
+20120612 16:05 - DBScript - 20120612.001.sql; New gridview in CategoriesManagement.ascx etc.
+20120612 16:05 - UPLOAD
+20120613 21:03 - DB Scripts - 20120613.001.sql and 20120613.002.sql; New page in Forms/ - Statistics.aspx;
+20120613 21:10 - UPLOAD
+20120823 15:04 - ame.InnerHtml = String.Format("<code>-{0}┐<br />&nbsp;&nbsp;({1})</code>", .FieldName, .FieldDescription) in Events.aspx.vb
+20120823 15:04 - UPLOAD
+20120911 20:43 - New table tbCurrencyExchangeRates; added System.Threading.Tasks.Task.Factory.StartNew(AddressOf SetExchangeRates) to global.asax Session_Start;
+20120928 20:06 - All code clean up using Code Maid; Edit Events.aspx.vb - now it calculates Income/Scheduled expense difference;
+20120928 20:15 - UPLOAD
+20121002 13:31 - New stored procedure - spMaintainDbIndexes; Changes in Session_Start and Application_Start in Global.asax.vb; New HistoryAction items in enumerations: RebuildDbIndexes = 43
+					LoadTranslationsInCache = 44
+20121002 13:31 - UPLOAD
+20121002 19:52 - BUG FIX in Events.aspx.vb - Dim availIncomeExpenseDiff As Decimal = currentlyAvailableIncome - currentExpenses - sumPaidExpenses; added sumPaidExpenses; Change in styles; New script: 20121002.001.sql
+20121002 20:10 - Refactoring in Global_asax.vb - added: If HttpRuntime.Cache("translations") Is Nothing Then; If DateTime.Now.Hour >= 1 AndAlso DateTime.Now.Hour <= 3 Then;
+20121017 10:35 - BUG FIX in Events.aspx.vb -   Dim sumPaidExpenses = ....
+20121017 10:35 - UPLOAD
+20121017 17:19 - Added new project to solution - MHB.API
+20121018 15:14 - Added new project to solution - MHB.Gadgets.ActionLogMonitor; New stored procedure in script 20121018.002.sql; new table in database in script 20121018.001.sql
+20121022 15:55 - Changes in MHB.Gadgets - added timer and updating collection from service, refreshing DataGrid etc.
+20121023 19:39 - MIGRATED ALL PROJECTS IN SOLUTION TO .NET FRAMEWORK 4.0
+20121023 20:40 - UPLOAD
+20121031 19:04 - BUG FIX in Events.aspx.vb - CalendarEvents.VisibleDate = New DateTime(Year, Month, 1) added one;
+20121031 19:10 - UPLOAD
+20121101 14:52 - Added new function in JQuery_functions.js handling escape key; tip labels in MainForm.aspx.vb.PanelDetailsTable - LabelTipKeysFunctionsDetailedViewTop;
+20121101 15:00 - UPLOAD
+20121217 16:19 - New usercontrol - ExchangeRates.ascx; New page in Forms - ExchangeRatesCharts.aspx; Changes in Global.asax.vb - replace USD, GBP and CHF with <a href to new page; New stored procedure spGetExchangeRates;
+20121217 16:30 - UPLOAD
+20121218 16:00 -	- new table in db: tbUsersBlackList
+					- new stored procedure in db: spAddUserToBlackList
+					- new stored procedure in db: spCheckIPBlacklisted
+					- new function in db: fnBinaryIPv4
+					- new function in db: fnDisplayIPv4
+					- new method in MHB.API/IMhbApiService.cs: BlockUser
+					- new method in MHB.API/IMhbApiService.cs: BanIP
+					- new call in MasterPage: Page_Init - If UserManager.User.IsInBlackList
+					- new class in MHB.Gadgets: ActionCommand.cs
+					- new button and command in MHB.Gadgets: _blockUserCommand
+20121218 16:30 - UPLOAD
+20121219 10:17 - Refactor in Global.asax.vb
+20121219 16:06 -	- new user control in MHB.Web\CustomControl: ApiManagementControl.ascx;
+					- new web page in MHB.Web\Forms: APIManagement.aspx;
+					- new links in MasterPage's footer;
+20121219 16:57 - FIX WARNINGS
+20121220 11:05 - New method in MHB.API: GetExpenditures();
+					- new HistoryActions: GenerateAPIKeySuccess, GenerateAPIKeyInvalidCredentials;
+					- new calls to ActionLog in ApiManagementControl.ascx.vb.ButtonLogin_Click
+20121220 14:49 - Refactor Forms/Charts.aspx.vb: GetDataToPlot() method;
+					- new methods in ExpenditureManager: GetYearlyExpensesProMonth(), GetYearlyBudgetsProMonth(), GetYearlySavingsProMonth(), GetYearlyExpensesProMonthDataTable();
+					- new method in Environment: CheckAccess(), AddNavigationLink();
+
+2013 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+20130102 11:38 - New method in ExpenditureManagerBase.cs: DuplicateExpenditures(); Change in MainForm.aspx.vb.ButtonStartDuplicate_Click();
+20130102 22:13 - Changes in spDuplicateMonthRecords.sql;
+20130102 23:03 - BUG FIX: Me.MainTableDataSource = expenditureManager.GetUserExpenditures(DisplayFlaggedSums, False, PaidExpensesHidden) in RebindGrid in MainForm.aspx.vb;
+20130103 11:15 - Changes in spDuplicateMonthRecords.sql and MainForm.aspx.vb.ButtonStartDuplicate_Click();
+20130103 11:15 - UPLOAD
+20130105 15:18 - LabelSum added to Charts.aspx.vb;
+20130105 15:20 - UPLOAD
+20130124 10:34 - UPGRADE to Visual Studio 2012 Update 1; Remove old upgrade file; 
+20130125 13:26 - New methods in MhbApiService.svc.cs: DeleteParentExpenditure(), DeleteChildExpenditures(), AddParentExpenditure(), SearchUserExpenditures(), GetExpenditureDetails(), UpdateParentExpenses(); 
+					Check for UserID in ExpenditureManager.DeleteParentExpense() and ..DeleteChildExpense();
+20130125 20:12 - New folder ~Test02\MHB.Web\References including: 
+					Microsoft.Practices.EnterpriseLibrary.Common.dll
+					Microsoft.Practices.EnterpriseLibrary.Data.dll
+				 New methods in MhbApiService.svc.cs - check SVN history and changes please;
+20130125 20:33 - New HistoryActions; new cases to Color() in ActionLog.vb;
+20130126 13:00 - New script - 20130126.001.sql; Wrap ButtonHideExpenses with UpdatePanel to enable CssClass refresh when click; New styles: ButtonAddMediumActive and ButtonAddMediumInactive;
+20130130 19:53 - New page: Forms/Diagnostics.aspx page uses jQuery UI; Added Assembly Info to all projects;
+20130131 12:41 - New method in Environment: IsAssemblyDebugBuild(); Changes in Diagnostics.aspx - added tab control and accordions for Action logs and Exception logs        
+20130201 10:48 - Changes in SearchUserExpenditures(); New script: 20130201.001.sql;
+20130201 11:10 - UPLOAD
+20130201 19:12 - Refactor MHB.BL.SQLHelper; FIX in MHB.BL.ExpenditureManagerBase.SearchUserExpenditures() - Changed JOIN to LEFT; internal class SearchQueries in SQLHelper; Refactor MHB.BL.CategoryBase;
+20130201 19:30 - UPLOAD
+20130204 11:19 - New methods in SQLHelper.SearchQueries; Changes in SearchUserExpenditures();
+20130205 15:54 - Switch to jquery-1.9.0, jquery-ui-1.10.0,  fancybox 2.0; Refactor JQuery_functions.js - new methods for popups; Change all popups to fancybox and jQuery UI Dialog; Some refactoring.. still lots to do :(
+20130206 10:33 - Rewrite ButtonAddExpenditureDetails_Click() in MainForm.aspx.vb; New method in MHB.BL.ExpenditureManager - AddNewChildExpense(), UpdateChildExpenses(), DeleteChildExpenses() - overload method;
+					Fixes in JQuery_functions.js - replaced click() with $(document).on("click", "[id*=CheckBoxRecurrentExpenditure]" because of UpdatePanel issue; fixed some selectors - replaced generated asp id with 'id*='
+20130207 20:49 - BUG FIX - If id = 0 Then Continue For in UpdateDetails in MainForm.aspx.vb;
+20130208 10:55 - Changes in Global.asax.vb - make all function calls async; Remove Environment instance, remove Request object etc.
+20130209 15:43 - Added new class MHB.BL.CategoryComments - new table in db - CategoryComments - new translations - new db script - new images; New method in CategoryBase.cs - LoadComments() etc.
+20130209 22:46 - Delete CategoryComment; UsersVoted comma-delimited field; unable to vote more than once;
+20130210 11:18 - New columns to tbCategoryComments - DateModifued and IsDeleted - changes in queries; Layout changes to CategoriesManagement.ascx control; Comments counter and new callout icon showing notifications to comments; Changes in spGetCategoriesTable;
+20130211 20:07 - New script 20130211.001.sql; Edit methods - UpdateIncome, AddIncome, DeleteIncome; Don't delete income instead new column IsDeleted; New class IncomeLog;
+20130213 10:29 - BUG FIX in MainForm.aspx.vb.ButtonStartDuplicate_Click() and [spDuplicateMonthRecords] - removed hardcoded tbDetailsTable01 table name;
+20130219 11:43 - BUG FIX in MainForm.aspx - button ButtonCloseAddNewDiv as runat button instead of input; CloseFancyBox() method in JQuery_functions.js; Changes in MHB.BL new class Extensions extension method for DateTime - ToISODate();
+					New property in Environment.vb - DetailsTableDataSource; Changes in ButtonUpdateDetailsTable_Click only update details when changes detected;
+20130222 14:20 - New script - 20130222.001; New table in db. New classes in MHB.BL - Product:ProductBase; New method in ExpenditureManager - GetProducts(); New methods in MHB.BL.SQLHelper - GetProduct(), GetProducts(), DeleteProduct(), AddProduct(), UpdateProduct();
+20130327 10:15 - Net method - GetControlsByTypeRecursively in Environment; Change in ApplyDropDownSkin method in Environment;
+20130327 19:27 - Fixes to Duplicate functionality behaviour - changes in checkboxes and target year, month default selection in dialog; increase api dialog size;
+20130408 10:37 - WebForm_FireDefaultButton() in PanelDetailsTable; Click cell to sum in details grid; Details grid copy/paste; bug fix when adding new supplier - OrElse CType(Session("Suppliers"), List(Of Supplier)).Count = 0 Then - luckily it reloads the list when you .Clear();
+					Budgets change button styles to ButtonAddSmall; Change Environment.Month when switching months in Calendar (Events); keyWord.ToUpper().Contains(prefixText.ToUpper())) in ProductAutoComplete.asmx.vb;
+20130409 14:57 - Move add new detail textboxes to GridViewDetails Footer Row; Fix for FooterRow visible when no records bound see RowDataBound!; Alt text on copy&paste imagebutton in GridViewDetails;
+20130409 22:37 - Use jquery popup for attachments preview; major changes in attachments download; fixed performance issue - PreviewAttachment.aspx.vb?id=xx was called for each row of GridView1 opening a new connection as it was located in <TemplateField>;
+20130425 19:57 - - New button (pink) - button_add_shopping_list_hover.gif;
+					- Pink button added to GridViewDetails popup - prints shopping list;
+					- Modify AddToShoppingList() method;
+					- New ImageButton in GridViewDetails popup - add to shopping list;
+					- New db script - 20130425.001.sql - translations;
+					- Change DEFAUL_PRODUCT_ID to 1 from -1;
+20130429 20:00 - Refactor Environment.SaveFileAs(); New form - FileDownloader.aspx; Refactor ProductsManagement.ascx - Print shoppint list method; New url in URLRewrite.xml;
+20130523 16:09 - - Details property in ExpenditureBase changed from List to IEnumerable;
+					- DetailsDataSource property in Environment changed from List to IEnumerable;
+					- TabContainer1 in MainForm.aspx;
+					- New pie chart control in TabContainer1;
+					- New method in MainForm.aspx.vb - GetGroupedProductsWithSums();
+					- Refactor DrawPieChart();
+					- Refactor RebindDetailsGrid();
+					- Refactor references to RebindDetailsGrid() - replace RebindGrid with ButtonUpdate_Click;
+20130527 16:41 - Comment out ButtonUpdate() call in $(document).bind('keydown', 'ctrl+s', function () { in JQuery_functions.js
+20130530 15:02 - Configure MHB.API to be debugged with WCFTestClient.exe - JUST MARK THE MhbApiService.svc AS START UP PAGE (!!!);
+					- Increase CommandTimeOut in GetDataReader in MHB.DAL (and overloads);
+					- Recreate MHB.API publish profiles;
+20130531 10:03 - Change target framework of MHB.API and MHB.BL projects to .NET 4.5; Add [IgnoreDataMemberAttribute()] to public SqlConnection Connection { get; set; } in ProductBase.cs and SupplierBase.cs;
+					- Cause: Exception when calling MHB.API.MhbApiService.svc from a browser or the WcfTestClient.exe - System.Runtime.Serialization.InvalidDataContractException: Type 'System.Data.SqlClient.SqlCredential' cannot be serialized.
+20130531 10:23 - Switch all projects to .NET 4.5 framework; Add references to System.Data.DataSetExtensions in MHB.Web and ?? (check svn log);
+20130531 14:30 - New popups - check JQUery_functions.js - ShowPieChartCategoriesPopup() etc; Modify DrawPieChart(); New charts in MainForm.aspx - ChartProductsPopup etc;
+20130606 14:21 - Change product default id to 1;
+					- New column in tbDetailsTableXX - SupplierID;
+					- New popup - ShowNewDetailsSupplierSelectorDiv();
+					- New UserControl - SupplierSelector;
+					- New property to ExpenditureDetail - Supplier;
+					- Change loading of Details - load a Supplier object;
+20130607 11:40 - http://mantis.myhomebills.info/view.php?id=52
+					- When selecting a supplier for the currently opened detailed expenditures display its name in the details popup title bar;
+					- Also added a label and link in the details popup: 'Selected supplier' and when clicked displays the pick supplier popup again; 
+20130610 14:11 - Rewrite ExpenditureManagerBase.cs methods: AddNewChildExpense(), DeleteChildExpenses(), UpdateChildExpenses() - when updating details it calculates the sum of the modified/added records and update tbMainTableXX with the value;
+					- No more calls to Button_Update(); (Removed from ButtonAddExpenditureDetails_Click(), ButtonUpdateDetailsTable_Click(), ButtonDeleteFromDetailsTable_Click())
+					- Rewrite RebindDetailsGrid() - no more setting the GridView1.TextBoxFieldValue directly;
+					- Rewrite ButtonDeleteFromDetailsTable_Click();
+					- Modify ExpenditureDetail.cs and ExpenditureDetailBase.cs - new properties - ConnectionString, DetailsTableName etc;
+					- ElseIf Request.Form("__EVENTTARGET") = HOTKEY_SAVE Then
+20130611 10:29 - http://mantis.myhomebills.info/view.php?id=54 GridViewDetails_SelectedIndexChanged - set drop down suppliers selected supplier;
+			   - http://mantis.myhomebills.info/view.php?id=55 Rename ButtonDetailsAttachBottom to ButtonDetailsTableAttachBottom to fire the $(document).on("click", "[id*=ButtonDetailsTableAttach]" function
+					and set the $("[id*=HiddenDetailsRowID]")
+20130611 17:02 - http://mantis.myhomebills.info/view.php?id=53 new label in calculations fieldset - LabelSumPerDayText; Changes to CalculateAndDisplaySum() - (check notes in mantis);
+20130611 17:10 - UPLOAD
+20130620 18:34 - http://mantis.myhomebills.info/view.php?id=61 Change DECLARE @sumDetails AS DECIMAL to DECLARE @sumDetails AS MONEY in ExpenditureManager.UpdateChildExpenses();
+				 Change DECLARE @sumDetails AS DECIMAL to DECLARE @sumDetails AS MONEY in ExpenditureManager.AddChildExpense() - BOTH OVERLOADS OF THE METHOD!!!
+20130625 12:22 - If IsNothing(HttpRuntime.Cache.Get("AllExchangeRatesHistory")) Changed from Application.Get to Cache.Get In Session_Start - was checking if Application variable is empty but was storing it in cache ?!
+20130626 15:42 - FillExpenditureList, GetExpenditureDetails, SearchExpenses etc - Pass SqlConnection as parameter; 
+					Overload for RebindGrid(List<Expenditure> items); 
+					Rewrite RebindGridOnSearchPerformed();
+					http://mantis.myhomebills.info/view.php?id=65
+20130627 13:49 - Added System.Threading.Thread.Sleep(waitInterval) to Global.asax.vb.SetExchangeRates() - http://mantis.myhomebills.info/view.php?id=64
+20130628 16:52 - MHB.Gadgets load logs incrementally - this._startDate = DateTime.Now; filter out action logs with empty City in Geo Localization;
+20130628 19:26 - New stored procedure - spGetDaysSinceLastCurrencyExchangeRatesUpdate; Changes in Gloval.asax.vb - check how many days since daysSinceLastCurrencyExchangeRatesUpdate;
+20130628 19:42 - Added _taskExchangeRates var to Global.asax.vb and check if it has completed before calling SetExchangeRates();
+20130629 08:43 - Global.asax.vb.DeleteDemoEntries GetSingleValue:Transaction (Process ID 60) was deadlocked on lock resources with another proces http://mantis.myhomebills.info/view.php?id=66
+20130702 11:06 - Changes in Session_Start in Global.asax.vb - new task declarations, renaming application vars, tasks and methods, executing tasks as a callback; bug fix set exchange rates and history was not called because task check if nothing - see changelog;
+					CheckBoxDetailsTableSelectChanges in [spGetDaysSinceLastCurrencyExchangeRatesUpdate] was wrong DATEADD mixed up parameters;
+20130702 11:42 - 0000068: Deselect supplier - css style of button is changed but supplier name label stays if none selected - HiddenSelectedSupplier = 1 http://mantis.myhomebills.info/view.php?id=68
+20130708 10:38 - http://mantis.myhomebills.info/view.php?id=71 on enter key pressed do not enter details if textboxes empty; if empty DO A SAVE !! (perhaps add warnings if just descr./price is filled in and name is empty)
+20130708 14:56 - Add initial text to LinkButtonSelectedDetailsSupplier because if you don't pick a supplier on opening the Details popup it stays empty and you cannot pick again;
+20130708 16:16 - http://mantis.myhomebills.info/view.php?id=69 Changes in [spAddNewUserCategory] and [spGetCategoriesTable] - Remove commas at the beginning of keywords, trim whitespaces etc; on update store just keywords before we added the name of the keywords - see changelog;
+20130708 22:43 - New table - tbMeasureTypes; alter tbDetailsTableXX - new columns - Amount, MeasureTypeID; Check db script 20130708.001.sql;
+					Added RadioButtonListWeightVolumeSelector and changes in ExpenditureManagerBase.AddNewChildExpense() to insert SupplierID, Amount and MeasureTypeID;
+					New functions in JQuery_functions.js - ShowDivWeightVolumeSelector(), CloseDivWeightVolumeSelector(), CloseSupplierPopup();
+20130708 22:59 - Added .Replace(",", ".") to ProductsManagement.ascx.vb.GridViewProducts_RowCommand - update;
+20130709 11:38 - http://mantis.myhomebills.info/view.php?id=74 Add only selected details to shopping list; if none selected add and print all Changes to ButtonDetailsPrintShoppingList_Click - add only selected items to shopping list - if none are selected add and print all
+					http://mantis.myhomebills.info/view.php?id=75 Hide add to products list icon in details grid when clicked and product already in shopping list Changes in GridViewDetails_RowCommand() COMMAND_PRINT_SHOPPING_LIST_DETAIL
+20130709 15:54 - http://mantis.myhomebills.info/view.php?id=51 commas have been added to all textboxes in PanelAddNewSupplier - moved it outside updatepanel and added button as trigger;
+					new js function CloseCreateNewSupplierDialog();
+20130709 16:22 - Check if HiddenDetailsMeasureTypeID.Value is numeric in ButtonAddExpenditureDetails_Click and set a default value of 3 in html;		
+20130711 11:15 - http://mantis.myhomebills.info/view.php?id=70 UrlRewriterBase.GetLink new overload with params KeyValuePair<string, string>[] args; New ImageButton in GridViewDetails ImageButtonEditDetailProduct and new command; js function ScrollToEditedProduct();
+20130719 11:41 - New user control: ProductPriceStatistics.ascx and new web form: DetailsProductPriceStatistics.aspx; New method in environment: GetOpenInCustomWindowScript();
+					New ImageButton in GridViewDetails: ImageButtonDetailProductStatistics;
+					BUG FIX: removed this.ConnectionString = result.ConnectionString; from ProductBase constructor as it was setting it to null;
+					New methods in ProductBase.cs: GetProductPriceStatistics a static and non static methods and accompanying methods in SQLHelper;
+20130719 15:41 - Added support for all users and corresponding details tables in spGetDetailsProductPriceStatistics; New extension method - IsBetween;
+					calculate tolerance - see ProductPriceStatistics.ascx.vb
+20130719 18:20 - http://mantis.myhomebills.info/view.php?id=77 added translations in gridviewdetails - 20130719.001.sql; Increase tolerance percentage for Product price statistics in ProductPriceStatistics.ascx
+20130806 13:17 - http://mantis.myhomebills.info/view.php?id=88 New method RebindDetailsGridProductsInfo(); New class in MHB.BL - ProductInfo;
+20130808 09:59 - http://mantis.myhomebills.info/view.php?id=87 New labels in calculations panel - LabelExpectedCostTotalSumDifference and LabelExpectedCostTotalSumDifferenceText - add tooltips to them in Page_Load on MainForm.aspx - new script - 20130808.001.sql;
+					Changes in [spGetBudgetsSavingsSumExpenses] and CalculateAndDisplaySum - new field - budgetTotal;
+20130808 13:01 - http://mantis.myhomebills.info/view.php?id=84 - Added a MeasureType property to ProductInfo class; Refactor GetProducts() in ProductAutoComplete.asmx.vb - use Environment.Products instead of making calls to the db for each key press;
+					Average product price is calculated in region below If Request.Form("__EVENTTARGET") = ButtonAddExpenditureDetails.ClientID in Page_Load in MainForm.aspx
+20130808 19:07 - http://mantis.myhomebills.info/view.php?id=89 changes in ButtonDetailsPrintShoppingList_Click added new attribute to CheckBoxDetailsTableSelect - ProductID;
+20130808 21:38 - http://mantis.myhomebills.info/view.php?id=89 changes in ButtonDetailsPrintShoppingList_Click; added ElseIf Request.Form("__EVENTTARGET") = ButtonDetailsPrintShoppingList.ClientID and new js function - confirmSelectDetailsPrintShoppingListMode;
+					Added dialog-modal div in GridViewDetails;
+20130808 09:45 - http://mantis.myhomebills.info/view.php?id=90 translations for details print shopping list mode selection dialog - 20130809.001.sql; Changes in confirmSelectDetailsPrintShoppingListMode - added GetTranslatedValue inline tags;					    
+20130809 21:09 - http://mantis.myhomebills.info/view.php?id=91 For Each col As TemplateField In CType(ctl, GridView).Columns -  changed to - For Each col As TemplateField In CType(ctl, GridView).Columns.OfType(Of TemplateField)()
+20130820 11:34 - http://mantis.myhomebills.info/view.php?id=81 added new js function: ResetGridCellSum(); call to ResetGridCellSum() in Page_PreRender() 
+					http://mantis.myhomebills.info/view.php?id=93 document.getElementById("ctl00_ContentPlaceHolder1_GridViewDetails_ctl03_TextBoxDetailNameNew"); in CloseDivWeightVolumeSelector();
+					http://mantis.myhomebills.info/view.php?id=24 translation fixed in 20130820.001.sql; 
+					http://mantis.myhomebills.info/view.php?id=7 added autocomlete and on enter and/or selecting an item from autosuggest list it postbacks and fires the ButtonPerformSearch;
+					http://mantis.myhomebills.info/view.php?id=94 added auto complete functionality  - spGetSearchKeywords - SearchAutoComplete.asmx; New property in Environment - SearchKeywords, new method in MHB.BL.ExpenditureManager - GetSearchKeywords();
+20130821 09:07 - Added close event handler to ShowDivWeightVolumeSelector which focuses the Textbox new detail;
+					http://mantis.myhomebills.info/view.php?id=95 Added GridView1_RowCommand and LinkButtonBillDate
+					Added UpdatePanelTabButtons and UpdatePanelCurrentMonth so that they change when Me.Month and/or Me.Year are changed;
+					Changes to SetCurrentMonthLabelText() and SetCurrentYear();
+					Store Environment.ExpenditureManager property into Session
+20130822 13:27 - http://mantis.myhomebills.info/view.php?id=96 New construcor in Category, new prop SqlConnection; New constructor in User, new prop SqlConnection; 
+					Changes in MHB.BL.ExpenditureManagerBase.cs.FillExpenditureList - load Category and User;
+					New methods in MainForm.aspx.vb - InitializePieChart(), GetGroupedCategoriesWithSums() change DrawPieChart();
+					http://mantis.myhomebills.info/view.php?id=58 - new js function ShowPieChartSuppliersPopup(); new method - in MainForm.aspx.vb - GetGroupedSuppliersWithSums();
+					new tab TabPanelSuppliersPieChart - fix translations - 20130822.001.sql;
+20130822 17:55 - Translation fix: ImageButtonOpenPieChartSuppliersInNewWindow.OnClientClick jQuery dialog title SuppliersPieChartTitle;
+					Some refactoring in MainForm.aspx.vb.Page_Load();
+					Change width of pie charts on MainForm.aspx;
+20130822 18:25 - http://mantis.myhomebills.info/view.php?id=97 Added overload for MHB.BL.ExpenditureManagerBase.cs.GetUserIncome() method accepting month as a parameter; set Environement.IncomeDataSource in Events.aspx.vb.CalendarEvents_VisibleMonthChanged event handler;
+20130823 12:50 - http://mantis.myhomebills.info/view.php?id=49 Added new UserControl TodaySpentListControl; new div in MainForm.aspx - DivTodaySpentList new UpdatePanel - UpdatePanelTodaySpentList; following changes also related to:
+					http://mantis.myhomebills.info/view.php?id=60 Two new methods in Environment - RecordTransactions() and AddTransation(); Add calls to ButtonUpdate_Click, ButtonAddExpenditureDetails_Click, ButtonUpdateDetailsTable_Click, ButtonDeleteFromDetailsTable_Click
+20130823 23:54 - http://mantis.myhomebills.info/view.php?id=100
+20130824 10:00 - http://mantis.myhomebills.info/view.php?id=101 changes to spDeleteDemoEntries added IF @interval > 15 OR (SELECT COUNT(ID) AS Savings FROM tbMonthlySavings WHERE UserID = 25) > 1
+20130824 12:57 - Added OrElse HttpContext.Current.Request.IsLocal to Login.aspx.vb.Page_Load() so in debug we can directly login; Added a fix port for development server - 1234;
+					http://mantis.myhomebills.info/view.php?id=104 - added transactionSum = .DetailValue to each switch case in ButtonAddExpenditureDetails_Click; .DetailValue = value = transactionSum is wrong!!;
+					http://mantis.myhomebills.info/view.php?id=105 - Me.Products = Nothing in ButtonAddNewDetailsProduct_Click
+					Added Me._en.Products = Nothing to DeleteCommand and UpdateCommand switch cases in ProductsManagement.ascx.vb.GridViewProducts_RowCommand;
+					Changed .DetailValue = count * IIf(selectedProduct IsNot Nothing AndAlso selectedProduct.Weight > 0, selectedProduct.Weight, 1) * value in ButtonAddExpenditureDetails_Click
+					http://mantis.myhomebills.info/view.php?id=106 Changes to [spGetDetailsProductPriceStatistics] use same calculations for volume and weight WHEN MeasureTypeID = 1 OR MeasureTypeID = 2 THEN DetailValue / Amount
+					Changes to  If Request.Form("__EVENTTARGET") = ButtonAddExpenditureDetails.ClientID in MainForm.aspx.vb.Page_Load;
+					New method GetSuggestedProductAveragePrice replaces latter changes and extracts them to a new method;
+					VERY IMPORTANT changes to handle Volume and Weight MeasureTypes the same across sps and methods;
+					Changes to ButtonAddExpenditureDetails_Click switch
+20130824 20:04 - http://mantis.myhomebills.info/view.php?id=102 added SqlParameters instead of concatenated script;
+					http://mantis.myhomebills.info/view.php?id=103 TodaySpentListControl.ascx.vb RebindGrid() - filter mainDataSource by m.HasDetails = False
+20130827 13:41 - http://mantis.myhomebills.info/view.php?id=107 Refactor Global.asax.vb.LogLastLoginTime(); Moved checking whether Cache item is null inside of method itself instead of before starting the new task so they are in the same thread... I suppose;
+					Refactor UserManager.User.GetUserID - added overload methods and a private one called GetUserIDInternal; Added overload for GetAPIKey() and GetAPIKeyInternal;
+
+20130827 16:09 - Added HttpRuntime.Cache.Insert() to Global.asax.vb.LoadExchangeRatesHistoryIntoCache(); New parameterized constructors for ActionLog and ExceptionLog accepting parameter SqlConnection, overloads for GetAll methods of both classes;
+					Added SqlConnection property and <IgnoreDataMemberAttribute()> to it; SqlHelper.LoadActionLogsInternal and SqlHelper.LoadExceptionLogsInternal methods; Added disposing to DataReader to User.GetAPIKey method and MHB.BL GetUserExpenditures;
+20130827 18:54 - http://mantis.myhomebills.info/view.php?id=108 VisitorsMaps.xaml.cs.LoadCities - foreach filter ActionLogs where email is not empty - do the same for grouping statement used to mimic DistinctBy functionallity;
+20130828 09:42 - New int extension methods in MHB.BL.Extensions.NumericExtensions - IsEven() and IsOdd();
+					Added check prior to executing GLobal.asax.vb.DeleteDemoEntries -  If DateTime.Now.Hour.IsEven();
+					Added System.Threading.Thread.Sleep(interval) to Global.asax.vb.LoadExchangeRatesHistoryIntoCache() to cure exception - GetDataTable:Transaction (Process ID 65) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. qry:spGetExchangeRates 2012-01-01
+					New Cities added to ActionLog;
+					Stretch MHB.Gadgets tab container on resize;
+20130828 11:28 - MHB.Gadgets.MainWindows.xaml.cs._worker_DoWork - Set this._startDate = newActionLogs.Max(al => al.LogDate); was not working when client and server have different time set ! ! !
+					this._startDate = newActionLogs.Max(al => al.LogDate).AddSeconds(1);
+20130828 18:06 - http://mantis.myhomebills.info/view.php?id=111 Comment out SetTranslationInCache call in Global.asax.vb.Application_Start;
+					 Catch ex As ThreadAbortException added to GridViewDetails_RowCommand
+					 http://mantis.myhomebills.info/view.php?id=109
+					 http://mantis.myhomebills.info/view.php?id=110 CategoryBase.cs.c = SQLHelper.GetCategory( forgot to assign result to c 
+20130828 18:47 - http://mantis.myhomebills.info/view.php?id=112 Added record transactions functionallity to GridViewDetails_RowCommand;
+20130828 19:33 - http://mantis.myhomebills.info/view.php?id=112 Moved recording of transactions to RebindGrid() commented out all calls to RecordTransaction() and AddTransaction() methods;
+20130829 12:56 - http://mantis.myhomebills.info/view.php?id=113 ProductsManagement.ascx.vb - added LinkButtonRemoveFromShoppingList, GridViewProducts - ImageItemIsInShoppingList and RemoveFromListCommand;
+20130829 19:27 - http://mantis.myhomebills.info/view.php?id=115 Added check Me.Categories.Select(Function(c) c.ID).Contains(d.CategoryID) to MainForm.asxp.vb.GetGroupedCategoriesWithSums()
+					DrawPieChart() - Cannot find column [costSum]. Added check  If table.Columns.Contains("costSum") AndAlso table.Columns.Contains("costCategoryName") Then
+20130829 19:34 - http://mantis.myhomebills.info/view.php?id=116 Added check  AndAlso Me.Suppliers.Select(Function(s) s.ID).Contains(d.SupplierID)
+20130830 13:19 - Add numeric up/down decoration to GridViewDetails footer row amount textbox - Environment.ExecuteScript(GridViewDetails, "$('[id*=TextBoxDetailAmountNew]').spinner();", True);
+20130830 16:14 - http://mantis.myhomebills.info/view.php?id=114 PHASE #1 - New constructor of Product; two new classes - ProductParameter and ProductParameterBase; new methods in Product - GetParameters and AddParameter with overload;
+					New properties for Product - Parent and ParentID; New methods in MHB.BL.SQLHelper - GetProductParameters and AddProductParameter;
+20130830 20:04 - http://mantis.myhomebills.info/view.php?id=114 New method in MHB.BL.SQLHelper.AddChildExpenseProductParameters; new db script - 20130830.001.sql; ButtonAddExpenditureDetails_Click - load Product - .Product = New Product(.ProductID, Me.UserID, Me.GetConnectionString);
+20130831 09:49 - RadioButtonListWeightVolumeSelector after adding a detail set selection to count; New SqlConnection property of ExpenditureDetail; New method - AddChildExpenseInternal called from both AddChildExpense method overloads;
+					rewrite UpdateChildExpenses();
+20130831 14:16 - New method - MHB.BL.SQLHelper.UpdateProductParameters();
+20130901 09:20 - http://mantis.myhomebills.info/view.php?id=114 New table in database - tbProductParameterType; Two new classes in MHB.BL - ProductParameterType and ProductParameterTypeBase; See script 20130901.001.sql
+					Change MHB.BL.SQLHelper.UpdateProductParameters to support new column ProductParameterType
+					Change MHB.BL.SQLHelper.GetProductParameters to support new column ProductParameterType
+					Change MHB.BL.SQLHelper.AddProductParameter to support new column ProductParameterType	
+20130909 11:26 - http://mantis.myhomebills.info/view.php?id=118 and related 119 Refactor MHB.UserManager.User.GetUserIDInternal() - use SQLParameters;
+					! ! ! IMPORTANT ! ! ! - Replaced SqlParameter[] with IDataParameter[] everywhere in DatabaseConnector.cs;
+					Light refactoring of MHB.Web.Login.aspx.vb.ButtonLogin_Click();
+20130910 10:38 - http://mantis.myhomebills.info/view.php?id=123 - Add paging to products management; Fix filtering when changing supplier category is lost and vice versa:
+					New dropdown DropDownListPageSize; added GridViewProducts_PageIndexChanging to ProductsManagement.ascx.vb; set page size in RebindProductsGrid() from DropDownListPageSize;
+					http://mantis.myhomebills.info/view.php?id=124 - Add product price statistics to products management:
+						Changes in Page_Load in ProductPriceStatistics.ascx.vb; New TemplateColumn in ProductsManagement.ascx.GridViewProducts copied from GridViewDetails statistics column;
+20130912 11:59 - http://mantis.myhomebills.info/view.php?id=80 Batch change selected details supplier:
+					New postback case added in Page_Load - ElseIf Request.Form("__EVENTTARGET") = BATCH_SET_DETAILS_SUPPLIER; Pass selected detail ids from SetSupplierIdHiddenField();
+					Changed MHB.BL.UpdateChildExpenses()
+20130912 12:33 - http://mantis.myhomebills.info/view.php?id=80 - set supplier in ButtonUpdateDetailsTable_Click - change it for selected items else leave it unchanged;
+20130912 13:17 - http://mantis.myhomebills.info/view.php?id=125 - Display message when batch changing supplier of selected details:
+					New script: 20130912.001.sql for message; added message to Request.Form("__EVENTTARGET") = BATCH_SET_DETAILS_SUPPLIER case; Still to add message in ButtonUpdateDetails_Click;
+20130913 12:07 - http://mantis.myhomebills.info/view.php?id=114 - Input mileage and calculate average consumption and remaining range and planned range for this month:
+					ExpenditureManagerBase.GetExpenditureDetails() replace parentID parameter with parent of type Expenditure;
+					GridViewDetails new TemplateField with HeaderText Mileage; New function in Environment - GetColumnByHeaderText returns DataControlField; Hide this column for category expenses other than Fuel in RebindDetailsGridProductsInfo();
+					ButtonUpdateDetailsTable_Click - get input mileage from TextBoxDetailsTableMileage and set .Product.Parameters = new array of parameters - see next change for that matter:
+						MHB.BL.SQLHelper - change UpdateProductParameters function to delete and insert into tbProductParameters if passed collection contains new parameters with ID == 0 else UPDATE existing ones;
+						Bug fix - use reader.GetInt32(index); instead of reader.GetInt16(index); in GetProductParameters();
+					Set mileage value in GridViewDetails_RowDataBound;
+20130913 12:55 - http://mantis.myhomebills.info/view.php?id=114 - New property of ProductInfo - Consumption; calculate average consumption in RebindDetailsGridProductsInfo(); Resize GridViewDetails in ShowDetailsTable();
+20130913 14:03 - MHB.BL.SQLHelper.DeleteChildExpense() added delete from tbProductParameters;
+20130913 15:03 - Fix in RebindDetailsGridProductsInfo() calculate average fuel consumption just for entries with mileage > 0;
+20130913 15:20 - ButtonUpdateDetailsTable_Click - fix update just expenses that are either selected or have different name/descr/value;
+20130914 13:11 - Bug fix in MHB.BL.SQLHelper.UpdateProductParameters() it was deleting all product parameters of the given type - filter by ProductParameter.ParentID
+					Refactor latter method - use SqlParameters;
+20130916 14:16 - http://mantis.myhomebills.info/view.php?id=114 - New stored procedure - spGetFuelStatistics - for calculating expected range/quantity based on average fuel price for current and previous month;
+20130916 20:45 - http://mantis.myhomebills.info/view.php?id=114 - Won't be using stored procedure spGetFuelStatistics for now - extended MHB.Web.MainForm.aspx.vb.RebindDetailsGridProductsInfo();
+					New properties for MHB.BL.ProductInfo used in GridViewDetailsProductsInfo; Restyle GridViewDetails - merged template fields and changed widths etc. Changes in ShowDetailsTable();
+20130916 22:56 - http://mantis.myhomebills.info/view.php?id=114 - BUG FIX: After updating details when adding a new detail of category fuel duplicates with empty parent ids were added; Resolution:
+					MHB.BL.ExpenditureManager.DeleteChildExpenses() - added DELETE FROM tbProductParameters WHERE ParentID IN ({1}) query;
+					MHB.BL.SQLHelper.GetProductParameters() removed case else if  if (parentID <= 0);
+20130916 23:20 - http://mantis.myhomebills.info/view.php?id=114 - Changes in ButtonUpdateDetailsTable_Click - added If .Product.Parameters.Any() Then case and so if not empty update existing mileage parameter (the single one for the moment)
+20130917 10:21 - http://mantis.myhomebills.info/view.php?id=77 - Changes in Environment.TranslateControls() in GridView case - changed TemplateField filter to DataControlField base class so that BoundField headers (and all types of GridView columns) are supported and translated;
+					New translations script - 20130917.001.sql
+					Changed header text to match script ControlIDs in GridViewDetailsProductsInfo;
+20130917 12:10 - New property for ProductInfo - RemainingRange; New translation for header added; Changes in RebindDetailsGridProductsInfo() to calculate new property; New column in GridViewDetailsProductsInfo;
+20130917 22:11 - http://mantis.myhomebills.info/view.php?id=128 - New property in Environment - IsInEditMode; Environment.TranslateControls - add case checking Environment.IsInEditMode;
+					New admin LinkButton in MasterPage - LinkButtonEditMode; Moved SetTranslationInCache() and GetTranslations() methods from Global.asax.vb to Environment;
+					New popup in MainForm.aspx - PanelEditControlTranslation;
+					New function in JQuery_Functions - ShowEditControlTranslationPopup();
+					New method in MainForm.aspx.vb - ButtonSaveNewTranslation_Click()
+20130918 09:33 - http://mantis.myhomebills.info/view.php?id=128 - Deleted Translation struct in MHB.BL.Environment and created new classes in MHB.BL - Translation and TranslationBase;
+					GetTranslations() method deleted from Environment and rewritten in MHB.BL.TranslationBase as a static method;
+					Language enum moved from Environment to MHB.BL.Enums - changed all references in project;
+20130918 10:45 - e.Page.ClientScript.RegisterClientScriptInclude(Me.GetType(), "Global", Me.ResolveClientUrl("~/Javascript/EditModeScripts.js")) added to MasterPage.Page_Init to disable jQuery attached click events;
+					added <span id="PanelAdminLinks" to links in MasterPage;
+					New js file - EditModeScript
+					Added - webControl.Attributes.Remove("onclick") to TranslateControls;
+20130918 11:11 - Me.IsInEditMode case in Environment.TranslateControls - filter out ImageButtons and remove OnClientClick handlers for Buttons and LinkButtons;
+20130918 14:10 - http://mantis.myhomebills.info/view.php?id=128 - Refactor Environment.TranslateControls();
+20130918 15:13 - http://mantis.myhomebills.info/view.php?id=128 - Changes in UPDATE statement in ButtonSaveNewTranslation_Click;
+					Changes in MHB.Web.MainForms.aspx.vb.RebindGrid - added if Me.IsInEditMode;
+20130918 15:32 - Added new method in Environment - PutGridViewInEditMode; Calls in RebindGrid and RebindDetailsGrid; PanelDetailsTable added inline tag to set style display;
+20130918 19:40 - http://mantis.myhomebills.info/view.php?id=128 - Changes in TranslateControls() don't remove OnClientClick handler for LinkButtons; Changes in EditModeScript.js - added new method - ShowDetailsTableInEditMode();
+					Changes in MHB.Web.MainForms.aspx.vb.Page_load - added new constant and request eventtarget case - REBIND_DETAILS_GRID_IN_EDIT_MODE;
+					Renamed PutGridViewInEditMode to PutGridViewHeaderInEditMode and add a call in RebindDetailsGridProductsInfo();
+					Removed  <div id="PanelDetailsTable" style="display: none;" inline setting with a code block;
+20130918 20:52 - Check for ProductParameters modifications in ButtonUpdateDetailsTable_Click() - two new private methods added - ExpenditureDetailProductParametersAreModified and ProductParametersAreModified
+					Changes in ButtonUpdateDetailsTable_Click in assigning a Product if originalExpense.Product is assigned to newExpenseDetail.Product - originalExpense.Product.Parameters get the value of newExpenseDetail.Product.Parameters - solved that by assigning it to New Product with an empty enumerable ot ProductParameters;
+20130919 10:09 - http://mantis.myhomebills.info/view.php?id=128 - Changes in PutGridViewHeaderInEditMode() for GridView headers display the column original header text as controlid - original header text is stored in SortExpression when in edit mode - changed Environment.TranslateControls()
+					Removed ControlTextEN = @ControlID condition from ButtonSaveNewTranslation_Click
+					New method in TranslationBase.UpdateControlTranslation() - nmoved logic from ButtonSaveNewTranslation_Click();
+20130919 11:06 - Added four overloads of MHB.BL.ExpenditureManagerBase.GetExpenditureDetails() and a base method - GetExpenditureDetailsInternal();
+20130919 12:13 - If all details for an expenditure have the same product category display a button which loads all details of the same product category for the current year;
+					Added overload for RebindDetailsGrid and a new base method - RebindDetailsGridInternal;
+					New method - CheckIfAllDetailsProductsAreOfSameCategory(); New translations script add - 20130919.001.sql
+20130919 16:57 - Refactor MHB.BL.SQLHelper.GetExpense() - added overload for MHB.BL.ExpenditureManager.GetUserExpenditures(); Check for d.Parent IsNot Nothing in RebindDetailsGridProductsInfo;
+20130919 19:42 - Refactor MHB.Web.TranslateControls in Case GetType(RadioButtonList).Name;
+20130919 19:51 - !!! IMPORTANT !!! Huge performance improvement - Replaced en.TranslateControls(Me.Page.Controls) with en.TranslateControls(Me.Controls) in all custom controls;
+					Changes to 20130919.001.sql translations;
+20130924 13:15 - http://mantis.myhomebills.info/view.php?id=129 - Add context menu link in details to copy selected detail to another expenditure that has details:
+					Added new popup MoveDetailsSelectParent in MHB.Web.MainForm.aspx; Added new js function - MoveDetailsToNewParent in JQuery_Functions.js;
+					Added ListBoxParentExpenditures and ListBoxParentExpenditures_SelectedIndexChanged;
+20130924 15:26 - Put ListBoxParentExpenditures in UpdatePanel - UpdatePanelMoveDetailsSelectParent; new parameter added to MoveDetailsToNewParent(name); inline tag script init in ImageButtonCopyPasteDetail;
+20130925 10:39 - Changes in ShowEditControlTranslationPopup(); Added check If expensesToUpdate.Any() to ButtonUpdateDetails_Click(); Tiny refactor in GridViewDetails_RowDataBound(); New property in Environment - Me.SelectedDetails;
+					New js function in MainForm.aspx - MoveSelectedDetails() called from ImageButtonCopyPasteDetail so that we can use inline tags to get translated title for the popup
+					BUG FIX: Changes in ExpenditureDetailProductParametersAreModified() if details has product but no parameters we must return true adn add parameters;
+20130927 11:20 - http://mantis.myhomebills.info/view.php?id=89 - Bug printing shopping list from details grid; was not printing and showing the options confirm popup only on top print button:
+					Removed $("[id*=ButtonDetailsPrintShoppingList]").click from JQuery_function.js and added ButtonDetailsPrintShoppingList.OnClientClick;
+					Rewritten FileDownloader.aspx.vb to acceps query string parameters;
+					Rewritten Environment.SaveFileAs() method;
+					In MainForm.aspx.vb.ButtonDetailsPrintShoppingList_Click call FileDownloader with query string parameters instead of just calling the SaveAs() method;
+20130927 15:19 - Auto hide pick supplier and select measure type popup;
+20131007 10:23 - Changes in CloseDivWeightVolumeSelector() added parameter flag if unchecked detail inputs would not be focused.
+					Increase timeout in ShowNewDetailsSupplierSelectorDiv and ShowDivWeightVolumeSelector to 5 seconds;
+					Set spinner input decoration of TextBoxDetailAmountNew in Page_Load;
+20131008 09:49 - Minor refactoring in SearchControl.ascx.vb;
+20131011 20:06 - http://mantis.myhomebills.info/view.php?id=132 - Changes in ExpenditureDetailProductParametersAreModified(); 
+					removed checking if newChildExpense Product is null because it was initialized with empty parameters and products;
+20131027 21:11 - Bug fix - double clicking a cell in either details or main grid was distorting width of cells;
+20131028 13:41 - Added paging to GridView1; New handlers - DropDownListDetailsPageSizeTop_SelectedIndexChanged and GridViewDetail_PageIndexChanging; Changes in RebindDetailsGridInternal; 
+					New css style - GridPager New overload of RebindDetailsGrid() accepting zero parameters; Applied new GridPages css style to ProductsManagement.ascx;
+20131028 21:47 - Get links for Help, FAQ, support, help, svn and forum from URLRewriter; new entries in URLRewrite.xml;
+20131030 19:19 - http://mantis.myhomebills.info/view.php?id=60 GetExpenditureDetailsInternal added fill DetailDateCreated property from reader; New columns added to tbDetailsTableXX - DetailDateCreated, DetailInitialValue - 20131030.001.sql; 
+					Changed AddChildExpenseInternal to insert new columns AddChildExpenseInternal;
+					New property of ExpenditureBase - DateRecordCreated; Changes in ExpenditureManager.AddNewParentExpense and ExpenditureManager.FillExpenditureList;
+					Changes in ExpenditureManagerBase.UpdateParentExpenses set FieldInitialValue if no previous transactions which means it's a new record we first set the value of;
+					Changes in queries in TodaySpentListControl.RebindGrid;
+20131030 21:26 - Added - e.DetailInitialValue = (decimal)reader["DetailInitialValue"]; to ExpenditureManagerBase.GetExpenditureDetailsInternal;
+20131031 19:15 - Comment out context.BeginRequest +=  in HttpModules;
+20131107 19:39 - http://mantis.myhomebills.info/view.php?id=60 - Bug fix -was still showing expenses from previous days/months as where clause was wrong - alter query clauses in TodaySpentListControl.RebindGrid();
+20131108 11:17 - http://mantis.myhomebills.info/view.php?id=137 - New optional parameter in ProductsManagement.RebindProductsGrid() - pageSize that can optionally be set to all so that we can find the row with the selected product id and set it in edit mode;
+20131114 16:50 - Added new property of Expenditure - Transactions; added overloads of TransactionBase.GetAll() method accepting SqlConnection parameter;
+					TODO: Imrove TodaySpentListControl grid databind;
+20131114 20:57 - http://mantis.myhomebills.info/view.php?id=60 - Bug fix - changes in TodaySpentListControl.RebindGrid() - see previous change;
+20131209 17:02 - http://mantis.myhomebills.info/view.php?id=142 - New command for GridViewDetails - COMMAND_DETAIL_MERGE; New stored procedure spMergeDetails - new script added in folder sql - spMergeDetails.sql; New method added in ExpenditureManagerBase.cs - MergeDetails;
+20140108 15:51 - Happy new year! Wish you thousands of active new users this year and a new dedicated server just for you! :) - installed Sonar plugin for Jenkins.
+20140122 15:00 - http://mantis.myhomebills.info/view.php?id=151 - Add column quantity/amount to details grid which displays the amount for weight and volume measure types; apply suming of cell values when clicked on and selected and display sum in status pane;
+					TextBoxDetailsTableFieldAmount added in template field in GridViewDetails;
+					Add attribute to AddCellValue in GridViewDetails_RowDataBound;
+20140123 15:23 - http://mantis.myhomebills.info/view.php?id=138 - Add details popup to each details showing date created, attachment link/size/etc, supplier, product and so on;
+					New UserControl - CustomControls\ProductDetails; New translations - 20140123.001.sql; Changes in EditModeScripts.js - display new ProductDetails popup - ShowProductDetailsPanel();
+					In Product - add third tuple item to return value of GetProductPriceStatistics(); Changes to spGetDetailsProductPriceStatistics;
+20140124 18:34 - http://mantis.myhomebills.info/view.php?id=152 - 000152: Bug in http://myhomebills.info/Forms/DetailsProductPriceStatistics.aspx?ProductID=66&MeasureTypeID=2 - ! Check related tasks to this issue !
+					Merged the newly created ProductDetails UserControl with the existing ProductPriceStatistics.ascx and redo the Page_Load event handler of ProductPriceStatistics to fix the bug and set the ExpenseDetail property of the ProductDetails control;
+					In GridViewDetails - ImageButtonDetailProductStatistics - GetOpenInCustomWindowScript - just pass a single 'detid' query string parameter;
+					Comment out the ProductDetails instance and declarations from MainForm.aspx.vb and the dblclick event in JQuery_function.js;
+20140125 18:31 - http://mantis.myhomebills.info/view.php?id=106 - Changes to spGetDetailsProductPriceStatistics - make MeasureType parameter optional and when not provided take the most frequently occurring value;
+					In ProductsManagement.ascx - use average price when adding to shopping list in ButtonAddToShoppingList_Click();
+					In ProductBase.cs - Make a parameterless GetProductPriceStatistics method override which takes advantage of the new functionallity described in beggining - spGetDetailsProductPriceStatistics;
+					In SQLHelper.cs - Add new optional parameter SqlConnection connection to GetProductPriceStatisticsReader(), FillProductPriceStatisticsList();
+20140127 11:33 - http://mantis.myhomebills.info/view.php?id=138#c127 - Additional functionality - add "accuracy indicator" label showing how many entries of that product have been taken into account when getting the price statistics as some could have been ignored as their measure type could be different than the rest etc. 
+					Product.GetProductPriceStatistics() methods are now obsolete - instead in ProductPriceStatistics just use Me._en.ExpenseManager.GetExpenditureDetails() (new overload was created accepting just productID as parameter)
+					this method always returns all of the values so nothing is filtered;
+20140212 10:27 - http://mantis.myhomebills.info/view.php?id=147 - Display all flagged expenditures link does not work - ExpenditureManagerBase.cs - new overload for GetUserExpenditures(bool allFlaggedOnly);
+					Changes in MainForm.RebindGrid() - added check If Me.DisplayAllFlaggedSums Then...
+20140213 13:28 - http://mantis.myhomebills.info/view.php?id=154 - (see relations) - Purchase history popup showing items edited/added for a selected date;  Show last edite items list for both details and main;
+					Added two new user controls - PurchaseHistoryControl and PurchaseHistoryDateSelectorControl; Changes in JQuery_functions.js - ShowPurchaseHistoryList() and ShowPurchaseHistoryDateSelector();
+					PurchaseHistory_DateSelected event handler in MainForm.aspx; New css styles - PlainTextPale...;
+20140226 11:27 - http://mantis.myhomebills.info/view.php?id=155 -Details grid paging not persisting page size in dropdowns and after post back reverts to default page size -
+					Added a new session property to Environment - PageSizeDetails;
+20140228 15:10 - http://mantis.myhomebills.info/view.php?id=138 - Extended ProductDetails popup with new labels showing quantity of product entries/sum etc. New overload for GetExpenditureDetails()  using Expression<Func<ExpenditureDetails, bool>> as parameter
+20140531 16:52 - http://mantis.myhomebills.info/view.php?id=164 - Change ReceiptScanner RootNamespace to MHB.ReceiptScanner;
+					ReceiptImporter - redo the Scan() method; Parse price and name individually instead of splitting price and name;
+					ReceiptImporter - use engine.Process(img, PageSegMode.SingleBlock)) instead of just engine.Process(img)) - wasn't returning the prices;
+					MainForm - added DropDownListDetailsGridProductSuggest in GridViewDetails; put AjaxFileUploadReceipt in an UpdatePanel called - UpdatePanelAjaxFileUploadReceipt;
+					MainForm - find product suggestion in GridViewDetails_RowDataBound and fill DropDownListDetailsGridProductSuggest;
+					MainForm - AjaxFileUploadReceipt_UploadComplete - remove switch case block - just add with MeasureType.Count;
+20140531 22:34 - http://mantis.myhomebills.info/view.php?id=164 - MainForm - GridViewDetails.TextBoxDetailsTableFieldAmount visibility set in GridViewDetails_RowDataBound;
+					MainForm - GridViewDetails - two new TemplatFields - ImageButtonDetailApproveSuggestedProduct and ImageButtonDetailRejectSuggestedProduct - 2 new image files for mouseout - tick_circle_faded.png and general-delete-icon_faded.png;
+20140602 10:16 - http://mantis.myhomebills.info/view.php?id=164 - MHB.BL.ExpenditureDetail - new boolean property ForceUpdate added used in MainForm.SaveGridViewDetailsChanges();
+					MHB.Web.MainForm - GridViewDetails_RowCommand.COMMAND_DETAIL_APPROVE_SUGGESTED_PRODUCT - set ForceUpdate to true;
+20140603 21:43 - http://mantis.myhomebills.info/view.php?id=164 - MHB.Web Images - new general-delete-icon.png and general-delete-icon_faded.png icons; GridViewDetails - rearrange product approve reject icons and visibility;
+					MHB.Web.GridViewDetails_RowCommand implement COMMAND_DETAIL_REJECT_SUGGESTED_PRODUCT case;
+					Old general-delete-icon icons renamed to general-delete-icon_red;
+20140604 10:34 - http://mantis.myhomebills.info/view.php?id=164 - AjaxFileUploadReceipt_UploadComplete - added try catch block - in finally save receipt as compressed jpeg and delete the original big bmp used for ocr'ing;
+					new script added - 20140604.001.sql containing tooltip translations for GridViewDetails image buttons - ImageButtonDetailApproveSuggestedProduct and ImageButtonDetailRejectSuggestedProduct
+20140605 11:30 - http://mantis.myhomebills.info/view.php?id=123 - ProductsManagement.RebindProductsGrid remove optional page size parameter and directly set GridViewProducts.PageSize = DropDownListPageSize.SelectedValue;
+					ProductsManagement.RebindProductsGrid.GridViewProducts markup - ShowFooter=true and PageSize=20;
+20140605 16:43 - http://mantis.myhomebills.info/view.php?id=26 - refactor DownloadAttachment.aspx.vb - CheckAccess() only called if IsShared is false;
+				 http://mantis.myhomebills.info/view.php?id=165
+					! ! ! IMPORTANT ! ! ! - New column added to both tbMainTableXX grid and tbDetailsTableXX all tables - IsShared bit - default 0;
+										  - New script - 20140605.001.sql;
+										  - IsShared column added to MHB.BL.Expenditure and MHB.BL.ExpenditureDetails;
+										  - REWRITE MHB.BL.UpdateParentExpenses - use SQL parameters; FillExpenditureList and FillExpenditureDetails - load IsShared;
+			   - New icons - sharethis-16.png, sharethis-24.png and sharethis-16_faded.png - used in MainForm.GridView1/GridViewDetails -ImageButtonShareMainAttachment and ImageButtonShareDetailAttachment;
+			   - New row commands for both GridView1 and GridViewDetails.RowCommand - COMMAND_SHARE_MAIN_ATTACHMENT, COMMAND_SHARE_DETAIL_ATTACHMENT;
+			   - New entry in URLRewrite - DownloadAttachment;
+20140606 10:57 - MHB.BL.ExpendigutureManager.UpdateParentExpenses - Added IsShared = to query;
+					IsShared added to insert statements in spDeleteDemoEntries;
+					! ! ! IMPORTANT ! ! ! - MHB.Web.MainForm.ButtonUpdate_Click complete rewrite - new method extracted - GetExpenditureFromGridViewRow() which constructs and returns an Expenditure object from a GridViewRow;
+					- MHB.Web.MainForm.GridView1_RowEditing - use URLRewriter.GetLink;
+					- MHB.Web.MainForm.GridView1_RowCommand - handle ThreadAbortException;
+20140812 11:37 - http://mantis.myhomebills.info/view.php?id=167 - Add category to details so that statistics for products of that category can be generated and in future details can be grouped in a category;
+					Add new column CategoryID to all tbDetailsTableXX tables - 20140812.001.sql;
+					SQLHelper.AddChildExpenseInternal - set details category id same as Product.CategoryID when inserting;
+					Product - set default CategoryID to Category default const;
+20140812 14:53 - Rewrite spGetAllUsersCategorySums.sql used to fill the 3D sums per categories chart;
+					New script - 20140812.003.sql;
+20140812 16:36 - Update user category icons from inetpub; add imagebutton for category to GridViewDetails; MasterPage add Request.IsLocal condition to IsInBlackList;
+20140812 23:29 - Added default category with ID 0 - 20140812.004.sql;
+20140813 10:49 - http://mantis.myhomebills.info/view.php?id=167 - Rewrite spGetUsersAverageExpensesForCategory using tbDetailsTable data and sp_executesql so that table names can be passed as parameters;
+20140813 10:49 - http://mantis.myhomebills.info/view.php?id=167 - Changes to spGetAllUsersCategorySums, spGetSumsForCategoriesPerMonth, spGetUsersAverageExpensesForCategory - when calculating sum from
+					DetailsTable check if MainTable.CostCategory is not the same as the one we're looking for - as MainTable holds the sum of all details and we don't want it doubled;
+					Additional columns to CostsCompare.aspx chart
+20140814 09:55 - http://mantis.myhomebills.info/view.php?id=168 - Common statistics - add checkbox list so that individual categories can be selected;
+					Created new SQL type - CategorySelectionType and added a parameter of that type to [spGetAllUsersCategorySums];
+					Changes in Statistics.aspx.vb - added CheckBoxList for categories with 2 css classes - CheckBoxListVertival tr/label;changes in GetDataSource; new method - FillCategoriesCheckBoxList;
+					new script - 20140814.001.sql;
+20140815 10:29 - http://mantis.myhomebills.info/view.php?id=17 - refactor budgets control code and css - new class - BudgetsGridViewFooter; order income by date;
+20140819 14:45 - http://mantis.myhomebills.info/view.php?id=160 - +/- keys change quantity - new binding function in MHB.Web/Javascript/JQuery_functions - if ($('#DivWeightVolumeSelector').is(":visible"));
+					http://mantis.myhomebills.info/view.php?id=159 - When entering a decimal value auto move to FieldName after third decimal place - new js function in MHB.Web/Javascript/JQuery_functions - SelectDetailsNameInput();
+					- TextBoxDetailAmountNew - onkeypress attribute added;
+20140819 15:42 - http://mantis.myhomebills.info/view.php?id=161 - When entering a decimal value auto change to Weight... or volume and notify in no obstructive way - changes in ShowDivWeightVolumeSelector();
+					ButtonAddExpenditureDetails_Click - do not allow more than 50 detail records to be inserted at a time;
+20140821 16:28 - http://mantis.myhomebills.info/view.php?id=166 - Product statistics - add most frequently purchased items
+					New stored procedure called: spGetFrequentlyPurchasedProductsByDate - new script in /sql - spGetFrequentlyPurchasedProductsByDate.sql, new script - 20140821.001.sql with a new translation for the new tab;
+					New tab added to pie charts tab container in MainForm;
+					Changes in ProductPriceStatistics.ascx control;
+					Changes in MainForm RebindGrid() - fill newly created GridViewMostFrequentlyPurchasedProducts;
+20140822 11:28 - http://mantis.myhomebills.info/view.php?id=166 - Added vendor column to spGetFrequentlyPurchasedProductsByDate and new columns to GridViewMostFrequentlyPurchasedProducts for edit product and vendor;
+					Environment - new function added - ToLiteral() converting text to escaped sequense;
+20140822 15:54 - http://mantis.myhomebills.info/view.php?id=169 - Implement URL rewriting by using the existing URLRewrite module - Change RequestedAddresses in URLRewrite.xml;
+					Global.asax - added new _taskLoadUrlRewriteAddressesListIntoCache Task and LoadUrlRewriterAddressesIntoCache() method;
+					Change URLRewrite.cs - get RewriteAddress[] from HttpRuntime.Cache;
+					Web.config -  add <modules runAllManagedModulesForAllRequests="true" >
+										<add name="URLRewrite" type="MHB.HttpModules.URLRewrite" />
+									  </modules>
+20140903 13:54 - Added [IgnoreDataMemberAttribute()] to ProductParameterBase Connection property
+					- Cause: Exception when calling MHB.API.MhbApiService.svc from a browser or the WcfTestClient.exe - System.Runtime.Serialization.InvalidDataContractException: Type 'System.Data.SqlClient.SqlCredential' cannot be serialized.
+					- MHB.Gadgets - update service reference;
+                    - Publish MHB.Api and make new version of MHB.Gadgets;
+20140904 15:36 - http://mantis.myhomebills.info/view.php?id=170 - Organize notes - implement search, view/preview;
+					- Notes.ascx - DataGridNotesPreviews with in a jQuery accordion; refactor code;
+					- added readmore.js jQuery plugin for collapsible panels - use in NotesPreview in Notes.ascx;
+					- new css style - GridDefaultItemStyle and change .GridPager a, .GridPager span { display:block on inline-block because pager of datagrid was vertical (??) - added .GridPager td {border:none;};
+					- JQuery_functions - ShowNotesPanel added open callback to set readmore() and accordion();
+20140904 19:19 - http://mantis.myhomebills.info/view.php?id=170 - Solution configuration manager don't build forum; Notes.ascx - Environment.ExecuteScript readmore in page load on postback; new style - DataGridNotesPreviewsItemStyle;
+20140905 13:07 - http://mantis.myhomebills.info/view.php?id=170 - #notes - Added jQueryUI datepicker - with a postback and highlighting all dates that have notes;
+20140905 13:07 - http://mantis.myhomebills.info/view.php?id=170 - #notes - FormView1 added CssClass="GridPager";
+					- new constant added in Environment - Environment.COMMAND_CLEAR_DEFAULT and a case in Notes.Page_load; change clear anchor in Notes.ascx;
+					- MainForm LinkButtonTransactions - added opacity onmouseover and onmouseover event handlers;
+					- changes in ShowDivWeightVolumeSelector;
+20140906 15:49 - http://mantis.myhomebills.info/view.php?id=171 - Enter key to add parent expenditure - added Panel under PanelAddNewFields with DefaultButton property set to ButtonAddField;
+20141023 13:47 - http://mantis.myhomebills.info/view.php?id=172 - Add price per supplier in DetailsProductPriceStatistic - for all suppliers item was purchased from
+					http://mantis.myhomebills.info/view.php?id=173 - Extend DetailsProductPriceStatistics?detid=XX by adding total quantity this year
+					- Changes in ProductDetails.ascx.vb.GetStatistics() - created delegate funcMaxMinValueDetailPerSupplier; added labels named LabelPDCTotalQuantityYearly*;
+20141024 11:06 - http://mantis.myhomebills.info/view.php?id=172 - Add price per supplier in DetailsProductPriceStatistic - for all suppliers item was purchased from
+					- Changes in ProductDetails.ascx.vb.GetStatistics() - order results by average asc and set ProductInfo.Highest/LowestPrice properties and highlight using css in markup;
+					- Changes in MHB.BL.ProductInfo - added new properties Highest/LowestPrice, UniqueId, SupplierID;
+20141024 18:52 - Order categories and suppliers in gridview in ProductsManagement edit template;
+20141025 14:17 - http://mantis.myhomebills.info/view.php?id=177 - Product price for supplier wrong when measure type is weight - max, min, avg. values wrong;
+					- Change in ProductDetails.ascx.vb.GetStatistics() - added inceptionWeightVolumeCalcFunc although we already have this calculcated in the ExpenditureDetail.UnitPrice property;
+					added expenditureDetailsToRemove var so we remove invalid entries which have a different measure type than the most occuring one;
+20141025 15:35 - Test entry to test the Jenkins promote plugin and my batch file copying everything from D:\SkyDrive\MHB_PUBLISH to inetpub\wwwroot;
+20141028 11:40 - http://mantis.myhomebills.info/view.php?id=178 - 0000178: MAJOR BUG!!! - When modifiying an existing category it deletes and recreates it with new id and CostCategory in MainTable is not
+					Description	When you modify an existing category it deletes it and then creates a new one with the same name and keywords AND WITH A NEW ID !!! The MainTableXX.CostCategory column on the other hand does not have a foreign key constraint so all info is lost - all existing entries in MT remain with the old id
+					- Changes in CategoryBase.cs - added new method - Update(); and new method UpdateCategory in SQLHelper;
+						- New stored procedure - spUpdateCategory;
+						- Changes in spGetCategoriesTable so that it does not trim whitespaces everywhere;
+						- Changes in CategoriesManagement - do not delete and add new category but use the newly created update function();
+					- New db script added - 20141028.001.sql - Add foreign key tbMainTableXX.CostCategory;
+20141029 15:03 - http://mantis.myhomebills.info/view.php?id=172 - Add price per supplier in DetailsProductPriceStatistic - 
+					- Added new column Total count and changed styles and font sizes;
+20141030 15:18 - http://mantis.myhomebills.info/view.php?id=44 - Possible stack overflow exception while CTRL+S - the update methods for GridView1 and GridViewDetails have cross calls and cause stack overflow;
+					!!!!!!!!!!!!!! I THINK I FOUND IT !!!!!!!!!!!!!!
+					In ExpenditureManagerBase.FillExpenditureDetails() we were doing: 
+					if (parent == null)
+					{
+						e.Parent = this.GetUserExpenditures(new int[] { e.ExpenditureID }, connection).FirstOrDefault();
+					}
+
+					which is a recursive call back to FillExpendituresList and then back again to FillExpendituresDetails();
+20141110 11:45 - http://mantis.myhomebills.info/view.php?id=183 - When quantity is entered in details (measure type is weight or volume) and you click on it generating a change
+					measure type is reverted to count and volume/weight information is not displayed anymore; - remove onblur="ShowDivWeightVolumeSelector();" in TextBoxDetailsTableFieldAmount;
+					added ImageButtonMeasureType in GridViewDetails allowing to switch measure type of detail;
+20141118 10:37 - http://mantis.myhomebills.info/view.php?id=186 - Enlarge the notes popup panel;
+					ShowDetailsTable() - increase width to 1200px;
+					http://mantis.myhomebills.info/view.php?id=188 - Details grid - show suppliers - maybe logo or just text - new method added in MainForm.aspx.vb - GetSupplierName() and new templatefield in GridViewDetail;
+					SupplierSelector control - increase width to 600px and order suppliers by name; add margin to buttons;
+					favicon.ico was deleted by accident - THIS FAILS THE PUBLISH STEP IN JENKINS !!! hence it cannot be promoted because old built version is in SkyDrive publish folder;
+20141120 14:57 - http://mantis.myhomebills.info/view.php?id=180 - Include category information in DetailsProductPriceStatistics - 
+					Resolution: instead use same template but display results filtered by detail category instead by product;
+						- Added CategoryID read-only property to ExpenditureDetail which returns Product.CategoryID;
+						- New property IsCategoryStatistic of ProductDetails control - pass it in query string in GridViewDetails.ImageCategory onclick event - modify row databound to remove old redirect;
+20141121 15:53 - http://mantis.myhomebills.info/view.php?id=189 - Share notes - generate share link;
+						- Added new column to tbNotes - IsShared - script file - 20141121.001.sql; Changes in Notes.ascx;
+						- UrlRewriter - new method added - GetKey() by providing the path - but it was not used - still I'll leave it there
+						- New page added - Forms/SharedNotes.aspx;
+						- New entries in URLRewrite.xml;
+20141128 18:47 - Changes in MainForm.aspx.vb - GridViewDetails_RowCommand - added String.Format("e.CommandName:{0};e.CommandArgument:{1};e.CommandSource:{2};" to caught exception to be able to obtain more info on this
+					constantly occuring error: Conversion from string "" to type Integer is not valid.   at Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger(String Value)
+					   at Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger(Object Value)
+					   at MHB.Web.TestGrid.GridViewDetails_RowCommand(Object sender, GridViewCommandEventArgs e)
+20141201 20:20 - http://mantis.myhomebills.info/view.php?id=192 - Refactor user acount settings screen - rewrite UserManagement - put User object in Environment;
+					http://mantis.myhomebills.info/view.php?id=193 - Enable auto login settings in User Account Settings screen
+						1. Restrict access in a time frame
+						2. Enable auto login and generate a direct link
+							- Added datetimepicker javascript;
+							- Refactor AccountSettings layout
+							- Change tbUsers column names
+							- Added new translations in 20141201.sql
+							- Refactor UserManagement.User constructors'load and update methods
+							- Added DropDownListCurrencies dropdown with hardcoded all currencies of the world
+							- Login.Page_Load - added check for auto-logon time frame and whether auto-login is enabled
+							- Environment - remove default case from SetUserLanguageByGeoIP instead set it in newly created CurrentUser property in Environment
+							- MAJOR Optimization - FillExpenditureList - don't instantiate User on each iteration of the Reader.Read() lazy load;
+							- New entries in ActionLog;
+							- Added OrElse HttpContext.Current.Request.IsLocal in Login.aspx.vb.Page_load for auto-login so that it worksfor local requests when IP is not resolved properly
+20141203 20:24 - Put christmas logo on and enable snowfall :) 
+					! ! ! ! IMPORTANT ! ! ! ! - Environment.CurrentLanguage -Session("lang") = Nothing returns True although it is set '0' put Session("lang") Is Nothing instead; language on initial load
+					was not set correctly although geoip service returned correct language code;
+20141206 12:24 - Login.aspx.vb - Refactor ButtonRegister_Click - extract functionallity into new methods - CheckUserInput(), CheckIfUserNameTaken() etc. 
+					Login.aspx - Disable context menu and copy/paste/cut operations on login and register textboxes; 
+					! ! ! ! IMPORTANT ! ! ! ! - UserManager - GetUserIDInternal() change SqlParameter types and length - this could prevent a user to login - BE VERY CAREFULL ! ! ! ! 
+					- Change autologin functionality - don't take time restriction into account if it's weekend
+20141208 12:29 - ! ! ! ! IMPORTANT ! ! ! ! - USERS CANNOT LOG IN!! Login.aspx.vb - register() - use same parameters' sql db type as in login - VARCHAR 
+					ALL CURRENTLY REGISTERED USERS ARE REGISTERED WITH VARCHAR - NVARCHAR DOES NOT WORK!!
+20141210 20:48 - Unable to save a note;
+20141217 11:11 - Rename MHB.DAL.db to MHB.DAL.DatabaseConnector;
+					- new method User.GetVisitorLanguageCodeByAddress() get latest language code for this ip from the database instead of waiting for the geo ip service;
+					- new typed method GetSingleValue<T> - mark other overloads as obsolete;
+					- Global.asax - LoadExchangeRatesHistoryIntoCache() - make it async await - and use Task.Delay instead of Thread.Sleep;
+20141217 16:03 - MAJOR OPTIMIZATION - 
+				- ExpenditureManager - add three new properties Categories, Products and Suppliers so that when loading expenditures they can selected directly from these lists instead of being loaded;
+					- FillExpenditureList, GetProducts, FillExpenditureDetails - change so that it loads the data from the latter properties;
+				- InitExpenditureManager() - pass Products, Categories and Suppliers;
+				- Login.aspx - ButtonLogin_Click - put geolocalization in new thread;
+				- Product - add categoriesCache, suppliersCache to constructor;
+20141219 11:09 - MHB.DAL - new class - Extensions - new generic typed IDataReader extension method - Get<T>(_
+					MHB.BL.ExpenditureManagerBase - New property - Language;
+					MHB.BL.ExpenditureManagerBase - New required constructor connectionString, mainTableName, detailsTableName, userID, month, year, and language parameters;
+												-   Set categories, suppliers and products there -
+														this.Categories = this.GetCategories();
+														this.Suppliers = this.GetSuppliers();
+														this.Products = this.GetProducts();
+					MHB.BL.ExpenditureManagerBase - FillExpenditureList return IEnumerable - and use new IDataReader extension method Get<T>
+												GetProducts returns IEnumerable
+												GetSupplier returns IEnumerable
+												new method GetCategories - remove static Category.GetAll();
+							
+												GetUserExpenditures overloads return IEnumerable;
+												SearchUserExpenditures return IEnumerable;
+							
+												GetMaximumExpenditureForCategory use IEnumerable
+					MHB.BL.SQLHelper - GetCategories and GetSuppliers return IEnumerable;
+
+					Budgets.ascx - BindGrid() use  Me._en.ExpenseManager instead of constructing a new instance;
+					CategoriesManagement - RebindCategoriesGrid() - use Me._en.ExpenseManager.GetCategories() instead of Category.GetAll();
+					CategoryIcons - rename en to _en;
+										- User Me._en.Categories instead of ExpenseManager.GetCategories();
+					ProductsManagement - VERY STUPID - in RowDataBound was calling ExpenseManager.GetSuppliers - instead just use .DataSource = Me._en.Suppliers.OrderBy(Function(s) s.Name);
+					SearchControl - PerformSearch() use  Me._en.ExpenseManager instead of constructing a new instance;
+										FillSearchByCategoryDdl - use  .DataSource = Me._en.Categories instead of calling ExpenseManager.GetCategories;
+					SuppliersManagement - RebindSuppliersGrid() use 			Me._en.ExpenseManager.GetSuppliers().ToList() without passing UserID parameter which is get internally in ExpenditureManager;
+		
+					Environment - Categories and Suppliers properties return Ienumerable;
+									InitExpenditureManager() - just one line  Session("ExpenditureManager") = New ExpenditureManager(Me.Get..
+					CategoriesYearlyCharts - FillCategoriesDdl() - use .DataSource = Me.Categories instead of Category.GetAll();
+
+					MainForm - RebindDivCategory - ListBoxPickCategory.DataSource = Me.Categories instead of Category.GetAll();
+								ButtonAddExpenditureDetails_Click -  New ExpenditureDetail(Me.ExpenseManager) pass ExpenditureManager as parameter;
+			
+			
+					ExpenditureDetail - Accept ExpenditureManager as constructor parameter;
+20141220 10:34 - ExpenditureManager - remove maintable and details table parameters from constructor - get them internally by using GetUserMainTableNames static method;
+					in GetProducts(), GetSuppliers() and GetCategories() set respectible properties;
+					- GetExpenditureDetails() and overloads and related internal methods return IEnumerable instead of List;
+					- Environment - MainTable and DetailsTable properties use ExpenditureManager.GetUserMainTableNames() method; Products property IEnumerable;
+					- MainForm - RebindSuppliersDropDown() use ExpenseManager.Suppliers property instead of calling GetSuppliers();
+					- MasterPage - /Banners/bg_koleda.swf
+20141220 11:22 - ButtonAddNewDetailsProduct_Click - call RebindGrid() so that it loads data from database as RebindDetailsGrid() gets MainDataSource so that Category icon is refreshed;
+					order suppliers and products by name;
+20141225 10:15 - Global.asax.vb - Session_Start - record ip addresses on all method calls;
+					- New Logging.Logger.HistoryAction enum member - SetTranslationInCache;
+20150123 10:38 - http://mantis.myhomebills.info/view.php?id=1198 - Add a label showind how much more or less budget we have compared to previous month - 
+					- New css style - PlainTextGreenExtraLarge;
+					- ExpenditureManager - new overload method for GetUserIncome(month, year);
+					- Budgets.ascx - new field - _previousMonthIncome; new property - PreviousMonthIncomeSum; changes in BindGrid - set new label text and styles there;
+20150215 20:40 - Renew startssl.com ssl certificate; - make new folder MHB.Web\Certificates\2015;
+					- Remove tyxo counter;
+					- Remove http: from links and replace with just // to avoid "Page is partially encrypted" message in browser
+					- New images - Images/us_flag.gif, uk_flag.gif, switzerland_flag.gif - Global.asax.SetCurrentExchangeRates() - replace with those as image links from rss not ssl
+					- SetCurrentExchangeRates() - Add Headers to WebClient copied from FireBug when accessing the bnb.bg rss feed url;
+20150216 09:35 - Rewrite Global.asax.vb.SetCurrentExchangeRates() - use xml feed file of bnb.bg - http://www.bnb.bg/Statistics/StExternalSector/StExchangeRates/StERForeignCurrencies/index.htm?download=xml&search=&lang=BG;
+					- Save xml with all currencies and query just the three: GBP, CHF and USD- construct html from that xml;
+					- Local variables for usd and gbp rates so they are inserted in the dedicated columns of tbCurrencyExchangeRates table - refactor html - put some nbsp;
+20150313 15:16 - http://mantis.myhomebills.info/view.php?id=32 - Store currency exchange rates on disk and refresh twice a day
+					- New entities in MHB.BL - Currency and CurrencyEchangeRate;
+					- New enum and static dictionary in MHB.BL.Enums - CurrencyCode and CurrenciesList
+					- AccountSetting - load currencies dropdown by using the latter CurrenciesList static dictionary;
+					- Environment - ExchangeRatesHistory property is now  IEnumerable(Of CurrencyExchangeRate);
+					- New database script - 20150313.001.sql - refactor table - use spGetExchangeRates to parse the xml and update dedicated exchange rates columns
+						alter columns and change data type to money
+20150314 16:53 - http://mantis.myhomebills.info/view.php?id=1199 - Product price statistics - show quantity per month and per year - 
+					- Change projects target cpu to x64;
+					- Global.asax.vb - SetCurrentExchangeRates - read html for the bar from a new html file - ExchangeRatesBar.html;
+					- ProductDetails.ascx - new labels for product units count per month and per year;
+					- MHB.BL.Product - new column PackageUnitsCount and new column in database - tbProducts;
+						- ProductsManagement - new column in gridview for PackageUnitsCount;
+20150315 09:58 - MainForm - DetailsProductPriceStatistics popup - size dynamically depending on MeasureType;
+					- Set publish profiles to use x64;
+20150315 11:09 - Product.Update() - Update all existing details and main records with the product id with the new categoryid;
+20150316 14:29 - Added new columns to tbProducts table - IsFixedMeasureType, DefaultMeasureType - 20150316.001.sql;
+					- Inserted new default measure type record - tbMeasureTypes - 'not set';
+					- If you modify a product and enter volume or weight higher than 0 then set IsFixedMeasureType = true and DefaultMeasureType according to whether volume or weight > 0;
+						- When entering a new detail if IsFixedMeasureType == true disable Amount textbox and weight/volume selector icon and as amount take the Product.Weight/.Volume value;
+20150316 16:59 - When updating a product and is of FixedMeasureType kind - update all detail entries with the new volume or weight and if the measuretype has reverted;
+					- Change regex expression for PackageUnitsCount;
+20150317 16:28 - http://mantis.myhomebills.info/view.php?id=194 - Merge products - new methods in ProductBase and SQLHelper - Merge(); new command in ProductsManagement.GridViewProducts_RowCommand;
+					 LinkButtonMerge to hover menu; GridViewProducts - checkbox column added;
+					- BUGFIX - users shared categories not displayed - ExpenditureManagerBase.GetCategories() add optional boolean flag - loadAll which when true passes 0 to the spGetCategories 
+						stored procedure and it loads all;
+					- BUGFIX - when deleting a product set all exstings details and main entries' productid to default productid
+20150317 20:00 - SQHelper.GetChildExpenses() - AND dt.CategoryID = @CategoryID" instead of AND mt.CostCategory = @CategoryID";
+					- ExpenditureManagerBase.GetExpenditureDetails() overloads - string connectionString, int productID and int categoryID, string connectionString;
+MAJOR BUG!!!		- ProductPriceStatistics.ascx - rewrite page_load - remove tolerance calculations and pass only ProductID and CategoryID as querystring params - not needed to pass ExpenditureDetail to ProductDetails control!
+						ImageButtonDetailProductStatistics - pass ProductID instead of detid;
+20150318 08:49 - GridViewDetails_RowDataBound - txtBoxDetailsTableFieldAmount.ReadOnly instead of enabled when IsFixedMeasureType so that details can be selected with the js script;
+20150318 10:41 - 
+MAJOR BUG!!!		- When editing a product and setting a volume or weight > 0 then Amount of all details is updated with that value. When you revert weight and amount of a product back to 0
+						then all details' amount remains the same as in SQLHelper.UpdateProduct() we do details.Amount = (CASE WHEN @Amount = 0 THEN details.Amount ELSE @Amount END)
+						and WHEN @Amount = 0 then details.Amount contains the product.Volume/Weight and cannot be reverted to the original user data.
+						- new db script added - 20150318.001.sql - add new column to detailstable01 - InitialAmount - when adding or updating detailstable - set InitialAmount to Amount;
+							revert ExpenditureDetail.Amount data for Nuts 647 category from a backup;
+20150318 11:27 -  Add new column InitialMeasureTypeID - SQLHelper.UpdateProduct() - add InitialMeasureTypeID, ExpenditureManagerBase.UpdateChildExpenses() - InitialMeasureTypeID = @MeasureTypeID{1}
+						SQLHelper.AddChildExpenseInternal() - insert InitialMeasureTypeID = @MeasureTypeID;
+20150318 13:12 - modify spDuplicateMonthRecords to include the new tbDetailsTableXX columns - InitialMeasureTypeID and InitialAmount as copying expenditures to another month was broken;
+20150318 19:52 - new project MHB.UnitTests added;
+					- MHB.BL.Product - this.KeyWords = product.KeyWords added to ctor and Load(); make Update() internal and use ExpenditureManager.UpdateProduct() method;
+					- MHB.BL.SQLHelper - GetProductParameters() added ParentID = 0 condition to query - (CASE WHEN @ParentID = 0 THEN ParentID ELSE @ParentID END);
+MAJOR BUG!!!   - MHB.BL.SQLHelper.GetProducts() - no need to load ProductParameters - really slows things down !!! they are always empty as we pass ParentID = 0; add finally and dispose reader;
+			   - All project files add optimize code in release
+			   - MHB.Web.Environment Products, Suppliers, Categories - use ExpenseManager.Products/Suppliers/Categories properties instead of calling the GetXXX() methods;
+			   - MHB.BL.ExpenditureManager - change Products, Suppliers, Categories properties - lazy loading - if empty call GetXXX() methods;
+					- rename overloads of GetExpenditureDetails() method accepting the ProductID and CategoryID parameters with GetExpenditureDetailsForProduct/Category();
+20150319 07:17 - All project files - check Enable trace constant;
+20150319 09:40 - New unit test method - ChangeProductDefaultMeasureType;
+					- ExpenditureDetails - new properties - InitialAmount and InitialMeasureType;
+					- Product - zero Weight when setting Volume and vice versa;
+20150319 16:01 - MHB.Gadgets - update service reference because it was throwing a serialization error;
+20150319 20:20 - MHB.BL.ExpenditureManager.GetUserExpenditures() - check if ExpressionQueryArgs contains the required MainTableName parameter;
+					- new unit test method - DuplicateMonthRecords;
+20150320 12:02 - MHB.BL.ExpenditureManager.DeleteParentExpense - check if id array empty, UpdateParentExpenses() - update Flagged column;
+					- new unit test class added - ExpendituresCRUDOperationsTest with two new methods - AddNewParentExpenditure() and UpdateParentExpenditure();
+20150320 14:53 - SuppliersManagement.RebindSuppliersGrid() - remove Me._en.Suppliers = GetSuppliers as Environment.Suppliers supports lazy loading;
+
+************************************************************
+				!!!! MAJOR BUG !!!!
+************************************************************
+20150320 20:21 - !!!! MAJOR BUG !!!! - ExpenditureManager.Suppliers - lazy loading causes too many connection open from SupplierSelector - as getter getting called too often
+					Remove lazy loading and load Suppliers, Products and Categories in constructor;
+20150321 07:59 - ExpenditureManagerBase - two new methods - AddProduct() and AddSupplier() to substitute Product.Add() and Supplier.Add() - make those internal;
+					- Environment - make Categories, Suppliers and Products properties readonly to avoid having to refresh the session variables each time they change;
+20150321 12:27 - ExpenditureManagerBase - new method - update supplier - and make Supplier.Update() method internal and substitute with the newly created one;
+20150321 14:25 - ExpenditureManagerBase - new method GetAllCategories to be used for loading shared categories in CategoriesManagement as when GetCateries was used with a loadAll parameter it would overwrite the Environment.Categories property listing user's categories;
+20150321 20:10 - MasterPage.master.vb - conditionally set log accoring to current date;
+					- Fix annoying SetUserLanguageByGeoIP - Object reference not set to an instance of an object. exception log;
+20150322 09:39 - MHB.BL.Product - BUG FIX - changing default measure type for product wasn't working and was missed by the unit tests as i.e. when you set Weight and Volume is set to 0 and in Volume setter Weight is overwritten;
+					- GridViewDetails Category icon - added js onerror event and set to default warning icon;
+20150322 19:07 - ProductBase.Weight/Volume properties remove != 0 check in setter;
+20150322 23:24 - BUG FIX !!! - Product.Parameters not saved - LOTS of changes !!! - ExpenditureDetail - new property - HasProductParameters - new db script - 20150322.001.sql;
+					- ExpenditureManager.FillExpenditureList - check extend - (e.HasDetails && loadDetails);
+					VERY VERY IMPORTANT !!!! FillExpenditureDetails() - replaced this.Products.Single(p => p.ID == e.ProductID); with  new Product(this.Products.Single(p => p.ID == e.ProductID));
+						as Product.Parameters were overwritten as product is queried from the array by reference !!!! :( 
+							load ProductParameters and check for newly created flag - HasProductParameters; 
+								Watch out - e.Product.Parameters = Enumerable.Empty<ProductParameter>(); otherwise MainForm markup would fail;
+					- Product.AddParameter - pass detailstable name;
+					- MHB.BL.SQLHelper.UpdateProductParameters/AddProductParameter - add detailsTableName parameter and UPDATE tbDetailsTable01 SET HasProductParameters = 1;
+					- MainForm.SaveGridViewDetailsChanges - change check for Product Parameters change - Not Enumerable.SequenceEqual(originalChildExpense.Product.Parameters, newChildExpense.Product.Parameters)) 
+20150323 11:26 - MHB.DAL.db - GetDataReader - trace stacktrace; Login.Page_Load - IsLocal check for auto debug login;
+					- MainForm.SaveGridViewDetailsChanges() - check if parameters have changed by selecting their values to array and comparing;
+20150323 12:05 - BUG FIX !!! - cannot add detail expenditure !! LabelDetailsTableFieldMileage in GridViewDetails footer row - Product.Parameters is null and prohibits any postback!!!
+20150323 13:11 - MainForm.SaveGridViewDetailsChanges() - check if any originalExpense.Product.Parameters and newExpense.Product.Parameters;
+20150327 11:28 - BUG FIX - package unit count per year/month empty in ProductDetails - reason for this - in FillExpenditureDetails - product = new Product(product) and in product ctor PackageUnitCount was not set
+					FillExpenditureDetails- e.Product = this.Products.Single(p => p.ID == e.ProductID);
+					ProductBase - copy all columns from managementstudio for Product and use in ctor and Load();
+20150331 10:20 - RebindDetailsGridInternal() - null reference exception from CheckIfAllDetailsProductsAreOfSameCategory - delete CheckIfAllDetailsProductsAreOfSameCategory() method and use All() linq function;
+20150401 09:26 - MasterPage - dynamic logo selection - put default case
+20150402 16:06 - http://mantis.myhomebills.info/view.php?id=20 - MHB.BL.Extensions - new extension class SortingExtensions with a new method - Sort();
+					- MainForm - GridViewDetails - enable sorting and add SortExpression property of template columns;
+						- RebindDetailsGrid - pass optional GridViewSortEventArgs parameter.
+20150402 22:18 - MainForm.RebindDetailsGridInternal() - Sequence contains no matching element and Object reference not set to an instance of an object. exceptions because 
+					I was checking Me.DetailsDataSource.First(Function(d) d.ProductID <> Product.PRODUCT_DEFAULT_ID).Product.CategoryID and the ExpenditureDetails is null hence the Product is null and it throws the null reference exceptions;
+20150404 11:03 - ExpenditureManager - new methods - AddCategory, UpdateCategory - separation of concern - so that Categories property is reloaded, otherwise if you call Category.Add/Update the Environemnt.Categories property is not reloaded.
+					- MainForm - ButtonUpdate_Click - maintain Flagged flag as it does not change when Update button is click and otherwise gets lost
+20150406 21:31 - MHB.BL.ExpenditureManager.FillExpenditureDetails - move ExpenditureDetail local variable inside loop;
+					- VERY IMPORTANT - MHB.BL.ExpenditureManager.FillExpenditureDetails - e.Product = new Product() - create copy as otherwise Product.Parameters is overwritten!!!
+					- MHB.BL.UpdateProductParameters - rewrite/changes in UpdateProductParameters();
+20150407 09:53 - MainForm.GridViewDetails - ImageCategory - remove onerror handler as it was not working - put default ../Images/warning_icon_small.gif in MHB.BL.CategoryBase.IconPath;
+20150424 11:41 - New UnitTest method - CheckCategoryReportResultsAndCompareWithPlainSQLQuery - new unit test stored procedure - sp_UnitTests_GetDetailsPerCategory
+					- This test compares the results of linq queries and a plain sql query;
+20150503 23:19 - Auto logo selection in MasterPage - no default case !!!
+20150512 10:29 - http://mantis.myhomebills.info/view.php?id=2203 - Autocomplete - suggest projects based on total entries; Put more frequently purchased items on top;
+					- new property Product.Priority, new method SQLHelper.GetProductTotalEntries() used in GetProducts to set priority; ProductAutoComplete.asmx - order by priority descending;
+20150813 09:54 - http://mantis.myhomebills.info/view.php?id=2217 - mark a detail surpluss or redundant and generate a report of what could have been saved
+					mark a detail surpluss or redundant and generate a report of what could have been saved
+					- New property of ExpenditureDetails - IsSurplus
+					- New GridView in MainForm in Tabpanals called Surplus items
+					- MainForm.RebindGrid - bind new surplus items grid from DetailsDataSource
+					- New column in tbDetailsTableXX - IsSurplus - new db script - 20150812.001.sql
+20150813 15:07 - Bind GridViewSurplusItems from MainTableDataSource;
+					- put footer and total sum
+20150813 19:33 - http://mantis.myhomebills.info/view.php?id=2218 - When you put quotes in name or description of a main record that has details - the detailsgrid popup is not shown
+					this is due to the fact that it is vizualized via the ShowDetailsGrid js function and the name is passed as parameters and the quotes ruin the syntax
+					- MainForm.aspx- LinkButtonMainTableDetails OnClientClick - replace double quotes with an empty string;
+20150907 14:15 - GridView1 panel - make default button save
+20150907 15:15 - spCopyParentExpense - copy details too			
+20150909 09:32 - When using a shared category the grid and Environment.Categories property is not refreshed		
+20151109 18:49 - BUGFIX - In firefox 42 and up the TabContainer1 in MainForm is overflowed and shown underneath - SOLUTION: put a fixed size on it - 683px
+20151118 14:24 - http://mantis.myhomebills.info/view.php?id=3225 - Transliterate latin to cyrillic on details grid autocomplete when Bulgarian is the current language
+					- Environment - new readonly array fields: BULGARIAN_ALPHABET_LOWERCASE and BULGARIAN_ALPHABET_TRANSLITERATED_LOWERCASE; new method IsLatin
+					- implemented in ProductAutoComplete.asmx;
+20151119 06:46 - http://mantis.myhomebills.info/view.php?id=2208 - When creating a new product suggest a category based on name and keywords
+					- Environment - extracted TransliterateText method functionality from ProductAutoComplete.asmx;
+					- MainForm - GridViewDetails_SelectedIndexChanged - find products or categories with keywords matching user input
+20151119 12:20 - http://mantis.myhomebills.info/view.php?id=2207 - GridView1 sorting - maybe filters - show exceeded budgets etc - 
+					- MainTableDataSource - IEnumerable instead of List
+					- GridView1 - add SortExpression property to headers;
+					- MainForm - RebindGrid - remove unused month parameter and add sortEventArgs GridViewSortEventArgs
+						- set ViewState("SortDirectionGridView1") and call Sort extension method on MainTableDataSource
+20160101 11:00 - HAPPY NEW YEAR MyHomeBills! I wish you great success in 2016!
+					- UnitTests.ProductTests.CheckCategoryReportResultsAndCompareWithPlainSQLQuery - sumObjectPerYear is DBNull and we can't assert is equal to zero - add trinary inline check
+20160102 17:07 - http://mantis.myhomebills.info/view.php?id=3229 - After selecting a product from autocomplete display prevailing measure type to suggest entry
+					- Actually, it was done so that it automatically sets the detail measure type id based on prevailing measure type,
+						problem was, however, that the function used to get prevailing measure types - GetProductTotalEntries - was passed a parameter year, so for 2016 we have zero entries, hence MeasureTypeId = NotSet
+					- BULGARIAN_ALPHABET_TRANSLITERATED_LOWERCASE - set them to match bg phonetic - i.e. - в = w instead of v and ш = ] Instead of sh
+20160122 19:38 - http://mantis.myhomebills.info/view.php?id=3232 - 	Details grid autocomplete popup shows up all over the place!
+					-   // VERY IMPORTANT COMMENT!! I SPENT THE ENTIRE AFTERNOON WITH THIS ****
+						// IT ALWAYS CAME UP WITH INTERNAL SERVER ERROR WHEN I PASSED textBoxDetailNameNew.val() TO data: PARAMETER IN THE AJAX REQUEST
+						// AND IF YOU PUT IN A PLAIN STRING LIKE SO: '{prefixText:"kame"}' IT WOULD WORK !?!?!
+						// THE REASON FOR ALL THIS **** WAS THAT IF YOU USE THE textBoxDetailNameNew.val() AND TYPE JUST A SINGLE LETTER
+						// IT WOULD RETURN HUNDREDS OF RECORDS CAUSING JavaScriptSerializer().Serialize(products) TO SHOW LENGTH EXCEEDED OR SOMETHING
+						// I WAS SO DESPERATE THAT I DID NOT CHANGE THE MOST IMPORTANT ERROR MESSAGE IN THE ERROR HANDLER LIKE SO: alert(JSON.stringify(XMLHttpRequest));
+						// AND THE BEST PART WAS THAT I WAS ABLE TO DEBUG GetProductsJSON AND IT WOULD RETURN NORMALLY AND THROW THE ERROR UPON EXIT CLIENT SIDE :(
+						// ALWAYS, ALWAYS, ALWAYS GET THE MOST ERROR INFO AS YOU CAN GET !!!
+					RESOLUTION:
+						- new js method in MainForm.aspx markup file - SetAutoComplete();
+						- delete AutoCompleteExDetails from MainForm.aspx
+						- MainForm.aspx.vb - Environment.ExecuteScript(sender, "SetAutoComplete()", True) called when selected from autocomplete
+						- ProductAutoComplete.asmx - new method - GetProductsJSON;
+						- IMPORTANT: web.config - added -   <system.web.extensions>
+																<scripting>
+																	<webServices>
+																	<jsonSerialization maxJsonLength="2147483644" />
+																	</webServices>
+																</scripting>
+															</system.web.extensions>
+20160125 15:33 - http://mantis.myhomebills.info/view.php?id=3228 - When entering a detail expenditure it sets NotSet as MeasureType by default in a random manner -
+					This issue still persists and it occured whenever you enter a product which was never bought in the present year hence it was not set in GetProducts() method
+					and it then reverted to the default value of the PrevailingMeasureType property of product = 0
+					- SOLUTION - put a field for the PrevailingMeasureType property
+					- ButtonAddExpenditureDetails_Click - measureType = Me.HiddenDetailsMeasureTypeID.Value but Me.HiddenDetailsMeasureTypeID.Value has been set to .PrevailingMeasureType in Page_Load
+						then the switch statment uses Me.HiddenDetailsMeasureTypeID.Value but it still has the previous value
+20160127 12:57 - http://mantis.myhomebills.info/view.php?id=197 - Show last edited items -
+			- new tabpanel duplicating surplus gridview
+20160401 10:43 - http://mantis.myhomebills.info/view.php?id=3231 - History view - add sum of each day;
+			- new methods ExpenditureManager.GetSumSpentPerDay, GetParentExpendituresForDate
+				new ExpenditureManager.GetUserExpenditures and SQLHelper.GetExpense overload - DateTime[] parameter;
+				- GetTransactions - return IEnumerable instead of list - Transaction.cs - replace float with decimal;
+				- PurchaseHistoryControl - LabelTotalAmount in footer
+				- PurchaseHistoryDateSelectorControl - LabelTotalSum;
+				- Environment - GetCellIndexByName fix - wasn't working due to the fact that the header is translated and does not match the key;
+				- MainForm - LinkButtonPurchaseHistory click event to reload PurchaseHistoryDateSelectorControl instead of rebinding on post back;
+				- UnitTests - new class - ReportsCheckTests - new method CheckSumSpendPerDayTest;
+				- New stored procedure - sp_UnitTests_CheckSumSpendPerDayTest
+20160402 11:16 - Auto-login changes - make more secure - set Environment.UserID after checks and check additionally the web.config HomeIPs property;
+20160403 11:05 - Auto-login - remove check for HomeIPs property;
+					MainForm - Request.Form("__EVENTTARGET") = ButtonAddExpenditureDetails.ClientID AndAlso IsNumeric(Request.Form("__EVENTARGUMENT"))
+					when selecting auto complete result - call ButtonAddExpenditureDetails_Click to directly submit;
+				- added detailsspanSelectedSum to GridViewDetailsPopup to show sums there as well;
+					- JQueryFunctions.AddCellValue - use parsfloat().toFixed(2) to display just 2 decimal places and avoid the 0E results;
+20160411 11:23 - BUGFIX - add to shopping list not working
+					- spGetDetailsProductPriceStatistics - check if measureType parameter is eq. to 0 not just -1 otherwise won't return anything;
+					- put default buttons in productsmanagement
+20160420 16:11 - On autocomplete selection details are added immediately. If you add a batch and change the DetailValue of just one it would update the entire batch, but just once;
+20160421 11:01 - JQuery_functions.js - on key press - CloseDivWeightVolumeSelector() if TextBoxDetailNameNew has focus;
+					- Environment - refactor properties, implicit casts, is Nothing instead of = Nothing comparisons; sql parameters to queries added;
+						Change CurrentLanguage property - enum instead of integer return type;
+					- http://mantis.myhomebills.info/view.php?id=3234 - DetailsGrid - when changing supplier of a detail entry supplier label of row is not refreshed
+						- MainForm - extract all post backs from Page_load to new method called HandlePostBacks;
+20160421 16:50 - CategoriesManagement.ascx - ButtonSave_Click - check if category name already exists;
+					- new unit tests class - CategoriesTests - 
+						- new unit test method CategoriesTests.CheckForCategoriesDuplicates
+20160422 09:15 - UnitTest fix - ChangeProductDefaultMeasureType - ExpenditureManagerBase.UpdateChildExpenses - don't update detailed expenditure initial amount!
+					- MainForm.GridViewDetails_RowDataBound - put txtBoxDetailsTableFieldAmount readonly if product is of fixed measure type;				
+				- Added checks for HttpRuntime if is nothing as when casting result it throws null reference exception
+20160422 16:24 - BUGFIX - MainForm.ButtonAddExpenditureDetails_Click - Case Enums.MeasureType.Count - Me.LastAddedMultipleDetailsIDs.Add(newDetailID) only if batch addind - count > 1;
+20160502 19:28 - http://mantis.myhomebills.info/view.php?id=3229 - After selecting a product from autocomplete display prevailing measure type to suggest entry
+				- REGRESSION: details is now automatically added after selecting product from autocomplete but HiddenDetailsMeasureTypeID is not refresed
+20160503 16:35 - BUGFIX - when merging products products were not refreshed
+20160504 12:04 - Environment - Replace Sum, ExpectedCostSum etc properties return value with Decimal instead of Double
+				- MainForm.GridView1 - put FooterRows for Expected Cost, Sum and Difference columns;
+					- MainForm - remove SumDiv and LabelSum used in CalculateAndDisplaySum; remove LabelExpectedCostSum from calculations as it is now shown in FooterRow of GridView1;
+					- MainForm - move DrawPieChart and Budget1.BindGrid() to CalculateAndDisplaySum();
+					- MainForm - refactor CalculateAndDisplaySum() - also set values to new FooterRow labels;
+					- MainForm - Button_Click - remove Budget1.BindGrid() and always set Me.Month first! - this was messing up DrawMonthCompletionProgressBar();
+20160505 11:23 - BUGFIX - Difference sum in GridView1 footer not updated as BudgetUpdated event handler was commented out from MainForm as it caused stack overflow because it was called in Budget.BindGrid() method
+						but now it's only called in Row_Command and when adding new income;
+						- refactoring;
+					- [spGetBudgetsSavingsSumExpenses] - put @budgetTotal and @budget outside IF blocks;
+20160505 14:11 - BUGFIX - http://mantis.myhomebills.info/view.php?id=92 - Charts.aspx - expenses per month chart displays wrong sums as sum was saved in tbMonthlyExpenses but when hide paid expenses is clicked it stores just the sum of the unpaid;
+						FIX: new stored procedure: spGetUsersYearlyExpenses - get sums from actual tbMainTable and pivot the table to match the old tbMonthlyExpenses column names;
+20160511 16:45 - http://mantis.myhomebills.info/view.php?id=3237 - Highlight supplier in supplier pick menu based on total use - 
+					- ExpenditureManager.GetSuppliers() - use IDataReader.Get generic method;
+					- Supplier - new properties - TotalPurchasesSum, TotalPurchasesCount, TotalPurchasesSharePercentage, TotalPurchasesSumPercentage, Opacity - all set in ExpenditureManager.GetSuppliers();
+						- set opacity to 1.0 if supplier has been edited in last 10 days or is marked as preffered;
+					- Changes in SupplierSelector control - don't display supplier if active is not set;
+20160513 14:29 - http://mantis.myhomebills.info/view.php?id=3239 - Put markings on new progressbar showing pay-check dates and perhaps red checkpoints showing some planned expenditures
+					- Remove jQuery progress bar and write own progress bar by generating a html table and cells programatically and highlight pay days and current progress;
+20160527 08:59 - http://mantis.myhomebills.info/view.php?id=3243 - CalculateAndDisplaySum error: attempted to divide by zero - AWFUL MAJOR BUG :(
+					- this line was causing the issue: Dim sumPerDay = (Me.MonthBudget - Me.Sum) / daysUntilNextPayCheck
+					so that blocks the CalculateAndDisplaySum method and it stops showing any info on remaining sum etc.
+					SOLUTION: Check if daysUntilNextPayCheck > 0 refactor methods and extract getting next income date and list of incomes to a new method: GetNextIncomeDate()
+						- DrawMonthCompletionProgressBar pass nextMonthIncome As IEnumerable(Of Income) from CalculateAndDisplaySum			
+20160616 11:17 - MHB.BL.ExpenditureDetail - new property AverageConsumption; MHB.BL.ExpenditureManagerBase.GetExpenditureDetails add optional Enums.MeasureType parameter used when displaying all fuel entries of current year in order to avoid != Volume;
+					- MHB.BL.Product - move PrevailingMeasureType property to base as it was not set in constructor;
+					- MHB.BL.SQLHelper.GetChildExpenses - add measure type parameter;
+					- MHB.Web.MainForm Griview1 - new template field with TextBoxDetailsTableAverageConsumption and Footer - LabelDetailsTableAverageConsumption;
+				  !!- MHB.Web.MainForm RebindDetailsGrid - remove sortEventsArg parameter and functionality and move them to RebindDetailsGridInternal
+						- that fixes sorting and paging of search results and all year entries;
+					- MHB.Web.MainForm - GridViewDetails_RowDataBound added case for DataControlRowType.Footer where average fuel consumption is calculated;
+				  !!- MHB.Web.MainForm - GridViewDetails_RowCommand - remove calling Me.RebindGrid() and Me.RebindDetailsGrid(Me.ExpenditureID) all the time at the end of the method and added only where necessary;
+					- MHB.Web.MainForm - ButtonAllDetailsForCategory_Click - When category is fuel get just entries having the volume measure type;
+				  !!- MHB.Web.MainForm - GridViewDetail_PageIndexChanging - use Me.RebindDetailsGridInternal()
+20160621 10:26 - On the go fixes - SQLHelper.GetProductTotalEntries - check if (!productCounts.ContainsKey(productID))
+				  !!- a product is returned twice by the query if it has equal entries count of a measure type;
+				  !!- rewrite Environment.GetTranslatedValue() :)
+				  - MainForm.RebindDetailsGridProductsInfo - hide avgConsumptionColumn for non fuel entries;
+				  - MainForm.GridViewDetails_RowDataBound - there was a problem with the closing End Ifs and imgBtnCategory was never set to Visible=True;
+20160621 10:49 - Added Enable compression HttpModule. minify js and css files;
+20160624 09:42 - https://mantis.myhomebills.info/view.php?id=3247 - RebindDetailsGridInternal - Object reference not set to an instance of an object when having entered un-escaped special char for DetailName - ajax call fails and record is stored in db but no longer shown in DetailsGrid - IIS Worker process CPU usage goes to 90+%
+					- MainForm.aspx.vb.RebindDetailsGridInternal - Dim referenceDetail was Nothing and latter error was thrown;
+					- MainForm.aspx - escape special characters textBoxDetailNameNew.autocomplete( ... data: '{prefixText:"' + escape(textBoxDetailNameNew.val()) + '"}'
+				- Put new EnableCompression http module under   <system.webServer> otherwise not called in IIS7+
+20160624 10:38 -     textBoxDetailNameNew.autocomplete( ... use textBoxDetailNameNew.val().replace(/\\/g, '') instead of escape() as escape() converts the Cyrillic letters to HTML codes
+20160624 16:46 - https://mantis.myhomebills.info/view.php?id=3246 - PreviewAttachment is always loading each image on MainForm causing the page size to increase - 
+					- JQueryFunctions.js - set img src in ShowPreviewAttach();
+20160701 13:56 - https://mantis.myhomebills.info/view.php?id=3251 - Spent per category charts error: GetDataTable:Error converting data type nvarchar to int. qry:EXECUTE spGetSumsForCategoryPerYear 1, 2001, Bulgarian, 2
+					CategoriesYearlyCharts.RebindChart() - refactor method - use SqlParameters - problem was CurrentLanguage is not cast to int;
+20160701 15:07 - https://mantis.myhomebills.info/view.php?id=3249 - Cannot add vendor/vendors list not refreshing;
+					The supplier is actually added to the database it's just not shown because of the inner join to tbMainTableXX and tbDetailsTableXX in the GetSuppliers method query;
+					SOLUTION: add an empty row to both tbMainTableXX and tbDetailsTableXX; Changes in SQLHelper.AddSupplier();
+20160712 09:38 - https://mantis.myhomebills.info/view.php?id=3252 - When marked as paid set expected cost to equal actually paid
+					- MHB.BL.ExpenditureManagerBase.UpdateParentExpenses() - FieldExpectedValue = (CASE WHEN @IsPaid{1} = 1 THEN @FieldValue{1} ELSE @FieldExpectedValue{1} END),
+20160712 11:53 - https://mantis.myhomebills.info/view.php?id=3245 - Geo IP localization service not working apparently as city column is always empty in action log;
+					- Use more than one geo ip service - new app.config property - GeoIPServiceFormattedUrls - holding comma delimited list of geo ip services;
+						- Changes in GeoLocation.GetGeoData() - For Each serviceUrl As String In Me._geoIpServiceUrls - if City or CountryCode cannot be queried try next service in list
+20160712 13:31 - MHB.UnitTests.ExpendituresCRUSOperationsTests.UpdateParentExpenditure - fix checking FieldExpectedValue after https://mantis.myhomebills.info/view.php?id=3252 - When marked as paid set expected cost to equal actually paid;
+20160713 09:59 - https://mantis.myhomebills.info/view.php?id=3245 - City column still empty; geo location data is not queried on session start events but only when a user logs in manually; [spGetActionLogData] in need of rewrite;
+					- Changes in [spGetActionLogData] - use DATEDIFF when joining tbTransactionLog to tbActionLog as it's much faster than casting to string;
+					- Rewrite Session_Start in Global.asax.vb - use a Task and ContinueWith and initially call UpdateUserGeoLocationInfo();
+					- New HistoryAction - SessionStart;
+20160713 11:07 - https://mantis.myhomebills.info/view.php?id=3253 - AjaxControlToolkit.TextBoxWatermarkExtender missing required WatermarkText property value for TextBoxWatermarkExtender1. If Global.asax.vb.SetTranslationInCache() has not completed the latter exception is thrown;
+					- Global.asax.vb.Session_Start - move SetTranslationInCache outside async tasks;
+					- Global.asax.vb.Application_Start - rewrite use ContinueWith and call SetTranslationInCache();
+20160713 14:01 - Logger - add color in HistoryAction for SessionStart;
+					- Environment.ExchangeRates - store in session variable and then return it in case cache is empty or reloading;
+					- Enironment.TranslateControls - ctlTexts - init as Enumerable.Empty to try and avoid Value cannot be null.Parameter name: collection exception;
+20160714 09:58 - Global.asax.Session_Start - move LoadUrlRewriterAddressesIntoCache() outside async Task otherwise if you browse to myhomebills/Forms/Login and they are not loaded 404 error occurs;
+20160714 16:36 - https://mantis.myhomebills.info/view.php?id=3238 - Display categories distribution pie chart in details popup
+					- Add jquery.canvasjs.min.js;
+					- MHB.Web.MainForm.aspx - new js function - DrawDetailsPieChart(dataPoints) and new UpdatePanel - UpdatePanelDetailsGridChartContainer
+					- MHB.Web.MainForm.aspx.vb - new Function - DrawDetailsPieChart();
+20160715 11:41 - DetailsGrid categories distribution chart changes and fixes;
+					- jquery.canvas.min.js - change font sizes and font types directly in Theme1 as they were overridden by jQueryUI dialog;
+					- Fix getAmount Func when detail.Product is null;
+20160715 13:34 - BUGFIX - ProductDetails -units quantity not displayed at all as Product is nothing;
+20160802 09:23 - BUGFIX - DetailsPieChart - PackageUnitsCount is 0 in db and hence products are not counted correctly;
+					BUGFIX - PanelProgressBarContainer.Controls.Clear() to avoid doubling the progress bar;
+20160805 16:27 - https://mantis.myhomebills.info/view.php?id=3254 - Show last edited main categories in tabs on details popup; make perhaps easily switchable using a key combination like ALT+TAB
+					- Using jQuery UI Tabs for this;
+					- Environment - new property holding last edited parent expenditures - LastEditedParentExpenditures;
+					- MainForm - new js script - load_lazyload() called as end request on PageRequestManager;
+					- MainForm.UpdatePanelDetails - add HiddenSelectedLastEditedParentExpenditureTabIndex used in the latter function to set selected tab;
+					- MainForm - added <div id="tabs" style="border: none !important; background: transparent! important;"><ul runat="server" id="DetailsGridEditedCategoriesTabPanel" 
+					- MainForm.vb - added new case to HandlePostbacks method - Request.Form("__EVENTTARGET") = UpdatePanelDetails.ClientID
+					- MainForm - new method - FillLastEditedDetailsTabPanel creating the tabs (li) and adding them to the tab panel
+					- MainForm.ButtonAddDetails_Click - fix the annoying problem where after page size is exceeded page is not automatically switched on to the next;
+					- MainForm.ListBoxParentExpenditures_SelectedIndexChanged - fix annoying problem when copying to another details - initially GridViewDetails is populated with target entries, but on postback it's switched back to the origin;
+20160910 15:05 - Rewrite Environment.TranslateControls;
+20161119 11:33 - !!! MAJOR BUG - DrawMonthCompletionProgressBar() nextIncomeDate and/or firstIncomeDate .Year could be min date it not set - 1900/0001 which makes a 65+k days differnece between the two and thausands HtmlTableCells;
+20161201 09:31 - BUGFIX - GetNextIncomeDate() - GetUserIncome:Specified argument was out of the range of valid values. Parameter name: Month out of range! - when calculating next income date I do Me.Month + 1 and it's no December, so next month becomes = 13
+20161204 12:01 - Optimize Envinronment.TranslateControls() -In products management gridview row popup menus just the first was translated because panel
+					container was added once and next ones are ignored - SOLUTION/WORKAROUND - do not add controls whose parent is a Panel to already translated list;
+					Extract Translations to readonly property
+					Continue for loop if ctl.ID is null
+					Get matchingTranslation just once with FirstOrDefault instead of doing Any and then again another loop in FirstOrDefault
+20161205 13:05 - https://mantis.myhomebills.info/view.php?id=3260 - Add machine bound license check - 
+					- Add nuget reference to MHB.Licensing
+					- New method - Environment.ValidateLicense()
+					- Validate licens in Session_Start
+					- Add License folder containing License.lic generated on MHB VM and the public key
+20161208 13:40 - Update MHB.Licensing nuget to new version which embeds public key in license file.
+20161216 21:04 - !!!! MAJOR BUG - Translation not working! Tab panels not translated; new db script 20161216.001.sql adding translations for tab panels; remove manual tabpanel header text setting;
+					- FIX in Environment.TranslateControls - set Translation.SelectedLanguage, otherwise it just returns the default translation.
+20161217 10:27 - Optimize Translations -
+					- !!!! MAJOR BUG - GetTranslatedValue not working! as selected language was never called and default translations is returned - see latter commit!
+					- TranslationBase - GetTranslations() - Load only where ControlID is not numeric as integer control ids are categories translations
+					- MHB.Web.Environment - Translations property - make readonly and store in session
+					- MHB.Web.Environment - Additional checks to optimize performance - col.HeaderText Is Nothing
+						- remove For Each row As GridViewRow In gridView.Rows as it was never called - GridView template field controls are translated in main body; extract to obsolete method - TranslateRowControls()
+20161218 13:46 - Optimize Translations - Call TranslateControls just once (remove all calls from all controls) in MasterPage Page_Load handler - NOTE: MasterPage Page_Load is called AFTER content pages Page_Load;
+					- TranslateGridViewControls - call for all GridViews after DataBind();
+20161220 09:17 - Sign all MHB assemblies
+20161222 11:35 - Add new history action enum members for download installer
+20161224 08:48 - BUGFIX - Budgets.ascx - lblSum not shown as TranslateGridViewControls is called just after footer row text is set manually;
+					- MHB.Gadgets - added NullToVisibilityConverter to enable ban ip button on each row with an IP Address;
+20161224 10:36 - Increment MHB.DAL version
+					- Added new default user with UserID = 0
+					- GetSingleValueInternal() return (T)Convert.ChangeType(result, typeof(T)); instead of return (T)result;
+					- New HistoryAction s- BlackListCheckCheck_BANNED and BlackListCheckCheckOK
+					- Modify [spCheckIPBlacklisted]
+					- MHB.Gadgets - update service reference
+					- Modify User.IsInBlackList() now GetSingleValue returns bool
+20170203 09:59 - BUGFIX - https://mantis.myhomebills.info/view.php?id=164 - Upload and ocr scanned receipts and insert parsed data to GridViewDetails
+					Update tesseract reference to 3.0.2 from nuget as previous one was failing due to dll being 32bit.
+20170203 15:37 - Add reference to "Microsoft.Office.Interop.Word" version="15.0.4797.1003" and new class ProofingTools used to spell check OCR scanned text;
+20170209 16:44 - https://mantis.myhomebills.info/view.php?id=164 - Parse Google results page and get suggested word to further proof scanned text.
+20170210 11:14 - Update FAQ - installing certificate of signed assemblies.
+					- ExpenditureDetail - new property - IsOcrScanned
+					- Product - new property - OcrKeyWords
+						These are used to differentiate ExpenditureDetails that are added via ReceiptScanner from the manually added ones.
+						OcrKeyWords are only used to fill the SuggestProduct dropdown in each row of GridViewDetails
+					- New db script - 20170210.001.sql
+20170311 09:39 - https://mantis.myhomebills.info/view.php?id=157 - Allow adding decimal amount values to shopping list
+20170321 15:03 - https://mantis.myhomebills.info/view.php?id=3266 Highlight weekdays and weekends
+				 https://mantis.myhomebills.info/view.php?id=3265 add count remaining days and sum per day
+					- Change DrawMonthCompletionProgressBar - add new ProgressBar prefixed classes and new row for counter
+20170322 12:54 - https://mantis.myhomebills.info/view.php?id=3256 - Details popup grid search with autocomplete
+					- New web service providing data for jquery autocomplete - DetailsGridSearch.asmx
+					- New dto object - ExpenditureDetailsInfo used in DetailsGridSearch.asmx service
+					- New textbox in detailsgrid - TextBoxDetailsGridSearch and TextBoxDetailsGridSearch.autocomplete ajax call in MainForm.aspx
+					- New case in HandlePostbacks - TextBoxDetailsGridSearch.ClientID
+20170304 11:51 - Rewrite GetCategoryID - add whole entered text as first keyword before spliting it- GetCategoryKeyWords now returns string[] and marked as obsolete.
+					- MHB.BL.Category - new readonly property CategoryKeywords as string[]
+20170405 10:42 - https://mantis.myhomebills.info/view.php?id=3267 - Cannot delete supplier - Supplier is actually marked IsDeleted = 0 but Suppliers list is not refreshed 
+					- MHB.BL.ExenditureManager - new method added - DeleteSupplier. Mark static method in Supplier.cs as obsolete
+					- MHB.BL.Category - Keywords property - trim each keyword and make upper case
+20170502 14:45 - Environment.GetCategoryID - First try the entire entered text, if it does not return anything then try wildcard search
+20170502 16:49 - https://mantis.myhomebills.info/view.php?id=44 - MAJOR BUG - caused stack overflow the latter commit - this commit introduced a neverending for loop. as neither of the returns is reached the loops keeps on going 
+20170506 12:19 - https://mantis.myhomebills.info/view.php?id=3269 - import bills by sending an email
+					- MBH.Mail - new method - GetImportEmail which is usint the OpenPOP POP3Client to get all messages which have an 32 chars long subject which matches the sender's email api key;
+					Global.asax - new method HandleImportEmails which is executed on SessionStart
+20170506 12:19 - https://mantis.myhomebills.info/view.php?id=3269 - import bills by sending an email
+					- Always delete the email no matter whether it fails or not, Change regex

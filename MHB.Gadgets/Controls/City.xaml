@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="MHB.Gadgets.Controls.City"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             xmlns:converters="clr-namespace:MHB.Gadgets.Converters">
+    <Grid>
+        <Grid.Resources>
+            <converters:VisitorsCountConverter x:Key="VisitorsCountConverter"></converters:VisitorsCountConverter>
+        </Grid.Resources>
+
+        <StackPanel Orientation="Horizontal">
+            <Ellipse Width="{Binding Path=Radius}" Height="{Binding Path=Radius}" Fill="Red"></Ellipse>
+            <Label Content="{Binding Path=CityName}" Foreground="DarkBlue"></Label>
+            <Label Content="{Binding Path=VisitorsCount, Converter={StaticResource VisitorsCountConverter}}" Foreground="DarkBlue"></Label>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,17 @@
+ALTER TABLE tbMainTableTemp
+
+DROP CONSTRAINT PK_tbMainTableTemp
+
+GO
+
+ALTER TABLE tbMainTableTemp
+
+DROP COLUMN ID
+
+GO
+
+ALTER TABLE tbMainTableTemp
+
+ADD ID INT
+
+GO

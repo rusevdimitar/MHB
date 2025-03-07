@@ -1,0 +1,18 @@
+<project outputDir="C:\Jenkins\workspace\MyHomeBills\MHB.Published\bin\" baseDir="C:\Jenkins\workspace\MyHomeBills\MHB.Published\bin\" xmlns="http://confuser.codeplex.com">
+  <rule pattern="true" inherit="false">
+    <protection id="anti ildasm" />
+    <protection id="rename" />
+    <protection id="anti tamper" />
+    <protection id="ctrl flow" />
+    <protection id="anti dump" />
+    <protection id="ref proxy" />
+  </rule>
+  <module path="MHB.BL.dll" snKey="C:\Jenkins\workspace\MyHomeBills\MyHomeBillsCodeSign.pfx" snKeyPass="mitko123" />
+  <module path="MHB.Captcha.dll" snKey="C:\Jenkins\workspace\MyHomeBills\MyHomeBillsCodeSign.pfx" snKeyPass="mitko123" />
+  <module path="MHB.DAL.dll" snKey="C:\Jenkins\workspace\MyHomeBills\MyHomeBillsCodeSign.pfx" snKeyPass="mitko123" />
+  <module path="MHB.Logging.dll" snKey="C:\Jenkins\workspace\MyHomeBills\MyHomeBillsCodeSign.pfx" snKeyPass="mitko123" />
+  <module path="MHB.Mail.dll" snKey="C:\Jenkins\workspace\MyHomeBills\MyHomeBillsCodeSign.pfx" snKeyPass="mitko123" />
+  <module path="MHB.ReceiptScanner.dll" snKey="C:\Jenkins\workspace\MyHomeBills\MyHomeBillsCodeSign.pfx" snKeyPass="mitko123" />
+  <module path="MHB.UserManager.dll" snKey="C:\Jenkins\workspace\MyHomeBills\MyHomeBillsCodeSign.pfx" snKeyPass="mitko123" />
+  <module path="MHB.Web.dll" snKey="C:\Jenkins\workspace\MyHomeBills\MyHomeBillsCodeSign.pfx" snKeyPass="mitko123" />
+</project>

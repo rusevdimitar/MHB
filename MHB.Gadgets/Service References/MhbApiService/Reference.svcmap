@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0b1d6250-8316-480b-bb12-8bc23f208c8b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:57559/MhbApiService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MhbApiService11.xsd" MetadataType="Schema" ID="0b95b586-ec0c-4217-944e-b417c7fe05c6" SourceId="1" SourceUrl="http://localhost:57559/MhbApiService.svc?xsd=xsd9" />
+    <MetadataFile FileName="MhbApiService111.xsd" MetadataType="Schema" ID="3f6f5468-1b8b-4a5c-bc58-cf5a1ad1fc0d" SourceId="1" SourceUrl="http://localhost:57559/MhbApiService.svc?xsd=xsd8" />
+    <MetadataFile FileName="MhbApiService112.xsd" MetadataType="Schema" ID="a3050d0b-fbda-49a2-a1b7-d4bc0d457aba" SourceId="1" SourceUrl="http://localhost:57559/MhbApiService.svc?xsd=xsd10" />
+    <MetadataFile FileName="MhbApiService.disco" MetadataType="Disco" ID="6836ce4e-0a9c-488a-979f-ff7b171df242" SourceId="1" SourceUrl="http://localhost:57559/MhbApiService.svc?disco" />
+    <MetadataFile FileName="MhbApiService1.wsdl" MetadataType="Wsdl" ID="42d4ff1c-3b66-447b-8556-df511c8ef2b8" SourceId="1" SourceUrl="http://localhost:57559/MhbApiService.svc?wsdl" />
+    <MetadataFile FileName="MhbApiService113.xsd" MetadataType="Schema" ID="bde197eb-6c4b-45c4-8901-8c3d964e37ae" SourceId="1" SourceUrl="http://localhost:57559/MhbApiService.svc?xsd=xsd5" />
+    <MetadataFile FileName="MhbApiService114.xsd" MetadataType="Schema" ID="9e4117ea-1d6b-4129-9714-cf7cfd6e8b29" SourceId="1" SourceUrl="http://localhost:57559/MhbApiService.svc?xsd=xsd4" />
+    <MetadataFile FileName="MhbApiService115.xsd" MetadataType="Schema" ID="cdb69ab0-acf8-452e-ba78-37774bb40e97" SourceId="1" SourceUrl="http://localhost:57559/MhbApiService.svc?xsd=xsd7" />
+    <MetadataFile FileName="MhbApiService116.xsd" MetadataType="Schema" ID="67ec77d5-95c3-4eeb-a019-3f4e98e69363" SourceId="1" SourceUrl="http://localhost:57559/MhbApiService.svc?xsd=xsd6" />
+    <MetadataFile FileName="MhbApiService117.xsd" MetadataType="Schema" ID="23649bb6-b61f-41d6-9b70-95c2bf98267d" SourceId="1" SourceUrl="http://localhost:57559/MhbApiService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MhbApiService118.xsd" MetadataType="Schema" ID="41281507-e303-4722-879f-c53dc645624c" SourceId="1" SourceUrl="http://localhost:57559/MhbApiService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MhbApiService119.xsd" MetadataType="Schema" ID="92a14e9a-dfe2-455d-a41c-997a692aeb81" SourceId="1" SourceUrl="http://localhost:57559/MhbApiService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MhbApiService1110.xsd" MetadataType="Schema" ID="5a5cd68c-6778-4e92-815c-d287496169d1" SourceId="1" SourceUrl="http://localhost:57559/MhbApiService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

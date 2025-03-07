@@ -1,0 +1,58 @@
+﻿body
+{
+    padding: 0px;
+    margin: 0px;
+    background-image: url('../Images/page_bggrn.gif');
+    background-color: #bfd2ee;
+    background-repeat: repeat-x;
+}
+#main
+{
+    border: 1px solid #99CCFF;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+.GridCells
+{
+    border-style: none;
+    font-family: 'Segoe UI';
+    font-size: 11px;
+}
+.GridViewHeaderStyle
+{
+    /*background-image: url('../Images/barbbox.gif');*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    height: 24px;
+    background-color: #333333;
+    background-image: url('../Images/barbbox.gif');
+    background-repeat: repeat-x;
+}
+.PlainTextBox
+{
+    font-family: 'Segoe UI';
+    font-size: 11px;
+    color: #000066;
+    border: 1px solid #000066;
+}
+.PlainText
+{
+    font-family: 'Segoe UI';
+    font-size: 11px;
+    color: #000066;
+}
+.PlainTextBold
+{
+    font-family: 'Segoe UI';
+    font-size: 11px;
+    color: #000066;
+    font-weight: bold;
+}
+.ErrorText
+{
+    font-family: 'Segoe UI';
+    font-size: 11px;
+    color: #CC0000;
+    font-weight: bold;
+}

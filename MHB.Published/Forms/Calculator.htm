@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calculator</title>
+    <style type="text/css">
+        .CalculatorPlainButton
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #003366;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="background-color: #F4FAFF;">
+    <form name="Calc">
+    <table border="4">
+        <tr>
+            <td>
+                <input type="text" class="CalculatorWindow" name="Input">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" name="one" class="CalculatorPlainButton" value="  1  " onclick="Calc.Input.value += '1'">
+                <input type="button" name="two" class="CalculatorPlainButton" value="  2  " onclick="Calc.Input.value += '2'">
+                <input type="button" name="three" class="CalculatorPlainButton" value="  3  " onclick="Calc.Input.value += '3'">
+                <input type="button" name="plus" class="CalculatorPlainButton" value="  +  " onclick="Calc.Input.value += ' + '">
+                <br>
+                <input type="button" name="four" class="CalculatorPlainButton" value="  4  " onclick="Calc.Input.value += '4'">
+                <input type="button" name="five" class="CalculatorPlainButton" value="  5  " onclick="Calc.Input.value += '5'">
+                <input type="button" name="six" class="CalculatorPlainButton" value="  6  " onclick="Calc.Input.value += '6'">
+                <input type="button" name="minus" class="CalculatorPlainButton" value="  -  " onclick="Calc.Input.value += ' - '">
+                <br>
+                <input type="button" name="seven" class="CalculatorPlainButton" value="  7  " onclick="Calc.Input.value += '7'">
+                <input type="button" name="eight" class="CalculatorPlainButton" value="  8  " onclick="Calc.Input.value += '8'">
+                <input type="button" name="nine" class="CalculatorPlainButton" value="  9  " onclick="Calc.Input.value += '9'">
+                <input type="button" name="times" class="CalculatorPlainButton" value="  x  " onclick="Calc.Input.value += ' * '">
+                <br>
+                <input type="button" name="clear" class="CalculatorPlainButton" value="  c  " onclick="Calc.Input.value = ''">
+                <input type="button" name="zero" class="CalculatorPlainButton" value="  0  " onclick="Calc.Input.value += '0'">
+                <input type="button" name="DoIt" class="CalculatorPlainButton" value="  =  " onclick="Calc.Input.value = eval(Calc.Input.value)">
+                <input type="button" name="div" class="CalculatorPlainButton" value="  /  " onclick="Calc.Input.value += ' / '">
+                <br>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

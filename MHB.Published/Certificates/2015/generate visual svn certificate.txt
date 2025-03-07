@@ -1,0 +1,1 @@
+"%VISUALSVN_SERVER%\bin\openssl" pkcs12 -in D:\Test02\MHB.Web\Certificates\2015\W3xr1vuirpIM9y5u.p12 -nodes -out visualsvn.pem

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MHB.Logging" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MHB.Logging" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="ArrayOfActionLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActionLog" nillable="true" type="tns:ActionLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActionLog" nillable="true" type="tns:ArrayOfActionLog" />
+  <xs:complexType name="ActionLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Action" type="tns:Logger.HistoryAction" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConnectionString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LogDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="RelativeCoordinates" nillable="true" type="q1:TupleOfdoubledouble" />
+      <xs:element minOccurs="0" name="TransactionMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserPassword" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActionLog" nillable="true" type="tns:ActionLog" />
+  <xs:simpleType name="Logger.HistoryAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Login" />
+      <xs:enumeration value="Register" />
+      <xs:enumeration value="Update" />
+      <xs:enumeration value="AddNew" />
+      <xs:enumeration value="Delete" />
+      <xs:enumeration value="Attach" />
+      <xs:enumeration value="AttachDetails" />
+      <xs:enumeration value="AddDetails" />
+      <xs:enumeration value="DeleteDetails" />
+      <xs:enumeration value="UpdateDetails" />
+      <xs:enumeration value="AttachToDetails" />
+      <xs:enumeration value="LogOut" />
+      <xs:enumeration value="AnnualReportCharts" />
+      <xs:enumeration value="AnnualReportPDFExcel" />
+      <xs:enumeration value="RecoverPassword" />
+      <xs:enumeration value="VideoTutorial" />
+      <xs:enumeration value="ScreenShots" />
+      <xs:enumeration value="ChangeCurrentLanguageEnglish" />
+      <xs:enumeration value="ChangeCurrentLanguageDeutsch" />
+      <xs:enumeration value="ChangeCurrentLanguageBulgarian" />
+      <xs:enumeration value="ChangeCurrency" />
+      <xs:enumeration value="ChangePassword" />
+      <xs:enumeration value="DeleteDemoEntries" />
+      <xs:enumeration value="StartDemo" />
+      <xs:enumeration value="AddIncome" />
+      <xs:enumeration value="DeleteIncome" />
+      <xs:enumeration value="EditIncome" />
+      <xs:enumeration value="FlagBill" />
+      <xs:enumeration value="PerformSearch" />
+      <xs:enumeration value="InitiateSearchWindow" />
+      <xs:enumeration value="ChangeMonth" />
+      <xs:enumeration value="CopyParentExpense" />
+      <xs:enumeration value="AnnualCategoryCharts" />
+      <xs:enumeration value="AddCategory" />
+      <xs:enumeration value="UpdateCategory" />
+      <xs:enumeration value="EditCategory" />
+      <xs:enumeration value="DeleteCategory" />
+      <xs:enumeration value="CancelEditCategory" />
+      <xs:enumeration value="Help" />
+      <xs:enumeration value="Events" />
+      <xs:enumeration value="GetExchangeRates" />
+      <xs:enumeration value="CopyUserCategory" />
+      <xs:enumeration value="Statistics" />
+      <xs:enumeration value="RebuildDbIndexes" />
+      <xs:enumeration value="LoadTranslationsInCache" />
+      <xs:enumeration value="CurrencyExchangeRatesCharts" />
+      <xs:enumeration value="GenerateAPIKeySuccess" />
+      <xs:enumeration value="GenerateAPIKeyInvalidCredentials" />
+      <xs:enumeration value="API_DeleteParentExpenditure" />
+      <xs:enumeration value="API_DeleteChildExpenditures" />
+      <xs:enumeration value="API_AddParentExpenditure" />
+      <xs:enumeration value="API_SearchUserExpenditures" />
+      <xs:enumeration value="API_GetExpenditureDetails" />
+      <xs:enumeration value="API_UpdateParentExpenses" />
+      <xs:enumeration value="API_GetUsersAverageSumForCategory" />
+      <xs:enumeration value="API_CopyParentExpense" />
+      <xs:enumeration value="API_DeleteAttachment" />
+      <xs:enumeration value="API_GetMaximumExpenditureForCategory" />
+      <xs:enumeration value="API_GetUserIncome" />
+      <xs:enumeration value="API_DuplicateExpenditures" />
+      <xs:enumeration value="API_GetYearlyExpensesProMonth" />
+      <xs:enumeration value="API_GetYearlyBudgetsProMonth" />
+      <xs:enumeration value="API_GetYearlySavingsProMonth" />
+      <xs:enumeration value="API_GetUserExpenditures" />
+      <xs:enumeration value="API_GetExpenditures" />
+      <xs:enumeration value="API_GetActionLogs" />
+      <xs:enumeration value="API_GetExceptionLogs" />
+      <xs:enumeration value="API_BlockUser" />
+      <xs:enumeration value="API_BanIP" />
+      <xs:enumeration value="API_GetSingleValue" />
+      <xs:enumeration value="API_ExecuteQuery" />
+      <xs:enumeration value="API_GetDataReader" />
+      <xs:enumeration value="API_GetDataTable" />
+      <xs:enumeration value="SendNotificationEmails" />
+      <xs:enumeration value="AddCategoryComment" />
+      <xs:enumeration value="VoteUpOnCategoryComment" />
+      <xs:enumeration value="VoteDownOnCategoryComment" />
+      <xs:enumeration value="DeleteCategoryComment" />
+      <xs:enumeration value="DeleteProduct" />
+      <xs:enumeration value="CancelEditProduct" />
+      <xs:enumeration value="UpdateProduct" />
+      <xs:enumeration value="DeleteSupplier" />
+      <xs:enumeration value="CancelEditSupplier" />
+      <xs:enumeration value="UpdateSupplier" />
+      <xs:enumeration value="EditSupplier" />
+      <xs:enumeration value="EditProduct" />
+      <xs:enumeration value="GetExchangeRatesHistory" />
+      <xs:enumeration value="ProductPriceStatistics" />
+      <xs:enumeration value="NavigateToBillDate" />
+      <xs:enumeration value="LoadUrlRewriterAddressesListIntoCache" />
+      <xs:enumeration value="ChangeUserLanguage" />
+      <xs:enumeration value="ChangeUserAutoLoginSettings" />
+      <xs:enumeration value="SetTranslationInCache" />
+      <xs:enumeration value="SessionStart" />
+      <xs:enumeration value="ApplicationStart" />
+      <xs:enumeration value="ApplicationEnd" />
+      <xs:enumeration value="SessionEnd" />
+      <xs:enumeration value="EndValidateLicense" />
+      <xs:enumeration value="ValidateLicenseSuccessful" />
+      <xs:enumeration value="DownloadMyHomeBillsInstaller" />
+      <xs:enumeration value="DownloadPageOpened" />
+      <xs:enumeration value="BlackListCheckCheckOK" />
+      <xs:enumeration value="BlackListCheckCheck_BANNED" />
+      <xs:enumeration value="EndHandleImportEmails" />
+      <xs:enumeration value="BeginHandleImportEmails" />
+      <xs:enumeration value="HandleImportEmailsAddedImportedChildExpense" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Logger.HistoryAction" nillable="true" type="tns:Logger.HistoryAction" />
+  <xs:complexType name="ArrayOfExceptionLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExceptionLog" nillable="true" type="tns:ExceptionLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExceptionLog" nillable="true" type="tns:ArrayOfExceptionLog" />
+  <xs:complexType name="ExceptionLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConnectionString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="LogDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LogInnerExceptionMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LogMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LogSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LogStackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MethodName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SqlQuery" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionLog" nillable="true" type="tns:ExceptionLog" />
+</xs:schema>

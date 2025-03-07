@@ -1,0 +1,2 @@
+﻿UPDATE tbLanguage SET ControlTextBG = 'Годишен доклад категория' WHERE ControlID = 'ButtonAnnualSummaryPerCategory'
+UPDATE tbLanguage SET ControlTextEN = 'Annual report by category' WHERE ControlID = 'ButtonAnnualSummaryPerCategory'

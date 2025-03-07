@@ -1,0 +1,1482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D039432-34F9-40E1-A2AC-E80DB8D5D396}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MHB.Web</RootNamespace>
+    <AssemblyName>MHB.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <UseIISExpress>true</UseIISExpress>
+    <TargetFrameworkProfile />
+    <IISExpressSSLPort>44333</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>None</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\MHB.Licensing.2016.12.19.2\lib\net452\BouncyCastle.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.4.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MHB.Licensing, Version=2016.12.19.2, Culture=neutral, PublicKeyToken=12f2806b3142d5ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\MHB.Licensing.2016.12.19.2\lib\net452\MHB.Licensing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Portable.Licensing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=12f2806b3142d5ff, processorArchitecture=MSIL">
+      <HintPath>..\packages\MHB.Licensing.2016.12.19.2\lib\net452\Portable.Licensing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebChart, Version=1.1.1.4, Culture=neutral, PublicKeyToken=fce6564cdf1444e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\WebChart.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArticleImages\ffb-xmas-2010.jpg" />
+    <Content Include="Assemblies\itextsharp.dll" />
+    <Content Include="Banners\bg_koleda.swf" />
+    <Content Include="bin\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.ProcessingObjectModel.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.WebForms.dll" />
+    <Content Include="Certificates\2015\generate visual svn certificate.txt" />
+    <Content Include="CustomControls\ApiManagementControl.ascx" />
+    <Content Include="CustomControls\CategoriesManagement.ascx" />
+    <Content Include="CustomControls\CategoryIcons.ascx" />
+    <Content Include="CustomControls\ExchangeRates.ascx" />
+    <Content Include="CustomControls\ExchangeRatesBar.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomControls\ProductDetails.ascx" />
+    <Content Include="CustomControls\ProductPriceStatistics.ascx" />
+    <Content Include="CustomControls\ProductsManagement.ascx" />
+    <Content Include="CustomControls\PurchaseHistoryControl.ascx" />
+    <Content Include="CustomControls\PurchaseHistoryDateSelectorControl.ascx" />
+    <Content Include="CustomControls\SupplierSelector.ascx" />
+    <Content Include="CustomControls\SuppliersManagement.ascx" />
+    <Content Include="CustomControls\TodaySpentListControl.ascx" />
+    <Content Include="DBScripts\20161216.001.sql" />
+    <Content Include="DBScripts\20150812.001.sql" />
+    <Content Include="DBScripts\20111103.001.sql" />
+    <Content Include="DBScripts\20111207.001.sql" />
+    <Content Include="DBScripts\20120106.001.sql" />
+    <Content Include="DBScripts\20120106.002.sql" />
+    <Content Include="DBScripts\20120123.001_analyze_indexes.sql" />
+    <Content Include="DBScripts\20120123.002_drop_create_indexes.sql" />
+    <Content Include="DBScripts\20120124.001.sql" />
+    <Content Include="DBScripts\20120124.002.sql" />
+    <Content Include="DBScripts\20120127.001.sql" />
+    <Content Include="DBScripts\20120215.001.sql" />
+    <Content Include="DBScripts\20120215.002.sql" />
+    <Content Include="DBScripts\20120215.003.sql" />
+    <Content Include="DBScripts\20120216.001.sql" />
+    <Content Include="DBScripts\20120217.001.sql" />
+    <Content Include="DBScripts\20120217.002.sql" />
+    <Content Include="DBScripts\20120217.003.sql" />
+    <Content Include="DBScripts\20120218.001.sql" />
+    <Content Include="DBScripts\20120223.001.sql" />
+    <Content Include="DBScripts\20120223.002.sql" />
+    <Content Include="DBScripts\20120302.001.sql" />
+    <Content Include="DBScripts\20120311.001.sql" />
+    <Content Include="DBScripts\20120425.001.sql" />
+    <Content Include="DBScripts\20120426.001.sql" />
+    <Content Include="DBScripts\20120426.002.sql" />
+    <Content Include="DBScripts\20120515.001.sql" />
+    <Content Include="DBScripts\20120515.002.sql" />
+    <Content Include="DBScripts\20120515.003.sql" />
+    <Content Include="DBScripts\20120516.001.sql" />
+    <Content Include="DBScripts\20120516.002.sql" />
+    <Content Include="DBScripts\20120517.001.sql" />
+    <Content Include="DBScripts\20120517.002.sql" />
+    <Content Include="DBScripts\20120517.003.sql" />
+    <Content Include="DBScripts\20120518.001.sql" />
+    <Content Include="DBScripts\20120528.001.sql" />
+    <Content Include="DBScripts\20120528.002.sql" />
+    <Content Include="DBScripts\20120529.001.sql" />
+    <Content Include="DBScripts\20120531.001.sql" />
+    <Content Include="DBScripts\20120601.001.sql" />
+    <Content Include="DBScripts\20120612.001.sql" />
+    <Content Include="DBScripts\20120613.001.sql" />
+    <Content Include="DBScripts\20120613.002.sql" />
+    <Content Include="DBScripts\20130719.001.sql" />
+    <Content Include="DBScripts\20120911.001.sql" />
+    <Content Include="DBScripts\20121002.001.sql" />
+    <Content Include="DBScripts\20121018.001.sql" />
+    <Content Include="DBScripts\20121018.002.sql" />
+    <Content Include="DBScripts\20121217.001.sql" />
+    <Content Include="DBScripts\20121218.001.sql" />
+    <Content Include="DBScripts\20130102.001.sql" />
+    <Content Include="DBScripts\20130126.001.sql" />
+    <Content Include="DBScripts\20130201.001.sql" />
+    <Content Include="DBScripts\20130209.001.sql" />
+    <Content Include="DBScripts\20130211.001.sql" />
+    <Content Include="DBScripts\20130222.001.sql" />
+    <Content Include="DBScripts\20130228.001.sql" />
+    <Content Include="DBScripts\20130301.001.sql" />
+    <Content Include="DBScripts\20130302.001.sql" />
+    <Content Include="DBScripts\20130304.001.sql" />
+    <Content Include="DBScripts\20130305.001.sql" />
+    <Content Include="DBScripts\20130305.002.sql" />
+    <Content Include="DBScripts\20130326.001.sql" />
+    <Content Include="DBScripts\20130425.001.sql" />
+    <Content Include="DBScripts\20130606.001.sql" />
+    <Content Include="DBScripts\20130611.001.sql" />
+    <Content Include="DBScripts\20130708.001.sql" />
+    <Content Include="DBScripts\20130808.001.sql" />
+    <Content Include="DBScripts\20130809.001.sql" />
+    <Content Include="DBScripts\20130820.001.sql" />
+    <Content Include="DBScripts\20130822.001.sql" />
+    <Content Include="DBScripts\20130830.001.sql" />
+    <Content Include="DBScripts\20130901.001.sql" />
+    <Content Include="DBScripts\20130912.001.sql" />
+    <Content Include="DBScripts\20130913.001.sql" />
+    <Content Include="DBScripts\20130916.001.sql" />
+    <Content Include="DBScripts\20130917.001.sql" />
+    <Content Include="DBScripts\20130919.001.sql" />
+    <Content Include="DBScripts\20130924.001.sql" />
+    <Content Include="DBScripts\20131030.001.sql" />
+    <Content Include="DBScripts\20140123.001.sql" />
+    <Content Include="DBScripts\20140604.001.sql" />
+    <Content Include="DBScripts\20140605.001.sql" />
+    <Content Include="DBScripts\20140812.001.sql" />
+    <Content Include="DBScripts\20140812.002.sql" />
+    <Content Include="DBScripts\20140812.003.sql" />
+    <Content Include="DBScripts\20140812.004.sql" />
+    <Content Include="DBScripts\20140813.001.sql" />
+    <Content Include="DBScripts\20140821.001.sql" />
+    <Content Include="DBScripts\20141028.001.sql" />
+    <Content Include="DBScripts\20141121.001.sql" />
+    <Content Include="DBScripts\20150313.001.sql" />
+    <Content Include="DBScripts\20141201.001.sql" />
+    <Content Include="DBScripts\20150314.001.sql" />
+    <Content Include="DBScripts\20150316.001.sql" />
+    <Content Include="DBScripts\20150318.001.sql" />
+    <Content Include="DBScripts\20150322.001.sql" />
+    <Content Include="DBScripts\20160802.001.sql" />
+    <Content Include="DBScripts\20161224.001.sql" />
+    <Content Include="DBScripts\20170210.001.sql" />
+    <Content Include="FAQ.txt" />
+    <Content Include="Forms\APIManagement.aspx" />
+    <Content Include="Forms\BuyStandalone.aspx" />
+    <Content Include="Forms\CategoriesYearlyCharts.aspx" />
+    <Content Include="Forms\DetailsGridSearch.asmx" />
+    <Content Include="Forms\DetailsProductPriceStatistics.aspx" />
+    <Content Include="Forms\Diagnostics.aspx" />
+    <Content Include="Forms\Events.aspx" />
+    <Content Include="Forms\ExchangeRatesCharts.aspx" />
+    <Content Include="Forms\FileDownloader.aspx" />
+    <Content Include="Forms\ProductAutoComplete.asmx" />
+    <Content Include="Forms\SearchAutoComplete.asmx" />
+    <Content Include="Forms\SharedNotes.aspx" />
+    <Content Include="Forms\Statistics.aspx" />
+    <Content Include="Forms\UserCategoriesManagement.aspx" />
+    <Content Include="Forms\PayPalButton.htm" />
+    <Content Include="Forms\UserProductsManagement.aspx" />
+    <Content Include="Images\add_product.png" />
+    <Content Include="Images\add_product_faded.png" />
+    <Content Include="Images\add_to_shopping_list.gif" />
+    <Content Include="Images\add_to_shopping_list_faded.gif" />
+    <Content Include="Images\admin_action_log.png" />
+    <Content Include="Images\admin_mass_email.png" />
+    <Content Include="Images\btn_download_standalone.png" />
+    <Content Include="Images\btn_download_standalone_hover.png" />
+    <Content Include="Images\button_add_new_blue.png" />
+    <Content Include="Images\button_add_new_blue_hover.png" />
+    <Content Include="Images\button_add_new_green.png" />
+    <Content Include="Images\button_add_new_green_hover.png" />
+    <Content Include="Images\button_add_new_medium_red.png" />
+    <Content Include="Images\button_add_new_medium_red_hover.png" />
+    <Content Include="Images\button_add_new_orange.png" />
+    <Content Include="Images\button_add_new_orange_hover.png" />
+    <Content Include="Images\button_add_new_red.png" />
+    <Content Include="Images\button_add_new_red_hover.png" />
+    <Content Include="Images\button_add_shopping_list.gif" />
+    <Content Include="Images\button_add_shopping_list_hover.gif" />
+    <Content Include="Images\CalloutIcon.png" />
+    <Content Include="Images\cart_delete.png" />
+    <Content Include="Images\Coins.png" />
+    <Content Include="Images\context_delete.png" />
+    <Content Include="Images\context_delete_attach.gif" />
+    <Content Include="Images\copy_all.png" />
+    <Content Include="Images\envelope.gif" />
+    <Content Include="Images\faq\add_1.jpg" />
+    <Content Include="Images\faq\add_2.jpg" />
+    <Content Include="Images\faq\add_3.jpg" />
+    <Content Include="Images\faq\add_4.jpg" />
+    <Content Include="Images\faq\add_cat_0.jpg" />
+    <Content Include="Images\faq\add_cat_1.jpg" />
+    <Content Include="Images\faq\add_cat_2.jpg" />
+    <Content Include="Images\faq\add_cat_3.jpg" />
+    <Content Include="Images\faq\add_cat_4.jpg" />
+    <Content Include="Images\faq\add_cat_5.jpg" />
+    <Content Include="Images\faq\add_cat_6.jpg" />
+    <Content Include="Images\faq\add_cat_7.jpg" />
+    <Content Include="Images\faq\annu_report_1.jpg" />
+    <Content Include="Images\faq\annu_report_2.jpg" />
+    <Content Include="Images\faq\annu_report_3.jpg" />
+    <Content Include="Images\faq\annu_report_4.jpg" />
+    <Content Include="Images\faq\attach_1.jpg" />
+    <Content Include="Images\faq\attach_2.jpg" />
+    <Content Include="Images\faq\attach_3.jpg" />
+    <Content Include="Images\faq\attach_4.jpg" />
+    <Content Include="Images\faq\budget_1.jpg" />
+    <Content Include="Images\faq\calc_1.jpg" />
+    <Content Include="Images\faq\calendar_1.jpg" />
+    <Content Include="Images\faq\calendar_2.jpg" />
+    <Content Include="Images\faq\cat_1.jpg" />
+    <Content Include="Images\faq\cat_2.jpg" />
+    <Content Include="Images\faq\cat_3.jpg" />
+    <Content Include="Images\faq\copy_1.jpg" />
+    <Content Include="Images\faq\copy_2.jpg" />
+    <Content Include="Images\faq\det_1.jpg" />
+    <Content Include="Images\faq\det_2.jpg" />
+    <Content Include="Images\faq\det_3.jpg" />
+    <Content Include="Images\faq\export_1.jpg" />
+    <Content Include="Images\faq\export_2.jpg" />
+    <Content Include="Images\faq\flag_1.jpg" />
+    <Content Include="Images\faq\lang_1.jpg" />
+    <Content Include="Images\faq\lang_2.jpg" />
+    <Content Include="Images\faq\lang_3.jpg" />
+    <Content Include="Images\faq\save_1.jpg" />
+    <Content Include="Images\faq\tran_1.jpg" />
+    <Content Include="Images\faq\tran_2.jpg" />
+    <Content Include="Images\faq\undo_1.jpg" />
+    <Content Include="Images\flag_blue.png" />
+    <Content Include="Images\general-delete-icon.png" />
+    <Content Include="Images\general-delete-icon_faded.png" />
+    <Content Include="Images\general-delete-icon_red.png" />
+    <Content Include="Images\general-delete-icon_red_faded.png" />
+    <Content Include="Images\hide_paid.png" />
+    <Content Include="Images\logo_032_christmas.gif" />
+    <Content Include="Images\logo_032_spring.gif" />
+    <Content Include="Images\logo_christmas_2013.gif" />
+    <Content Include="Images\logo_martenica_new.gif" />
+    <Content Include="Images\logo_martenica_new_3rd_march.gif" />
+    <Content Include="Images\Main_logo_new_design_2.png" />
+    <Content Include="Images\measure_type_count_details.png" />
+    <Content Include="Images\measure_type_volume_details.png" />
+    <Content Include="Images\measure_type_weight_details.png" />
+    <Content Include="Images\misc\Electricity_2009-2012.Png" />
+    <Content Include="Images\misc\select_all_bills.jpg" />
+    <Content Include="Images\open_new_window.png" />
+    <Content Include="Images\page_paste.png" />
+    <Content Include="Images\page_white_copy.png" />
+    <Content Include="Images\page_white_copy_faded.png" />
+    <Content Include="Images\pencil.png" />
+    <Content Include="Images\pencil_faded.png" />
+    <Content Include="Images\product_prices_chart.gif" />
+    <Content Include="Images\product_prices_chart_faded.gif" />
+    <Content Include="Images\resultset_next.png" />
+    <Content Include="Images\resultset_previous.png" />
+    <Content Include="Images\sharethis-16.png" />
+    <Content Include="Images\sharethis-24.png" />
+    <Content Include="Images\sharethis-24_faded.png" />
+    <Content Include="Images\switch_icon.png" />
+    <Content Include="Images\switch_icon_hover.png" />
+    <Content Include="Images\switzerland_flag.gif" />
+    <Content Include="Images\TabControl\blueGrad.jpg" />
+    <Content Include="Images\TabControl\green.jpg" />
+    <Content Include="Images\TabControl\lightblue.jpg" />
+    <Content Include="Images\TabControl\orange.jpg" />
+    <Content Include="Images\TabControl\red.jpg" />
+    <Content Include="Images\TabControl\sprite.png" />
+    <Content Include="Images\thumbs_down.gif" />
+    <Content Include="Images\thumbs_up.gif" />
+    <Content Include="Images\tick_circle.png" />
+    <Content Include="Images\tick_circle_faded.png" />
+    <Content Include="Images\uk_flag.gif" />
+    <Content Include="Images\UserCategoryIcons\1394\Miscellaneous.png" />
+    <Content Include="Images\UserCategoryIcons\1557\1031-22x22x32.png" />
+    <Content Include="Images\UserCategoryIcons\1557\apple.gif" />
+    <Content Include="Images\UserCategoryIcons\1557\bandito.png" />
+    <Content Include="Images\UserCategoryIcons\1557\bus.png" />
+    <Content Include="Images\UserCategoryIcons\1557\cat.gif" />
+    <Content Include="Images\UserCategoryIcons\1557\dress.png" />
+    <Content Include="Images\UserCategoryIcons\1557\gnome-color-browser.png" />
+    <Content Include="Images\UserCategoryIcons\1557\Help.png" />
+    <Content Include="Images\UserCategoryIcons\1557\kiss.gif" />
+    <Content Include="Images\UserCategoryIcons\1557\water_damage.png" />
+    <Content Include="Images\UserCategoryIcons\1557\_apple_shared_tiny.jpg" />
+    <Content Include="Images\UserCategoryIcons\1577\Cat.png" />
+    <Content Include="Images\UserCategoryIcons\1630\Tango-feet.png" />
+    <Content Include="Images\UserCategoryIcons\1665\car_sedan_green.gif" />
+    <Content Include="Images\UserCategoryIcons\1666\Citroen_icon.gif" />
+    <Content Include="Images\UserCategoryIcons\1666\seat.jpeg" />
+    <Content Include="Images\UserCategoryIcons\1666\SUN.jpg" />
+    <Content Include="Images\UserCategoryIcons\1666\Water_icon.JPG" />
+    <Content Include="Images\UserCategoryIcons\1697\Mobile Icon.jpg" />
+    <Content Include="Images\UserCategoryIcons\1697\Swim.png" />
+    <Content Include="Images\UserCategoryIcons\1697\Yoga.png" />
+    <Content Include="Images\UserCategoryIcons\1828\bob_logo.png" />
+    <Content Include="Images\UserCategoryIcons\1828\images lek.jpg" />
+    <Content Include="Images\UserCategoryIcons\1828\image_gallery.png" />
+    <Content Include="Images\UserCategoryIcons\1828\index_living_the_dream_top.jpg" />
+    <Content Include="Images\UserCategoryIcons\1828\logo max.png" />
+    <Content Include="Images\UserCategoryIcons\1828\logo Корес.png" />
+    <Content Include="Images\UserCategoryIcons\1828\logo.png.gif" />
+    <Content Include="Images\UserCategoryIcons\1828\logo_header.png" />
+    <Content Include="Images\UserCategoryIcons\1828\MaxiCall.png" />
+    <Content Include="Images\UserCategoryIcons\1828\passat.jpg" />
+    <Content Include="Images\UserCategoryIcons\1828\primer-vivafree.png" />
+    <Content Include="Images\UserCategoryIcons\1828\telenor.png" />
+    <Content Include="Images\UserCategoryIcons\1828\vrata.JPG" />
+    <Content Include="Images\UserCategoryIcons\1828\Керхер.jpg" />
+    <Content Include="Images\UserCategoryIcons\1828\Хладилник.jpg" />
+    <Content Include="Images\UserCategoryIcons\1\alchochol.png" />
+    <Content Include="Images\UserCategoryIcons\1\apartment.gif" />
+    <Content Include="Images\UserCategoryIcons\1\baby.png" />
+    <Content Include="Images\UserCategoryIcons\1\bmw.png" />
+    <Content Include="Images\UserCategoryIcons\1\Cigarette.png" />
+    <Content Include="Images\UserCategoryIcons\1\Coins.png" />
+    <Content Include="Images\UserCategoryIcons\1\colortv.png" />
+    <Content Include="Images\UserCategoryIcons\1\dgrad_gerb.gif" />
+    <Content Include="Images\UserCategoryIcons\1\Dog.gif" />
+    <Content Include="Images\UserCategoryIcons\1\Duck.png" />
+    <Content Include="Images\UserCategoryIcons\1\fiat.png" />
+    <Content Include="Images\UserCategoryIcons\1\garden_dgrad_julian.gif" />
+    <Content Include="Images\UserCategoryIcons\1\honda_logo.jpg" />
+    <Content Include="Images\UserCategoryIcons\1\Jar.png" />
+    <Content Include="Images\UserCategoryIcons\1\nanny.jpg" />
+    <Content Include="Images\UserCategoryIcons\1\Pacifier.png" />
+    <Content Include="Images\UserCategoryIcons\1\palm_island.png" />
+    <Content Include="Images\UserCategoryIcons\1\Shirt.png" />
+    <Content Include="Images\UserCategoryIcons\1\visa_credit_card.png" />
+    <Content Include="Images\UserCategoryIcons\1\Yellow-Taxi-256.png" />
+    <Content Include="Images\UserCategoryIcons\1\автомивка.png" />
+    <Content Include="Images\UserCategoryIcons\1\бира.png" />
+    <Content Include="Images\UserCategoryIcons\1\брашно.png" />
+    <Content Include="Images\UserCategoryIcons\1\гъба.png" />
+    <Content Include="Images\UserCategoryIcons\1\зехтин.png" />
+    <Content Include="Images\UserCategoryIcons\1\кафе.png" />
+    <Content Include="Images\UserCategoryIcons\1\кашкавал.png" />
+    <Content Include="Images\UserCategoryIcons\1\крава.png" />
+    <Content Include="Images\UserCategoryIcons\1\лютеница.png" />
+    <Content Include="Images\UserCategoryIcons\1\масло.png" />
+    <Content Include="Images\UserCategoryIcons\1\месо.png" />
+    <Content Include="Images\UserCategoryIcons\1\минерална_вода.png" />
+    <Content Include="Images\UserCategoryIcons\1\одеколон.png" />
+    <Content Include="Images\UserCategoryIcons\1\памперси.png" />
+    <Content Include="Images\UserCategoryIcons\1\риба.png" />
+    <Content Include="Images\UserCategoryIcons\1\сирене.png" />
+    <Content Include="Images\UserCategoryIcons\1\сок.png" />
+    <Content Include="Images\UserCategoryIcons\1\тоалетна_хартия.png" />
+    <Content Include="Images\UserCategoryIcons\1\хляб.png" />
+    <Content Include="Images\UserCategoryIcons\1\шоколад.png" />
+    <Content Include="Images\UserCategoryIcons\1\яйце.png" />
+    <Content Include="Images\UserCategoryIcons\25\clothes.png" />
+    <Content Include="Images\UserCategoryIcons\25\no_category_icon.png" />
+    <Content Include="Images\UserCategoryIcons\39\Bulsatcom.JPG" />
+    <Content Include="Images\UserCategoryIcons\39\dir.jpg" />
+    <Content Include="Images\UserCategoryIcons\39\tel.jpg" />
+    <Content Include="Images\UserCategoryIcons\850\bbq.png" />
+    <Content Include="Images\UserCategoryIcons\850\bills.jpg" />
+    <Content Include="Images\UserCategoryIcons\850\icon.christmas.gif" />
+    <Content Include="Images\UserCategoryIcons\850\images %282%29.jpg" />
+    <Content Include="Images\UserCategoryIcons\850\images.jpg" />
+    <Content Include="Images\UserCategoryIcons\850\suitcase.jpg" />
+    <Content Include="Images\UserCategoryIcons\911\user-policeman-icon.png" />
+    <Content Include="Images\us_flag.gif" />
+    <Content Include="Javascript\contextmenu.js" />
+    <Content Include="Javascript\datetimepicker\jquery.datetimepicker.css" />
+    <Content Include="Javascript\datetimepicker\jquery.datetimepicker.js" />
+    <Content Include="Javascript\EditModeScripts.js" />
+    <Content Include="Javascript\event_util.js" />
+    <Content Include="Javascript\fancybox\blank.gif" />
+    <Content Include="Javascript\fancybox\fancybox-x.png" />
+    <Content Include="Javascript\fancybox\fancybox-y.png" />
+    <Content Include="Javascript\fancybox\fancybox.png" />
+    <Content Include="Javascript\fancybox\fancy_close.png" />
+    <Content Include="Javascript\fancybox\fancy_loading.png" />
+    <Content Include="Javascript\fancybox\fancy_nav_left.png" />
+    <Content Include="Javascript\fancybox\fancy_nav_right.png" />
+    <Content Include="Javascript\fancybox\fancy_shadow_e.png" />
+    <Content Include="Javascript\fancybox\fancy_shadow_n.png" />
+    <Content Include="Javascript\fancybox\fancy_shadow_ne.png" />
+    <Content Include="Javascript\fancybox\fancy_shadow_nw.png" />
+    <Content Include="Javascript\fancybox\fancy_shadow_s.png" />
+    <Content Include="Javascript\fancybox\fancy_shadow_se.png" />
+    <Content Include="Javascript\fancybox\fancy_shadow_sw.png" />
+    <Content Include="Javascript\fancybox\fancy_shadow_w.png" />
+    <Content Include="Javascript\fancybox\fancy_title_left.png" />
+    <Content Include="Javascript\fancybox\fancy_title_main.png" />
+    <Content Include="Javascript\fancybox\fancy_title_over.png" />
+    <Content Include="Javascript\fancybox\fancy_title_right.png" />
+    <Content Include="Javascript\fancybox\jquery.easing-1.3.pack.js" />
+    <Content Include="Javascript\fancybox\jquery.fancybox-1.3.4.css" />
+    <Content Include="Javascript\fancybox\jquery.fancybox-1.3.4.js" />
+    <Content Include="Javascript\fancybox\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="Javascript\fancybox\jquery.mousewheel-3.0.4.pack.js" />
+    <Content Include="Javascript\fancybox\lib\jquery-1.9.0.min.js" />
+    <Content Include="Javascript\fancybox\lib\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Javascript\fancybox\source\blank.gif" />
+    <Content Include="Javascript\fancybox\source\fancybox_loading.gif" />
+    <Content Include="Javascript\fancybox\source\fancybox_overlay.png" />
+    <Content Include="Javascript\fancybox\source\fancybox_sprite.png" />
+    <Content Include="Javascript\fancybox\source\helpers\fancybox_buttons.png" />
+    <Content Include="Javascript\fancybox\source\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Javascript\fancybox\source\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Javascript\fancybox\source\helpers\jquery.fancybox-media.js" />
+    <Content Include="Javascript\fancybox\source\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Javascript\fancybox\source\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Javascript\fancybox\source\jquery.fancybox.css" />
+    <Content Include="Javascript\fancybox\source\jquery.fancybox.js" />
+    <Content Include="Javascript\fancybox\source\jquery.fancybox.pack.js" />
+    <Content Include="Javascript\jquery-1.10.1.js" />
+    <Content Include="Javascript\jquery-1.10.1.min.js" />
+    <Content Include="Javascript\jquery-1.9.0.js" />
+    <Content Include="Javascript\jquery-ui-1.10.0.custom.js" />
+    <Content Include="Javascript\jquery-ui-1.10.0.custom.min.js" />
+    <Content Include="Javascript\jquery.canvasjs.min.js" />
+    <Content Include="Javascript\jquery.easy-confirm-dialog.js" />
+    <Content Include="Javascript\jquery.easy-confirm-dialog.min.js" />
+    <Content Include="Javascript\jquery.hotkeys-0.7.9.js" />
+    <Content Include="Javascript\JQuery_functions.min.js" />
+    <Content Include="Javascript\readmore.js" />
+    <Content Include="Javascript\select2-release-3.2\select2.css" />
+    <Content Include="Javascript\select2-release-3.2\select2.js" />
+    <Content Include="Javascript\select2-release-3.2\select2.min.js" />
+    <Content Include="Javascript\select2-release-3.2\select2.png" />
+    <Content Include="Javascript\select2-release-3.2\select2x2.png" />
+    <Content Include="Javascript\select2-release-3.2\spinner.gif" />
+    <Content Include="Javascript\snowstorm.js" />
+    <Content Include="Simpleviewer\images\1.jpeg" />
+    <Content Include="Simpleviewer\images\10.jpeg" />
+    <Content Include="Simpleviewer\images\11.jpeg" />
+    <Content Include="Simpleviewer\images\12.jpeg" />
+    <Content Include="Simpleviewer\images\13.jpeg" />
+    <Content Include="Simpleviewer\images\14.jpeg" />
+    <Content Include="Simpleviewer\images\15.jpeg" />
+    <Content Include="Simpleviewer\images\16.jpeg" />
+    <Content Include="Simpleviewer\images\17.jpeg" />
+    <Content Include="Simpleviewer\images\18.jpeg" />
+    <Content Include="Simpleviewer\images\19.jpeg" />
+    <Content Include="Simpleviewer\images\2.jpeg" />
+    <Content Include="Simpleviewer\images\20.jpeg" />
+    <Content Include="Simpleviewer\images\3.jpeg" />
+    <Content Include="Simpleviewer\images\4.jpeg" />
+    <Content Include="Simpleviewer\images\5.jpeg" />
+    <Content Include="Simpleviewer\images\6.jpeg" />
+    <Content Include="Simpleviewer\images\7.jpeg" />
+    <Content Include="Simpleviewer\images\8.jpeg" />
+    <Content Include="Simpleviewer\images\9.jpeg" />
+    <Content Include="Simpleviewer\images\cat_1.png" />
+    <Content Include="Simpleviewer\images\cat_2.png" />
+    <Content Include="Simpleviewer\images\cat_3.png" />
+    <Content Include="Simpleviewer\images\cat_4.png" />
+    <Content Include="Simpleviewer\images\cat_5.png" />
+    <Content Include="Simpleviewer\images\cat_6.png" />
+    <Content Include="Simpleviewer\images\cat_7.png" />
+    <Content Include="Simpleviewer\images\cat_8.png" />
+    <Content Include="Simpleviewer\images\cat_9.png" />
+    <Content Include="Simpleviewer\thumbs\1.jpeg" />
+    <Content Include="Simpleviewer\thumbs\10.jpeg" />
+    <Content Include="Simpleviewer\thumbs\11.jpeg" />
+    <Content Include="Simpleviewer\thumbs\12.jpeg" />
+    <Content Include="Simpleviewer\thumbs\13.jpeg" />
+    <Content Include="Simpleviewer\thumbs\14.jpeg" />
+    <Content Include="Simpleviewer\thumbs\15.jpeg" />
+    <Content Include="Simpleviewer\thumbs\16.jpeg" />
+    <Content Include="Simpleviewer\thumbs\17.jpeg" />
+    <Content Include="Simpleviewer\thumbs\18.jpeg" />
+    <Content Include="Simpleviewer\thumbs\19.jpeg" />
+    <Content Include="Simpleviewer\thumbs\2.jpeg" />
+    <Content Include="Simpleviewer\thumbs\20.jpeg" />
+    <Content Include="Simpleviewer\thumbs\3.jpeg" />
+    <Content Include="Simpleviewer\thumbs\4.jpeg" />
+    <Content Include="Simpleviewer\thumbs\5.jpeg" />
+    <Content Include="Simpleviewer\thumbs\6.jpeg" />
+    <Content Include="Simpleviewer\thumbs\7.jpeg" />
+    <Content Include="Simpleviewer\thumbs\8.jpeg" />
+    <Content Include="Simpleviewer\thumbs\9.jpeg" />
+    <Content Include="Simpleviewer\thumbs\cat_1.png" />
+    <Content Include="Simpleviewer\thumbs\cat_2.png" />
+    <Content Include="Simpleviewer\thumbs\cat_3.png" />
+    <Content Include="Simpleviewer\thumbs\cat_4.png" />
+    <Content Include="Simpleviewer\thumbs\cat_5.png" />
+    <Content Include="Simpleviewer\thumbs\cat_6.png" />
+    <Content Include="Simpleviewer\thumbs\cat_7.png" />
+    <Content Include="Simpleviewer\thumbs\cat_8.png" />
+    <Content Include="Simpleviewer\thumbs\cat_9.png" />
+    <Content Include="Javascript\select2-release-3.2\LICENSE" />
+    <Content Include="Javascript\select2-release-3.2\README.md" />
+    <Content Include="Javascript\select2-release-3.2\release.sh" />
+    <Content Include="Certificates\dev.myhomebills.info.cer" />
+    <Content Include="Certificates\forum.myhomebills.info.cer" />
+    <Content Include="Certificates\svn.myhomebills.info.cer" />
+    <Content Include="Certificates\test.myhomebills.info.cer" />
+    <Content Include="copy_tesseract_leptonica_dlls.ps1" />
+    <Content Include="DBScripts\20140814.001.sql" />
+    <Content Include="Certificates\2015\ssl.crt" />
+    <Content Include="Certificates\2015\ssl.key" />
+    <Content Include="Certificates\2015\ssl.key.decrypted" />
+    <Content Include="Certificates\2015\startssl.com.2015.p12" />
+    <Content Include="Certificates\2015\visualsvn.pem" />
+    <Content Include="Certificates\2015\W3xr1vuirpIM9y5u.p12" />
+    <Content Include="License\License.lic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="My Project\PublishProfiles\MHB.DROP.BOX.pubxml" />
+    <None Include="My Project\PublishProfiles\MHB.GOOGLE.DRIVE.pubxml" />
+    <None Include="My Project\PublishProfiles\MHB.JENKINS.WORKSPACE.pubxml" />
+    <None Include="My Project\PublishProfiles\MHB.LOCAL.pubxml" />
+    <None Include="My Project\PublishProfiles\MHB.SKY.DRIVE.pubxml" />
+    <None Include="My Project\PublishProfiles\MHB.TEST FTP.pubxml" />
+    <Content Include="Certificates\MyHomeBills.pfx" />
+    <Content Include="Certificates\MyHomeBills_IE_Certificate.pfx" />
+    <Content Include="Certificates\MyHomeBills_IIS_Certificate.pfx" />
+    <Content Include="Certificates\MyHomeBill_SVN_Certificate.crt" />
+    <Content Include="Certificates\MyHomeBills_IE_Certificate.cer" />
+    <Content Include="packages.config" />
+    <None Include="Sql\spMaintainDbIndexes.sql" />
+    <Content Include="Sql\EmptyDatabase.sql" />
+    <Content Include="Sql\FindAndFixCategoryDuplicatesForAllUsers.sql" />
+    <Content Include="Sql\fnBinaryIPv4.sql" />
+    <Content Include="Sql\fnDisplayIPv4.sql" />
+    <Content Include="Sql\SINGLE_USER_MODE_FIX.sql" />
+    <Content Include="Sql\spAddNewUserCategory.sql" />
+    <Content Include="Sql\spAddUserToBlackList.sql" />
+    <Content Include="Sql\spCheckIPBlackList.sql" />
+    <Content Include="Sql\spDuplicateMonthRecords.sql" />
+    <Content Include="Sql\spGetActionLogData.sql" />
+    <Content Include="Sql\spGetAllUsersCategorySums.sql" />
+    <Content Include="Sql\spGetDaysSinceLastCurrencyExchangeRatesUpdate.sql" />
+    <Content Include="Sql\spGetDetailsProductPriceStatistics.sql" />
+    <Content Include="Sql\spGetExchangeRates.sql" />
+    <Content Include="Sql\spGetFrequentlyPurchasedProductsByDate.sql" />
+    <Content Include="Sql\spGetFuelStatistics.sql" />
+    <Content Include="Sql\spGetSearchKeywords.sql" />
+    <Content Include="Sql\spGetUsersYearlyExpenses.sql" />
+    <Content Include="Sql\spMergeDetails.sql" />
+    <Content Include="Sql\spUpdateCategory.sql" />
+    <Content Include="Sql\spCopyParentExpense.sql" />
+    <Content Include="Sql\sp_UnitTests_CheckSumSpendPerDayTest.sql" />
+    <Content Include="Sql\sp_UnitTests_GetDetailsPerCategory.sql" />
+    <Content Include="Styles\ContextMenu.css" />
+    <Content Include="Styles\jQueryUI\cupertino\images\animated-overlay.gif" />
+    <Content Include="Styles\jQueryUI\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Styles\jQueryUI\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Styles\jQueryUI\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Styles\jQueryUI\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Styles\jQueryUI\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Styles\jQueryUI\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Styles\jQueryUI\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Styles\jQueryUI\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Styles\jQueryUI\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Styles\jQueryUI\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Styles\jQueryUI\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Styles\jQueryUI\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Styles\jQueryUI\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Styles\jQueryUI\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\jQueryUI\cupertino\jquery-ui-1.10.0.custom.css" />
+    <Content Include="Styles\jQueryUI\cupertino\jquery-ui-1.10.0.custom.min.css" />
+    <Content Include="Styles\jQueryUI\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Styles\jQueryUI\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Styles\jQueryUI\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Styles\jQueryUI\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\jQueryUI\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Styles\jQueryUI\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Styles\jQueryUI\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Styles\jQueryUI\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Styles\jQueryUI\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\jQueryUI\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Styles\jQueryUI\images\ui-icons_454545_256x240.png" />
+    <Content Include="Styles\jQueryUI\images\ui-icons_888888_256x240.png" />
+    <Content Include="Styles\jQueryUI\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Styles\jQueryUI\jquery-ui-1.10.0.custom.css" />
+    <Content Include="Styles\jQueryUI\jquery-ui-1.10.0.custom.min.css" />
+    <Content Include="Styles\Style.min.css" />
+    <Content Include="Styles\TabControlThemes.css" />
+    <Content Include="TODO\HardCodedLanguageSelectors.txt" />
+    <Content Include="DBScripts\20100623.001.sql" />
+    <Content Include="DBScripts\20100625.001.sql" />
+    <Content Include="DBScripts\20101211.001.sql" />
+    <Content Include="DBScripts\20101216.001.sql" />
+    <Content Include="DBScripts\20110320.001.sql" />
+    <Content Include="DBScripts\20110321.001.sql" />
+    <Content Include="DBScripts\20110520.001.sql" />
+    <Content Include="DBScripts\20110709.001.sql" />
+    <Content Include="DBScripts\20110928.001.sql" />
+    <Content Include="DBScripts\20111028.001.sql" />
+    <Content Include="DBScripts\20111028.002.sql" />
+    <Content Include="DBScripts\20111028.003.sql" />
+    <Content Include="Default.aspx" />
+    <Content Include="Forms\AccessDenied.htm" />
+    <Content Include="Forms\Admin.aspx" />
+    <Content Include="Forms\AJAX_test.aspx" />
+    <Content Include="Forms\Calculator.htm" />
+    <Content Include="Forms\Charts.aspx" />
+    <Content Include="Forms\EmailTemplate.html" />
+    <Content Include="Forms\FlagExpense.aspx" />
+    <Content Include="Forms\Login.aspx" />
+    <Content Include="Forms\MainForm.aspx" />
+    <Content Include="CustomControls\ToolTip.ascx" />
+    <Content Include="Forms\MassEmail.aspx" />
+    <Content Include="Forms\Mobile.aspx" />
+    <Content Include="Forms\MobileLogin.aspx" />
+    <Content Include="Forms\Transactions.aspx" />
+    <Content Include="Images\address_barcode.png" />
+    <Content Include="Images\button_add_new.gif" />
+    <Content Include="Images\button_add_new_hover.gif" />
+    <Content Include="Images\button_add_new_hover_medium.gif" />
+    <Content Include="Images\button_add_new_medium.gif" />
+    <Content Include="Images\button_add_new_small.gif" />
+    <Content Include="Images\button_add_new_small_hover.gif" />
+    <Content Include="Images\button_add_new_tiny.gif" />
+    <Content Include="Images\button_add_new_tiny_hover.gif" />
+    <Content Include="Images\button_cancel.png" />
+    <Content Include="Images\button_ok.png" />
+    <Content Include="Images\calendar.jpg" />
+    <Content Include="Images\demo_button_hover.png" />
+    <Content Include="Images\demo_button_hover_1.png" />
+    <Content Include="Images\demo_button_normal.png" />
+    <Content Include="Images\demo_button_normal_1.png" />
+    <Content Include="Images\detailsgrid_bg.jpg" />
+    <Content Include="Images\edit_add.png" />
+    <Content Include="Images\edit_add_placeholder.gif" />
+    <Content Include="Images\fancy_btn_grad.bmp" />
+    <Content Include="Images\gray_bg.gif" />
+    <Content Include="Images\gridViewTopgrad.gif" />
+    <Content Include="Images\h3.jpg" />
+    <Content Include="Images\h3_mouseover.jpg" />
+    <Content Include="Images\ico16_new.gif" />
+    <Content Include="Images\Login_Page_Header_Gradient.gif" />
+    <Content Include="Images\Login_Panel_bckgrnd1.gif" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\logo_032.gif" />
+    <Content Include="Images\logo_03_small_replaced_christmas.gif" />
+    <Content Include="Images\logo_default.gif" />
+    <Content Include="Images\logo_default_bw.gif" />
+    <Content Include="Images\logo_easter.gif" />
+    <Content Include="Images\logo_main_new_design.gif" />
+    <Content Include="Images\logo_martenica.gif" />
+    <Content Include="Images\Main_logo_new_design.png" />
+    <Content Include="Images\Main_logo_new_design_1.png" />
+    <Content Include="Images\page_bggrn.gif" />
+    <Content Include="Images\page_header_grad.bmp" />
+    <Content Include="Images\panel_login_bg.gif" />
+    <Content Include="Images\pending_icon.gif" />
+    <Content Include="Images\plus_icon_tiny.gif" />
+    <Content Include="Images\Register_Panel_bckgrnd1.gif" />
+    <Content Include="Images\scrnsht_button_hover.png" />
+    <Content Include="Images\scrnsht_button_hover_1.png" />
+    <Content Include="Images\scrnsht_button_normal.png" />
+    <Content Include="Images\scrnsht_button_normal_1.png" />
+    <Content Include="Images\small_green_check.gif" />
+    <Content Include="Images\Tab_bckgrnd_hover.gif" />
+    <Content Include="Images\undo_grid_icon.gif" />
+    <Content Include="Images\undo_grid_icon_hover.gif" />
+    <Content Include="Images\undo_icon.gif" />
+    <Content Include="Images\undo_icon.png" />
+    <Content Include="Images\warning_icon_small.gif" />
+    <Content Include="Javascript\AXAX_functions.js" />
+    <Content Include="Javascript\ClockOnMainPage.js" />
+    <Content Include="Javascript\jquery-1.6.4.js" />
+    <Content Include="Javascript\JQuery_functions.js" />
+    <Content Include="Javascript\FontSize.js" />
+    <Content Include="Javascript\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Javascript\jquery-1.4.1.js" />
+    <Content Include="Javascript\jquery-1.4.1.min.js" />
+    <Content Include="Javascript\JQueryPopup.js" />
+    <Content Include="Javascript\PageLoadTime.js" />
+    <Content Include="mhb_sitemap.htm" />
+    <None Include="BACKUP_MHB.bat" />
+    <Content Include="ServerWeb.config" />
+    <None Include="Images\Login_Panel.psd" />
+    <None Include="Sql\FindDuplicates.sql" />
+    <Content Include="Sql\spGetBudgetsSavingsSumExpenses.sql" />
+    <Content Include="Sql\spGetGategoryMatchingKeywords.sql" />
+    <Content Include="Styles\EmailTemplateStyle.css" />
+    <Content Include="Styles\MobileStyles.css" />
+    <Content Include="Styles\Popup.css" />
+    <Content Include="Styles\Style.css" />
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="TODO\SPWithHardcodedMainTableNames.txt" />
+    <Content Include="TODO\TODO.txt" />
+    <Content Include="URLRewrite.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\BusinessLogicOLD.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\CaptchaOLD.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\DataAccessFunctionsOLD.vb">
+    </Compile>
+    <Compile Include="Classes\Helper.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\MailManagerOLD.vb">
+    </Compile>
+    <Compile Include="Classes\UserDetailsOLD.vb">
+    </Compile>
+    <Compile Include="CustomControls\ApiManagementControl.ascx.designer.vb">
+      <DependentUpon>ApiManagementControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ApiManagementControl.ascx.vb">
+      <DependentUpon>ApiManagementControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\Budgets.ascx.designer.vb">
+      <DependentUpon>Budgets.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\Budgets.ascx.vb">
+      <DependentUpon>Budgets.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CategoriesManagement.ascx.designer.vb">
+      <DependentUpon>CategoriesManagement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\CategoriesManagement.ascx.vb">
+      <DependentUpon>CategoriesManagement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CategoryIcons.ascx.designer.vb">
+      <DependentUpon>CategoryIcons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\CategoryIcons.ascx.vb">
+      <DependentUpon>CategoryIcons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomPage.ascx.designer.vb">
+      <DependentUpon>CustomPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\CustomPage.ascx.vb">
+      <DependentUpon>CustomPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ExchangeRates.ascx.designer.vb">
+      <DependentUpon>ExchangeRates.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ExchangeRates.ascx.vb">
+      <DependentUpon>ExchangeRates.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\Notes.ascx.designer.vb">
+      <DependentUpon>Notes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\Notes.ascx.vb">
+      <DependentUpon>Notes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ProductDetails.ascx.designer.vb">
+      <DependentUpon>ProductDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ProductDetails.ascx.vb">
+      <DependentUpon>ProductDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ProductPriceStatistics.ascx.designer.vb">
+      <DependentUpon>ProductPriceStatistics.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ProductPriceStatistics.ascx.vb">
+      <DependentUpon>ProductPriceStatistics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ProductsManagement.ascx.designer.vb">
+      <DependentUpon>ProductsManagement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ProductsManagement.ascx.vb">
+      <DependentUpon>ProductsManagement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\PurchaseHistoryControl.ascx.designer.vb">
+      <DependentUpon>PurchaseHistoryControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\PurchaseHistoryControl.ascx.vb">
+      <DependentUpon>PurchaseHistoryControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\PurchaseHistoryDateSelectorControl.ascx.designer.vb">
+      <DependentUpon>PurchaseHistoryDateSelectorControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\PurchaseHistoryDateSelectorControl.ascx.vb">
+      <DependentUpon>PurchaseHistoryDateSelectorControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\SearchControl.ascx.designer.vb">
+      <DependentUpon>SearchControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\SearchControl.ascx.vb">
+      <DependentUpon>SearchControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\SupplierSelector.ascx.designer.vb">
+      <DependentUpon>SupplierSelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\SupplierSelector.ascx.vb">
+      <DependentUpon>SupplierSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\SuppliersManagement.ascx.designer.vb">
+      <DependentUpon>SuppliersManagement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\SuppliersManagement.ascx.vb">
+      <DependentUpon>SuppliersManagement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\TodaySpentListControl.ascx.designer.vb">
+      <DependentUpon>TodaySpentListControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\TodaySpentListControl.ascx.vb">
+      <DependentUpon>TodaySpentListControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Environment.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AccountSetting.aspx.designer.vb">
+      <DependentUpon>AccountSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AccountSetting.aspx.vb">
+      <DependentUpon>AccountSetting.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin.aspx.designer.vb">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin.aspx.vb">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AJAX_test.aspx.designer.vb">
+      <DependentUpon>AJAX_test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AJAX_test.aspx.vb">
+      <DependentUpon>AJAX_test.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\APIManagement.aspx.designer.vb">
+      <DependentUpon>APIManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\APIManagement.aspx.vb">
+      <DependentUpon>APIManagement.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\BillDetails.aspx.designer.vb">
+      <DependentUpon>BillDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BillDetails.aspx.vb">
+      <DependentUpon>BillDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\BuyStandalone.aspx.designer.vb">
+      <DependentUpon>BuyStandalone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BuyStandalone.aspx.vb">
+      <DependentUpon>BuyStandalone.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Charts.aspx.designer.vb">
+      <DependentUpon>Charts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Charts.aspx.vb">
+      <DependentUpon>Charts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CategoriesYearlyCharts.aspx.designer.vb">
+      <DependentUpon>CategoriesYearlyCharts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CategoriesYearlyCharts.aspx.vb">
+      <DependentUpon>CategoriesYearlyCharts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailsGridSearch.asmx.vb">
+      <DependentUpon>DetailsGridSearch.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailsProductPriceStatistics.aspx.designer.vb">
+      <DependentUpon>DetailsProductPriceStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DetailsProductPriceStatistics.aspx.vb">
+      <DependentUpon>DetailsProductPriceStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Diagnostics.aspx.designer.vb">
+      <DependentUpon>Diagnostics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Diagnostics.aspx.vb">
+      <DependentUpon>Diagnostics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Events.aspx.designer.vb">
+      <DependentUpon>Events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Events.aspx.vb">
+      <DependentUpon>Events.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ExchangeRatesCharts.aspx.designer.vb">
+      <DependentUpon>ExchangeRatesCharts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExchangeRatesCharts.aspx.vb">
+      <DependentUpon>ExchangeRatesCharts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FileDownloader.aspx.designer.vb">
+      <DependentUpon>FileDownloader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FileDownloader.aspx.vb">
+      <DependentUpon>FileDownloader.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ProductAutoComplete.asmx.vb">
+      <DependentUpon>ProductAutoComplete.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchAutoComplete.asmx.vb">
+      <DependentUpon>SearchAutoComplete.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\SharedNotes.aspx.designer.vb">
+      <DependentUpon>SharedNotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SharedNotes.aspx.vb">
+      <DependentUpon>SharedNotes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Statistics.aspx.designer.vb">
+      <DependentUpon>Statistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Statistics.aspx.vb">
+      <DependentUpon>Statistics.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserCategoriesManagement.aspx.designer.vb">
+      <DependentUpon>UserCategoriesManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserCategoriesManagement.aspx.vb">
+      <DependentUpon>UserCategoriesManagement.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CostsCompare.aspx.designer.vb">
+      <DependentUpon>CostsCompare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CostsCompare.aspx.vb">
+      <DependentUpon>CostsCompare.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DownloadAttachment.aspx.designer.vb">
+      <DependentUpon>DownloadAttachment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DownloadAttachment.aspx.vb">
+      <DependentUpon>DownloadAttachment.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FlagExpense.aspx.designer.vb">
+      <DependentUpon>FlagExpense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FlagExpense.aspx.vb">
+      <DependentUpon>FlagExpense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\GetCaptcha.aspx.designer.vb">
+      <DependentUpon>GetCaptcha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GetCaptcha.aspx.vb">
+      <DependentUpon>GetCaptcha.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.aspx.designer.vb">
+      <DependentUpon>MainForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.aspx.vb">
+      <DependentUpon>MainForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ToolTip.ascx.designer.vb">
+      <DependentUpon>ToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ToolTip.ascx.vb">
+      <DependentUpon>ToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\MassEmail.aspx.designer.vb">
+      <DependentUpon>MassEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MassEmail.aspx.vb">
+      <DependentUpon>MassEmail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Mobile.aspx.designer.vb">
+      <DependentUpon>Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Mobile.aspx.vb">
+      <DependentUpon>Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\MobileLogin.aspx.designer.vb">
+      <DependentUpon>MobileLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MobileLogin.aspx.vb">
+      <DependentUpon>MobileLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PreviewAttachment.aspx.designer.vb">
+      <DependentUpon>PreviewAttachment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PreviewAttachment.aspx.vb">
+      <DependentUpon>PreviewAttachment.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports.aspx.designer.vb">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports.aspx.vb">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions.aspx.designer.vb">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions.aspx.vb">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserProductsManagement.aspx.designer.vb">
+      <DependentUpon>UserProductsManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserProductsManagement.aspx.vb">
+      <DependentUpon>UserProductsManagement.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GhostForm.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.designer.vb">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.vb">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Test01DbDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Test01DbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm1.aspx.designer.vb">
+      <DependentUpon>TestForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm1.aspx.vb">
+      <DependentUpon>TestForm1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Report1.rdlc">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArticleImages\money.jpg" />
+    <Content Include="ArticleImages\money1.jpg" />
+    <Content Include="ArticleImages\natisparite.gif" />
+    <None Include="Assemblies\AjaxControlToolkit.dll" />
+    <None Include="Assemblies\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <None Include="Assemblies\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <None Include="Assemblies\Microsoft.Practices.ServiceLocation.dll" />
+    <None Include="Assemblies\Microsoft.Practices.Unity.dll" />
+    <None Include="Assemblies\Microsoft.Practices.Unity.Interception.dll" />
+    <None Include="Assemblies\Microsoft.ReportViewer.Common.dll" />
+    <None Include="Assemblies\Microsoft.ReportViewer.ProcessingObjectModel.dll" />
+    <None Include="Assemblies\Microsoft.ReportViewer.WebForms.dll" />
+    <None Include="Assemblies\WebChart.dll" />
+    <Content Include="Banners\natisparite.gif" />
+    <Content Include="Banners\semeistvo.bg.gif" />
+    <Content Include="Banners\Twitter_banner.jpg" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="Changes.txt" />
+    <Content Include="CustomControls\Budgets.ascx" />
+    <Content Include="CustomControls\CustomPage.ascx" />
+    <Content Include="CustomControls\Notes.ascx" />
+    <Content Include="CustomControls\SearchControl.ascx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Flowplayer\flowplayer-3.1.4.swf" />
+    <Content Include="Flowplayer\flowplayer.controls-3.1.4.swf" />
+    <Content Include="Forms\AccountSetting.aspx" />
+    <Content Include="Forms\BillDetails.aspx" />
+    <Content Include="Forms\GetCaptcha.aspx" />
+    <Content Include="Forms\PrivacyPolicy.htm" />
+    <Content Include="Forms\CostsCompare.aspx" />
+    <Content Include="Forms\Disclaimer.htm" />
+    <Content Include="Forms\DownloadAttachment.aspx" />
+    <Content Include="Forms\Demo.html" />
+    <Content Include="Forms\PreviewAttachment.aspx" />
+    <Content Include="Forms\PrivacyPolicyBG.htm" />
+    <Content Include="Forms\Reports.aspx" />
+    <Content Include="Forms\ScreenShots.htm" />
+    <Content Include="Forms\simpleviewer.swf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="Images\admin_categories_icon.png" />
+    <Content Include="Images\admin_exceptions_icon.png" />
+    <Content Include="Images\admin_translations_icon.png" />
+    <Content Include="Images\admin_users_icon.png" />
+    <Content Include="Images\admin_database_icon.png" />
+    <Content Include="Images\apple.gif" />
+    <Content Include="Banners\asp_blog.gif" />
+    <Content Include="Images\barbbox.gif" />
+    <Content Include="Images\barbboxgray.gif" />
+    <Content Include="Images\bg_flag_small.jpg" />
+    <Content Include="Images\bg_top_logo1.gif" />
+    <Content Include="Images\buttonbg.gif" />
+    <Content Include="Images\car_sedan_green.gif" />
+    <Content Include="Images\Demo_hover.gif" />
+    <Content Include="Images\Demo_normal.gif" />
+    <Content Include="Images\doctor_icon.gif" />
+    <Content Include="Images\electricity_icon.jpg" />
+    <Content Include="Images\en_flag_small.jpg" />
+    <Content Include="Images\epay.png" />
+    <Content Include="Images\flag_active.gif" />
+    <Content Include="Images\flag_bg_tiny.JPG" />
+    <Content Include="Images\flag_de_tiny.JPG" />
+    <Content Include="Images\flag_en_tiny.JPG" />
+    <Content Include="Images\flag_inactive.gif" />
+    <Content Include="Images\gas_pump.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\ico16_leaf1.gif" />
+    <Content Include="Images\info_icon.gif" />
+    <Content Include="Images\internet_category_icon.gif" />
+    <Content Include="Images\Intro_logo_01.gif" />
+    <Content Include="Images\Intro_logo_02.gif" />
+    <Content Include="Images\loading_dollar.gif" />
+    <Content Include="Images\attach.png" />
+    <Content Include="Images\bg_flag.jpg" />
+    <Content Include="Images\delete_attachment.gif" />
+    <Content Include="Images\down.jpg" />
+    <Content Include="Images\en_flag.jpg" />
+    <Content Include="Images\fancy_btn_grad_hover.bmp" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\loan.gif" />
+    <Content Include="Images\Login_Page_Header_Gradient.bmp" />
+    <Content Include="Images\Login_Panel_bckgrnd.gif" />
+    <Content Include="Images\logo_02.gif" />
+    <Content Include="Images\logo_03.gif" />
+    <Content Include="Images\logo_03_small.gif" />
+    <Content Include="Images\logo_tiny.gif" />
+    <Content Include="Images\magnify.cur" />
+    <Content Include="Images\Main_Logo.gif" />
+    <Content Include="Images\Main_Logo_2.gif" />
+    <Content Include="Images\NoImage.gif" />
+    <Content Include="Images\phone_icon.gif" />
+    <Content Include="Images\phone_icon.jpg" />
+    <Content Include="Images\pig_icon.png" />
+    <Content Include="Images\register_panel_arrow.gif" />
+    <Content Include="Images\Register_Panel_bckgrnd.gif" />
+    <Content Include="Images\register_panel_bg_grn.gif" />
+    <Content Include="Images\rent_icon.jpg" />
+    <Content Include="Images\report_icon.gif" />
+    <Content Include="Images\ScreenShots_hover.gif" />
+    <Content Include="Images\ScreenShots_normal.gif" />
+    <Content Include="Images\Search-icon.png" />
+    <Content Include="Images\Tab_bckgrnd.gif" />
+    <Content Include="Images\Tab_bckgrnd_selected.gif" />
+    <Content Include="Images\tick.gif" />
+    <Content Include="Images\up.jpg" />
+    <Content Include="Images\VideoTutorial_hover.gif" />
+    <Content Include="Images\VideoTutorial_normal.gif" />
+    <Content Include="Images\video_demo_hover.gif" />
+    <Content Include="Images\video_demo_normal.gif" />
+    <Content Include="Images\xtrm_logo.gif" />
+    <Content Include="Javascript\flowplayer-3.1.4.min.js" />
+    <Content Include="Javascript\global.js" />
+    <Content Include="Javascript\JavascriptForceNumericInput.js" />
+    <Content Include="Javascript\swfobject.js" />
+    <Content Include="MasterPage.master" />
+    <Content Include="Forms\RegisterMail.htm" />
+    <Content Include="Simpleviewer\classic.xml" />
+    <None Include="TestForm1.aspx" />
+    <None Include="DBScripts\20091107.001.sql" />
+    <None Include="DBScripts\20091110.001.sql" />
+    <None Include="DBScripts\20091115.001.sql" />
+    <None Include="DBScripts\20091118.001.sql" />
+    <None Include="DBScripts\20091122.001.sql" />
+    <None Include="DBScripts\20091125.001.sql" />
+    <None Include="DBScripts\20100122.001.sql" />
+    <None Include="DBScripts\20100413.001.sql" />
+    <None Include="DBScripts\20100513.001.sql" />
+    <None Include="DBScripts\20100515.001.sql" />
+    <None Include="DBScripts\20100515.002.sql" />
+    <None Include="Documents\Organisieren Sie Ihres monatliche Budgets.docx" />
+    <None Include="Documents\privacy_policy bg.doc" />
+    <None Include="Documents\privacy_policy eng.doc" />
+    <None Include="Images\LoginPageButtons.psd" />
+    <None Include="Images\Logo_Start_Page.psd" />
+    <None Include="Images\Logo_Start_Page_20091212.psd" />
+    <None Include="Images\SiteLogo.psd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Sql\GetUsersEmailsInCSV.sql" />
+    <None Include="Sql\qryInsertYearsInBudgetSavingsExpensesTables.sql" />
+    <None Include="Sql\spDeleteDemoEntries.sql" />
+    <None Include="Sql\spGetCategoriesTable.sql">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sql\spGetDueDateEmailReminderMessage.sql" />
+    <None Include="Sql\spGetSumsForCategoriesPerMonth.sql" />
+    <None Include="Sql\spGetYearlySavingsSum.sql" />
+    <None Include="Sql\spGetUsersAverageExpensesForCategory.sql" />
+    <None Include="Sql\spSetCostCategory.sql" />
+    <None Include="Sql\qryFillOrderIDs.sql" />
+    <None Include="Sql\OLDspGetAverageCostsForCategory.sql" />
+    <None Include="Test01DbDataSet.xsc">
+      <DependentUpon>Test01DbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Test01DbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Test01DbDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Test01DbDataSet.xss">
+      <DependentUpon>Test01DbDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="DBBackups\" />
+    <Folder Include="References\" />
+    <Folder Include="WebCharts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MHB.BL\MHB.BL.csproj">
+      <Project>{3e01e3c6-c0f9-42cd-ab85-0b8f3922b265}</Project>
+      <Name>MHB.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MHB.Captcha\Captcha\MHB.Captcha.csproj">
+      <Project>{7F9C2E8A-74FA-4647-9C4A-E6ECA97C501E}</Project>
+      <Name>MHB.Captcha</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MHB.DAL\MHB.DAL.csproj">
+      <Project>{7A29F226-200A-4D75-9E19-27ED7A6022A8}</Project>
+      <Name>MHB.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MHB.HttpModules\MHB.HttpModules.csproj">
+      <Project>{593AB196-9EB7-44D3-912C-10B31E0D31F8}</Project>
+      <Name>MHB.HttpModules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MHB.IPGeoLocation\MHB.IPGeoLocation.vbproj">
+      <Project>{EE4F3592-A0F1-4489-BD8E-94F4DC38C173}</Project>
+      <Name>MHB.IPGeoLocation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MHB.Logging\MHB.Logging.vbproj">
+      <Project>{0A386C37-4902-4F08-B92B-B8AB2711AD58}</Project>
+      <Name>MHB.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MHB.Mail\MHB.Mail.csproj">
+      <Project>{3D66D2A4-AAA3-4772-BE37-E49CFA777C99}</Project>
+      <Name>MHB.Mail</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MHB.ReceiptScanner\MHB.ReceiptScanner.csproj">
+      <Project>{539f4ae5-a4aa-4453-b9c8-5c1558c17fe0}</Project>
+      <Name>MHB.ReceiptScanner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MHB.UserManager\MHB.UserManager.csproj">
+      <Project>{524026DA-33AE-418B-BE71-5220A62CBE94}</Project>
+      <Name>MHB.UserManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\MyHomeBillsCodeSign.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>1234</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44333</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

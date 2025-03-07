@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MhbApiService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MHB.BL" />
+      <xsd:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MHB.UserManager" />
+      <xsd:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MHB.Logging" />
+      <xsd:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System.Data.SqlClient" />
+      <xsd:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System.Data.Common" />
+      <xsd:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost:57559/MhbApiService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/System.Data.SqlTypes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMhbApiService_DeleteParentExpenditure_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteParentExpenditure" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_DeleteParentExpenditure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteParentExpenditureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_DeleteChildExpenditures_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteChildExpenditures" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_DeleteChildExpenditures_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteChildExpendituresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_AddParentExpenditure_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddParentExpenditure" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_AddParentExpenditure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddParentExpenditureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_SearchUserExpenditures_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserExpenditures" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_SearchUserExpenditures_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserExpendituresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetExpenditureDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpenditureDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetExpenditureDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpenditureDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_UpdateParentExpenses_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateParentExpenses" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_UpdateParentExpenses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateParentExpensesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetUsersAverageSumForCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersAverageSumForCategory" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetUsersAverageSumForCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersAverageSumForCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_CopyParentExpense_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyParentExpense" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_CopyParentExpense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyParentExpenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_DeleteAttachment_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAttachment" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_DeleteAttachment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetMaximumExpenditureForCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaximumExpenditureForCategory" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetMaximumExpenditureForCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaximumExpenditureForCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetUserIncome_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIncome" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetUserIncome_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIncomeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_DuplicateExpenditures_InputMessage">
+    <wsdl:part name="parameters" element="tns:DuplicateExpenditures" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_DuplicateExpenditures_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DuplicateExpendituresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetYearlyExpensesProMonth_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetYearlyExpensesProMonth" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetYearlyExpensesProMonth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetYearlyExpensesProMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetYearlyBudgetsProMonth_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetYearlyBudgetsProMonth" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetYearlyBudgetsProMonth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetYearlyBudgetsProMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetYearlySavingsProMonth_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetYearlySavingsProMonth" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetYearlySavingsProMonth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetYearlySavingsProMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetUserExpenditures_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserExpenditures" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetUserExpenditures_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserExpendituresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetExpenditures_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpenditures" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetExpenditures_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpendituresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetActionLogs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionLogs" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetActionLogs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetExceptionLogs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExceptionLogs" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetExceptionLogs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExceptionLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_BlockUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:BlockUser" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_BlockUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BlockUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_BanIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:BanIP" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_BanIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BanIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetSingleValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleValue" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetSingleValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_ExecuteQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteQuery" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_ExecuteQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetDataReader_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataReader" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetDataReader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataReaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetDataTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataTable" />
+  </wsdl:message>
+  <wsdl:message name="IMhbApiService_GetDataTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataTableResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMhbApiService">
+    <wsdl:operation name="DeleteParentExpenditure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/DeleteParentExpenditure" message="tns:IMhbApiService_DeleteParentExpenditure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/DeleteParentExpenditureResponse" message="tns:IMhbApiService_DeleteParentExpenditure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteChildExpenditures">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/DeleteChildExpenditures" message="tns:IMhbApiService_DeleteChildExpenditures_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/DeleteChildExpendituresResponse" message="tns:IMhbApiService_DeleteChildExpenditures_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddParentExpenditure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/AddParentExpenditure" message="tns:IMhbApiService_AddParentExpenditure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/AddParentExpenditureResponse" message="tns:IMhbApiService_AddParentExpenditure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserExpenditures">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/SearchUserExpenditures" message="tns:IMhbApiService_SearchUserExpenditures_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/SearchUserExpendituresResponse" message="tns:IMhbApiService_SearchUserExpenditures_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenditureDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/GetExpenditureDetails" message="tns:IMhbApiService_GetExpenditureDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/GetExpenditureDetailsResponse" message="tns:IMhbApiService_GetExpenditureDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParentExpenses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/UpdateParentExpenses" message="tns:IMhbApiService_UpdateParentExpenses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/UpdateParentExpensesResponse" message="tns:IMhbApiService_UpdateParentExpenses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersAverageSumForCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/GetUsersAverageSumForCategory" message="tns:IMhbApiService_GetUsersAverageSumForCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/GetUsersAverageSumForCategoryResponse" message="tns:IMhbApiService_GetUsersAverageSumForCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyParentExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/CopyParentExpense" message="tns:IMhbApiService_CopyParentExpense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/CopyParentExpenseResponse" message="tns:IMhbApiService_CopyParentExpense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttachment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/DeleteAttachment" message="tns:IMhbApiService_DeleteAttachment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/DeleteAttachmentResponse" message="tns:IMhbApiService_DeleteAttachment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaximumExpenditureForCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/GetMaximumExpenditureForCategory" message="tns:IMhbApiService_GetMaximumExpenditureForCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/GetMaximumExpenditureForCategoryResponse" message="tns:IMhbApiService_GetMaximumExpenditureForCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserIncome">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/GetUserIncome" message="tns:IMhbApiService_GetUserIncome_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/GetUserIncomeResponse" message="tns:IMhbApiService_GetUserIncome_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DuplicateExpenditures">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/DuplicateExpenditures" message="tns:IMhbApiService_DuplicateExpenditures_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/DuplicateExpendituresResponse" message="tns:IMhbApiService_DuplicateExpenditures_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYearlyExpensesProMonth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/GetYearlyExpensesProMonth" message="tns:IMhbApiService_GetYearlyExpensesProMonth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/GetYearlyExpensesProMonthResponse" message="tns:IMhbApiService_GetYearlyExpensesProMonth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYearlyBudgetsProMonth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/GetYearlyBudgetsProMonth" message="tns:IMhbApiService_GetYearlyBudgetsProMonth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/GetYearlyBudgetsProMonthResponse" message="tns:IMhbApiService_GetYearlyBudgetsProMonth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYearlySavingsProMonth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/GetYearlySavingsProMonth" message="tns:IMhbApiService_GetYearlySavingsProMonth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/GetYearlySavingsProMonthResponse" message="tns:IMhbApiService_GetYearlySavingsProMonth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserExpenditures">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/GetUserExpenditures" message="tns:IMhbApiService_GetUserExpenditures_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/GetUserExpendituresResponse" message="tns:IMhbApiService_GetUserExpenditures_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenditures">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/GetExpenditures" message="tns:IMhbApiService_GetExpenditures_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/GetExpendituresResponse" message="tns:IMhbApiService_GetExpenditures_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActionLogs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/GetActionLogs" message="tns:IMhbApiService_GetActionLogs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/GetActionLogsResponse" message="tns:IMhbApiService_GetActionLogs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExceptionLogs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/GetExceptionLogs" message="tns:IMhbApiService_GetExceptionLogs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/GetExceptionLogsResponse" message="tns:IMhbApiService_GetExceptionLogs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BlockUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/BlockUser" message="tns:IMhbApiService_BlockUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/BlockUserResponse" message="tns:IMhbApiService_BlockUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BanIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/BanIP" message="tns:IMhbApiService_BanIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/BanIPResponse" message="tns:IMhbApiService_BanIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/GetSingleValue" message="tns:IMhbApiService_GetSingleValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/GetSingleValueResponse" message="tns:IMhbApiService_GetSingleValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteQuery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/ExecuteQuery" message="tns:IMhbApiService_ExecuteQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/ExecuteQueryResponse" message="tns:IMhbApiService_ExecuteQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataReader">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/GetDataReader" message="tns:IMhbApiService_GetDataReader_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/GetDataReaderResponse" message="tns:IMhbApiService_GetDataReader_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMhbApiService/GetDataTable" message="tns:IMhbApiService_GetDataTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMhbApiService/GetDataTableResponse" message="tns:IMhbApiService_GetDataTable_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMhbApiService" type="tns:IMhbApiService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DeleteParentExpenditure">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/DeleteParentExpenditure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteChildExpenditures">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/DeleteChildExpenditures" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddParentExpenditure">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/AddParentExpenditure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserExpenditures">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/SearchUserExpenditures" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenditureDetails">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/GetExpenditureDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParentExpenses">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/UpdateParentExpenses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersAverageSumForCategory">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/GetUsersAverageSumForCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyParentExpense">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/CopyParentExpense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttachment">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/DeleteAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaximumExpenditureForCategory">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/GetMaximumExpenditureForCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserIncome">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/GetUserIncome" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DuplicateExpenditures">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/DuplicateExpenditures" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYearlyExpensesProMonth">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/GetYearlyExpensesProMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYearlyBudgetsProMonth">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/GetYearlyBudgetsProMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYearlySavingsProMonth">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/GetYearlySavingsProMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserExpenditures">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/GetUserExpenditures" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenditures">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/GetExpenditures" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActionLogs">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/GetActionLogs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExceptionLogs">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/GetExceptionLogs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlockUser">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/BlockUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BanIP">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/BanIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleValue">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/GetSingleValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteQuery">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/ExecuteQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataReader">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/GetDataReader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTable">
+      <soap:operation soapAction="http://tempuri.org/IMhbApiService/GetDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MhbApiService">
+    <wsdl:port name="BasicHttpBinding_IMhbApiService" binding="tns:BasicHttpBinding_IMhbApiService">
+      <soap:address location="http://localhost:57559/MhbApiService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

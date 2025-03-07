@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18, 23.25" name="MyHomeBillsDb">
+  <DataContextMoniker Name="/MyHomeBillsDbDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8ff84252-69ff-4cc3-b634-658d7e853450" absoluteBounds="12.75, 7.25, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbActionLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ee8dfee-f546-4265-9bb0-496f1a26c31b" absoluteBounds="12.765, 7.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7f6fa9e1-4de4-4644-aac1-3c27002da98e" absoluteBounds="0.75, 3.5, 2, 2.9247054036458322">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3fa11a4c-aa42-4695-914e-2fab30455ff5" absoluteBounds="0.765, 3.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d18fba12-36ae-4d4c-94fc-c99088a5c5dc" absoluteBounds="0.75, 1, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbControlType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e192ee7d-461b-4dff-8139-0e54d946c7af" absoluteBounds="0.765, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5e36a445-26fd-460d-8f0e-3574dcff95e3" absoluteBounds="12.75, 10.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbCostCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13d85cb1-0d52-4000-8db9-5663742276c5" absoluteBounds="12.765, 10.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8e68354d-3467-4645-8b8d-203e367cf179" absoluteBounds="6.25, 4.5, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbCustomListItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7818753d-c516-4ca8-b972-9fe2be5f578b" absoluteBounds="6.265, 4.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="afad08ac-6837-4d92-9ca4-b1c9996f0b47" absoluteBounds="3.5, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbCustomPageControl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69d7d1d3-11f9-4323-8a57-6205a29daeba" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="de63502d-04f9-4389-b0fe-f5d26b454312" absoluteBounds="3.5, 15.75, 2, 2.7324039713541648">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbDetailsTable01" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d93bbf8-351c-407f-8974-ee9d907515dd" absoluteBounds="3.515, 16.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b8938a76-f8ef-4788-9a57-a929f220b250" absoluteBounds="12.5, 13.75, 2, 2.7324039713541648">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbDetailsTable02" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d4afd5a7-4c26-49c5-995f-e3469a6469b5" absoluteBounds="12.515, 14.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fbdfab81-0f05-4c9a-ad42-4ff2e37b420b" absoluteBounds="12.5, 3.75, 2, 2.732403971354167">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbDetailsTable03" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef9711ad-2bfe-457f-a8f6-e6d15a0dc39d" absoluteBounds="12.515, 4.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0579f9a0-2455-4b3b-ab39-8758d8474553" absoluteBounds="9.5, 8.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbDetailsTable04" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a7fe6fac-2ea1-49fe-9f33-2f78363b9e6d" absoluteBounds="9.515, 9.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0547e92a-6f70-446a-9109-45fe29d858e4" absoluteBounds="3.5, 8.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbDetailsTable05" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b166564a-e166-4763-ae6f-20eaeb4de938" absoluteBounds="3.515, 9.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8292834a-82f8-4f39-b32e-d8db83310036" absoluteBounds="15.75, 2.25, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbIncome" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ed2c448b-4222-4ea6-9b26-aa035aaf40ad" absoluteBounds="15.765, 2.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca1ff97b-5e56-423e-84c5-8c23bb00c791" absoluteBounds="15.75, 5.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbLanguage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b3402e5-5c13-49ef-add3-9d0a764c2945" absoluteBounds="15.765, 5.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="44eabc93-f23c-4702-978a-c76f5cfe574a" absoluteBounds="15.75, 8.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbLanguage1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a7729415-f6f7-4970-a237-79d8873a4fc1" absoluteBounds="15.765, 8.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a9f2feca-f1fc-4754-a59e-ab26cd4bdf6e" absoluteBounds="15.75, 10.25, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="988522b4-c311-46cb-bf7f-bc4933ca5399" absoluteBounds="15.765, 10.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00472a27-ec5e-4372-8612-abce58e412d5" absoluteBounds="0.75, 14.625, 2, 5.040021158854163">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbMainTable01" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7dd8dbbc-a5fc-4fa6-b4d2-f2b524b4aab9" absoluteBounds="0.765, 15.085, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7d5bd99b-5775-4bbb-91d4-6ea7176d355c" absoluteBounds="9.75, 12.625, 2, 5.040021158854163">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbMainTable02" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c7fb45d-50b0-48fc-bc10-66827d93d63c" absoluteBounds="9.765, 13.085, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b0bd4bd-ac17-4ab6-9ad4-340331dc104b" absoluteBounds="9.75, 2.625, 2, 5.0400211588541666">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbMainTable03" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52507212-361e-4d60-8f00-03e8d38fe32f" absoluteBounds="9.765, 3.085, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="268975b1-c489-4000-8101-74bb8b649f27" absoluteBounds="6.75, 7.625, 2, 5.0400211588541666">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbMainTable04" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84297a68-b28e-4f23-9803-1ce5ec3540eb" absoluteBounds="6.765, 8.085, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="180b4d92-a756-425c-b1e5-0b03dea0203c" absoluteBounds="0.75, 7.625, 2, 5.0400211588541666">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbMainTable05" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f552963-fcd3-485c-b8ce-e29b115db730" absoluteBounds="0.765, 8.085, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="459028ca-2fbd-41d7-9c70-5be5967f9f37" absoluteBounds="15.75, 14.25, 2, 3.6939111328124969">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbMonthlyBudget" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d999e022-2db4-465e-84d3-605cbf44fee2" absoluteBounds="15.765, 14.71, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a6b9e173-e9c0-47c3-be09-e99ef8c1161c" absoluteBounds="3.75, 19.25, 2, 3.6939111328125023">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbMonthlyExpense" />
+      <nestedChildShapes>
+        <elementListCompartment Id="945e4803-9540-4e00-818a-56857c555fe9" absoluteBounds="3.765, 19.71, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="85ead4ff-edab-408a-809c-3f5497668db0" absoluteBounds="6.75, 19.25, 2, 3.6939111328125023">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbMonthlySaving" />
+      <nestedChildShapes>
+        <elementListCompartment Id="43d25beb-33b4-4d8f-a5fd-0c9b95f01e71" absoluteBounds="6.765, 19.71, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4f07829f-d282-4680-9c4c-5dad9b30900c" absoluteBounds="3.5, 4.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MyHomeBillsDbDataContext/tbNote" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50da2196-1744-4f2e-b47d-8fc93de468de" absoluteBounds="3.515, 4.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 1.92390055338542); (7.25 : 1.92390055338542); (7.25 : 4.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyHomeBillsDbDataContext/tbCustomPageControl/tbCustomPageControl_tbCustomListItem" />
+      <nodes>
+        <classShapeMoniker Id="afad08ac-6837-4d92-9ca4-b1c9996f0b47" />
+        <classShapeMoniker Id="8e68354d-3467-4645-8b8d-203e367cf179" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.69314697265625); (3.5 : 1.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyHomeBillsDbDataContext/tbControlType/tbControlType_tbCustomPageControl" />
+      <nodes>
+        <classShapeMoniker Id="d18fba12-36ae-4d4c-94fc-c99088a5c5dc" />
+        <classShapeMoniker Id="afad08ac-6837-4d92-9ca4-b1c9996f0b47" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.5); (3.125 : 3.125); (3.125 : 3.47280110677083); (3.5 : 3.09780110677083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MyHomeBillsDbDataContext/tbUser/tbUser_tbCustomPageControl" />
+      <nodes>
+        <classShapeMoniker Id="7f6fa9e1-4de4-4644-aac1-3c27002da98e" />
+        <classShapeMoniker Id="afad08ac-6837-4d92-9ca4-b1c9996f0b47" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 17.1162019856771); (3.5 : 17.1162019856771)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyHomeBillsDbDataContext/tbMainTable01/tbMainTable01_tbDetailsTable01" />
+      <nodes>
+        <classShapeMoniker Id="00472a27-ec5e-4372-8612-abce58e412d5" />
+        <classShapeMoniker Id="de63502d-04f9-4389-b0fe-f5d26b454312" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 15.1162019856771); (12.5 : 15.1162019856771)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyHomeBillsDbDataContext/tbMainTable02/tbMainTable02_tbDetailsTable02" />
+      <nodes>
+        <classShapeMoniker Id="7d5bd99b-5775-4bbb-91d4-6ea7176d355c" />
+        <classShapeMoniker Id="b8938a76-f8ef-4788-9a57-a929f220b250" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 5.11620198567708); (12.5 : 5.11620198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyHomeBillsDbDataContext/tbMainTable03/tbMainTable03_tbDetailsTable03" />
+      <nodes>
+        <classShapeMoniker Id="4b0bd4bd-ac17-4ab6-9ad4-340331dc104b" />
+        <classShapeMoniker Id="fbdfab81-0f05-4c9a-ad42-4ff2e37b420b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 10.1162019856771); (9.5 : 10.1162019856771)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyHomeBillsDbDataContext/tbMainTable04/tbMainTable04_tbDetailsTable04" />
+      <nodes>
+        <classShapeMoniker Id="268975b1-c489-4000-8101-74bb8b649f27" />
+        <classShapeMoniker Id="0579f9a0-2455-4b3b-ab39-8758d8474553" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 10.1162019856771); (3.5 : 10.1162019856771)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyHomeBillsDbDataContext/tbMainTable05/tbMainTable05_tbDetailsTable05" />
+      <nodes>
+        <classShapeMoniker Id="180b4d92-a756-425c-b1e5-0b03dea0203c" />
+        <classShapeMoniker Id="0547e92a-6f70-446a-9109-45fe29d858e4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.91429768880208); (3.5 : 4.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyHomeBillsDbDataContext/tbUser/tbUser_tbNote" />
+      <nodes>
+        <classShapeMoniker Id="7f6fa9e1-4de4-4644-aac1-3c27002da98e" />
+        <classShapeMoniker Id="4f07829f-d282-4680-9c4c-5dad9b30900c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

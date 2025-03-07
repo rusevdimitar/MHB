@@ -1,0 +1,1 @@
+﻿UPDATE tbProducts SET PackageUnitsCount = 1 WHERE PackageUnitsCount = 0

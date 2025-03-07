@@ -1,0 +1,2 @@
+﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="SupplierSelector.ascx.vb" Inherits="MHB.Web.SupplierSelector" %>
+<asp:Panel ID="PanelSuppliersList" runat="server" Width="600px"></asp:Panel>

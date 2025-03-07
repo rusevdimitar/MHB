@@ -1,0 +1,2 @@
+﻿INSERT INTO tbLanguage (ControlID, ControlTextEN, ControlTextBG, ControlTextDE) VALUES
+('BatchDetailsSupplierChangedMessage', 'Supplier for following entries: [{0}] changed successfully to [{1}].', 'Доставчикът на следните записи: [{0}] е променен успешно с [{1}].', 'Anbieter für folgende Datensätze: [{0}] wurde erfolgreich zu [{1}] geändert.' )

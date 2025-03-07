@@ -1,0 +1,327 @@
+body
+{
+    font-family:verdana,tahoma,helvetica;
+}
+
+/* ajax__tab_red-theme theme (images/red.jpg) */
+.ajax__tab_red-theme .ajax__tab_header 
+{
+    font-family:arial,helvetica,clean,sans-serif;
+    font-size:small;
+    font-weight:bold;
+    border-bottom:solid 5px #a50000;
+}
+.ajax__tab_red-theme .ajax__tab_header .ajax__tab_outer 
+{
+    background:url('../Images/TabControl/red.jpg') #d8d8d8 repeat-x;
+    margin:0px 0.16em 0px 0px;
+    padding:1px 0px 1px 0px;
+    vertical-align:bottom;
+    border:solid 1px #a3a3a3;
+    border-bottom-width:0px;
+}
+.ajax__tab_red-theme .ajax__tab_header .ajax__tab_tab
+{    
+    color:#000;
+    padding:0.35em 0.75em;    
+    margin-right:0.01em;
+}
+.ajax__tab_red-theme .ajax__tab_hover .ajax__tab_outer 
+{
+    background: url('../Images/TabControl/red.jpg') #bfdaff repeat-x left -1300px;
+}
+.ajax__tab_red-theme .ajax__tab_active .ajax__tab_tab 
+{
+    color:#fff;
+}
+.ajax__tab_red-theme .ajax__tab_active .ajax__tab_outer
+{
+    background:url('../Images/TabControl/red.jpg') #a50000 repeat-x left -1400px;
+}
+.ajax__tab_red-theme .ajax__tab_body 
+{
+    font-family:verdana,tahoma,helvetica;
+    font-size:10pt;
+    padding:0.25em 0.5em;
+    background-color:#edf5ff;    
+    border:solid 1px #808080;
+    border-top-width:0px;
+}
+
+/* ajax__tab_lightblue-theme theme (images/lightblue.jpg) */
+.ajax__tab_lightblue-theme .ajax__tab_header 
+{
+    font-family:arial,helvetica,clean,sans-serif;
+    font-size:small;
+    border-bottom:solid 5px #c2e0fd;
+}
+.ajax__tab_lightblue-theme .ajax__tab_header .ajax__tab_outer 
+{
+    background:url('../Images/TabControl/lightblue.jpg') #d8d8d8 repeat-x;
+    margin:0px 0.16em 0px 0px;
+    padding:1px 0px 1px 0px;
+    vertical-align:bottom;
+    border:solid 1px #a3a3a3;
+    border-bottom-width:0px;
+}
+.ajax__tab_lightblue-theme .ajax__tab_header .ajax__tab_tab
+{    
+    color:#000;
+    padding:0.35em 0.75em;    
+    margin-right:0.01em;
+}
+.ajax__tab_lightblue-theme .ajax__tab_hover .ajax__tab_outer 
+{
+    background: url('../Images/TabControl/lightblue.jpg') #bfdaff repeat-x left -1300px;
+}
+.ajax__tab_lightblue-theme .ajax__tab_active .ajax__tab_tab 
+{
+    color:#000;
+}
+.ajax__tab_lightblue-theme .ajax__tab_active .ajax__tab_outer
+{
+    background:url('../Images/TabControl/lightblue.jpg') #ffffff repeat-x left -1400px;
+}
+.ajax__tab_lightblue-theme .ajax__tab_body 
+{
+    font-family:verdana,tahoma,helvetica;
+    font-size:10pt;
+    padding:0.25em 0.5em;
+    background-color:#ffffff;    
+    border:solid 1px #808080;
+    border-top-width:0px;
+}
+
+/* ajax__tab_green-theme theme (images/green.jpg) */
+.ajax__tab_green-theme .ajax__tab_header 
+{
+    font-family:arial,helvetica,clean,sans-serif;
+    font-size:small;
+    border-bottom:solid 5px #7cdb44;
+}
+.ajax__tab_green-theme .ajax__tab_header .ajax__tab_outer 
+{
+    background:url('../Images/TabControl/green.jpg') #d8d8d8 repeat-x;
+    margin:0px 0.16em 0px 0px;
+    padding:1px 0px 1px 0px;
+    vertical-align:bottom;
+    border:solid 1px #a3a3a3;
+    border-bottom-width:0px;
+}
+.ajax__tab_green-theme .ajax__tab_header .ajax__tab_tab
+{    
+    color:#000;
+    padding:0.35em 0.75em;    
+    margin-right:0.01em;
+}
+.ajax__tab_green-theme .ajax__tab_hover .ajax__tab_outer 
+{
+    background: url('../Images/TabControl/green.jpg') #bfdaff repeat-x left -1300px;
+}
+.ajax__tab_green-theme .ajax__tab_active .ajax__tab_tab 
+{
+    color:#fff;
+}
+.ajax__tab_green-theme .ajax__tab_active .ajax__tab_outer
+{
+    background:url('../Images/TabControl/green.jpg') #7cdb44 repeat-x left -1400px;
+}
+.ajax__tab_green-theme .ajax__tab_body 
+{
+    font-family:verdana,tahoma,helvetica;
+    font-size:10pt;
+    padding:0.25em 0.5em;
+    background-color:#edf5ff;    
+    border:solid 1px #808080;
+    border-top-width:0px;
+}
+/* ajax__tab_orange-theme theme (images/orange.jpg) */
+.ajax__tab_orange-theme .ajax__tab_header 
+{
+    font-family:arial,helvetica,clean,sans-serif;
+    font-size:small;
+    border-bottom:solid 5px #84aeef;
+}
+.ajax__tab_orange-theme .ajax__tab_header .ajax__tab_outer 
+{
+    background:url('../Images/TabControl/orange.jpg') #d8d8d8 repeat-x;
+    margin:0px 0.16em 0px 0px;
+    padding:1px 0px 1px 0px;
+    vertical-align:bottom;
+    border:solid 1px #a3a3a3;
+    border-bottom-width:0px;
+}
+.ajax__tab_orange-theme .ajax__tab_header .ajax__tab_tab
+{    
+    color:#000;
+    padding:0.35em 0.75em;    
+    margin-right:0.01em;
+}
+.ajax__tab_orange-theme .ajax__tab_hover .ajax__tab_outer 
+{
+    background: url('../Images/TabControl/orange.jpg') #bfdaff repeat-x left -1300px;
+}
+.ajax__tab_orange-theme .ajax__tab_active .ajax__tab_tab 
+{
+    color:#fff;
+}
+.ajax__tab_orange-theme .ajax__tab_active .ajax__tab_outer
+{
+    background:url('../Images/TabControl/orange.jpg') #84aeef repeat-x left -1400px;
+}
+.ajax__tab_orange-theme .ajax__tab_body 
+{
+    font-family:verdana,tahoma,helvetica;
+    font-size:10pt;
+    padding:0.25em 0.5em;
+    background-color:#edf5ff;    
+    border:solid 1px #808080;
+    border-top-width:0px;
+}
+
+/* ajax__tab_darkblue-theme theme (images/darkblue.jpg) */
+.ajax__tab_darkblue-theme .ajax__tab_header 
+{
+    font-family:arial,helvetica,clean,sans-serif;
+    font-size:small;
+    border-bottom:solid 5px #84aeef;
+}
+.ajax__tab_darkblue-theme .ajax__tab_header .ajax__tab_outer 
+{
+    background:url('../Images/TabControl/darkblue.jpg') #d8d8d8 repeat-x;
+    margin:0px 0.16em 0px 0px;
+    padding:1px 0px 1px 0px;
+    vertical-align:bottom;
+    border:solid 1px #a3a3a3;
+    border-bottom-width:0px;
+}
+.ajax__tab_darkblue-theme .ajax__tab_header .ajax__tab_tab
+{    
+    color:#000;
+    padding:0.35em 0.75em;    
+    margin-right:0.01em;
+}
+.ajax__tab_darkblue-theme .ajax__tab_hover .ajax__tab_outer 
+{
+    background: url('../Images/TabControl/darkblue.jpg') #bfdaff repeat-x left -1300px;
+}
+.ajax__tab_darkblue-theme .ajax__tab_active .ajax__tab_tab 
+{
+    color:#fff;
+}
+.ajax__tab_darkblue-theme .ajax__tab_active .ajax__tab_outer
+{
+    background:url('../Images/TabControl/darkblue.jpg') #84aeef repeat-x left -1400px;
+}
+.ajax__tab_darkblue-theme .ajax__tab_body 
+{
+    font-family:verdana,tahoma,helvetica;
+    font-size:10pt;
+    padding:0.25em 0.5em;
+    background-color:#edf5ff;    
+    border:solid 1px #808080;
+    border-top-width:0px;
+}
+/* ajax__tab_blueGrad-theme theme (images/blueGrad.jpg) */
+.ajax__tab_blueGrad-theme .ajax__tab_header 
+{
+    font-family:arial,helvetica,clean,sans-serif;
+    font-size:small;
+    color:#ffffff;
+    border-bottom:solid 5px #84aeef;
+}
+.ajax__tab_blueGrad-theme .ajax__tab_header .ajax__tab_outer 
+{
+    background:url('../Images/TabControl/blueGrad.jpg') repeat-x;
+    margin:0px 0.16em 0px 0px;
+    padding:1px 0px 1px 0px;
+    vertical-align:middle;
+    border:solid 1px #a3a3a3;
+    border-bottom-width:0px;
+}
+.ajax__tab_blueGrad-theme .ajax__tab_header .ajax__tab_tab
+{    
+    color:#ffffff;
+    padding:0.35em 0.75em;    
+    margin-right:0.01em;
+}
+.ajax__tab_blueGrad-theme .ajax__tab_hover .ajax__tab_outer 
+{
+    background: url('../Images/TabControl/blueGrad.jpg') #84aeef repeat-x left -1300px;
+}
+.ajax__tab_blueGrad-theme .ajax__tab_active .ajax__tab_tab 
+{
+    color:#fff;
+}
+.ajax__tab_blueGrad-theme .ajax__tab_active .ajax__tab_outer
+{
+     background:url('../Images/TabControl/blueGrad.jpg') #84aeef repeat-x left -1400px;  
+}
+.ajax__tab_blueGrad-theme .ajax__tab_body 
+{
+    font-family:verdana,tahoma,helvetica;
+    font-size:10pt;
+    padding:0.25em 0.5em;
+    background-color:#edf5ff;    
+    border:solid 1px #808080;
+    border-top-width:0px;
+}
+
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 1:49:51 XI 26, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:27:05 III 6, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+
+
+/* ajax__tab_yuitabview-theme theme (img/yui/sprite.png) */
+.ajax__tab_yuitabview-theme .ajax__tab_header 
+{
+    font-family:arial,helvetica,clean,sans-serif;
+    font-size:small;
+    border-bottom:solid 5px #2647a0;
+}
+.ajax__tab_yuitabview-theme .ajax__tab_header .ajax__tab_outer 
+{
+    background:url('../Images/TabControl/sprite.png') #d8d8d8 repeat-x;
+    margin:0px 0.16em 0px 0px;
+    padding:1px 0px 1px 0px;
+    vertical-align:bottom;
+    border:solid 1px #a3a3a3;
+    border-bottom-width:0px;
+}
+.ajax__tab_yuitabview-theme .ajax__tab_header .ajax__tab_tab
+{    
+    color:#000;
+    padding:0.35em 0.75em;    
+    margin-right:0.01em;
+}
+.ajax__tab_yuitabview-theme .ajax__tab_hover .ajax__tab_outer 
+{
+    background: url('../Images/TabControl/sprite.png') #bfdaff repeat-x left -1300px;
+}
+.ajax__tab_yuitabview-theme .ajax__tab_active .ajax__tab_tab 
+{
+    color:#fff;
+}
+.ajax__tab_yuitabview-theme .ajax__tab_active .ajax__tab_outer
+{
+    background:url('../Images/TabControl/sprite.png') #2647a0 repeat-x left -1400px;
+}
+.ajax__tab_yuitabview-theme .ajax__tab_body 
+{
+    font-family:verdana,tahoma,helvetica;
+    font-size:10pt;
+    padding:0.25em 0.5em;
+    background-color:#edf5ff;    
+    border:solid 1px #808080;
+    border-top-width:0px;
+}

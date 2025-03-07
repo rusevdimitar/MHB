@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Test01Db" Class="MyHomeBillsDbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DIMITARR\SQLEXPRESS;Initial Catalog=Test01Db;Integrated Security=True" SettingsObjectName="MHB_DAL.Properties.Settings" SettingsPropertyName="Test01DbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbActionLog" Member="tbActionLogs">
+    <Type Name="tbActionLog">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="logAction" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="logUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="logDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="logMessage" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="logIP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbUsers" Member="tbUsers">
+    <Type Name="tbUser">
+      <Column Name="password" Type="System.Data.Linq.Binary" DbType="VarBinary(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="currency" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="language" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="hassetlang" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="registrationdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="attachmentsize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lastlogintime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="lastipaddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="useragent" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="tbUser_tbCustomPageControl" Member="tbCustomPageControls" ThisKey="userID" OtherKey="UserID" Type="tbCustomPageControl" />
+      <Association Name="tbUser_tbNote" Member="tbNotes" ThisKey="userID" OtherKey="UserID" Type="tbNote" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbControlTypes" Member="tbControlTypes">
+    <Type Name="tbControlType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ControlType" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="ControlTypeText" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Association Name="tbControlType_tbCustomPageControl" Member="tbCustomPageControls" ThisKey="ID" OtherKey="ControlTypeID" Type="tbCustomPageControl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbCostCategories" Member="tbCostCategories">
+    <Type Name="tbCostCategory">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CostCategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CostNames" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Language" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbCustomListItems" Member="tbCustomListItems">
+    <Type Name="tbCustomListItem">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ControlID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ListItemValue" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ListItemText" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Selected" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tbCustomPageControl_tbCustomListItem" Member="tbCustomPageControl" ThisKey="ControlID" OtherKey="ID" Type="tbCustomPageControl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbCustomPageControls" Member="tbCustomPageControls">
+    <Type Name="tbCustomPageControl">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ControlID" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ControlTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ControlValue" Type="System.String" DbType="NChar(300)" CanBeNull="true" />
+      <Column Name="Calculable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Selected" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Label" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="tbCustomPageControl_tbCustomListItem" Member="tbCustomListItems" ThisKey="ID" OtherKey="ControlID" Type="tbCustomListItem" />
+      <Association Name="tbControlType_tbCustomPageControl" Member="tbControlType" ThisKey="ControlTypeID" OtherKey="ID" Type="tbControlType" IsForeignKey="true" />
+      <Association Name="tbUser_tbCustomPageControl" Member="tbUser" ThisKey="UserID" OtherKey="userID" Type="tbUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbDetailsTable01" Member="tbDetailsTable01s">
+    <Type Name="tbDetailsTable01">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExpenditureID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DetailName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DetailDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DetailValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DetailDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Attachment" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AttachmentFileType" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="HasAttachment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="tbMainTable01_tbDetailsTable01" Member="tbMainTable01" ThisKey="ExpenditureID" OtherKey="ID" Type="tbMainTable01" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbDetailsTable02" Member="tbDetailsTable02s">
+    <Type Name="tbDetailsTable02">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExpenditureID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DetailName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DetailDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DetailValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DetailDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Attachment" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AttachmentFileType" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="HasAttachment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="tbMainTable02_tbDetailsTable02" Member="tbMainTable02" ThisKey="ExpenditureID" OtherKey="ID" Type="tbMainTable02" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbDetailsTable03" Member="tbDetailsTable03s">
+    <Type Name="tbDetailsTable03">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExpenditureID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DetailName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DetailDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DetailValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DetailDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Attachment" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AttachmentFileType" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="HasAttachment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="tbMainTable03_tbDetailsTable03" Member="tbMainTable03" ThisKey="ExpenditureID" OtherKey="ID" Type="tbMainTable03" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbDetailsTable04" Member="tbDetailsTable04s">
+    <Type Name="tbDetailsTable04">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExpenditureID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DetailName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DetailDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DetailValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DetailDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Attachment" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AttachmentFileType" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="HasAttachment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="tbMainTable04_tbDetailsTable04" Member="tbMainTable04" ThisKey="ExpenditureID" OtherKey="ID" Type="tbMainTable04" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbDetailsTable05" Member="tbDetailsTable05s">
+    <Type Name="tbDetailsTable05">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExpenditureID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DetailName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DetailDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DetailValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DetailDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Attachment" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AttachmentFileType" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="HasAttachment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="tbMainTable05_tbDetailsTable05" Member="tbMainTable05" ThisKey="ExpenditureID" OtherKey="ID" Type="tbMainTable05" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbIncomes" Member="tbIncomes">
+    <Type Name="tbIncome">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IncomeName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="IncomeValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbLanguage" Member="tbLanguages">
+    <Type Name="tbLanguage">
+      <Column Name="ControlID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ControlTextEN" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ControlTextBG" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ControlTextDE" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbLanguages" Member="tbLanguage1s">
+    <Type Name="tbLanguage1">
+      <Column Name="Language" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbLog" Member="tbLogs">
+    <Type Name="tbLog">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="logMethod" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="logExceptionMessage" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="logInnerExceptionMessage" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="logExceptionSource" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="logStackTrace" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="logUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="logDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="logSqlQuery" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbMainTable01" Member="tbMainTable01s">
+    <Type Name="tbMainTable01">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FieldDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="FieldValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FieldExpectedValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateRecordUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsPaid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HasDetails" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Attachment" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AttachmentFileType" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="HasAttachment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CostCategory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notified" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NotificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Flagged" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FieldOldValue" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="tbMainTable01_tbDetailsTable01" Member="tbDetailsTable01s" ThisKey="ID" OtherKey="ExpenditureID" Type="tbDetailsTable01" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbMainTable02" Member="tbMainTable02s">
+    <Type Name="tbMainTable02">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FieldDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="FieldValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FieldExpectedValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateRecordUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsPaid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HasDetails" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Attachment" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AttachmentFileType" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="HasAttachment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CostCategory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notified" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NotificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Flagged" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FieldOldValue" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="tbMainTable02_tbDetailsTable02" Member="tbDetailsTable02s" ThisKey="ID" OtherKey="ExpenditureID" Type="tbDetailsTable02" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbMainTable03" Member="tbMainTable03s">
+    <Type Name="tbMainTable03">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FieldDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="FieldValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FieldExpectedValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateRecordUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsPaid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HasDetails" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Attachment" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AttachmentFileType" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="HasAttachment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CostCategory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notified" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NotificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Flagged" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FieldOldValue" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="tbMainTable03_tbDetailsTable03" Member="tbDetailsTable03s" ThisKey="ID" OtherKey="ExpenditureID" Type="tbDetailsTable03" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbMainTable04" Member="tbMainTable04s">
+    <Type Name="tbMainTable04">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FieldDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="FieldValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FieldExpectedValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateRecordUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsPaid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HasDetails" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Attachment" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AttachmentFileType" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="HasAttachment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CostCategory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notified" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NotificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Flagged" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FieldOldValue" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="tbMainTable04_tbDetailsTable04" Member="tbDetailsTable04s" ThisKey="ID" OtherKey="ExpenditureID" Type="tbDetailsTable04" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbMainTable05" Member="tbMainTable05s">
+    <Type Name="tbMainTable05">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FieldDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="FieldValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FieldExpectedValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateRecordUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsPaid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HasDetails" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Attachment" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AttachmentFileType" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="HasAttachment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CostCategory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notified" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NotificationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Flagged" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FieldOldValue" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="tbMainTable05_tbDetailsTable05" Member="tbDetailsTable05s" ThisKey="ID" OtherKey="ExpenditureID" Type="tbDetailsTable05" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbMonthlyBudget" Member="tbMonthlyBudgets">
+    <Type Name="tbMonthlyBudget">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BudgetJan" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BudgetFeb" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BudgetMar" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BudgetApr" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BudgetMay" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BudgetJune" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BudgetJuly" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BudgetAug" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BudgetSept" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BudgetOct" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BudgetNov" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BudgetDec" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbMonthlyExpenses" Member="tbMonthlyExpenses">
+    <Type Name="tbMonthlyExpense">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SumJanuary" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SumFebruary" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SumMarch" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SumApril" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SumMay" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SumJune" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SumJuly" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SumAugust" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SumSeptember" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SumOctober" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SumNovember" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SumDecember" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbMonthlySavings" Member="tbMonthlySavings">
+    <Type Name="tbMonthlySaving">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SavingsJan" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SavingsFeb" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SavingsMar" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SavingsApr" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SavingsMay" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SavingsJune" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SavingsJuly" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SavingsAug" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SavingsSept" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SavingsOct" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SavingsNov" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SavingsDec" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbNotes" Member="tbNotes">
+    <Type Name="tbNote">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="tbUser_tbNote" Member="tbUser" ThisKey="UserID" OtherKey="userID" Type="tbUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

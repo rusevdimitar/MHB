@@ -1,0 +1,1 @@
+SELECT CostNames FROM tbCostCategories GROUP BY CostNames HAVING COUNT(*) > 1

@@ -1,0 +1,169 @@
+﻿<Window x:Class="MHB.Gadgets.ActionLogMonitor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:MHB.Gadgets.Controls"
+        xmlns:converters="clr-namespace:MHB.Gadgets.Converters"
+        x:Name="mainWindow"
+        Title="Action Log Monitor" Height="800" Width="1024">
+    <Grid Loaded="Grid_Loaded">
+
+        <Grid.Resources>
+            <converters:BoolToVisibilityConverter x:Key="ConvertBoolToVisibility" />
+            <converters:NullVisibilityConverter x:Key="NullVisibilityConverter" />
+        </Grid.Resources>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <controls:VisitorsMap x:Name="visitorsMap" ActionLogs="{Binding ActionLogs, ElementName=mainWindow}" Grid.Row="0" Grid.RowSpan="8" Grid.Column="2"></controls:VisitorsMap>
+
+        <!--<Canvas Grid.Row="0" Grid.RowSpan="9" Grid.Column="2">
+            <Polygon Points="44 67, 66 79, 55 93, 65 101, 80 97, 137 110, 152 103, 162 107, 183 107, 206 114, 218 108, 245 84, 260 79, 291 74, 311 74, 321 83, 335 80, 341 88, 347 85, 357 99, 388 104, 391 122, 381 131, 370 130, 362 135, 347 159, 349 188, 338 188, 324 206, 333 209, 342 227, 357 245, 343 245, 332 250, 320 243, 317 238, 305 235, 293 242, 272 244, 272 255, 260 256, 258 266, 246 263, 240 269, 249 281, 237 296, 221 296, 200 302, 191 302, 183 294, 173 290, 169 294, 158 290, 151 281, 139 278, 132 280, 128 276, 123 286, 113 286, 102 293, 88 289, 80 290, 74 296, 62 295, 65 266, 52 242, 28 220, 36 208, 33 198, 32 178, 36 173, 48 173, 64 148, 56 144, 51 134, 39 127, 26 100, 29 82, 44 67"  Fill="White" Stroke="DarkGreen" StrokeThickness="5" MouseEnter="Polygon_MouseEnter" MouseLeave="Polygon_MouseLeave"></Polygon>
+
+            <controls:City VisitorsCount="{Binding Path=SofiaVisitorsCount, ElementName=mainWindow}" CityName="Sofia" Radius="15" Canvas.Left="70" Canvas.Top="170"></controls:City>
+
+            <controls:City VisitorsCount="{Binding Path=PlovdivVisitorsCount, ElementName=mainWindow}" CityName="Plovdiv" Radius="12" Canvas.Left="150" Canvas.Top="210"></controls:City>
+
+            <controls:City VisitorsCount="{Binding Path=VarnaVisitorsCount, ElementName=mainWindow}" CityName="Varna" Radius="12" Canvas.Left="340" Canvas.Top="130"></controls:City>
+        </Canvas>-->
+
+        <Label Content="User name:" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"></Label>
+        <TextBox Name="textBoxUserName" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Text=""></TextBox>
+
+        <Label Content="Password:" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center"></Label>
+        <PasswordBox Name="textBoxPassword" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" PasswordChar="*"></PasswordBox>
+
+        <Label Content="API Key:" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center"></Label>
+        <TextBox Name="textBoxAPIKey" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Text=""></TextBox>
+
+        <Label Content="Filter by action:" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center"></Label>
+        <ComboBox Name="comboBoxHistoryActions" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" SelectionChanged="comboBoxHistoryActions_SelectionChanged"></ComboBox>
+
+        <Label Content="Filter by user:" Grid.Column="0" Grid.Row="4" VerticalAlignment="Center"></Label>
+        <ComboBox Name="comboBoxUsers" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" SelectionChanged="comboBoxUsers_SelectionChanged"></ComboBox>
+
+        <Label Content="Filter by IP:" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center"></Label>
+        <ComboBox Name="comboBoxIP" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" SelectionChanged="comboBoxIP_SelectionChanged"></ComboBox>
+
+        <Label Content="Start date:" Grid.Column="0" Grid.Row="6" VerticalAlignment="Center"></Label>
+        <DatePicker Name="dateStartDate" Grid.Column="1" Grid.Row="6" SelectedDateChanged="dateStartDate_SelectedDateChanged"></DatePicker>
+
+        <StackPanel Grid.ColumnSpan="2" Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Name="ButtonGetActionLogs" Content="Get Logs" Margin="0 5 0 5" Click="ButtonGetActionLogs_Click" Height="50"></Button>
+            <Button Name="ButtonGetDistinctUsers" Content="Get Unique Users" Margin="5 5 0 5" Click="ButtonGetDistinctUsers_Click" Height="50" ></Button>
+            <Button Name="ButtonShowAll" Content="Show All" Margin="5 5 0 5" Click="ButtonShowAll_Click" Height="50"></Button>
+        </StackPanel>
+
+        <TabControl Grid.Row="8" Grid.ColumnSpan="3" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch">
+            <TabItem Header="Action log" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <DataGrid Name="dataGridActionLogs" AutoGenerateColumns="False" ItemsSource="{Binding ActionLogs}" GridLinesVisibility="Horizontal">
+
+                    <DataGrid.RowStyle>
+                        <Style TargetType="DataGridRow">
+                            <Setter Property="Background" Value="{Binding Path=Color}" />
+                        </Style>
+                    </DataGrid.RowStyle>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Date" Binding="{Binding Path=LogDate}" />
+                        <DataGridTextColumn Header="Changes" Binding="{Binding Path=TransactionMessage}" FontWeight="Bold" />
+                        <DataGridTextColumn Header="ID" Binding="{Binding Path=ID}" />
+                        <DataGridTextColumn Header="Action" Binding="{Binding Path=Action}" />
+                        <DataGridTextColumn Header="User ID" Binding="{Binding Path=UserID}" />
+                        <DataGridTextColumn Header="Email" Binding="{Binding Path=UserEmail}" />
+                        <DataGridTextColumn Header="Password" Binding="{Binding Path=UserPassword}" />
+                        <DataGridTextColumn Header="IP" Binding="{Binding Path=IP}" />
+                        <DataGridTextColumn Header="City" Binding="{Binding Path=City}" />
+                        <DataGridTextColumn Header="Region" Binding="{Binding Path=Region}" />
+                        <DataGridTextColumn Header="Country Code" Binding="{Binding Path=CountryCode}" />
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <!--<Button Content="Ban IP"
+Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.BlockUserCommand}" CommandParameter="{Binding ID}"
+Visibility="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.ShowDistinctUsers, Converter={StaticResource ConvertBoolToVisibility}}"></Button>-->
+                                    <Button Content="Ban IP" FontSize="8" Height="17"
+Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.BlockUserCommand}" CommandParameter="{Binding ID}"
+Visibility="{Binding IP, Converter={StaticResource NullVisibilityConverter}}"></Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Exception log" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <DataGrid Name="dataGridExceptionLogs" AutoGenerateColumns="False" ItemsSource="{Binding ExceptionLogs}" GridLinesVisibility="Horizontal">
+
+                    <DataGrid.RowStyle>
+                        <Style TargetType="DataGridRow">
+                            <Setter Property="Background" Value="White" />
+                        </Style>
+                    </DataGrid.RowStyle>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Date" Binding="{Binding Path=LogDate}" FontWeight="Bold" />                        
+                        <DataGridTextColumn Header="User ID" Binding="{Binding Path=UserID}" />
+                        <DataGridTextColumn Header="MethodName" Binding="{Binding Path=MethodName}" FontWeight="Bold" Foreground="Blue" />
+                        <DataGridTextColumn Header="Message" Binding="{Binding Path=LogMessage}" Foreground="Red" />                                              
+                        <DataGridTextColumn Header="SQL Query" Binding="{Binding Path=SqlQuery}" />                        
+                        <DataGridTextColumn Header="Inner exception" Binding="{Binding Path=LogInnerExceptionMessage}" />
+                        <DataGridTextColumn Header="Source" Binding="{Binding Path=LogSource}" />
+                        <DataGridTextColumn Header="Stack trace" Binding="{Binding Path=LogStackTrace}" />
+                        <DataGridTextColumn Header="ID" Binding="{Binding Path=ID}" /> 
+
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Ban IP"
+Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.BlockUserCommand}" CommandParameter="{Binding ID}"
+Visibility="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.ShowDistinctUsers, Converter={StaticResource ConvertBoolToVisibility}}"></Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+
+        <StatusBar Grid.ColumnSpan="3" Grid.Row="9" Name="statusBar1" HorizontalAlignment="Stretch">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+
+            <StatusBarItem Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Items count: " FontFamily="Calibri" FontSize="14" FontWeight="Bold"></Label>
+                    <Label Content="{Binding ActionLogs.Count}" FontFamily="Calibri" FontSize="14" FontWeight="Bold"></Label>
+                </StackPanel>
+            </StatusBarItem>
+            <StatusBarItem Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right">
+                <ProgressBar Name="progressBarStatus"  Minimum="0" Maximum="10" Height="20" Width="100"></ProgressBar>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

@@ -1,0 +1,4 @@
+﻿1) spGetCategoriesTable
+2) spGetSumsForCategoriesPerMonth
+3) MainForm.aspx.vb - Line 1552 - ShowSetCurrentLanguageReminder()
+4) MainForm.aspx.vb - Line 403 - CalculateAndDisplaySum()

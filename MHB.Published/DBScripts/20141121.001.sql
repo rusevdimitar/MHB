@@ -1,0 +1,1 @@
+﻿ALTER TABLE tbNotes ADD IsShared BIT NOT NULL DEFAULT 0

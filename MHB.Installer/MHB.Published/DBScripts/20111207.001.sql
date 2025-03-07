@@ -1,0 +1,6 @@
+﻿ALTER DATABASE smetkieu_db SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+ALTER DATABASE smetkieu_db COLLATE Cyrillic_General_CI_AS
+ALTER DATABASE smetkieu_db SET MULTI_USER
+
+
+SELECT DATABASEPROPERTYEX('smetkieu_db', 'Collation') SQLCollation;

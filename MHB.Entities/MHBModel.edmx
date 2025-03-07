@@ -1,0 +1,1965 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MHBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="MHBModelStoreContainer">
+          <EntitySet Name="SortOptions" EntityType="MHBModel.Store.SortOptions" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SortOptionsTranslations" EntityType="MHBModel.Store.SortOptionsTranslations" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbActionLog" EntityType="MHBModel.Store.tbActionLog" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbCategories" EntityType="MHBModel.Store.tbCategories" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbControlTypes" EntityType="MHBModel.Store.tbControlTypes" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbCostCategories" EntityType="MHBModel.Store.tbCostCategories" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbCustomListItems" EntityType="MHBModel.Store.tbCustomListItems" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbCustomPageControls" EntityType="MHBModel.Store.tbCustomPageControls" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbDetailsTable01" EntityType="MHBModel.Store.tbDetailsTable01" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbDetailsTable02" EntityType="MHBModel.Store.tbDetailsTable02" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbDetailsTable03" EntityType="MHBModel.Store.tbDetailsTable03" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbDetailsTable04" EntityType="MHBModel.Store.tbDetailsTable04" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbDetailsTable05" EntityType="MHBModel.Store.tbDetailsTable05" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbIncomes" EntityType="MHBModel.Store.tbIncomes" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbLanguage" EntityType="MHBModel.Store.tbLanguage" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbLanguages" EntityType="MHBModel.Store.tbLanguages" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbLog" EntityType="MHBModel.Store.tbLog" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbMainTable01" EntityType="MHBModel.Store.tbMainTable01" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbMainTable02" EntityType="MHBModel.Store.tbMainTable02" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbMainTable03" EntityType="MHBModel.Store.tbMainTable03" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbMainTable04" EntityType="MHBModel.Store.tbMainTable04" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbMainTable05" EntityType="MHBModel.Store.tbMainTable05" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbMainTableTemp" EntityType="MHBModel.Store.tbMainTableTemp" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbMonthlyBudget" EntityType="MHBModel.Store.tbMonthlyBudget" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbMonthlyExpenses" EntityType="MHBModel.Store.tbMonthlyExpenses" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbMonthlySavings" EntityType="MHBModel.Store.tbMonthlySavings" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbNotes" EntityType="MHBModel.Store.tbNotes" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbTransactionLog" EntityType="MHBModel.Store.tbTransactionLog" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbUsers" EntityType="MHBModel.Store.tbUsers" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tbUsersGeoLocationData" EntityType="MHBModel.Store.tbUsersGeoLocationData" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <AssociationSet Name="FK_CATID" Association="MHBModel.Store.FK_CATID">
+            <End Role="tbCategories" EntitySet="tbCategories" />
+            <End Role="tbCostCategories" EntitySet="tbCostCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SORTOPTIONTRANSL_SORTOPTION_ID" Association="MHBModel.Store.FK_SORTOPTIONTRANSL_SORTOPTION_ID">
+            <End Role="SortOptions" EntitySet="SortOptions" />
+            <End Role="SortOptionsTranslations" EntitySet="SortOptionsTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbCustomListItems_tbCustomPageControls" Association="MHBModel.Store.FK_tbCustomListItems_tbCustomPageControls">
+            <End Role="tbCustomPageControls" EntitySet="tbCustomPageControls" />
+            <End Role="tbCustomListItems" EntitySet="tbCustomListItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbCustomPageControls_tbControlTypes" Association="MHBModel.Store.FK_tbCustomPageControls_tbControlTypes">
+            <End Role="tbControlTypes" EntitySet="tbControlTypes" />
+            <End Role="tbCustomPageControls" EntitySet="tbCustomPageControls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbCustomPageControls_tbUsers" Association="MHBModel.Store.FK_tbCustomPageControls_tbUsers">
+            <End Role="tbUsers" EntitySet="tbUsers" />
+            <End Role="tbCustomPageControls" EntitySet="tbCustomPageControls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbDetailsTable01_tbMainTable01" Association="MHBModel.Store.FK_tbDetailsTable01_tbMainTable01">
+            <End Role="tbMainTable01" EntitySet="tbMainTable01" />
+            <End Role="tbDetailsTable01" EntitySet="tbDetailsTable01" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbDetailsTable02_tbMainTable02" Association="MHBModel.Store.FK_tbDetailsTable02_tbMainTable02">
+            <End Role="tbMainTable02" EntitySet="tbMainTable02" />
+            <End Role="tbDetailsTable02" EntitySet="tbDetailsTable02" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbDetailsTable03_tbMainTable03" Association="MHBModel.Store.FK_tbDetailsTable03_tbMainTable03">
+            <End Role="tbMainTable03" EntitySet="tbMainTable03" />
+            <End Role="tbDetailsTable03" EntitySet="tbDetailsTable03" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbDetailsTable04_tbMainTable04" Association="MHBModel.Store.FK_tbDetailsTable04_tbMainTable04">
+            <End Role="tbMainTable04" EntitySet="tbMainTable04" />
+            <End Role="tbDetailsTable04" EntitySet="tbDetailsTable04" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbDetailsTable05_tbMainTable05" Association="MHBModel.Store.FK_tbDetailsTable05_tbMainTable05">
+            <End Role="tbMainTable05" EntitySet="tbMainTable05" />
+            <End Role="tbDetailsTable05" EntitySet="tbDetailsTable05" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbNotes_tbUsers" Association="MHBModel.Store.FK_tbNotes_tbUsers">
+            <End Role="tbUsers" EntitySet="tbUsers" />
+            <End Role="tbNotes" EntitySet="tbNotes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="SortOptions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SortOptionsTranslations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SortOptionID" Type="int" />
+          <Property Name="LanguageID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tbActionLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="logAction" Type="int" Nullable="false" />
+          <Property Name="logUserID" Type="int" />
+          <Property Name="logDate" Type="datetime" />
+          <Property Name="logMessage" Type="nvarchar" MaxLength="200" />
+          <Property Name="logIP" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbCategories">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="CategoryName" Type="nvarchar" Nullable="false" MaxLength="70" />
+          <Property Name="IconPath" Type="nvarchar" Nullable="false" MaxLength="300" />
+          <Property Name="IsPayIconVisible" Type="bit" Nullable="false" />
+          <Property Name="UserCategoryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbControlTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ControlType" Type="nchar" MaxLength="100" />
+          <Property Name="ControlTypeText" Type="nchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tbCostCategories">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CostCategoryID" Type="int" />
+          <Property Name="CostNames" Type="nvarchar" MaxLength="50" />
+          <Property Name="Language" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbCustomListItems">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ControlID" Type="int" />
+          <Property Name="ListItemValue" Type="nvarchar" MaxLength="100" />
+          <Property Name="ListItemText" Type="nvarchar" MaxLength="100" />
+          <Property Name="Selected" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbCustomPageControls">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="ControlID" Type="nvarchar" MaxLength="100" />
+          <Property Name="ControlTypeID" Type="int" />
+          <Property Name="ControlValue" Type="nchar" MaxLength="300" />
+          <Property Name="Calculable" Type="bit" />
+          <Property Name="Selected" Type="bit" />
+          <Property Name="Label" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tbDetailsTable01">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ExpenditureID" Type="int" Nullable="false" />
+          <Property Name="DetailName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DetailDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="DetailValue" Type="money" />
+          <Property Name="DetailDate" Type="datetime" />
+          <Property Name="Attachment" Type="varbinary(max)" />
+          <Property Name="AttachmentFileType" Type="nchar" MaxLength="5" />
+          <Property Name="HasAttachment" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbDetailsTable02">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ExpenditureID" Type="int" Nullable="false" />
+          <Property Name="DetailName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DetailDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="DetailValue" Type="money" />
+          <Property Name="DetailDate" Type="datetime" />
+          <Property Name="Attachment" Type="varbinary(max)" />
+          <Property Name="AttachmentFileType" Type="nchar" MaxLength="5" />
+          <Property Name="HasAttachment" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbDetailsTable03">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ExpenditureID" Type="int" Nullable="false" />
+          <Property Name="DetailName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DetailDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="DetailValue" Type="money" />
+          <Property Name="DetailDate" Type="datetime" />
+          <Property Name="Attachment" Type="varbinary(max)" />
+          <Property Name="AttachmentFileType" Type="nchar" MaxLength="5" />
+          <Property Name="HasAttachment" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbDetailsTable04">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ExpenditureID" Type="int" Nullable="false" />
+          <Property Name="DetailName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DetailDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="DetailValue" Type="money" />
+          <Property Name="DetailDate" Type="datetime" />
+          <Property Name="Attachment" Type="varbinary(max)" />
+          <Property Name="AttachmentFileType" Type="nchar" MaxLength="5" />
+          <Property Name="HasAttachment" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbDetailsTable05">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ExpenditureID" Type="int" Nullable="false" />
+          <Property Name="DetailName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DetailDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="DetailValue" Type="money" />
+          <Property Name="DetailDate" Type="datetime" />
+          <Property Name="Attachment" Type="varbinary(max)" />
+          <Property Name="AttachmentFileType" Type="nchar" MaxLength="5" />
+          <Property Name="HasAttachment" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbIncomes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IncomeName" Type="nvarchar" MaxLength="200" />
+          <Property Name="IncomeValue" Type="money" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="Month" Type="int" />
+          <Property Name="Year" Type="int" />
+        </EntityType>
+        <EntityType Name="tbLanguage">
+          <Key>
+            <PropertyRef Name="ControlID" />
+          </Key>
+          <Property Name="ControlID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ControlTextEN" Type="nvarchar" />
+          <Property Name="ControlTextBG" Type="nvarchar" />
+          <Property Name="ControlTextDE" Type="nvarchar" />
+        </EntityType>
+        <EntityType Name="tbLanguages">
+          <Key>
+            <PropertyRef Name="Language" />
+          </Key>
+          <Property Name="Language" Type="int" Nullable="false" />
+          <Property Name="LanguageName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="logMethod" Type="nvarchar" MaxLength="300" />
+          <Property Name="logExceptionMessage" Type="nvarchar" MaxLength="500" />
+          <Property Name="logInnerExceptionMessage" Type="nvarchar" MaxLength="500" />
+          <Property Name="logExceptionSource" Type="nvarchar" MaxLength="500" />
+          <Property Name="logStackTrace" Type="nvarchar(max)" />
+          <Property Name="logUserID" Type="int" />
+          <Property Name="logDateTime" Type="datetime" />
+          <Property Name="logSqlQuery" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="tbMainTable01">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Month" Type="int" />
+          <Property Name="Year" Type="int" />
+          <Property Name="FieldName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FieldDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="FieldValue" Type="money" />
+          <Property Name="FieldExpectedValue" Type="money" />
+          <Property Name="DueDate" Type="datetime" />
+          <Property Name="DateRecordUpdated" Type="datetime" />
+          <Property Name="IsPaid" Type="bit" />
+          <Property Name="HasDetails" Type="bit" />
+          <Property Name="Attachment" Type="varbinary(max)" />
+          <Property Name="AttachmentFileType" Type="nchar" MaxLength="5" />
+          <Property Name="HasAttachment" Type="bit" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="CostCategory" Type="int" />
+          <Property Name="Notified" Type="bit" />
+          <Property Name="NotificationDate" Type="datetime" />
+          <Property Name="Flagged" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="FieldOldValue" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbMainTable02">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Month" Type="int" />
+          <Property Name="Year" Type="int" />
+          <Property Name="FieldName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FieldDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="FieldValue" Type="money" />
+          <Property Name="FieldExpectedValue" Type="money" />
+          <Property Name="DueDate" Type="datetime" />
+          <Property Name="DateRecordUpdated" Type="datetime" />
+          <Property Name="IsPaid" Type="bit" />
+          <Property Name="HasDetails" Type="bit" />
+          <Property Name="Attachment" Type="varbinary(max)" />
+          <Property Name="AttachmentFileType" Type="nchar" MaxLength="5" />
+          <Property Name="HasAttachment" Type="bit" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="CostCategory" Type="int" />
+          <Property Name="Notified" Type="bit" />
+          <Property Name="NotificationDate" Type="datetime" />
+          <Property Name="Flagged" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="FieldOldValue" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbMainTable03">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Month" Type="int" />
+          <Property Name="Year" Type="int" />
+          <Property Name="FieldName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FieldDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="FieldValue" Type="money" />
+          <Property Name="FieldExpectedValue" Type="money" />
+          <Property Name="DueDate" Type="datetime" />
+          <Property Name="DateRecordUpdated" Type="datetime" />
+          <Property Name="IsPaid" Type="bit" />
+          <Property Name="HasDetails" Type="bit" />
+          <Property Name="Attachment" Type="varbinary(max)" />
+          <Property Name="AttachmentFileType" Type="nchar" MaxLength="5" />
+          <Property Name="HasAttachment" Type="bit" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="CostCategory" Type="int" />
+          <Property Name="Notified" Type="bit" />
+          <Property Name="NotificationDate" Type="datetime" />
+          <Property Name="Flagged" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="FieldOldValue" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbMainTable04">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Month" Type="int" />
+          <Property Name="Year" Type="int" />
+          <Property Name="FieldName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FieldDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="FieldValue" Type="money" />
+          <Property Name="FieldExpectedValue" Type="money" />
+          <Property Name="DueDate" Type="datetime" />
+          <Property Name="DateRecordUpdated" Type="datetime" />
+          <Property Name="IsPaid" Type="bit" />
+          <Property Name="HasDetails" Type="bit" />
+          <Property Name="Attachment" Type="varbinary(max)" />
+          <Property Name="AttachmentFileType" Type="nchar" MaxLength="5" />
+          <Property Name="HasAttachment" Type="bit" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="CostCategory" Type="int" />
+          <Property Name="Notified" Type="bit" />
+          <Property Name="NotificationDate" Type="datetime" />
+          <Property Name="Flagged" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="FieldOldValue" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbMainTable05">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Month" Type="int" />
+          <Property Name="Year" Type="int" />
+          <Property Name="FieldName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FieldDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="FieldValue" Type="money" />
+          <Property Name="FieldExpectedValue" Type="money" />
+          <Property Name="DueDate" Type="datetime" />
+          <Property Name="DateRecordUpdated" Type="datetime" />
+          <Property Name="IsPaid" Type="bit" />
+          <Property Name="HasDetails" Type="bit" />
+          <Property Name="Attachment" Type="varbinary(max)" />
+          <Property Name="AttachmentFileType" Type="nchar" MaxLength="5" />
+          <Property Name="HasAttachment" Type="bit" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="CostCategory" Type="int" />
+          <Property Name="Notified" Type="bit" />
+          <Property Name="NotificationDate" Type="datetime" />
+          <Property Name="Flagged" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="FieldOldValue" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbMainTableTemp">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Month" Type="int" />
+          <Property Name="Year" Type="int" />
+          <Property Name="FieldName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FieldDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="FieldValue" Type="money" />
+          <Property Name="FieldExpectedValue" Type="money" />
+          <Property Name="DueDate" Type="datetime" />
+          <Property Name="DateRecordUpdated" Type="datetime" />
+          <Property Name="IsPaid" Type="bit" />
+          <Property Name="HasDetails" Type="bit" />
+          <Property Name="Attachment" Type="varbinary(max)" />
+          <Property Name="AttachmentFileType" Type="nchar" MaxLength="5" />
+          <Property Name="HasAttachment" Type="bit" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="CostCategory" Type="int" />
+          <Property Name="Notified" Type="bit" />
+          <Property Name="NotificationDate" Type="datetime" />
+          <Property Name="Flagged" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="FieldOldValue" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbMonthlyBudget">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="Year" Type="int" />
+          <Property Name="BudgetJan" Type="money" />
+          <Property Name="BudgetFeb" Type="money" />
+          <Property Name="BudgetMar" Type="money" />
+          <Property Name="BudgetApr" Type="money" />
+          <Property Name="BudgetMay" Type="money" />
+          <Property Name="BudgetJune" Type="money" />
+          <Property Name="BudgetJuly" Type="money" />
+          <Property Name="BudgetAug" Type="money" />
+          <Property Name="BudgetSept" Type="money" />
+          <Property Name="BudgetOct" Type="money" />
+          <Property Name="BudgetNov" Type="money" />
+          <Property Name="BudgetDec" Type="money" />
+        </EntityType>
+        <EntityType Name="tbMonthlyExpenses">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="Year" Type="int" />
+          <Property Name="SumJanuary" Type="money" />
+          <Property Name="SumFebruary" Type="money" />
+          <Property Name="SumMarch" Type="money" />
+          <Property Name="SumApril" Type="money" />
+          <Property Name="SumMay" Type="money" />
+          <Property Name="SumJune" Type="money" />
+          <Property Name="SumJuly" Type="money" />
+          <Property Name="SumAugust" Type="money" />
+          <Property Name="SumSeptember" Type="money" />
+          <Property Name="SumOctober" Type="money" />
+          <Property Name="SumNovember" Type="money" />
+          <Property Name="SumDecember" Type="money" />
+        </EntityType>
+        <EntityType Name="tbMonthlySavings">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="Year" Type="int" />
+          <Property Name="SavingsJan" Type="money" />
+          <Property Name="SavingsFeb" Type="money" />
+          <Property Name="SavingsMar" Type="money" />
+          <Property Name="SavingsApr" Type="money" />
+          <Property Name="SavingsMay" Type="money" />
+          <Property Name="SavingsJune" Type="money" />
+          <Property Name="SavingsJuly" Type="money" />
+          <Property Name="SavingsAug" Type="money" />
+          <Property Name="SavingsSept" Type="money" />
+          <Property Name="SavingsOct" Type="money" />
+          <Property Name="SavingsNov" Type="money" />
+          <Property Name="SavingsDec" Type="money" />
+        </EntityType>
+        <EntityType Name="tbNotes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="Note" Type="ntext" />
+          <Property Name="DateCreated" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tbTransactionLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="ExpenseID" Type="int" Nullable="false" />
+          <Property Name="NewValue" Type="money" Nullable="false" />
+          <Property Name="OldValue" Type="money" Nullable="false" />
+          <Property Name="TransactionText" Type="nvarchar" Nullable="false" MaxLength="300" />
+          <Property Name="DateModified" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tbUsers">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="password" Type="varbinary" MaxLength="50" />
+          <Property Name="userID" Type="int" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="100" />
+          <Property Name="currency" Type="nvarchar" MaxLength="4" />
+          <Property Name="language" Type="int" />
+          <Property Name="hassetlang" Type="bit" />
+          <Property Name="registrationdate" Type="datetime" />
+          <Property Name="attachmentsize" Type="int" />
+          <Property Name="lastlogintime" Type="datetime" />
+          <Property Name="lastipaddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="useragent" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tbUsersGeoLocationData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Ip" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="CountryCode" Type="varchar" Nullable="false" MaxLength="5" />
+          <Property Name="CountryName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="RegionCode" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="RegionName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="ZipCode" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="Latitude" Type="float" Nullable="false" />
+          <Property Name="Longitude" Type="float" Nullable="false" />
+          <Property Name="LoginDateTime" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_CATID">
+          <End Role="tbCategories" Type="MHBModel.Store.tbCategories" Multiplicity="0..1" />
+          <End Role="tbCostCategories" Type="MHBModel.Store.tbCostCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbCategories">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbCostCategories">
+              <PropertyRef Name="CostCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SORTOPTIONTRANSL_SORTOPTION_ID">
+          <End Role="SortOptions" Type="MHBModel.Store.SortOptions" Multiplicity="0..1" />
+          <End Role="SortOptionsTranslations" Type="MHBModel.Store.SortOptionsTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SortOptions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SortOptionsTranslations">
+              <PropertyRef Name="SortOptionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbCustomListItems_tbCustomPageControls">
+          <End Role="tbCustomPageControls" Type="MHBModel.Store.tbCustomPageControls" Multiplicity="0..1" />
+          <End Role="tbCustomListItems" Type="MHBModel.Store.tbCustomListItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbCustomPageControls">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbCustomListItems">
+              <PropertyRef Name="ControlID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbCustomPageControls_tbControlTypes">
+          <End Role="tbControlTypes" Type="MHBModel.Store.tbControlTypes" Multiplicity="0..1" />
+          <End Role="tbCustomPageControls" Type="MHBModel.Store.tbCustomPageControls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbControlTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbCustomPageControls">
+              <PropertyRef Name="ControlTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbCustomPageControls_tbUsers">
+          <End Role="tbUsers" Type="MHBModel.Store.tbUsers" Multiplicity="1" />
+          <End Role="tbCustomPageControls" Type="MHBModel.Store.tbCustomPageControls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsers">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="tbCustomPageControls">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbDetailsTable01_tbMainTable01">
+          <End Role="tbMainTable01" Type="MHBModel.Store.tbMainTable01" Multiplicity="1" />
+          <End Role="tbDetailsTable01" Type="MHBModel.Store.tbDetailsTable01" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbMainTable01">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbDetailsTable01">
+              <PropertyRef Name="ExpenditureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbDetailsTable02_tbMainTable02">
+          <End Role="tbMainTable02" Type="MHBModel.Store.tbMainTable02" Multiplicity="1" />
+          <End Role="tbDetailsTable02" Type="MHBModel.Store.tbDetailsTable02" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbMainTable02">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbDetailsTable02">
+              <PropertyRef Name="ExpenditureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbDetailsTable03_tbMainTable03">
+          <End Role="tbMainTable03" Type="MHBModel.Store.tbMainTable03" Multiplicity="1" />
+          <End Role="tbDetailsTable03" Type="MHBModel.Store.tbDetailsTable03" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbMainTable03">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbDetailsTable03">
+              <PropertyRef Name="ExpenditureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbDetailsTable04_tbMainTable04">
+          <End Role="tbMainTable04" Type="MHBModel.Store.tbMainTable04" Multiplicity="1" />
+          <End Role="tbDetailsTable04" Type="MHBModel.Store.tbDetailsTable04" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbMainTable04">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbDetailsTable04">
+              <PropertyRef Name="ExpenditureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbDetailsTable05_tbMainTable05">
+          <End Role="tbMainTable05" Type="MHBModel.Store.tbMainTable05" Multiplicity="1" />
+          <End Role="tbDetailsTable05" Type="MHBModel.Store.tbDetailsTable05" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbMainTable05">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbDetailsTable05">
+              <PropertyRef Name="ExpenditureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbNotes_tbUsers">
+          <End Role="tbUsers" Type="MHBModel.Store.tbUsers" Multiplicity="0..1" />
+          <End Role="tbNotes" Type="MHBModel.Store.tbNotes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsers">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="tbNotes">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="OLD___spGetAverageCostsForCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="costCategory" Type="int" Mode="In" />
+          <Parameter Name="minValue" Type="int" Mode="In" />
+          <Parameter Name="maxValue" Type="int" Mode="In" />
+          <Parameter Name="userID" Type="int" Mode="In" />
+          <Parameter Name="mainTableIndex" Type="int" Mode="In" />
+        </Function>
+        <Function Name="OLD___spGetYearlySavingsSum" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="userID" Type="int" Mode="In" />
+          <Parameter Name="year" Type="int" Mode="In" />
+        </Function>
+        <Function Name="OLD___spInsertNewCustomFieldInMainTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="int" Mode="In" />
+          <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="FieldDescription" Type="nvarchar" Mode="In" />
+          <Parameter Name="FieldValue" Type="money" Mode="In" />
+        </Function>
+        <Function Name="OLD___spReturnUserID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="userName" Type="nvarchar" Mode="In" />
+          <Parameter Name="password" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spAddUserGeoLocationInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Ip" Type="varchar" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
+          <Parameter Name="CountryCode" Type="varchar" Mode="In" />
+          <Parameter Name="CountryName" Type="varchar" Mode="In" />
+          <Parameter Name="RegionCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="RegionName" Type="nvarchar" Mode="In" />
+          <Parameter Name="City" Type="nvarchar" Mode="In" />
+          <Parameter Name="ZipCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="Latitude" Type="float" Mode="In" />
+          <Parameter Name="Longitude" Type="float" Mode="In" />
+        </Function>
+        <Function Name="spCheckAndInsertBudgetsSavingsExpensesPlaceHolderRows" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="year" Type="int" Mode="In" />
+          <Parameter Name="userID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spCopyParentExpense" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+          <Parameter Name="MainTableName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spDeleteDemoEntries" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spDuplicateMonthRecords" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="int" Mode="In" />
+          <Parameter Name="CurrentMonth" Type="int" Mode="In" />
+          <Parameter Name="CurrentYear" Type="int" Mode="In" />
+          <Parameter Name="DestinationMonth" Type="int" Mode="In" />
+          <Parameter Name="DestinationYear" Type="int" Mode="In" />
+          <Parameter Name="MainTableName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ReplaceDestinationRecords" Type="bit" Mode="In" />
+          <Parameter Name="FlaggedOnly" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="spGetBudgetsSavingsSumExpenses" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="year" Type="int" Mode="In" />
+          <Parameter Name="month" Type="int" Mode="In" />
+          <Parameter Name="userID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spGetCategoriesTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="language" Type="int" Mode="In" />
+          <Parameter Name="userID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spGetDueDateEmailReminderMessage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spGetGategoryMatchingKeywords" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="language" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spGetSumsForCategoriesPerMonth" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="int" Mode="In" />
+          <Parameter Name="Month" Type="int" Mode="In" />
+          <Parameter Name="Year" Type="int" Mode="In" />
+          <Parameter Name="Lang" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spGetSumsForCategoryPerYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="int" Mode="In" />
+          <Parameter Name="StartYear" Type="int" Mode="In" />
+          <Parameter Name="Lang" Type="int" Mode="In" />
+          <Parameter Name="CategoryID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spGetUsersAverageExpensesForCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="userID" Type="int" Mode="In" />
+          <Parameter Name="costCategory" Type="int" Mode="In" />
+          <Parameter Name="year" Type="int" Mode="In" />
+          <Parameter Name="month" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spSetCostCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+          <Parameter Name="mainTable" Type="nvarchar" Mode="In" />
+          <Parameter Name="keyWord" Type="nvarchar" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MHBModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="MHBEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="SortOptions" EntityType="MHBModel.SortOption" />
+          <EntitySet Name="SortOptionsTranslations" EntityType="MHBModel.SortOptionsTranslation" />
+          <EntitySet Name="tbActionLogs" EntityType="MHBModel.tbActionLog" />
+          <EntitySet Name="tbCategories" EntityType="MHBModel.tbCategory" />
+          <EntitySet Name="tbControlTypes" EntityType="MHBModel.tbControlType" />
+          <EntitySet Name="tbCostCategories" EntityType="MHBModel.tbCostCategory" />
+          <EntitySet Name="tbCustomListItems" EntityType="MHBModel.tbCustomListItem" />
+          <EntitySet Name="tbCustomPageControls" EntityType="MHBModel.tbCustomPageControl" />
+          <EntitySet Name="tbDetailsTable01" EntityType="MHBModel.tbDetailsTable01" />
+          <EntitySet Name="tbDetailsTable02" EntityType="MHBModel.tbDetailsTable02" />
+          <EntitySet Name="tbDetailsTable03" EntityType="MHBModel.tbDetailsTable03" />
+          <EntitySet Name="tbDetailsTable04" EntityType="MHBModel.tbDetailsTable04" />
+          <EntitySet Name="tbDetailsTable05" EntityType="MHBModel.tbDetailsTable05" />
+          <EntitySet Name="tbIncomes" EntityType="MHBModel.tbIncome" />
+          <EntitySet Name="tbLanguages" EntityType="MHBModel.tbLanguage" />
+          <EntitySet Name="tbLanguages1" EntityType="MHBModel.tbLanguage1" />
+          <EntitySet Name="tbLogs" EntityType="MHBModel.tbLog" />
+          <EntitySet Name="tbMainTable01" EntityType="MHBModel.tbMainTable01" />
+          <EntitySet Name="tbMainTable02" EntityType="MHBModel.tbMainTable02" />
+          <EntitySet Name="tbMainTable03" EntityType="MHBModel.tbMainTable03" />
+          <EntitySet Name="tbMainTable04" EntityType="MHBModel.tbMainTable04" />
+          <EntitySet Name="tbMainTable05" EntityType="MHBModel.tbMainTable05" />
+          <EntitySet Name="tbMainTableTemps" EntityType="MHBModel.tbMainTableTemp" />
+          <EntitySet Name="tbMonthlyBudgets" EntityType="MHBModel.tbMonthlyBudget" />
+          <EntitySet Name="tbMonthlyExpenses" EntityType="MHBModel.tbMonthlyExpens" />
+          <EntitySet Name="tbMonthlySavings" EntityType="MHBModel.tbMonthlySaving" />
+          <EntitySet Name="tbNotes" EntityType="MHBModel.tbNote" />
+          <EntitySet Name="tbTransactionLogs" EntityType="MHBModel.tbTransactionLog" />
+          <EntitySet Name="tbUsers" EntityType="MHBModel.tbUser" />
+          <EntitySet Name="tbUsersGeoLocationDatas" EntityType="MHBModel.tbUsersGeoLocationData" />
+          <AssociationSet Name="FK_SORTOPTIONTRANSL_SORTOPTION_ID" Association="MHBModel.FK_SORTOPTIONTRANSL_SORTOPTION_ID">
+            <End Role="SortOptions" EntitySet="SortOptions" />
+            <End Role="SortOptionsTranslations" EntitySet="SortOptionsTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CATID" Association="MHBModel.FK_CATID">
+            <End Role="tbCategories" EntitySet="tbCategories" />
+            <End Role="tbCostCategories" EntitySet="tbCostCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbCustomPageControls_tbControlTypes" Association="MHBModel.FK_tbCustomPageControls_tbControlTypes">
+            <End Role="tbControlTypes" EntitySet="tbControlTypes" />
+            <End Role="tbCustomPageControls" EntitySet="tbCustomPageControls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbCustomListItems_tbCustomPageControls" Association="MHBModel.FK_tbCustomListItems_tbCustomPageControls">
+            <End Role="tbCustomPageControls" EntitySet="tbCustomPageControls" />
+            <End Role="tbCustomListItems" EntitySet="tbCustomListItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbCustomPageControls_tbUsers" Association="MHBModel.FK_tbCustomPageControls_tbUsers">
+            <End Role="tbUsers" EntitySet="tbUsers" />
+            <End Role="tbCustomPageControls" EntitySet="tbCustomPageControls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbDetailsTable01_tbMainTable01" Association="MHBModel.FK_tbDetailsTable01_tbMainTable01">
+            <End Role="tbMainTable01" EntitySet="tbMainTable01" />
+            <End Role="tbDetailsTable01" EntitySet="tbDetailsTable01" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbDetailsTable02_tbMainTable02" Association="MHBModel.FK_tbDetailsTable02_tbMainTable02">
+            <End Role="tbMainTable02" EntitySet="tbMainTable02" />
+            <End Role="tbDetailsTable02" EntitySet="tbDetailsTable02" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbDetailsTable03_tbMainTable03" Association="MHBModel.FK_tbDetailsTable03_tbMainTable03">
+            <End Role="tbMainTable03" EntitySet="tbMainTable03" />
+            <End Role="tbDetailsTable03" EntitySet="tbDetailsTable03" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbDetailsTable04_tbMainTable04" Association="MHBModel.FK_tbDetailsTable04_tbMainTable04">
+            <End Role="tbMainTable04" EntitySet="tbMainTable04" />
+            <End Role="tbDetailsTable04" EntitySet="tbDetailsTable04" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbDetailsTable05_tbMainTable05" Association="MHBModel.FK_tbDetailsTable05_tbMainTable05">
+            <End Role="tbMainTable05" EntitySet="tbMainTable05" />
+            <End Role="tbDetailsTable05" EntitySet="tbDetailsTable05" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbNotes_tbUsers" Association="MHBModel.FK_tbNotes_tbUsers">
+            <End Role="tbUsers" EntitySet="tbUsers" />
+            <End Role="tbNotes" EntitySet="tbNotes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="SortOption">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="SortOptionsTranslations" Relationship="MHBModel.FK_SORTOPTIONTRANSL_SORTOPTION_ID" FromRole="SortOptions" ToRole="SortOptionsTranslations" />
+        </EntityType>
+        <EntityType Name="SortOptionsTranslation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="SortOptionID" Type="Int32" />
+          <Property Name="LanguageID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="SortOption" Relationship="MHBModel.FK_SORTOPTIONTRANSL_SORTOPTION_ID" FromRole="SortOptionsTranslations" ToRole="SortOptions" />
+        </EntityType>
+        <EntityType Name="tbActionLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="logAction" Type="Int32" Nullable="false" />
+          <Property Name="logUserID" Type="Int32" />
+          <Property Name="logDate" Type="DateTime" />
+          <Property Name="logMessage" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="logIP" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbCategory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="70" Unicode="true" FixedLength="false" />
+          <Property Name="IconPath" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="IsPayIconVisible" Type="Boolean" Nullable="false" />
+          <Property Name="UserCategoryID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbCostCategories" Relationship="MHBModel.FK_CATID" FromRole="tbCategories" ToRole="tbCostCategories" />
+        </EntityType>
+        <EntityType Name="tbControlType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ControlType" Type="String" MaxLength="100" Unicode="true" FixedLength="true" />
+          <Property Name="ControlTypeText" Type="String" MaxLength="100" Unicode="true" FixedLength="true" />
+          <NavigationProperty Name="tbCustomPageControls" Relationship="MHBModel.FK_tbCustomPageControls_tbControlTypes" FromRole="tbControlTypes" ToRole="tbCustomPageControls" />
+        </EntityType>
+        <EntityType Name="tbCostCategory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="CostCategoryID" Type="Int32" />
+          <Property Name="CostNames" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Language" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbCategory" Relationship="MHBModel.FK_CATID" FromRole="tbCostCategories" ToRole="tbCategories" />
+        </EntityType>
+        <EntityType Name="tbCustomListItem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ControlID" Type="Int32" />
+          <Property Name="ListItemValue" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ListItemText" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Selected" Type="Boolean" />
+          <NavigationProperty Name="tbCustomPageControl" Relationship="MHBModel.FK_tbCustomListItems_tbCustomPageControls" FromRole="tbCustomListItems" ToRole="tbCustomPageControls" />
+        </EntityType>
+        <EntityType Name="tbCustomPageControl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="ControlID" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ControlTypeID" Type="Int32" />
+          <Property Name="ControlValue" Type="String" MaxLength="300" Unicode="true" FixedLength="true" />
+          <Property Name="Calculable" Type="Boolean" />
+          <Property Name="Selected" Type="Boolean" />
+          <Property Name="Label" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tbControlType" Relationship="MHBModel.FK_tbCustomPageControls_tbControlTypes" FromRole="tbCustomPageControls" ToRole="tbControlTypes" />
+          <NavigationProperty Name="tbCustomListItems" Relationship="MHBModel.FK_tbCustomListItems_tbCustomPageControls" FromRole="tbCustomPageControls" ToRole="tbCustomListItems" />
+          <NavigationProperty Name="tbUser" Relationship="MHBModel.FK_tbCustomPageControls_tbUsers" FromRole="tbCustomPageControls" ToRole="tbUsers" />
+        </EntityType>
+        <EntityType Name="tbDetailsTable01">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ExpenditureID" Type="Int32" Nullable="false" />
+          <Property Name="DetailName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="DetailDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DetailValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DetailDate" Type="DateTime" />
+          <Property Name="Attachment" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AttachmentFileType" Type="String" MaxLength="5" Unicode="true" FixedLength="true" />
+          <Property Name="HasAttachment" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tbMainTable01" Relationship="MHBModel.FK_tbDetailsTable01_tbMainTable01" FromRole="tbDetailsTable01" ToRole="tbMainTable01" />
+        </EntityType>
+        <EntityType Name="tbDetailsTable02">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ExpenditureID" Type="Int32" Nullable="false" />
+          <Property Name="DetailName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="DetailDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DetailValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DetailDate" Type="DateTime" />
+          <Property Name="Attachment" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AttachmentFileType" Type="String" MaxLength="5" Unicode="true" FixedLength="true" />
+          <Property Name="HasAttachment" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tbMainTable02" Relationship="MHBModel.FK_tbDetailsTable02_tbMainTable02" FromRole="tbDetailsTable02" ToRole="tbMainTable02" />
+        </EntityType>
+        <EntityType Name="tbDetailsTable03">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ExpenditureID" Type="Int32" Nullable="false" />
+          <Property Name="DetailName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="DetailDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DetailValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DetailDate" Type="DateTime" />
+          <Property Name="Attachment" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AttachmentFileType" Type="String" MaxLength="5" Unicode="true" FixedLength="true" />
+          <Property Name="HasAttachment" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tbMainTable03" Relationship="MHBModel.FK_tbDetailsTable03_tbMainTable03" FromRole="tbDetailsTable03" ToRole="tbMainTable03" />
+        </EntityType>
+        <EntityType Name="tbDetailsTable04">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ExpenditureID" Type="Int32" Nullable="false" />
+          <Property Name="DetailName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="DetailDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DetailValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DetailDate" Type="DateTime" />
+          <Property Name="Attachment" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AttachmentFileType" Type="String" MaxLength="5" Unicode="true" FixedLength="true" />
+          <Property Name="HasAttachment" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tbMainTable04" Relationship="MHBModel.FK_tbDetailsTable04_tbMainTable04" FromRole="tbDetailsTable04" ToRole="tbMainTable04" />
+        </EntityType>
+        <EntityType Name="tbDetailsTable05">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ExpenditureID" Type="Int32" Nullable="false" />
+          <Property Name="DetailName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="DetailDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DetailValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DetailDate" Type="DateTime" />
+          <Property Name="Attachment" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AttachmentFileType" Type="String" MaxLength="5" Unicode="true" FixedLength="true" />
+          <Property Name="HasAttachment" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tbMainTable05" Relationship="MHBModel.FK_tbDetailsTable05_tbMainTable05" FromRole="tbDetailsTable05" ToRole="tbMainTable05" />
+        </EntityType>
+        <EntityType Name="tbIncome">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="IncomeName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="IncomeValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="Month" Type="Int32" />
+          <Property Name="Year" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbLanguage">
+          <Key>
+            <PropertyRef Name="ControlID" />
+          </Key>
+          <Property Name="ControlID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ControlTextEN" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="ControlTextBG" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="ControlTextDE" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbLanguage1">
+          <Key>
+            <PropertyRef Name="Language" />
+          </Key>
+          <Property Name="Language" Type="Int32" Nullable="false" />
+          <Property Name="LanguageName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="logMethod" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="logExceptionMessage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="logInnerExceptionMessage" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="logExceptionSource" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="logStackTrace" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="logUserID" Type="Int32" />
+          <Property Name="logDateTime" Type="DateTime" />
+          <Property Name="logSqlQuery" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbMainTable01">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Month" Type="Int32" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="FieldName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FieldDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="FieldValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FieldExpectedValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DueDate" Type="DateTime" />
+          <Property Name="DateRecordUpdated" Type="DateTime" />
+          <Property Name="IsPaid" Type="Boolean" />
+          <Property Name="HasDetails" Type="Boolean" />
+          <Property Name="Attachment" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AttachmentFileType" Type="String" MaxLength="5" Unicode="true" FixedLength="true" />
+          <Property Name="HasAttachment" Type="Boolean" />
+          <Property Name="OrderID" Type="Int32" />
+          <Property Name="CostCategory" Type="Int32" />
+          <Property Name="Notified" Type="Boolean" />
+          <Property Name="NotificationDate" Type="DateTime" />
+          <Property Name="Flagged" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="FieldOldValue" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="tbDetailsTable01" Relationship="MHBModel.FK_tbDetailsTable01_tbMainTable01" FromRole="tbMainTable01" ToRole="tbDetailsTable01" />
+        </EntityType>
+        <EntityType Name="tbMainTable02">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Month" Type="Int32" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="FieldName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FieldDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="FieldValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FieldExpectedValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DueDate" Type="DateTime" />
+          <Property Name="DateRecordUpdated" Type="DateTime" />
+          <Property Name="IsPaid" Type="Boolean" />
+          <Property Name="HasDetails" Type="Boolean" />
+          <Property Name="Attachment" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AttachmentFileType" Type="String" MaxLength="5" Unicode="true" FixedLength="true" />
+          <Property Name="HasAttachment" Type="Boolean" />
+          <Property Name="OrderID" Type="Int32" />
+          <Property Name="CostCategory" Type="Int32" />
+          <Property Name="Notified" Type="Boolean" />
+          <Property Name="NotificationDate" Type="DateTime" />
+          <Property Name="Flagged" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="FieldOldValue" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="tbDetailsTable02" Relationship="MHBModel.FK_tbDetailsTable02_tbMainTable02" FromRole="tbMainTable02" ToRole="tbDetailsTable02" />
+        </EntityType>
+        <EntityType Name="tbMainTable03">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Month" Type="Int32" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="FieldName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FieldDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="FieldValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FieldExpectedValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DueDate" Type="DateTime" />
+          <Property Name="DateRecordUpdated" Type="DateTime" />
+          <Property Name="IsPaid" Type="Boolean" />
+          <Property Name="HasDetails" Type="Boolean" />
+          <Property Name="Attachment" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AttachmentFileType" Type="String" MaxLength="5" Unicode="true" FixedLength="true" />
+          <Property Name="HasAttachment" Type="Boolean" />
+          <Property Name="OrderID" Type="Int32" />
+          <Property Name="CostCategory" Type="Int32" />
+          <Property Name="Notified" Type="Boolean" />
+          <Property Name="NotificationDate" Type="DateTime" />
+          <Property Name="Flagged" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="FieldOldValue" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="tbDetailsTable03" Relationship="MHBModel.FK_tbDetailsTable03_tbMainTable03" FromRole="tbMainTable03" ToRole="tbDetailsTable03" />
+        </EntityType>
+        <EntityType Name="tbMainTable04">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Month" Type="Int32" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="FieldName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FieldDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="FieldValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FieldExpectedValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DueDate" Type="DateTime" />
+          <Property Name="DateRecordUpdated" Type="DateTime" />
+          <Property Name="IsPaid" Type="Boolean" />
+          <Property Name="HasDetails" Type="Boolean" />
+          <Property Name="Attachment" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AttachmentFileType" Type="String" MaxLength="5" Unicode="true" FixedLength="true" />
+          <Property Name="HasAttachment" Type="Boolean" />
+          <Property Name="OrderID" Type="Int32" />
+          <Property Name="CostCategory" Type="Int32" />
+          <Property Name="Notified" Type="Boolean" />
+          <Property Name="NotificationDate" Type="DateTime" />
+          <Property Name="Flagged" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="FieldOldValue" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="tbDetailsTable04" Relationship="MHBModel.FK_tbDetailsTable04_tbMainTable04" FromRole="tbMainTable04" ToRole="tbDetailsTable04" />
+        </EntityType>
+        <EntityType Name="tbMainTable05">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Month" Type="Int32" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="FieldName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FieldDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="FieldValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FieldExpectedValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DueDate" Type="DateTime" />
+          <Property Name="DateRecordUpdated" Type="DateTime" />
+          <Property Name="IsPaid" Type="Boolean" />
+          <Property Name="HasDetails" Type="Boolean" />
+          <Property Name="Attachment" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AttachmentFileType" Type="String" MaxLength="5" Unicode="true" FixedLength="true" />
+          <Property Name="HasAttachment" Type="Boolean" />
+          <Property Name="OrderID" Type="Int32" />
+          <Property Name="CostCategory" Type="Int32" />
+          <Property Name="Notified" Type="Boolean" />
+          <Property Name="NotificationDate" Type="DateTime" />
+          <Property Name="Flagged" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="FieldOldValue" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="tbDetailsTable05" Relationship="MHBModel.FK_tbDetailsTable05_tbMainTable05" FromRole="tbMainTable05" ToRole="tbDetailsTable05" />
+        </EntityType>
+        <EntityType Name="tbMainTableTemp">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Month" Type="Int32" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="FieldName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FieldDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="FieldValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FieldExpectedValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DueDate" Type="DateTime" />
+          <Property Name="DateRecordUpdated" Type="DateTime" />
+          <Property Name="IsPaid" Type="Boolean" />
+          <Property Name="HasDetails" Type="Boolean" />
+          <Property Name="Attachment" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AttachmentFileType" Type="String" MaxLength="5" Unicode="true" FixedLength="true" />
+          <Property Name="HasAttachment" Type="Boolean" />
+          <Property Name="OrderID" Type="Int32" />
+          <Property Name="CostCategory" Type="Int32" />
+          <Property Name="Notified" Type="Boolean" />
+          <Property Name="NotificationDate" Type="DateTime" />
+          <Property Name="Flagged" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="FieldOldValue" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="tbMonthlyBudget">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="BudgetJan" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BudgetFeb" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BudgetMar" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BudgetApr" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BudgetMay" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BudgetJune" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BudgetJuly" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BudgetAug" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BudgetSept" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BudgetOct" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BudgetNov" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BudgetDec" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="tbMonthlyExpens">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="SumJanuary" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SumFebruary" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SumMarch" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SumApril" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SumMay" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SumJune" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SumJuly" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SumAugust" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SumSeptember" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SumOctober" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SumNovember" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SumDecember" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="tbMonthlySaving">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="SavingsJan" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SavingsFeb" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SavingsMar" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SavingsApr" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SavingsMay" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SavingsJune" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SavingsJuly" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SavingsAug" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SavingsSept" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SavingsOct" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SavingsNov" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SavingsDec" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="tbNote">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="Note" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="DateCreated" Type="DateTime" />
+          <NavigationProperty Name="tbUser" Relationship="MHBModel.FK_tbNotes_tbUsers" FromRole="tbNotes" ToRole="tbUsers" />
+        </EntityType>
+        <EntityType Name="tbTransactionLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="ExpenseID" Type="Int32" Nullable="false" />
+          <Property Name="NewValue" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="OldValue" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="TransactionText" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="DateModified" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="tbUser">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="password" Type="Binary" MaxLength="50" FixedLength="false" />
+          <Property Name="userID" Type="Int32" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="currency" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+          <Property Name="language" Type="Int32" />
+          <Property Name="hassetlang" Type="Boolean" />
+          <Property Name="registrationdate" Type="DateTime" />
+          <Property Name="attachmentsize" Type="Int32" />
+          <Property Name="lastlogintime" Type="DateTime" />
+          <Property Name="lastipaddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="useragent" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tbCustomPageControls" Relationship="MHBModel.FK_tbCustomPageControls_tbUsers" FromRole="tbUsers" ToRole="tbCustomPageControls" />
+          <NavigationProperty Name="tbNotes" Relationship="MHBModel.FK_tbNotes_tbUsers" FromRole="tbUsers" ToRole="tbNotes" />
+        </EntityType>
+        <EntityType Name="tbUsersGeoLocationData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Ip" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="CountryCode" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="CountryName" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="RegionCode" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="RegionName" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ZipCode" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Latitude" Type="Double" Nullable="false" />
+          <Property Name="Longitude" Type="Double" Nullable="false" />
+          <Property Name="LoginDateTime" Type="DateTime" />
+        </EntityType>
+        <Association Name="FK_SORTOPTIONTRANSL_SORTOPTION_ID">
+          <End Role="SortOptions" Type="MHBModel.SortOption" Multiplicity="0..1" />
+          <End Role="SortOptionsTranslations" Type="MHBModel.SortOptionsTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SortOptions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SortOptionsTranslations">
+              <PropertyRef Name="SortOptionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CATID">
+          <End Role="tbCategories" Type="MHBModel.tbCategory" Multiplicity="0..1" />
+          <End Role="tbCostCategories" Type="MHBModel.tbCostCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbCategories">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbCostCategories">
+              <PropertyRef Name="CostCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbCustomPageControls_tbControlTypes">
+          <End Role="tbControlTypes" Type="MHBModel.tbControlType" Multiplicity="0..1" />
+          <End Role="tbCustomPageControls" Type="MHBModel.tbCustomPageControl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbControlTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbCustomPageControls">
+              <PropertyRef Name="ControlTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbCustomListItems_tbCustomPageControls">
+          <End Role="tbCustomPageControls" Type="MHBModel.tbCustomPageControl" Multiplicity="0..1" />
+          <End Role="tbCustomListItems" Type="MHBModel.tbCustomListItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbCustomPageControls">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbCustomListItems">
+              <PropertyRef Name="ControlID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbCustomPageControls_tbUsers">
+          <End Role="tbUsers" Type="MHBModel.tbUser" Multiplicity="1" />
+          <End Role="tbCustomPageControls" Type="MHBModel.tbCustomPageControl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsers">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="tbCustomPageControls">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbDetailsTable01_tbMainTable01">
+          <End Role="tbMainTable01" Type="MHBModel.tbMainTable01" Multiplicity="1" />
+          <End Role="tbDetailsTable01" Type="MHBModel.tbDetailsTable01" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbMainTable01">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbDetailsTable01">
+              <PropertyRef Name="ExpenditureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbDetailsTable02_tbMainTable02">
+          <End Role="tbMainTable02" Type="MHBModel.tbMainTable02" Multiplicity="1" />
+          <End Role="tbDetailsTable02" Type="MHBModel.tbDetailsTable02" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbMainTable02">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbDetailsTable02">
+              <PropertyRef Name="ExpenditureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbDetailsTable03_tbMainTable03">
+          <End Role="tbMainTable03" Type="MHBModel.tbMainTable03" Multiplicity="1" />
+          <End Role="tbDetailsTable03" Type="MHBModel.tbDetailsTable03" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbMainTable03">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbDetailsTable03">
+              <PropertyRef Name="ExpenditureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbDetailsTable04_tbMainTable04">
+          <End Role="tbMainTable04" Type="MHBModel.tbMainTable04" Multiplicity="1" />
+          <End Role="tbDetailsTable04" Type="MHBModel.tbDetailsTable04" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbMainTable04">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbDetailsTable04">
+              <PropertyRef Name="ExpenditureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbDetailsTable05_tbMainTable05">
+          <End Role="tbMainTable05" Type="MHBModel.tbMainTable05" Multiplicity="1" />
+          <End Role="tbDetailsTable05" Type="MHBModel.tbDetailsTable05" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbMainTable05">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tbDetailsTable05">
+              <PropertyRef Name="ExpenditureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbNotes_tbUsers">
+          <End Role="tbUsers" Type="MHBModel.tbUser" Multiplicity="0..1" />
+          <End Role="tbNotes" Type="MHBModel.tbNote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsers">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="tbNotes">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MHBModelStoreContainer" CdmEntityContainer="MHBEntities">
+          <EntitySetMapping Name="SortOptions"><EntityTypeMapping TypeName="MHBModel.SortOption"><MappingFragment StoreEntitySet="SortOptions">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SortOptionsTranslations"><EntityTypeMapping TypeName="MHBModel.SortOptionsTranslation"><MappingFragment StoreEntitySet="SortOptionsTranslations">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="SortOptionID" ColumnName="SortOptionID" />
+            <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbActionLogs"><EntityTypeMapping TypeName="MHBModel.tbActionLog"><MappingFragment StoreEntitySet="tbActionLog">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="logAction" ColumnName="logAction" />
+            <ScalarProperty Name="logUserID" ColumnName="logUserID" />
+            <ScalarProperty Name="logDate" ColumnName="logDate" />
+            <ScalarProperty Name="logMessage" ColumnName="logMessage" />
+            <ScalarProperty Name="logIP" ColumnName="logIP" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbCategories"><EntityTypeMapping TypeName="MHBModel.tbCategory"><MappingFragment StoreEntitySet="tbCategories">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+            <ScalarProperty Name="IconPath" ColumnName="IconPath" />
+            <ScalarProperty Name="IsPayIconVisible" ColumnName="IsPayIconVisible" />
+            <ScalarProperty Name="UserCategoryID" ColumnName="UserCategoryID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbControlTypes"><EntityTypeMapping TypeName="MHBModel.tbControlType"><MappingFragment StoreEntitySet="tbControlTypes">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ControlType" ColumnName="ControlType" />
+            <ScalarProperty Name="ControlTypeText" ColumnName="ControlTypeText" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbCostCategories"><EntityTypeMapping TypeName="MHBModel.tbCostCategory"><MappingFragment StoreEntitySet="tbCostCategories">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="CostCategoryID" ColumnName="CostCategoryID" />
+            <ScalarProperty Name="CostNames" ColumnName="CostNames" />
+            <ScalarProperty Name="Language" ColumnName="Language" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbCustomListItems"><EntityTypeMapping TypeName="MHBModel.tbCustomListItem"><MappingFragment StoreEntitySet="tbCustomListItems">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ControlID" ColumnName="ControlID" />
+            <ScalarProperty Name="ListItemValue" ColumnName="ListItemValue" />
+            <ScalarProperty Name="ListItemText" ColumnName="ListItemText" />
+            <ScalarProperty Name="Selected" ColumnName="Selected" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbCustomPageControls"><EntityTypeMapping TypeName="MHBModel.tbCustomPageControl"><MappingFragment StoreEntitySet="tbCustomPageControls">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="ControlID" ColumnName="ControlID" />
+            <ScalarProperty Name="ControlTypeID" ColumnName="ControlTypeID" />
+            <ScalarProperty Name="ControlValue" ColumnName="ControlValue" />
+            <ScalarProperty Name="Calculable" ColumnName="Calculable" />
+            <ScalarProperty Name="Selected" ColumnName="Selected" />
+            <ScalarProperty Name="Label" ColumnName="Label" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbDetailsTable01"><EntityTypeMapping TypeName="MHBModel.tbDetailsTable01"><MappingFragment StoreEntitySet="tbDetailsTable01">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ExpenditureID" ColumnName="ExpenditureID" />
+            <ScalarProperty Name="DetailName" ColumnName="DetailName" />
+            <ScalarProperty Name="DetailDescription" ColumnName="DetailDescription" />
+            <ScalarProperty Name="DetailValue" ColumnName="DetailValue" />
+            <ScalarProperty Name="DetailDate" ColumnName="DetailDate" />
+            <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+            <ScalarProperty Name="AttachmentFileType" ColumnName="AttachmentFileType" />
+            <ScalarProperty Name="HasAttachment" ColumnName="HasAttachment" />
+            <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbDetailsTable02"><EntityTypeMapping TypeName="MHBModel.tbDetailsTable02"><MappingFragment StoreEntitySet="tbDetailsTable02">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ExpenditureID" ColumnName="ExpenditureID" />
+            <ScalarProperty Name="DetailName" ColumnName="DetailName" />
+            <ScalarProperty Name="DetailDescription" ColumnName="DetailDescription" />
+            <ScalarProperty Name="DetailValue" ColumnName="DetailValue" />
+            <ScalarProperty Name="DetailDate" ColumnName="DetailDate" />
+            <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+            <ScalarProperty Name="AttachmentFileType" ColumnName="AttachmentFileType" />
+            <ScalarProperty Name="HasAttachment" ColumnName="HasAttachment" />
+            <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbDetailsTable03"><EntityTypeMapping TypeName="MHBModel.tbDetailsTable03"><MappingFragment StoreEntitySet="tbDetailsTable03">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ExpenditureID" ColumnName="ExpenditureID" />
+            <ScalarProperty Name="DetailName" ColumnName="DetailName" />
+            <ScalarProperty Name="DetailDescription" ColumnName="DetailDescription" />
+            <ScalarProperty Name="DetailValue" ColumnName="DetailValue" />
+            <ScalarProperty Name="DetailDate" ColumnName="DetailDate" />
+            <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+            <ScalarProperty Name="AttachmentFileType" ColumnName="AttachmentFileType" />
+            <ScalarProperty Name="HasAttachment" ColumnName="HasAttachment" />
+            <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbDetailsTable04"><EntityTypeMapping TypeName="MHBModel.tbDetailsTable04"><MappingFragment StoreEntitySet="tbDetailsTable04">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ExpenditureID" ColumnName="ExpenditureID" />
+            <ScalarProperty Name="DetailName" ColumnName="DetailName" />
+            <ScalarProperty Name="DetailDescription" ColumnName="DetailDescription" />
+            <ScalarProperty Name="DetailValue" ColumnName="DetailValue" />
+            <ScalarProperty Name="DetailDate" ColumnName="DetailDate" />
+            <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+            <ScalarProperty Name="AttachmentFileType" ColumnName="AttachmentFileType" />
+            <ScalarProperty Name="HasAttachment" ColumnName="HasAttachment" />
+            <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbDetailsTable05"><EntityTypeMapping TypeName="MHBModel.tbDetailsTable05"><MappingFragment StoreEntitySet="tbDetailsTable05">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="ExpenditureID" ColumnName="ExpenditureID" />
+            <ScalarProperty Name="DetailName" ColumnName="DetailName" />
+            <ScalarProperty Name="DetailDescription" ColumnName="DetailDescription" />
+            <ScalarProperty Name="DetailValue" ColumnName="DetailValue" />
+            <ScalarProperty Name="DetailDate" ColumnName="DetailDate" />
+            <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+            <ScalarProperty Name="AttachmentFileType" ColumnName="AttachmentFileType" />
+            <ScalarProperty Name="HasAttachment" ColumnName="HasAttachment" />
+            <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbIncomes"><EntityTypeMapping TypeName="MHBModel.tbIncome"><MappingFragment StoreEntitySet="tbIncomes">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="IncomeName" ColumnName="IncomeName" />
+            <ScalarProperty Name="IncomeValue" ColumnName="IncomeValue" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Month" ColumnName="Month" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbLanguages"><EntityTypeMapping TypeName="MHBModel.tbLanguage"><MappingFragment StoreEntitySet="tbLanguage">
+            <ScalarProperty Name="ControlID" ColumnName="ControlID" />
+            <ScalarProperty Name="ControlTextEN" ColumnName="ControlTextEN" />
+            <ScalarProperty Name="ControlTextBG" ColumnName="ControlTextBG" />
+            <ScalarProperty Name="ControlTextDE" ColumnName="ControlTextDE" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbLanguages1"><EntityTypeMapping TypeName="MHBModel.tbLanguage1"><MappingFragment StoreEntitySet="tbLanguages">
+            <ScalarProperty Name="Language" ColumnName="Language" />
+            <ScalarProperty Name="LanguageName" ColumnName="LanguageName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbLogs"><EntityTypeMapping TypeName="MHBModel.tbLog"><MappingFragment StoreEntitySet="tbLog">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="logMethod" ColumnName="logMethod" />
+            <ScalarProperty Name="logExceptionMessage" ColumnName="logExceptionMessage" />
+            <ScalarProperty Name="logInnerExceptionMessage" ColumnName="logInnerExceptionMessage" />
+            <ScalarProperty Name="logExceptionSource" ColumnName="logExceptionSource" />
+            <ScalarProperty Name="logStackTrace" ColumnName="logStackTrace" />
+            <ScalarProperty Name="logUserID" ColumnName="logUserID" />
+            <ScalarProperty Name="logDateTime" ColumnName="logDateTime" />
+            <ScalarProperty Name="logSqlQuery" ColumnName="logSqlQuery" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbMainTable01"><EntityTypeMapping TypeName="MHBModel.tbMainTable01"><MappingFragment StoreEntitySet="tbMainTable01">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Month" ColumnName="Month" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+            <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+            <ScalarProperty Name="FieldDescription" ColumnName="FieldDescription" />
+            <ScalarProperty Name="FieldValue" ColumnName="FieldValue" />
+            <ScalarProperty Name="FieldExpectedValue" ColumnName="FieldExpectedValue" />
+            <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+            <ScalarProperty Name="DateRecordUpdated" ColumnName="DateRecordUpdated" />
+            <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+            <ScalarProperty Name="HasDetails" ColumnName="HasDetails" />
+            <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+            <ScalarProperty Name="AttachmentFileType" ColumnName="AttachmentFileType" />
+            <ScalarProperty Name="HasAttachment" ColumnName="HasAttachment" />
+            <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+            <ScalarProperty Name="CostCategory" ColumnName="CostCategory" />
+            <ScalarProperty Name="Notified" ColumnName="Notified" />
+            <ScalarProperty Name="NotificationDate" ColumnName="NotificationDate" />
+            <ScalarProperty Name="Flagged" ColumnName="Flagged" />
+            <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+            <ScalarProperty Name="FieldOldValue" ColumnName="FieldOldValue" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbMainTable02"><EntityTypeMapping TypeName="MHBModel.tbMainTable02"><MappingFragment StoreEntitySet="tbMainTable02">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Month" ColumnName="Month" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+            <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+            <ScalarProperty Name="FieldDescription" ColumnName="FieldDescription" />
+            <ScalarProperty Name="FieldValue" ColumnName="FieldValue" />
+            <ScalarProperty Name="FieldExpectedValue" ColumnName="FieldExpectedValue" />
+            <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+            <ScalarProperty Name="DateRecordUpdated" ColumnName="DateRecordUpdated" />
+            <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+            <ScalarProperty Name="HasDetails" ColumnName="HasDetails" />
+            <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+            <ScalarProperty Name="AttachmentFileType" ColumnName="AttachmentFileType" />
+            <ScalarProperty Name="HasAttachment" ColumnName="HasAttachment" />
+            <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+            <ScalarProperty Name="CostCategory" ColumnName="CostCategory" />
+            <ScalarProperty Name="Notified" ColumnName="Notified" />
+            <ScalarProperty Name="NotificationDate" ColumnName="NotificationDate" />
+            <ScalarProperty Name="Flagged" ColumnName="Flagged" />
+            <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+            <ScalarProperty Name="FieldOldValue" ColumnName="FieldOldValue" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbMainTable03"><EntityTypeMapping TypeName="MHBModel.tbMainTable03"><MappingFragment StoreEntitySet="tbMainTable03">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Month" ColumnName="Month" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+            <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+            <ScalarProperty Name="FieldDescription" ColumnName="FieldDescription" />
+            <ScalarProperty Name="FieldValue" ColumnName="FieldValue" />
+            <ScalarProperty Name="FieldExpectedValue" ColumnName="FieldExpectedValue" />
+            <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+            <ScalarProperty Name="DateRecordUpdated" ColumnName="DateRecordUpdated" />
+            <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+            <ScalarProperty Name="HasDetails" ColumnName="HasDetails" />
+            <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+            <ScalarProperty Name="AttachmentFileType" ColumnName="AttachmentFileType" />
+            <ScalarProperty Name="HasAttachment" ColumnName="HasAttachment" />
+            <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+            <ScalarProperty Name="CostCategory" ColumnName="CostCategory" />
+            <ScalarProperty Name="Notified" ColumnName="Notified" />
+            <ScalarProperty Name="NotificationDate" ColumnName="NotificationDate" />
+            <ScalarProperty Name="Flagged" ColumnName="Flagged" />
+            <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+            <ScalarProperty Name="FieldOldValue" ColumnName="FieldOldValue" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbMainTable04"><EntityTypeMapping TypeName="MHBModel.tbMainTable04"><MappingFragment StoreEntitySet="tbMainTable04">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Month" ColumnName="Month" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+            <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+            <ScalarProperty Name="FieldDescription" ColumnName="FieldDescription" />
+            <ScalarProperty Name="FieldValue" ColumnName="FieldValue" />
+            <ScalarProperty Name="FieldExpectedValue" ColumnName="FieldExpectedValue" />
+            <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+            <ScalarProperty Name="DateRecordUpdated" ColumnName="DateRecordUpdated" />
+            <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+            <ScalarProperty Name="HasDetails" ColumnName="HasDetails" />
+            <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+            <ScalarProperty Name="AttachmentFileType" ColumnName="AttachmentFileType" />
+            <ScalarProperty Name="HasAttachment" ColumnName="HasAttachment" />
+            <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+            <ScalarProperty Name="CostCategory" ColumnName="CostCategory" />
+            <ScalarProperty Name="Notified" ColumnName="Notified" />
+            <ScalarProperty Name="NotificationDate" ColumnName="NotificationDate" />
+            <ScalarProperty Name="Flagged" ColumnName="Flagged" />
+            <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+            <ScalarProperty Name="FieldOldValue" ColumnName="FieldOldValue" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbMainTable05"><EntityTypeMapping TypeName="MHBModel.tbMainTable05"><MappingFragment StoreEntitySet="tbMainTable05">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Month" ColumnName="Month" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+            <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+            <ScalarProperty Name="FieldDescription" ColumnName="FieldDescription" />
+            <ScalarProperty Name="FieldValue" ColumnName="FieldValue" />
+            <ScalarProperty Name="FieldExpectedValue" ColumnName="FieldExpectedValue" />
+            <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+            <ScalarProperty Name="DateRecordUpdated" ColumnName="DateRecordUpdated" />
+            <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+            <ScalarProperty Name="HasDetails" ColumnName="HasDetails" />
+            <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+            <ScalarProperty Name="AttachmentFileType" ColumnName="AttachmentFileType" />
+            <ScalarProperty Name="HasAttachment" ColumnName="HasAttachment" />
+            <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+            <ScalarProperty Name="CostCategory" ColumnName="CostCategory" />
+            <ScalarProperty Name="Notified" ColumnName="Notified" />
+            <ScalarProperty Name="NotificationDate" ColumnName="NotificationDate" />
+            <ScalarProperty Name="Flagged" ColumnName="Flagged" />
+            <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+            <ScalarProperty Name="FieldOldValue" ColumnName="FieldOldValue" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbMainTableTemps"><EntityTypeMapping TypeName="MHBModel.tbMainTableTemp"><MappingFragment StoreEntitySet="tbMainTableTemp">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Month" ColumnName="Month" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+            <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+            <ScalarProperty Name="FieldDescription" ColumnName="FieldDescription" />
+            <ScalarProperty Name="FieldValue" ColumnName="FieldValue" />
+            <ScalarProperty Name="FieldExpectedValue" ColumnName="FieldExpectedValue" />
+            <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+            <ScalarProperty Name="DateRecordUpdated" ColumnName="DateRecordUpdated" />
+            <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+            <ScalarProperty Name="HasDetails" ColumnName="HasDetails" />
+            <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+            <ScalarProperty Name="AttachmentFileType" ColumnName="AttachmentFileType" />
+            <ScalarProperty Name="HasAttachment" ColumnName="HasAttachment" />
+            <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+            <ScalarProperty Name="CostCategory" ColumnName="CostCategory" />
+            <ScalarProperty Name="Notified" ColumnName="Notified" />
+            <ScalarProperty Name="NotificationDate" ColumnName="NotificationDate" />
+            <ScalarProperty Name="Flagged" ColumnName="Flagged" />
+            <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+            <ScalarProperty Name="FieldOldValue" ColumnName="FieldOldValue" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbMonthlyBudgets"><EntityTypeMapping TypeName="MHBModel.tbMonthlyBudget"><MappingFragment StoreEntitySet="tbMonthlyBudget">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+            <ScalarProperty Name="BudgetJan" ColumnName="BudgetJan" />
+            <ScalarProperty Name="BudgetFeb" ColumnName="BudgetFeb" />
+            <ScalarProperty Name="BudgetMar" ColumnName="BudgetMar" />
+            <ScalarProperty Name="BudgetApr" ColumnName="BudgetApr" />
+            <ScalarProperty Name="BudgetMay" ColumnName="BudgetMay" />
+            <ScalarProperty Name="BudgetJune" ColumnName="BudgetJune" />
+            <ScalarProperty Name="BudgetJuly" ColumnName="BudgetJuly" />
+            <ScalarProperty Name="BudgetAug" ColumnName="BudgetAug" />
+            <ScalarProperty Name="BudgetSept" ColumnName="BudgetSept" />
+            <ScalarProperty Name="BudgetOct" ColumnName="BudgetOct" />
+            <ScalarProperty Name="BudgetNov" ColumnName="BudgetNov" />
+            <ScalarProperty Name="BudgetDec" ColumnName="BudgetDec" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbMonthlyExpenses"><EntityTypeMapping TypeName="MHBModel.tbMonthlyExpens"><MappingFragment StoreEntitySet="tbMonthlyExpenses">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+            <ScalarProperty Name="SumJanuary" ColumnName="SumJanuary" />
+            <ScalarProperty Name="SumFebruary" ColumnName="SumFebruary" />
+            <ScalarProperty Name="SumMarch" ColumnName="SumMarch" />
+            <ScalarProperty Name="SumApril" ColumnName="SumApril" />
+            <ScalarProperty Name="SumMay" ColumnName="SumMay" />
+            <ScalarProperty Name="SumJune" ColumnName="SumJune" />
+            <ScalarProperty Name="SumJuly" ColumnName="SumJuly" />
+            <ScalarProperty Name="SumAugust" ColumnName="SumAugust" />
+            <ScalarProperty Name="SumSeptember" ColumnName="SumSeptember" />
+            <ScalarProperty Name="SumOctober" ColumnName="SumOctober" />
+            <ScalarProperty Name="SumNovember" ColumnName="SumNovember" />
+            <ScalarProperty Name="SumDecember" ColumnName="SumDecember" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbMonthlySavings"><EntityTypeMapping TypeName="MHBModel.tbMonthlySaving"><MappingFragment StoreEntitySet="tbMonthlySavings">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+            <ScalarProperty Name="SavingsJan" ColumnName="SavingsJan" />
+            <ScalarProperty Name="SavingsFeb" ColumnName="SavingsFeb" />
+            <ScalarProperty Name="SavingsMar" ColumnName="SavingsMar" />
+            <ScalarProperty Name="SavingsApr" ColumnName="SavingsApr" />
+            <ScalarProperty Name="SavingsMay" ColumnName="SavingsMay" />
+            <ScalarProperty Name="SavingsJune" ColumnName="SavingsJune" />
+            <ScalarProperty Name="SavingsJuly" ColumnName="SavingsJuly" />
+            <ScalarProperty Name="SavingsAug" ColumnName="SavingsAug" />
+            <ScalarProperty Name="SavingsSept" ColumnName="SavingsSept" />
+            <ScalarProperty Name="SavingsOct" ColumnName="SavingsOct" />
+            <ScalarProperty Name="SavingsNov" ColumnName="SavingsNov" />
+            <ScalarProperty Name="SavingsDec" ColumnName="SavingsDec" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbNotes"><EntityTypeMapping TypeName="MHBModel.tbNote"><MappingFragment StoreEntitySet="tbNotes">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Note" ColumnName="Note" />
+            <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbTransactionLogs"><EntityTypeMapping TypeName="MHBModel.tbTransactionLog"><MappingFragment StoreEntitySet="tbTransactionLog">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="ExpenseID" ColumnName="ExpenseID" />
+            <ScalarProperty Name="NewValue" ColumnName="NewValue" />
+            <ScalarProperty Name="OldValue" ColumnName="OldValue" />
+            <ScalarProperty Name="TransactionText" ColumnName="TransactionText" />
+            <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbUsers"><EntityTypeMapping TypeName="MHBModel.tbUser"><MappingFragment StoreEntitySet="tbUsers">
+            <ScalarProperty Name="password" ColumnName="password" />
+            <ScalarProperty Name="userID" ColumnName="userID" />
+            <ScalarProperty Name="email" ColumnName="email" />
+            <ScalarProperty Name="currency" ColumnName="currency" />
+            <ScalarProperty Name="language" ColumnName="language" />
+            <ScalarProperty Name="hassetlang" ColumnName="hassetlang" />
+            <ScalarProperty Name="registrationdate" ColumnName="registrationdate" />
+            <ScalarProperty Name="attachmentsize" ColumnName="attachmentsize" />
+            <ScalarProperty Name="lastlogintime" ColumnName="lastlogintime" />
+            <ScalarProperty Name="lastipaddress" ColumnName="lastipaddress" />
+            <ScalarProperty Name="useragent" ColumnName="useragent" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tbUsersGeoLocationDatas"><EntityTypeMapping TypeName="MHBModel.tbUsersGeoLocationData"><MappingFragment StoreEntitySet="tbUsersGeoLocationData">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Ip" ColumnName="Ip" />
+            <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+            <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+            <ScalarProperty Name="RegionCode" ColumnName="RegionCode" />
+            <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+            <ScalarProperty Name="City" ColumnName="City" />
+            <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+            <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+            <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+            <ScalarProperty Name="LoginDateTime" ColumnName="LoginDateTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="MHBModel">
+        <EntityTypeShape EntityType="MHBModel.SortOption" Width="1.5" PointX="5.75" PointY="15.625" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.SortOptionsTranslation" Width="1.5" PointX="8" PointY="15.5" Height="1.9802864583333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbActionLog" Width="1.5" PointX="0.75" PointY="11.375" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbCategory" Width="1.5" PointX="0.75" PointY="15.5" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbControlType" Width="1.5" PointX="0.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbCostCategory" Width="1.5" PointX="3" PointY="15.625" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbCustomListItem" Width="1.5" PointX="5.25" PointY="4.5" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbCustomPageControl" Width="1.5" PointX="3" PointY="4.125" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbDetailsTable01" Width="1.5" PointX="15" PointY="15.875" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbDetailsTable02" Width="1.5" PointX="15" PointY="3.875" Height="3.1340950520833353" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbDetailsTable03" Width="1.5" PointX="13" PointY="9.875" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbDetailsTable04" Width="1.5" PointX="10" PointY="3.875" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbDetailsTable05" Width="1.5" PointX="8" PointY="9.875" Height="3.1340950520833388" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbIncome" Width="1.5" PointX="2.75" PointY="11.375" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbLanguage" Width="1.5" PointX="15.75" PointY="8.375" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbLanguage1" Width="1.5" PointX="15.75" PointY="11.375" Height="1.4033821614583388" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbLog" Width="1.5" PointX="5.75" PointY="18.375" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbMainTable01" Width="1.5" PointX="12.75" PointY="14.75" Height="5.4417122395833388" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbMainTable02" Width="1.5" PointX="12.75" PointY="2.75" Height="5.4417122395833308" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbMainTable03" Width="1.5" PointX="10.75" PointY="8.75" Height="5.4417122395833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbMainTable04" Width="1.5" PointX="7.75" PointY="2.75" Height="5.4417122395833282" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbMainTable05" Width="1.5" PointX="5.75" PointY="8.75" Height="5.4417122395833282" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbMainTableTemp" Width="1.5" PointX="7.75" PointY="18.375" Height="5.2494108072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbMonthlyBudget" Width="1.5" PointX="9.75" PointY="18.375" Height="3.9033007812500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbMonthlyExpens" Width="1.5" PointX="17.75" PointY="2.375" Height="3.9033007812500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbMonthlySaving" Width="1.5" PointX="0.75" PointY="19.375" Height="3.9033007812500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbNote" Width="1.5" PointX="3" PointY="8.5" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbTransactionLog" Width="1.5" PointX="2.75" PointY="19.375" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbUser" Width="1.5" PointX="0.75" PointY="3.875" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MHBModel.tbUsersGeoLocationData" Width="1.5" PointX="17.75" PointY="7.375" Height="3.3263964843750093" IsExpanded="true" />
+        <AssociationConnector Association="MHBModel.FK_SORTOPTIONTRANSL_SORTOPTION_ID" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="16.518992513020834" />
+          <ConnectorPoint PointX="8" PointY="16.518992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="MHBModel.FK_CATID" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="16.615143229166666" />
+          <ConnectorPoint PointX="3" PointY="16.615143229166666" />
+        </AssociationConnector>
+        <AssociationConnector Association="MHBModel.FK_tbCustomPageControls_tbControlTypes" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="1.6439925130208337" />
+          <ConnectorPoint PointX="3.75" PointY="1.6439925130208337" />
+          <ConnectorPoint PointX="3.75" PointY="4.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="MHBModel.FK_tbCustomListItems_tbCustomPageControls" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="5.5862939453125" />
+          <ConnectorPoint PointX="5.25" PointY="5.5862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="MHBModel.FK_tbCustomPageControls_tbUsers" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="5.6920475260416659" />
+          <ConnectorPoint PointX="3" PointY="5.6920475260416659" />
+        </AssociationConnector>
+        <AssociationConnector Association="MHBModel.FK_tbDetailsTable01_tbMainTable01" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.25" PointY="17.442047526041666" />
+          <ConnectorPoint PointX="15" PointY="17.442047526041666" />
+        </AssociationConnector>
+        <AssociationConnector Association="MHBModel.FK_tbDetailsTable02_tbMainTable02" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.25" PointY="5.4420475260416676" />
+          <ConnectorPoint PointX="15" PointY="5.4420475260416676" />
+        </AssociationConnector>
+        <AssociationConnector Association="MHBModel.FK_tbDetailsTable03_tbMainTable03" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.25" PointY="11.442047526041666" />
+          <ConnectorPoint PointX="13" PointY="11.442047526041666" />
+        </AssociationConnector>
+        <AssociationConnector Association="MHBModel.FK_tbDetailsTable04_tbMainTable04" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.25" PointY="5.4420475260416659" />
+          <ConnectorPoint PointX="10" PointY="5.4420475260416659" />
+        </AssociationConnector>
+        <AssociationConnector Association="MHBModel.FK_tbDetailsTable05_tbMainTable05" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="11.442047526041669" />
+          <ConnectorPoint PointX="8" PointY="11.442047526041669" />
+        </AssociationConnector>
+        <AssociationConnector Association="MHBModel.FK_tbNotes_tbUsers" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="7.3936979166666674" />
+          <ConnectorPoint PointX="1.5" PointY="9.4901432291666623" />
+          <ConnectorPoint PointX="3" PointY="9.4901432291666623" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

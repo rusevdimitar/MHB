@@ -1,0 +1,16 @@
+<License>
+  <Id>27ec38ac-37cb-428c-9aa6-1d34b4af54e2</Id>
+  <Type>Standard</Type>
+  <Expiration>Tue, 31 Dec 2019 22:00:00 GMT</Expiration>
+  <LicenseAttributes>
+    <Attribute name="MachineKey">71C2E1113EF0B7ADA1A2FD11C5FFF422</Attribute>
+    <Attribute name="PublicKey">MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE8Mkr7uQ9EHtd5j7qBCPUs4wJYrhIsqtEf6QAxkQ2//oY86JVVpZzmJumBfwt+lx4VfozkjaVSeblJbWAi5JtNg==</Attribute>
+  </LicenseAttributes>
+  <Quantity>1</Quantity>
+  <ProductFeatures />
+  <Customer>
+    <Name>MyHomeBills Server VM</Name>
+    <Email>support@myhomebills.info</Email>
+  </Customer>
+  <Signature>MEYCIQDDYPN4/Zq9bJ3uRhcv5BOfjudzwRyuMFCyFwwHFM42DAIhAIxkOnnsmtbodsXpX9EJeFECfWf3u5uUxFwg2VfTItU5</Signature>
+</License>

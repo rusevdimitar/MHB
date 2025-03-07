@@ -1,0 +1,274 @@
+﻿<%@ Master Language="vb" AutoEventWireup="false" CodeBehind="MasterPage.master.vb"
+    Inherits="MHB.Web.MasterPage" %>
+
+<%@ Import Namespace="MHB.BL" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MyHomeBills</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta name="title" content="MyHomeBills" />
+    <meta name="description" content="Лично счетоводство. Най-добрата програма за лично счетоводство. Приложение/Програма планиране и управление лични финанси, домашен и семеен бюджет. Управлявайте личните си финанси както никога досега! Организирайте личните си финанси и семеен/домашен бюджет. Организирайте месечния си бюджет. Планирайте предстоящите разходи и определете бюджет за отделните сметки и харчове през месеца" />
+    <meta name="description" content="Organize and plan your households' monthly budget, bills and daily expenses. Set reminders to bills' due dates. You can enter recurrent bills and due date. Bills get automatically categorized based on keywords. You get statistical chart on how much others are spending in your range, how much you have spent for a year and your min and max figures." />
+    <meta name="keywords" content="лични финанси, управление лични финанси, финанси, лични, програма лични финанси,
+                            приложение планиране лични финанси, счетоводен помощник, просто счетоводство, управление финанси, лично счетоводство,
+                            домашни разходи, домашен, разход, разходи, домашни, домакинство, планиране домакинство,
+                            разходи домакинство, месечен бюджет, планиране бюджет, програма бюджет, програма
+                            семеен бюджет, програма месечен бюджет, нещо семеен бюджет, планиране пари, планиране
+                            пари месец, заплата, планиране заплата, разпределяне заплата, персонални финанси, персонално бюджетиране, mese4en biudjet, mesechen
+                            budget, budget, programa mese4en biudjet, planirane bjudjet, semeen biudget, planirane
+                            zaplata, zaplata, planirane, bjudjet, biudget, budget, monthly budget, family budget,
+                            family bills, myhomebills, my home bills, home expenses, household, expenditure,
+                            cost, budget, monthly budget, family budget, family bills, myhomebills, my home bills, home expenses, household, expenditure, cost, lichni finansi, planirane lichni finansi" />
+    <meta name="copyright" content="Copyright MyHomeBills 2009 - 2016" />
+    <meta name="author" content="MyHomeBills" />
+    <meta name="email" content="support@myhomebills.info" />
+    <meta name="Distribution" content="Global" />
+    <meta name="Rating" content="General" />
+    <meta name="Robots" content="INDEX,FOLLOW" />
+    <meta name="Revisit-after" content="1 Day" />
+    <meta name="google-site-verification" content="hI1ZImGFlO18RZUi5rfMPrTxIA40RTxXF14S9hfvYVc" />
+
+    <link href="Styles/jQueryUI/cupertino/jquery-ui-1.10.0.custom.min.css" rel="stylesheet" />
+    <script src="../Javascript/jquery-1.10.1.min.js" type="text/javascript"></script>
+    <script src="../Javascript/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
+    <script src="/Javascript/readmore.js" type="text/javascript"></script>
+    <link href="Styles/Style.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/TabControlThemes.css" rel="stylesheet" type="text/css" />
+    <script src="/Javascript/ClockOnMainPage.js" type="text/javascript"></script>
+    <script src="/Javascript/PageLoadTime.js" type="text/javascript"></script>
+    <script src="../Javascript/flowplayer-3.1.4.min.js" type="text/javascript"></script>
+    <script src="/Javascript/JavascriptForceNumericInput.js" type="text/javascript"></script>
+    <script src="/Javascript/jquery.canvasjs.min.js" type="text/javascript"></script>
+    <script src="../Javascript/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <link href="Javascript/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
+
+    <link href="Styles/ContextMenu.css" rel="stylesheet" type="text/css" />
+    <script src="../Javascript/contextmenu.js" type="text/javascript"></script>
+    <script src="../Javascript/event_util.js" type="text/javascript"></script>
+
+    <link href="Javascript/select2-release-3.2/select2.css" rel="stylesheet" />
+    <script src="/Javascript/select2-release-3.2/select2.min.js" type="text/javascript"></script>
+
+    <script src="/Javascript/jquery.hotkeys-0.7.9.js" type="text/javascript"></script>
+    <script src="/Javascript/datetimepicker/jquery.datetimepicker.js" type="text/javascript"></script>
+    <link href="Javascript/datetimepicker/jquery.datetimepicker.css" rel="stylesheet" />
+
+    <%--<script src="/Javascript/jquery.easy-confirm-dialog.js" type="text/javascript"></script>--%>
+</head>
+<body>
+    <h1>Приложение/Програма планиране лични финанси, домашен и семеен бюджет. Управлявайте
+        личните си финанси както никога досега! Организирайте личните си финанси и семеен/домашен
+        бюджет. Организирайте месечния си бюджет. Планирайте предстоящите разходи и определете
+        бюджет за отделните сметки и харчове през месеца</h1>
+    <form id="form1" runat="server">
+        <table id="main" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <table cellspacing="0" width="100%">
+                        <tr>
+                            <td align="left"></td>
+                            <td align="right" style="height: 15px;">
+                                <asp:Panel ID="PanelStripMenuLinks" runat="server" CssClass="PlainTextBold">
+                                    <span id="PanelAdminLinks" runat="server">
+                                        <asp:LinkButton ID="LinkButtonEditMode" runat="server">Turn edit mode on</asp:LinkButton>
+                                        &nbsp;|
+                                        <asp:LinkButton ID="LinkButtonAdmin" runat="server" PostBackUrl="~/Forms/Admin.aspx">admin</asp:LinkButton>
+                                        &nbsp;|
+                                    </span>
+                                    <asp:LinkButton ID="LinkButtonHelp" runat="server">help</asp:LinkButton>
+                                    &nbsp;|
+                                    <asp:LinkButton ID="LinkButtonFAQ" runat="server">FAQ</asp:LinkButton>
+                                    &nbsp;|
+                                    <asp:LinkButton ID="LinkButtonPhorum" runat="server">discuss</asp:LinkButton>
+                                    &nbsp;|
+                                    <asp:LinkButton ID="LinkButtonAccountSettings" runat="server">account settings</asp:LinkButton>
+                                    &nbsp;|
+                                    <asp:LinkButton ID="LinkButtonSignOut" runat="server">sign out</asp:LinkButton>
+                                    &nbsp;<asp:Label ID="LabelUser" runat="server"></asp:Label>
+                                </asp:Panel>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" style="height: 50px;">
+                                <% Select Case DateTime.Now.Month
+
+                                        Case 1
+
+                                            If DateTime.Now.Day = 1 OrElse DateTime.Now.Day = 2 Then
+                                                Response.Write("<img id=""imgLogo"" alt=""Happy New Year !"" src=""/Images/logo_032_christmas.gif"" style=""width: 320px; height: 77px;"" />")
+                                         
+                                            Else
+                                                Response.Write("<img id=""imgLogo"" alt=""MyHomeBills!"" src=""/Images/logo_032.gif"" style=""width: 320px; height: 77px;"" />") ' Default Logo
+                                            End If
+
+                                            Exit Select
+
+                                        Case 3 ' March
+
+                                            If DateTime.Now.Day >= 21 AndAlso DateTime.Now.Day <= 31 Then
+                                                Response.Write("<img id=""imgLogo"" alt=""MyHomeBills"" src=""/Images/logo_032_spring.gif"" style=""width: 320px; height: 77px;"" />")
+                                            ElseIf DateTime.Now.Day = 2 OrElse DateTime.Now.Day = 3 Then
+                                                Response.Write("<img id=""imgLogo"" alt=""MyHomeBills"" src=""/Images/logo_martenica_new_3rd_march.gif"" style=""width: 299px; height: 76px;"" />")
+                                            Else
+                                                Response.Write("<img id=""imgLogo"" alt=""MyHomeBills"" src=""/Images/logo_martenica_new.gif"" style=""width: 320px; height: 77px;"" />") ' Default Logo
+                                            End If
+
+                                            Exit Select
+
+                                        Case 4 ' April
+
+                                            If DateTime.Now.Day >= 10 AndAlso DateTime.Now.Day <= 13 Then
+                                                Response.Write("<img id=""imgLogo"" alt=""MyHomeBills"" src=""/Images/logo_easter.gif"" style=""width: 500px; height: 98px; top: -17px !important;"" />")
+                                            Else
+                                                Response.Write("<img id=""imgLogo"" alt=""MyHomeBills!"" src=""/Images/logo_032.gif"" style=""width: 320px; height: 77px;"" />") ' Default Logo
+                                            End If
+
+                                            Exit Select
+
+                                        Case 12
+
+                                            If DateTime.Now.Day >= 18 AndAlso DateTime.Now.Day <= 31 Then
+                                                Response.Write("<img id=""imgLogo"" alt=""Merry Christmas !"" src=""/Images/logo_christmas_2013.gif"" style=""width: 320px; height: 77px;"" />")
+                                            ElseIf DateTime.Now.Day = 27 Then
+                                                Response.Write("<img id=""imgLogo"" alt=""First logo !"" src=""/Images/logo_default.gif"" style=""width: 500px; height: 98px; top: -17px !important;"" />")
+                                            Else
+                                                Response.Write("<img id=""imgLogo"" alt=""MyHomeBills!"" src=""/Images/logo_032.gif"" style=""width: 320px; height: 77px;"" />") ' Default Logo
+                                            End If
+
+                                            Exit Select
+
+                                        Case Else
+
+                                            Response.Write("<img id=""imgLogo"" alt=""MyHomeBills!"" src=""/Images/logo_032.gif"" style=""width: 320px; height: 77px;"" />") ' Default Logo
+
+                                            Exit Select
+
+                                    End Select
+
+                                %>
+                            </td>
+                            <td align="right" valign="bottom">
+                                <!--<embed src="/Banners/bg_koleda.swf" quality="high" bgcolor="#FFFFFF" swliveconnect="false" width="712" height="90" name="movie" align="center" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>-->
+                                <div id="loadgingpage" style="font-family: Arial, Helvetica, sans-serif; font-size: 9px; color: #808080">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="HeadMenuStrip">
+                            <td align="left" style="border-left: 1px solid rgb(216, 223, 231);">&nbsp;&nbsp;<span id="clock"></span>
+                            </td>
+                            <td align="right" style="border-right: 1px solid rgb(216, 223, 231);">
+                                <h1>Обмении курсове на Българска Народна Банка БНБ. Валутни курсове. Валутни обменни
+                                курсове на БНБ. Курс Евро. Курс Долар. Курс купува. Курс продава. Евро. Долар. Обменни
+                                курсове купува/продава. Фиксинг БНБ.</h1>
+                                <asp:Label ID="LabelExchangeRates" runat="server" CssClass="PlainTextSmall"></asp:Label>&nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="middle">
+                                <asp:Panel ID="PanelNavigation" runat="server">
+                                    &nbsp;&nbsp;<asp:LinkButton ID="LinkButtonHome" runat="server" CssClass="NavigationBar">Home</asp:LinkButton>
+                                </asp:Panel>
+                            </td>
+                            <td align="right" valign="middle">
+                                <asp:Label ID="LabelChooseCurrentLanguage" runat="server" CssClass="PlainText" Text="choose language:"></asp:Label>
+                                <asp:ImageButton ID="ImageButtonEN" runat="server" ImageUrl="/Images/flag_en_tiny.JPG" />
+                                <asp:ImageButton ID="ImageButtonDE" runat="server" ImageUrl="/Images/flag_de_tiny.JPG" />
+                                <asp:ImageButton ID="ImageButtonBG" runat="server" ImageUrl="/Images/flag_bg_tiny.JPG" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="Footer">
+                    <table style="width: 100%">
+                        <tr>
+                            <td colspan="3" align="left">
+                                <a class="LinkAlternateStyle" href="PrivacyPolicy.htm">Privacy policy</a> | <a class="LinkAlternateStyle"
+                                    href="PrivacyPolicyBG.htm">Политики за поверителност</a> | <a class="LinkAlternateStyle"
+                                        href="Disclaimer.htm" target="_blank">Disclaimer</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="2">
+                                <a class="LinkAlternateStyle" href='<%= URLRewriter.GetLink("AdvertiseLink")%>'>Advertise</a>
+                                | <a class="LinkAlternateStyle" href='<%= URLRewriter.GetLink("SupportLink")%>'>Contact</a>
+                                | <a class="LinkAlternateStyle" href='<%= URLRewriter.GetLink("Phorum")%>' target="_blank">Discussion
+                                Board</a> | <a class="LinkAlternateStyle" href='<%= URLRewriter.GetLink("HelpLink")%>'
+                                    target="_blank">Help</a> | <a class="LinkAlternateStyle" href='<%= URLRewriter.GetLink("FAQLink")%>'
+                                        target="_blank">FAQ</a>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <a class="LinkAlternateStyle" target="_blank" href="APIManagement.aspx">Developers</a> |
+								<a class="LinkAlternateStyle" target="_blank" href='<%= URLRewriter.GetLink("MhbApiServiceUrl")%>'>API Service</a> |
+								<a class="LinkAlternateStyle" target="_blank" href='<%= URLRewriter.GetLink("MantisBugTracking")%>'>Bug Tracking</a> |
+								<a class="LinkAlternateStyle" target="_blank" href='<%= URLRewriter.GetLink("Jenkins")%>'>Build Server</a> |
+								<a class="LinkAlternateStyle" target="_blank" href='<%= URLRewriter.GetLink("SqlWebAdmin")%>'>Database</a> |
+								<a class="LinkAlternateStyle" target="_blank" href='<%= URLRewriter.GetLink("EmailServer")%>'>E-Mail Server</a> |
+								<a class="LinkAlternateStyle" target="_blank" href='<%= URLRewriter.GetLink("EmailWebMail")%>'>E-Mail Web Mail</a> |
+								<a class="LinkAlternateStyle" target="_blank" href='<%= URLRewriter.GetLink("EmailWebMailAdmin")%>'>E-Mail Web Mail Admin</a> |
+                                <a class="LinkAlternateStyle" target="_blank" href='<%= URLRewriter.GetLink("SVNLink")%>'>SVN Server</a> |
+                                <a class="LinkAlternateStyle" target="_blank" href='<%= URLRewriter.GetLink("IRCWebChatLink")%>'>IRC Web Chat</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" colspan="3">The materials on this site may not be reproduced, published, or transmitted electronically
+                            for commercial purposes. Copyright © 2009 -
+                            <%= Date.Now.Year%>
+                            MyHomeBills. All rights reserved.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <%-- <tr>
+                <td>
+                    <embed style="border-bottom:1px solid #07203F;" width="100%" height="20" wmode="transparent" allowscriptaccess="sameDomain" quality="high" bgcolor="#ffffff" name="t2" id="t2" src="http://www.x3news.com/ticker/ticker_unoff.swf" type="application/x-shockwave-flash"></embed>
+                </td>
+            </tr>--%>
+            <tr>
+                <td>
+                    <asp:Label ID="LabelLastUserInfo" runat="server" CssClass="mediumTipText"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+
+                    <img src="/Images/xtrm_logo.gif" alt="WebXtrm" /><br />
+                    <br />
+                    <a href="http://goo.gl/jTT5p" target="_blank">
+                        <img style="border-style: none;" src="/Images/address_barcode.png" alt="Scan this to your mobile to bookmark MyHomeBills!" /></a>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-16319237-1");
+            pageTracker._trackPageview();
+        } catch (err) { }
+    </script>
+</body>
+</html>

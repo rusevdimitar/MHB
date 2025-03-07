@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3E01E3C6-C0F9-42CD-AB85-0B8F3922B265}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MHB.BL</RootNamespace>
+    <AssemblyName>MHB.BL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <Optimize>false</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <DefineConstants>
+    </DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\MyHomeBillsCodeSign.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MHB.Web\References\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addresses.cs" />
+    <Compile Include="AddressesBase.cs">
+      <DependentUpon>Addresses.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CategoryComment.cs" />
+    <Compile Include="CategoryCommentBase.cs">
+      <DependentUpon>CategoryComment.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Currency.cs" />
+    <Compile Include="CurrencyExchangeRate.cs" />
+    <Compile Include="ExpenditureDetailInfo.cs" />
+    <Compile Include="ExpressionQueryArgs.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Income.cs" />
+    <Compile Include="IncomeBase.cs">
+      <DependentUpon>Income.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeLog.cs" />
+    <Compile Include="IncomeLogBase.cs">
+      <DependentUpon>IncomeLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductBase.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductInfo.cs" />
+    <Compile Include="ProductParameter.cs" />
+    <Compile Include="ProductParameterBase.cs">
+      <DependentUpon>ProductParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductParameterType.cs" />
+    <Compile Include="ProductParameterTypeBase.cs">
+      <DependentUpon>ProductParameterType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueryManager.cs" />
+    <Compile Include="SortOption.cs" />
+    <Compile Include="SortOptionBase.cs">
+      <DependentUpon>SortOption.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="Supplier.cs" />
+    <Compile Include="SupplierBase.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransactionManagerBase.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>TransactionManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Translation.cs" />
+    <Compile Include="TranslationBase.cs">
+      <DependentUpon>Translation.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="URLRewriter.cs" />
+    <Compile Include="URLRewriterBase.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>URLRewriter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenditure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpenditureBase.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Expenditure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenditureDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpenditureDetailBase.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ExpenditureDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenditureManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpenditureManagerBase.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ExpenditureManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CategoryBase.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RewriteAddress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RewriteAddressBase.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>RewriteAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransactionBase.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MHB.DAL\MHB.DAL.csproj">
+      <Project>{7A29F226-200A-4D75-9E19-27ED7A6022A8}</Project>
+      <Name>MHB.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MHB.Logging\MHB.Logging.vbproj">
+      <Project>{0A386C37-4902-4F08-B92B-B8AB2711AD58}</Project>
+      <Name>MHB.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MHB.UserManager\MHB.UserManager.csproj">
+      <Project>{524026da-33ae-418b-be71-5220a62cbe94}</Project>
+      <Name>MHB.UserManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release'">
+    <Exec Command="c:\nuget.exe pack $(ProjectFileName) -Prop Configuration=Release -Prop Platform=x64">
+    </Exec>
+  </Target>
+</Project>

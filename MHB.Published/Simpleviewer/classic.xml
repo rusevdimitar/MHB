@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<simpleviewergallery
+
+	title="MyHomeBills"
+	textColor="FFFFFF"
+	frameColor="FFFFFF"
+	thumbPosition="LEFT"
+	galleryStyle="CLASSIC"
+	thumbColumns="3"
+	thumbRows="4"
+	showOpenButton="TRUE"
+	showFullscreenButton="TRUE"
+	frameWidth="20"
+	maxImageWidth="1600"
+	maxImageHeight="1200"
+	imagePath="../Simpleviewer/images/"
+	thumbPath="../Simpleviewer/thumbs/"
+	useFlickr="false"
+	flickrUserName=""
+	flickrTags=""
+	languageCode="AUTO"
+	languageList=""
+
+>
+
+  <image imageURL="../Simpleviewer/images/cat_1.png" thumbURL="../Simpleviewer/thumbs/cat_1.png" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/cat_2.png" thumbURL="../Simpleviewer/thumbs/cat_2.png" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/cat_3.png" thumbURL="../Simpleviewer/thumbs/cat_3.png" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/cat_4.png" thumbURL="../Simpleviewer/thumbs/cat_4.png" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/cat_5.png" thumbURL="../Simpleviewer/thumbs/cat_5.png" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/cat_6.png" thumbURL="../Simpleviewer/thumbs/cat_6.png" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/cat_7.png" thumbURL="../Simpleviewer/thumbs/cat_7.png" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/cat_8.png" thumbURL="../Simpleviewer/thumbs/cat_8.png" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/cat_9.png" thumbURL="../Simpleviewer/thumbs/cat_9.png" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+
+  <image imageURL="../Simpleviewer/images/1.jpeg" thumbURL="../Simpleviewer/thumbs/1.jpeg" linkURL="" linkTarget="">
+    <caption><![CDATA[Welcome to <u><a href="http://www.myhomebills.info" target="_blank">MyHomeBills</a></u>.]]></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/2.jpeg" thumbURL="../Simpleviewer/thumbs/2.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/3.jpeg" thumbURL="../Simpleviewer/thumbs/3.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/4.jpeg" thumbURL="../Simpleviewer/thumbs/4.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/5.jpeg" thumbURL="../Simpleviewer/thumbs/5.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/6.jpeg" thumbURL="../Simpleviewer/thumbs/6.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/7.jpeg" thumbURL="../Simpleviewer/thumbs/7.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/8.jpeg" thumbURL="../Simpleviewer/thumbs/8.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/9.jpeg" thumbURL="../Simpleviewer/thumbs/9.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/10.jpeg" thumbURL="../Simpleviewer/thumbs/10.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/11.jpeg" thumbURL="../Simpleviewer/thumbs/11.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/12.jpeg" thumbURL="../Simpleviewer/thumbs/12.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/13.jpeg" thumbURL="../Simpleviewer/thumbs/13.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/14.jpeg" thumbURL="../Simpleviewer/thumbs/14.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/15.jpeg" thumbURL="../Simpleviewer/thumbs/15.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+  <image imageURL="../Simpleviewer/images/16.jpeg" thumbURL="../Simpleviewer/thumbs/16.jpeg" linkURL="" linkTarget="">
+    <caption></caption>
+  </image>
+</simpleviewergallery>

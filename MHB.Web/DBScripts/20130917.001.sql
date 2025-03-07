@@ -1,0 +1,13 @@
+﻿INSERT INTO tbLanguage (ControlID, ControlTextBG, ControlTextEN, ControlTextDE) VALUES ('Value', 'Стойност', 'Value', 'Wert')
+INSERT INTO tbLanguage (ControlID, ControlTextBG, ControlTextEN, ControlTextDE) VALUES ('Amount', 'Количество', 'Amount', 'Menge')
+INSERT INTO tbLanguage (ControlID, ControlTextBG, ControlTextEN, ControlTextDE) VALUES ('Total', 'Общо', 'Total', 'Gesamt')
+INSERT INTO tbLanguage (ControlID, ControlTextBG, ControlTextEN, ControlTextDE) VALUES ('Average', 'Средно', 'Average', 'Durchschnitt')
+INSERT INTO tbLanguage (ControlID, ControlTextBG, ControlTextEN, ControlTextDE) VALUES ('Max', 'Максимално', 'Max', 'Max')
+INSERT INTO tbLanguage (ControlID, ControlTextBG, ControlTextEN, ControlTextDE) VALUES ('Min', 'Минимално', 'Min', 'Min')
+INSERT INTO tbLanguage (ControlID, ControlTextBG, ControlTextEN, ControlTextDE) VALUES ('Consumption', 'Консумация', 'Consumption', 'Verbrauch')
+INSERT INTO tbLanguage (ControlID, ControlTextBG, ControlTextEN, ControlTextDE) VALUES ('PricePer100kms', 'Разход на 100км', 'Price per 100km', 'Preis pro 100 km')
+INSERT INTO tbLanguage (ControlID, ControlTextBG, ControlTextEN, ControlTextDE) VALUES ('PricePerkm', 'Разход на км', 'Price per km', 'Preis pro km')
+INSERT INTO tbLanguage (ControlID, ControlTextBG, ControlTextEN, ControlTextDE) VALUES ('ExpectedQuantity', 'Очаквано количество', 'Expected quantity', 'Erwartete Menge')
+INSERT INTO tbLanguage (ControlID, ControlTextBG, ControlTextEN, ControlTextDE) VALUES ('ExpectedRange', 'Очаквано макс. разстояние', 'Expected range', 'Erwartete Reichweite')
+INSERT INTO tbLanguage (ControlID, ControlTextBG, ControlTextEN, ControlTextDE) VALUES ('RemainingRange', 'Оставащо разстояние', 'Remaining range', 'Verbliebene Reichweite')
+

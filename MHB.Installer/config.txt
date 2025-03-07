@@ -1,0 +1,5 @@
+;!@Install@!UTF-8!
+Title="MyHomeBills Standalone v11.10.1939.1875"
+BeginPrompt="Do you want to install MyHomeBills Standalone v11.10.1939.1875?"
+RunProgram="Install.bat"
+;!@InstallEnd@!
