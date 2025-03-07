@@ -28,3 +28,7 @@ Currently supported environment:
 - Windows 11
 - Visual Studio 2022
 - SQL Serves 2022
+
+# History
+
+This projects was initialy developed in early 2008
