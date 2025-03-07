@@ -5,7 +5,7 @@ Sign:
 	
 	Import certificate:
 	------------------------------------------------------------------------------------------------------------
-	- "C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\x64\sn.exe" -i MyHomeBillsCodeSign.pfx VS_KEY_C5C92CC1463CFA15
+	- "C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\sn.exe" -i MyHomeBillsCodeSign.pfx VS_KEY_C5C92CC1463CFA15
 
 	Sign third-party dll:
 	------------------------------------------------------------------------------------------------------------
@@ -13,7 +13,7 @@ Sign:
 		:: Disassemble BouncyCastle.Crypto.dll
 		"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" /all /out=WebChart.il WebChart.dll
 
-		!!!!!VERY IMPORTANT!!!!! - Create your own key like this: "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\sn.exe" -k WebChartKey.snk
+		!!!!!VERY IMPORTANT!!!!! - Create your own key like this: "C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\x64\sn.exe" -k WebChartKey.snk
 		for some reason it does not work with the snk extracted from the pfx!!!
 		:: Extract public key to snk required to use with ilasm
 		"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\sn.exe" -p D:\PROJECTS\Test02\MyHomeBillsCodeSign.pfx D:\PROJECTS\Test02\MyHomeBillsCodeSign-publickey.snk

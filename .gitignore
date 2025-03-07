@@ -408,3 +408,5 @@ FodyWeavers.xsd
 /MHB.Installer/MyHomeBills_Setup_v11.10.1939.1875.exe
 /MHB.Installer/Installer.7z
 /MHB.Installer/NDP452-KB2901907-x86-x64-AllOS-ENU.exe
+/MHB.Web/temp/
+/MHB.Web/WebCharts/

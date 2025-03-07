@@ -34,11 +34,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'SearchUserExpendituresResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/SearchUserExpenditures", ReplyAction="http://tempuri.org/IMhbApiService/SearchUserExpendituresResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -53,11 +53,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'GetExpenditureDetailsResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/GetExpenditureDetails", ReplyAction="http://tempuri.org/IMhbApiService/GetExpenditureDetailsResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -72,11 +72,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'userName' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/UpdateParentExpenses", ReplyAction="http://tempuri.org/IMhbApiService/UpdateParentExpensesResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -91,11 +91,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'userName' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/GetUsersAverageSumForCategory", ReplyAction="http://tempuri.org/IMhbApiService/GetUsersAverageSumForCategoryResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -110,11 +110,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'userName' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/CopyParentExpense", ReplyAction="http://tempuri.org/IMhbApiService/CopyParentExpenseResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -129,11 +129,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'userName' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/DeleteAttachment", ReplyAction="http://tempuri.org/IMhbApiService/DeleteAttachmentResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -148,11 +148,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'GetMaximumExpenditureForCategoryResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/GetMaximumExpenditureForCategory", ReplyAction="http://tempuri.org/IMhbApiService/GetMaximumExpenditureForCategoryResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -167,11 +167,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'GetUserIncomeResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/GetUserIncome", ReplyAction="http://tempuri.org/IMhbApiService/GetUserIncomeResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -186,11 +186,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'userName' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/DuplicateExpenditures", ReplyAction="http://tempuri.org/IMhbApiService/DuplicateExpendituresResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -205,11 +205,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'userName' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/GetYearlyExpensesProMonth", ReplyAction="http://tempuri.org/IMhbApiService/GetYearlyExpensesProMonthResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -224,11 +224,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'userName' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/GetYearlyBudgetsProMonth", ReplyAction="http://tempuri.org/IMhbApiService/GetYearlyBudgetsProMonthResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -243,11 +243,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'userName' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/GetYearlySavingsProMonth", ReplyAction="http://tempuri.org/IMhbApiService/GetYearlySavingsProMonthResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -262,11 +262,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'GetUserExpendituresResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/GetUserExpenditures", ReplyAction="http://tempuri.org/IMhbApiService/GetUserExpendituresResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -281,11 +281,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'GetExpendituresResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/GetExpenditures", ReplyAction="http://tempuri.org/IMhbApiService/GetExpendituresResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -300,11 +300,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'GetActionLogsResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/GetActionLogs", ReplyAction="http://tempuri.org/IMhbApiService/GetActionLogsResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -319,11 +319,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'GetExceptionLogsResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/GetExceptionLogs", ReplyAction="http://tempuri.org/IMhbApiService/GetExceptionLogsResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -338,11 +338,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'userName' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/BlockUser", ReplyAction="http://tempuri.org/IMhbApiService/BlockUserResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -357,11 +357,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'userName' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/BanIP", ReplyAction="http://tempuri.org/IMhbApiService/BanIPResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -376,11 +376,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'GetSingleValueResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/GetSingleValue", ReplyAction="http://tempuri.org/IMhbApiService/GetSingleValueResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -395,11 +395,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'userName' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/ExecuteQuery", ReplyAction="http://tempuri.org/IMhbApiService/ExecuteQueryResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -414,11 +414,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'GetDataReaderResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/GetDataReader", ReplyAction="http://tempuri.org/IMhbApiService/GetDataReaderResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -433,11 +433,11 @@ namespace MHB.Gadgets.MhbApiService {
         // CODEGEN: Parameter 'GetDataTableResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMhbApiService/GetDataTable", ReplyAction="http://tempuri.org/IMhbApiService/GetDataTableResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(IncomeBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TransactionBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SupplierBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterTypeBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductParameterBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ProductBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExpenditureDetailBase))]
@@ -657,7 +657,7 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Enums.SearchOptions", Namespace="http://schemas.datacontract.org/2004/07/MHB.BL")]
     public enum EnumsSearchOptions {
@@ -676,7 +676,7 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Enums.SortOptions", Namespace="http://schemas.datacontract.org/2004/07/MHB.BL")]
     public enum EnumsSortOptions {
@@ -692,7 +692,7 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Enums.SortDirection", Namespace="http://schemas.datacontract.org/2004/07/MHB.BL")]
     public enum EnumsSortDirection {
@@ -705,7 +705,7 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -715,7 +715,7 @@ namespace MHB.Gadgets.MhbApiService {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Expenditure))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1503,7 +1503,7 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1513,7 +1513,7 @@ namespace MHB.Gadgets.MhbApiService {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Category))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1784,7 +1784,7 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1794,7 +1794,7 @@ namespace MHB.Gadgets.MhbApiService {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoryComment))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2065,26 +2065,192 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DbParameter))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SqlParameter))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System")]
-    public partial class MarshalByRefObject : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/MHB.Logging")]
+    public partial class ExceptionLog : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private object @__identityField;
+        private string connectionStringField;
+        
+        private int idField;
+        
+        private bool idFieldSpecified;
+        
+        private System.DateTime logDateField;
+        
+        private bool logDateFieldSpecified;
+        
+        private string logInnerExceptionMessageField;
+        
+        private string logMessageField;
+        
+        private string logSourceField;
+        
+        private string logStackTraceField;
+        
+        private string methodNameField;
+        
+        private string sqlQueryField;
+        
+        private int userIDField;
+        
+        private bool userIDFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public object @__identity {
+        public string ConnectionString {
             get {
-                return this.@__identityField;
+                return this.connectionStringField;
             }
             set {
-                this.@__identityField = value;
-                this.RaisePropertyChanged("__identity");
+                this.connectionStringField = value;
+                this.RaisePropertyChanged("ConnectionString");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public int ID {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IDSpecified {
+            get {
+                return this.idFieldSpecified;
+            }
+            set {
+                this.idFieldSpecified = value;
+                this.RaisePropertyChanged("IDSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public System.DateTime LogDate {
+            get {
+                return this.logDateField;
+            }
+            set {
+                this.logDateField = value;
+                this.RaisePropertyChanged("LogDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LogDateSpecified {
+            get {
+                return this.logDateFieldSpecified;
+            }
+            set {
+                this.logDateFieldSpecified = value;
+                this.RaisePropertyChanged("LogDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public string LogInnerExceptionMessage {
+            get {
+                return this.logInnerExceptionMessageField;
+            }
+            set {
+                this.logInnerExceptionMessageField = value;
+                this.RaisePropertyChanged("LogInnerExceptionMessage");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public string LogMessage {
+            get {
+                return this.logMessageField;
+            }
+            set {
+                this.logMessageField = value;
+                this.RaisePropertyChanged("LogMessage");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        public string LogSource {
+            get {
+                return this.logSourceField;
+            }
+            set {
+                this.logSourceField = value;
+                this.RaisePropertyChanged("LogSource");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public string LogStackTrace {
+            get {
+                return this.logStackTraceField;
+            }
+            set {
+                this.logStackTraceField = value;
+                this.RaisePropertyChanged("LogStackTrace");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        public string MethodName {
+            get {
+                return this.methodNameField;
+            }
+            set {
+                this.methodNameField = value;
+                this.RaisePropertyChanged("MethodName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        public string SqlQuery {
+            get {
+                return this.sqlQueryField;
+            }
+            set {
+                this.sqlQueryField = value;
+                this.RaisePropertyChanged("SqlQuery");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public int UserID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("UserID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool UserIDSpecified {
+            get {
+                return this.userIDFieldSpecified;
+            }
+            set {
+                this.userIDFieldSpecified = value;
+                this.RaisePropertyChanged("UserIDSpecified");
             }
         }
         
@@ -2099,827 +2265,662 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SqlParameter))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data.Common")]
-    public partial class DbParameter : MarshalByRefObject {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/MHB.Logging")]
+    public partial class ActionLog : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private DbType dbTypeField;
+        private LoggerHistoryAction actionField;
         
-        private bool dbTypeFieldSpecified;
+        private bool actionFieldSpecified;
         
-        private ParameterDirection directionField;
+        private string cityField;
         
-        private bool directionFieldSpecified;
+        private string colorField;
         
-        private bool isNullableField;
+        private string connectionStringField;
         
-        private bool isNullableFieldSpecified;
+        private string countryCodeField;
         
-        private string parameterNameField;
+        private int idField;
         
-        private byte precisionField;
+        private bool idFieldSpecified;
         
-        private bool precisionFieldSpecified;
+        private string ipField;
         
-        private byte scaleField;
+        private System.DateTime logDateField;
         
-        private bool scaleFieldSpecified;
+        private bool logDateFieldSpecified;
         
-        private int sizeField;
+        private string messageField;
         
-        private bool sizeFieldSpecified;
+        private string regionField;
         
-        private string sourceColumnField;
+        private TupleOfdoubledouble relativeCoordinatesField;
         
-        private bool sourceColumnNullMappingField;
+        private string transactionMessageField;
         
-        private bool sourceColumnNullMappingFieldSpecified;
+        private string userEmailField;
         
-        private DataRowVersion sourceVersionField;
+        private int userIDField;
         
-        private bool sourceVersionFieldSpecified;
+        private bool userIDFieldSpecified;
         
-        private object valueField;
+        private string userPasswordField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public DbType DbType {
+        public LoggerHistoryAction Action {
             get {
-                return this.dbTypeField;
+                return this.actionField;
             }
             set {
-                this.dbTypeField = value;
-                this.RaisePropertyChanged("DbType");
+                this.actionField = value;
+                this.RaisePropertyChanged("Action");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DbTypeSpecified {
+        public bool ActionSpecified {
             get {
-                return this.dbTypeFieldSpecified;
+                return this.actionFieldSpecified;
             }
             set {
-                this.dbTypeFieldSpecified = value;
-                this.RaisePropertyChanged("DbTypeSpecified");
+                this.actionFieldSpecified = value;
+                this.RaisePropertyChanged("ActionSpecified");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public ParameterDirection Direction {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string City {
             get {
-                return this.directionField;
+                return this.cityField;
             }
             set {
-                this.directionField = value;
-                this.RaisePropertyChanged("Direction");
+                this.cityField = value;
+                this.RaisePropertyChanged("City");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DirectionSpecified {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string Color {
             get {
-                return this.directionFieldSpecified;
+                return this.colorField;
             }
             set {
-                this.directionFieldSpecified = value;
-                this.RaisePropertyChanged("DirectionSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public bool IsNullable {
-            get {
-                return this.isNullableField;
-            }
-            set {
-                this.isNullableField = value;
-                this.RaisePropertyChanged("IsNullable");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IsNullableSpecified {
-            get {
-                return this.isNullableFieldSpecified;
-            }
-            set {
-                this.isNullableFieldSpecified = value;
-                this.RaisePropertyChanged("IsNullableSpecified");
+                this.colorField = value;
+                this.RaisePropertyChanged("Color");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string ParameterName {
+        public string ConnectionString {
             get {
-                return this.parameterNameField;
+                return this.connectionStringField;
             }
             set {
-                this.parameterNameField = value;
-                this.RaisePropertyChanged("ParameterName");
+                this.connectionStringField = value;
+                this.RaisePropertyChanged("ConnectionString");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public byte Precision {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public string CountryCode {
             get {
-                return this.precisionField;
+                return this.countryCodeField;
             }
             set {
-                this.precisionField = value;
-                this.RaisePropertyChanged("Precision");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool PrecisionSpecified {
-            get {
-                return this.precisionFieldSpecified;
-            }
-            set {
-                this.precisionFieldSpecified = value;
-                this.RaisePropertyChanged("PrecisionSpecified");
+                this.countryCodeField = value;
+                this.RaisePropertyChanged("CountryCode");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public byte Scale {
+        public int ID {
             get {
-                return this.scaleField;
+                return this.idField;
             }
             set {
-                this.scaleField = value;
-                this.RaisePropertyChanged("Scale");
+                this.idField = value;
+                this.RaisePropertyChanged("ID");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ScaleSpecified {
+        public bool IDSpecified {
             get {
-                return this.scaleFieldSpecified;
+                return this.idFieldSpecified;
             }
             set {
-                this.scaleFieldSpecified = value;
-                this.RaisePropertyChanged("ScaleSpecified");
+                this.idFieldSpecified = value;
+                this.RaisePropertyChanged("IDSpecified");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public int Size {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public string IP {
             get {
-                return this.sizeField;
+                return this.ipField;
             }
             set {
-                this.sizeField = value;
-                this.RaisePropertyChanged("Size");
+                this.ipField = value;
+                this.RaisePropertyChanged("IP");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool SizeSpecified {
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public System.DateTime LogDate {
             get {
-                return this.sizeFieldSpecified;
+                return this.logDateField;
             }
             set {
-                this.sizeFieldSpecified = value;
-                this.RaisePropertyChanged("SizeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
-        public string SourceColumn {
-            get {
-                return this.sourceColumnField;
-            }
-            set {
-                this.sourceColumnField = value;
-                this.RaisePropertyChanged("SourceColumn");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public bool SourceColumnNullMapping {
-            get {
-                return this.sourceColumnNullMappingField;
-            }
-            set {
-                this.sourceColumnNullMappingField = value;
-                this.RaisePropertyChanged("SourceColumnNullMapping");
+                this.logDateField = value;
+                this.RaisePropertyChanged("LogDate");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool SourceColumnNullMappingSpecified {
+        public bool LogDateSpecified {
             get {
-                return this.sourceColumnNullMappingFieldSpecified;
+                return this.logDateFieldSpecified;
             }
             set {
-                this.sourceColumnNullMappingFieldSpecified = value;
-                this.RaisePropertyChanged("SourceColumnNullMappingSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public DataRowVersion SourceVersion {
-            get {
-                return this.sourceVersionField;
-            }
-            set {
-                this.sourceVersionField = value;
-                this.RaisePropertyChanged("SourceVersion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool SourceVersionSpecified {
-            get {
-                return this.sourceVersionFieldSpecified;
-            }
-            set {
-                this.sourceVersionFieldSpecified = value;
-                this.RaisePropertyChanged("SourceVersionSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
-        public object Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data")]
-    public enum DbType {
-        
-        /// <remarks/>
-        AnsiString,
-        
-        /// <remarks/>
-        Binary,
-        
-        /// <remarks/>
-        Byte,
-        
-        /// <remarks/>
-        Boolean,
-        
-        /// <remarks/>
-        Currency,
-        
-        /// <remarks/>
-        Date,
-        
-        /// <remarks/>
-        DateTime,
-        
-        /// <remarks/>
-        Decimal,
-        
-        /// <remarks/>
-        Double,
-        
-        /// <remarks/>
-        Guid,
-        
-        /// <remarks/>
-        Int16,
-        
-        /// <remarks/>
-        Int32,
-        
-        /// <remarks/>
-        Int64,
-        
-        /// <remarks/>
-        Object,
-        
-        /// <remarks/>
-        SByte,
-        
-        /// <remarks/>
-        Single,
-        
-        /// <remarks/>
-        String,
-        
-        /// <remarks/>
-        Time,
-        
-        /// <remarks/>
-        UInt16,
-        
-        /// <remarks/>
-        UInt32,
-        
-        /// <remarks/>
-        UInt64,
-        
-        /// <remarks/>
-        VarNumeric,
-        
-        /// <remarks/>
-        AnsiStringFixedLength,
-        
-        /// <remarks/>
-        StringFixedLength,
-        
-        /// <remarks/>
-        Xml,
-        
-        /// <remarks/>
-        DateTime2,
-        
-        /// <remarks/>
-        DateTimeOffset,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data")]
-    public enum ParameterDirection {
-        
-        /// <remarks/>
-        Input,
-        
-        /// <remarks/>
-        Output,
-        
-        /// <remarks/>
-        InputOutput,
-        
-        /// <remarks/>
-        ReturnValue,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data")]
-    public enum DataRowVersion {
-        
-        /// <remarks/>
-        Original,
-        
-        /// <remarks/>
-        Current,
-        
-        /// <remarks/>
-        Proposed,
-        
-        /// <remarks/>
-        Default,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data.SqlClient")]
-    public partial class SqlParameter : DbParameter {
-        
-        private SqlCompareOptions compareInfoField;
-        
-        private bool compareInfoFieldSpecified;
-        
-        private bool forceColumnEncryptionField;
-        
-        private bool forceColumnEncryptionFieldSpecified;
-        
-        private int localeIdField;
-        
-        private bool localeIdFieldSpecified;
-        
-        private int offsetField;
-        
-        private bool offsetFieldSpecified;
-        
-        private byte precision1Field;
-        
-        private bool precision1FieldSpecified;
-        
-        private byte scale1Field;
-        
-        private bool scale1FieldSpecified;
-        
-        private SqlDbType sqlDbTypeField;
-        
-        private bool sqlDbTypeFieldSpecified;
-        
-        private object sqlValueField;
-        
-        private string typeNameField;
-        
-        private string udtTypeNameField;
-        
-        private string xmlSchemaCollectionDatabaseField;
-        
-        private string xmlSchemaCollectionNameField;
-        
-        private string xmlSchemaCollectionOwningSchemaField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public SqlCompareOptions CompareInfo {
-            get {
-                return this.compareInfoField;
-            }
-            set {
-                this.compareInfoField = value;
-                this.RaisePropertyChanged("CompareInfo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CompareInfoSpecified {
-            get {
-                return this.compareInfoFieldSpecified;
-            }
-            set {
-                this.compareInfoFieldSpecified = value;
-                this.RaisePropertyChanged("CompareInfoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public bool ForceColumnEncryption {
-            get {
-                return this.forceColumnEncryptionField;
-            }
-            set {
-                this.forceColumnEncryptionField = value;
-                this.RaisePropertyChanged("ForceColumnEncryption");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ForceColumnEncryptionSpecified {
-            get {
-                return this.forceColumnEncryptionFieldSpecified;
-            }
-            set {
-                this.forceColumnEncryptionFieldSpecified = value;
-                this.RaisePropertyChanged("ForceColumnEncryptionSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public int LocaleId {
-            get {
-                return this.localeIdField;
-            }
-            set {
-                this.localeIdField = value;
-                this.RaisePropertyChanged("LocaleId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool LocaleIdSpecified {
-            get {
-                return this.localeIdFieldSpecified;
-            }
-            set {
-                this.localeIdFieldSpecified = value;
-                this.RaisePropertyChanged("LocaleIdSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public int Offset {
-            get {
-                return this.offsetField;
-            }
-            set {
-                this.offsetField = value;
-                this.RaisePropertyChanged("Offset");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool OffsetSpecified {
-            get {
-                return this.offsetFieldSpecified;
-            }
-            set {
-                this.offsetFieldSpecified = value;
-                this.RaisePropertyChanged("OffsetSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Precision", Order=4)]
-        public byte Precision1 {
-            get {
-                return this.precision1Field;
-            }
-            set {
-                this.precision1Field = value;
-                this.RaisePropertyChanged("Precision1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool Precision1Specified {
-            get {
-                return this.precision1FieldSpecified;
-            }
-            set {
-                this.precision1FieldSpecified = value;
-                this.RaisePropertyChanged("Precision1Specified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Scale", Order=5)]
-        public byte Scale1 {
-            get {
-                return this.scale1Field;
-            }
-            set {
-                this.scale1Field = value;
-                this.RaisePropertyChanged("Scale1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool Scale1Specified {
-            get {
-                return this.scale1FieldSpecified;
-            }
-            set {
-                this.scale1FieldSpecified = value;
-                this.RaisePropertyChanged("Scale1Specified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public SqlDbType SqlDbType {
-            get {
-                return this.sqlDbTypeField;
-            }
-            set {
-                this.sqlDbTypeField = value;
-                this.RaisePropertyChanged("SqlDbType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool SqlDbTypeSpecified {
-            get {
-                return this.sqlDbTypeFieldSpecified;
-            }
-            set {
-                this.sqlDbTypeFieldSpecified = value;
-                this.RaisePropertyChanged("SqlDbTypeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
-        public object SqlValue {
-            get {
-                return this.sqlValueField;
-            }
-            set {
-                this.sqlValueField = value;
-                this.RaisePropertyChanged("SqlValue");
+                this.logDateFieldSpecified = value;
+                this.RaisePropertyChanged("LogDateSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
-        public string TypeName {
+        public string Message {
             get {
-                return this.typeNameField;
+                return this.messageField;
             }
             set {
-                this.typeNameField = value;
-                this.RaisePropertyChanged("TypeName");
+                this.messageField = value;
+                this.RaisePropertyChanged("Message");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
-        public string UdtTypeName {
+        public string Region {
             get {
-                return this.udtTypeNameField;
+                return this.regionField;
             }
             set {
-                this.udtTypeNameField = value;
-                this.RaisePropertyChanged("UdtTypeName");
+                this.regionField = value;
+                this.RaisePropertyChanged("Region");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
-        public string XmlSchemaCollectionDatabase {
+        public TupleOfdoubledouble RelativeCoordinates {
             get {
-                return this.xmlSchemaCollectionDatabaseField;
+                return this.relativeCoordinatesField;
             }
             set {
-                this.xmlSchemaCollectionDatabaseField = value;
-                this.RaisePropertyChanged("XmlSchemaCollectionDatabase");
+                this.relativeCoordinatesField = value;
+                this.RaisePropertyChanged("RelativeCoordinates");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
-        public string XmlSchemaCollectionName {
+        public string TransactionMessage {
             get {
-                return this.xmlSchemaCollectionNameField;
+                return this.transactionMessageField;
             }
             set {
-                this.xmlSchemaCollectionNameField = value;
-                this.RaisePropertyChanged("XmlSchemaCollectionName");
+                this.transactionMessageField = value;
+                this.RaisePropertyChanged("TransactionMessage");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
-        public string XmlSchemaCollectionOwningSchema {
+        public string UserEmail {
             get {
-                return this.xmlSchemaCollectionOwningSchemaField;
+                return this.userEmailField;
             }
             set {
-                this.xmlSchemaCollectionOwningSchemaField = value;
-                this.RaisePropertyChanged("XmlSchemaCollectionOwningSchema");
+                this.userEmailField = value;
+                this.RaisePropertyChanged("UserEmail");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public int UserID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                this.userIDField = value;
+                this.RaisePropertyChanged("UserID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool UserIDSpecified {
+            get {
+                return this.userIDFieldSpecified;
+            }
+            set {
+                this.userIDFieldSpecified = value;
+                this.RaisePropertyChanged("UserIDSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
+        public string UserPassword {
+            get {
+                return this.userPasswordField;
+            }
+            set {
+                this.userPasswordField = value;
+                this.RaisePropertyChanged("UserPassword");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
     
     /// <remarks/>
-    [System.FlagsAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data.SqlTypes")]
-    public enum SqlCompareOptions {
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Logger.HistoryAction", Namespace="http://schemas.datacontract.org/2004/07/MHB.Logging")]
+    public enum LoggerHistoryAction {
         
         /// <remarks/>
-        None = 1,
+        Login,
         
         /// <remarks/>
-        IgnoreCase = 2,
+        Register,
         
         /// <remarks/>
-        IgnoreNonSpace = 4,
+        Update,
         
         /// <remarks/>
-        IgnoreKanaType = 8,
+        AddNew,
         
         /// <remarks/>
-        IgnoreWidth = 16,
+        Delete,
         
         /// <remarks/>
-        BinarySort = 32,
+        Attach,
         
         /// <remarks/>
-        BinarySort2 = 64,
+        AttachDetails,
+        
+        /// <remarks/>
+        AddDetails,
+        
+        /// <remarks/>
+        DeleteDetails,
+        
+        /// <remarks/>
+        UpdateDetails,
+        
+        /// <remarks/>
+        AttachToDetails,
+        
+        /// <remarks/>
+        LogOut,
+        
+        /// <remarks/>
+        AnnualReportCharts,
+        
+        /// <remarks/>
+        AnnualReportPDFExcel,
+        
+        /// <remarks/>
+        RecoverPassword,
+        
+        /// <remarks/>
+        VideoTutorial,
+        
+        /// <remarks/>
+        ScreenShots,
+        
+        /// <remarks/>
+        ChangeCurrentLanguageEnglish,
+        
+        /// <remarks/>
+        ChangeCurrentLanguageDeutsch,
+        
+        /// <remarks/>
+        ChangeCurrentLanguageBulgarian,
+        
+        /// <remarks/>
+        ChangeCurrency,
+        
+        /// <remarks/>
+        ChangePassword,
+        
+        /// <remarks/>
+        DeleteDemoEntries,
+        
+        /// <remarks/>
+        StartDemo,
+        
+        /// <remarks/>
+        AddIncome,
+        
+        /// <remarks/>
+        DeleteIncome,
+        
+        /// <remarks/>
+        EditIncome,
+        
+        /// <remarks/>
+        FlagBill,
+        
+        /// <remarks/>
+        PerformSearch,
+        
+        /// <remarks/>
+        InitiateSearchWindow,
+        
+        /// <remarks/>
+        ChangeMonth,
+        
+        /// <remarks/>
+        CopyParentExpense,
+        
+        /// <remarks/>
+        AnnualCategoryCharts,
+        
+        /// <remarks/>
+        AddCategory,
+        
+        /// <remarks/>
+        UpdateCategory,
+        
+        /// <remarks/>
+        EditCategory,
+        
+        /// <remarks/>
+        DeleteCategory,
+        
+        /// <remarks/>
+        CancelEditCategory,
+        
+        /// <remarks/>
+        Help,
+        
+        /// <remarks/>
+        Events,
+        
+        /// <remarks/>
+        GetExchangeRates,
+        
+        /// <remarks/>
+        CopyUserCategory,
+        
+        /// <remarks/>
+        Statistics,
+        
+        /// <remarks/>
+        RebuildDbIndexes,
+        
+        /// <remarks/>
+        LoadTranslationsInCache,
+        
+        /// <remarks/>
+        CurrencyExchangeRatesCharts,
+        
+        /// <remarks/>
+        GenerateAPIKeySuccess,
+        
+        /// <remarks/>
+        GenerateAPIKeyInvalidCredentials,
+        
+        /// <remarks/>
+        API_DeleteParentExpenditure,
+        
+        /// <remarks/>
+        API_DeleteChildExpenditures,
+        
+        /// <remarks/>
+        API_AddParentExpenditure,
+        
+        /// <remarks/>
+        API_SearchUserExpenditures,
+        
+        /// <remarks/>
+        API_GetExpenditureDetails,
+        
+        /// <remarks/>
+        API_UpdateParentExpenses,
+        
+        /// <remarks/>
+        API_GetUsersAverageSumForCategory,
+        
+        /// <remarks/>
+        API_CopyParentExpense,
+        
+        /// <remarks/>
+        API_DeleteAttachment,
+        
+        /// <remarks/>
+        API_GetMaximumExpenditureForCategory,
+        
+        /// <remarks/>
+        API_GetUserIncome,
+        
+        /// <remarks/>
+        API_DuplicateExpenditures,
+        
+        /// <remarks/>
+        API_GetYearlyExpensesProMonth,
+        
+        /// <remarks/>
+        API_GetYearlyBudgetsProMonth,
+        
+        /// <remarks/>
+        API_GetYearlySavingsProMonth,
+        
+        /// <remarks/>
+        API_GetUserExpenditures,
+        
+        /// <remarks/>
+        API_GetExpenditures,
+        
+        /// <remarks/>
+        API_GetActionLogs,
+        
+        /// <remarks/>
+        API_GetExceptionLogs,
+        
+        /// <remarks/>
+        API_BlockUser,
+        
+        /// <remarks/>
+        API_BanIP,
+        
+        /// <remarks/>
+        API_GetSingleValue,
+        
+        /// <remarks/>
+        API_ExecuteQuery,
+        
+        /// <remarks/>
+        API_GetDataReader,
+        
+        /// <remarks/>
+        API_GetDataTable,
+        
+        /// <remarks/>
+        SendNotificationEmails,
+        
+        /// <remarks/>
+        AddCategoryComment,
+        
+        /// <remarks/>
+        VoteUpOnCategoryComment,
+        
+        /// <remarks/>
+        VoteDownOnCategoryComment,
+        
+        /// <remarks/>
+        DeleteCategoryComment,
+        
+        /// <remarks/>
+        DeleteProduct,
+        
+        /// <remarks/>
+        CancelEditProduct,
+        
+        /// <remarks/>
+        UpdateProduct,
+        
+        /// <remarks/>
+        DeleteSupplier,
+        
+        /// <remarks/>
+        CancelEditSupplier,
+        
+        /// <remarks/>
+        UpdateSupplier,
+        
+        /// <remarks/>
+        EditSupplier,
+        
+        /// <remarks/>
+        EditProduct,
+        
+        /// <remarks/>
+        GetExchangeRatesHistory,
+        
+        /// <remarks/>
+        ProductPriceStatistics,
+        
+        /// <remarks/>
+        NavigateToBillDate,
+        
+        /// <remarks/>
+        LoadUrlRewriterAddressesListIntoCache,
+        
+        /// <remarks/>
+        ChangeUserLanguage,
+        
+        /// <remarks/>
+        ChangeUserAutoLoginSettings,
+        
+        /// <remarks/>
+        SetTranslationInCache,
+        
+        /// <remarks/>
+        SessionStart,
+        
+        /// <remarks/>
+        ApplicationStart,
+        
+        /// <remarks/>
+        ApplicationEnd,
+        
+        /// <remarks/>
+        SessionEnd,
+        
+        /// <remarks/>
+        EndValidateLicense,
+        
+        /// <remarks/>
+        ValidateLicenseSuccessful,
+        
+        /// <remarks/>
+        DownloadMyHomeBillsInstaller,
+        
+        /// <remarks/>
+        DownloadPageOpened,
+        
+        /// <remarks/>
+        BlackListCheckCheckOK,
+        
+        /// <remarks/>
+        BlackListCheckCheck_BANNED,
+        
+        /// <remarks/>
+        EndHandleImportEmails,
+        
+        /// <remarks/>
+        BeginHandleImportEmails,
+        
+        /// <remarks/>
+        HandleImportEmailsAddedImportedChildExpense,
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data")]
-    public enum SqlDbType {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System")]
+    public partial class TupleOfdoubledouble : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private double m_Item1Field;
+        
+        private double m_Item2Field;
         
         /// <remarks/>
-        BigInt,
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public double m_Item1 {
+            get {
+                return this.m_Item1Field;
+            }
+            set {
+                this.m_Item1Field = value;
+                this.RaisePropertyChanged("m_Item1");
+            }
+        }
         
         /// <remarks/>
-        Binary,
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public double m_Item2 {
+            get {
+                return this.m_Item2Field;
+            }
+            set {
+                this.m_Item2Field = value;
+                this.RaisePropertyChanged("m_Item2");
+            }
+        }
         
-        /// <remarks/>
-        Bit,
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
-        /// <remarks/>
-        Char,
-        
-        /// <remarks/>
-        DateTime,
-        
-        /// <remarks/>
-        Decimal,
-        
-        /// <remarks/>
-        Float,
-        
-        /// <remarks/>
-        Image,
-        
-        /// <remarks/>
-        Int,
-        
-        /// <remarks/>
-        Money,
-        
-        /// <remarks/>
-        NChar,
-        
-        /// <remarks/>
-        NText,
-        
-        /// <remarks/>
-        NVarChar,
-        
-        /// <remarks/>
-        Real,
-        
-        /// <remarks/>
-        UniqueIdentifier,
-        
-        /// <remarks/>
-        SmallDateTime,
-        
-        /// <remarks/>
-        SmallInt,
-        
-        /// <remarks/>
-        SmallMoney,
-        
-        /// <remarks/>
-        Text,
-        
-        /// <remarks/>
-        Timestamp,
-        
-        /// <remarks/>
-        TinyInt,
-        
-        /// <remarks/>
-        VarBinary,
-        
-        /// <remarks/>
-        VarChar,
-        
-        /// <remarks/>
-        Variant,
-        
-        /// <remarks/>
-        Xml,
-        
-        /// <remarks/>
-        Udt,
-        
-        /// <remarks/>
-        Structured,
-        
-        /// <remarks/>
-        Date,
-        
-        /// <remarks/>
-        Time,
-        
-        /// <remarks/>
-        DateTime2,
-        
-        /// <remarks/>
-        DateTimeOffset,
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3274,7 +3275,7 @@ namespace MHB.Gadgets.MhbApiService {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Income))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3488,7 +3489,7 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3498,7 +3499,7 @@ namespace MHB.Gadgets.MhbApiService {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Transaction))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3712,7 +3713,7 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3722,7 +3723,7 @@ namespace MHB.Gadgets.MhbApiService {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Supplier))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4034,7 +4035,7 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4184,7 +4185,7 @@ namespace MHB.Gadgets.MhbApiService {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductParameterType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4202,7 +4203,7 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4211,7 +4212,861 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DbParameter))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SqlParameter))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System")]
+    public partial class MarshalByRefObject : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private object @__identityField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public object @__identity {
+            get {
+                return this.@__identityField;
+            }
+            set {
+                this.@__identityField = value;
+                this.RaisePropertyChanged("__identity");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SqlParameter))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data.Common")]
+    public partial class DbParameter : MarshalByRefObject {
+        
+        private DbType dbTypeField;
+        
+        private bool dbTypeFieldSpecified;
+        
+        private ParameterDirection directionField;
+        
+        private bool directionFieldSpecified;
+        
+        private bool isNullableField;
+        
+        private bool isNullableFieldSpecified;
+        
+        private string parameterNameField;
+        
+        private byte precisionField;
+        
+        private bool precisionFieldSpecified;
+        
+        private byte scaleField;
+        
+        private bool scaleFieldSpecified;
+        
+        private int sizeField;
+        
+        private bool sizeFieldSpecified;
+        
+        private string sourceColumnField;
+        
+        private bool sourceColumnNullMappingField;
+        
+        private bool sourceColumnNullMappingFieldSpecified;
+        
+        private DataRowVersion sourceVersionField;
+        
+        private bool sourceVersionFieldSpecified;
+        
+        private object valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public DbType DbType {
+            get {
+                return this.dbTypeField;
+            }
+            set {
+                this.dbTypeField = value;
+                this.RaisePropertyChanged("DbType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DbTypeSpecified {
+            get {
+                return this.dbTypeFieldSpecified;
+            }
+            set {
+                this.dbTypeFieldSpecified = value;
+                this.RaisePropertyChanged("DbTypeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public ParameterDirection Direction {
+            get {
+                return this.directionField;
+            }
+            set {
+                this.directionField = value;
+                this.RaisePropertyChanged("Direction");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DirectionSpecified {
+            get {
+                return this.directionFieldSpecified;
+            }
+            set {
+                this.directionFieldSpecified = value;
+                this.RaisePropertyChanged("DirectionSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool IsNullable {
+            get {
+                return this.isNullableField;
+            }
+            set {
+                this.isNullableField = value;
+                this.RaisePropertyChanged("IsNullable");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IsNullableSpecified {
+            get {
+                return this.isNullableFieldSpecified;
+            }
+            set {
+                this.isNullableFieldSpecified = value;
+                this.RaisePropertyChanged("IsNullableSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public string ParameterName {
+            get {
+                return this.parameterNameField;
+            }
+            set {
+                this.parameterNameField = value;
+                this.RaisePropertyChanged("ParameterName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public byte Precision {
+            get {
+                return this.precisionField;
+            }
+            set {
+                this.precisionField = value;
+                this.RaisePropertyChanged("Precision");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PrecisionSpecified {
+            get {
+                return this.precisionFieldSpecified;
+            }
+            set {
+                this.precisionFieldSpecified = value;
+                this.RaisePropertyChanged("PrecisionSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public byte Scale {
+            get {
+                return this.scaleField;
+            }
+            set {
+                this.scaleField = value;
+                this.RaisePropertyChanged("Scale");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ScaleSpecified {
+            get {
+                return this.scaleFieldSpecified;
+            }
+            set {
+                this.scaleFieldSpecified = value;
+                this.RaisePropertyChanged("ScaleSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public int Size {
+            get {
+                return this.sizeField;
+            }
+            set {
+                this.sizeField = value;
+                this.RaisePropertyChanged("Size");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SizeSpecified {
+            get {
+                return this.sizeFieldSpecified;
+            }
+            set {
+                this.sizeFieldSpecified = value;
+                this.RaisePropertyChanged("SizeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        public string SourceColumn {
+            get {
+                return this.sourceColumnField;
+            }
+            set {
+                this.sourceColumnField = value;
+                this.RaisePropertyChanged("SourceColumn");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public bool SourceColumnNullMapping {
+            get {
+                return this.sourceColumnNullMappingField;
+            }
+            set {
+                this.sourceColumnNullMappingField = value;
+                this.RaisePropertyChanged("SourceColumnNullMapping");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SourceColumnNullMappingSpecified {
+            get {
+                return this.sourceColumnNullMappingFieldSpecified;
+            }
+            set {
+                this.sourceColumnNullMappingFieldSpecified = value;
+                this.RaisePropertyChanged("SourceColumnNullMappingSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public DataRowVersion SourceVersion {
+            get {
+                return this.sourceVersionField;
+            }
+            set {
+                this.sourceVersionField = value;
+                this.RaisePropertyChanged("SourceVersion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SourceVersionSpecified {
+            get {
+                return this.sourceVersionFieldSpecified;
+            }
+            set {
+                this.sourceVersionFieldSpecified = value;
+                this.RaisePropertyChanged("SourceVersionSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
+        public object Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data")]
+    public enum DbType {
+        
+        /// <remarks/>
+        AnsiString,
+        
+        /// <remarks/>
+        Binary,
+        
+        /// <remarks/>
+        Byte,
+        
+        /// <remarks/>
+        Boolean,
+        
+        /// <remarks/>
+        Currency,
+        
+        /// <remarks/>
+        Date,
+        
+        /// <remarks/>
+        DateTime,
+        
+        /// <remarks/>
+        Decimal,
+        
+        /// <remarks/>
+        Double,
+        
+        /// <remarks/>
+        Guid,
+        
+        /// <remarks/>
+        Int16,
+        
+        /// <remarks/>
+        Int32,
+        
+        /// <remarks/>
+        Int64,
+        
+        /// <remarks/>
+        Object,
+        
+        /// <remarks/>
+        SByte,
+        
+        /// <remarks/>
+        Single,
+        
+        /// <remarks/>
+        String,
+        
+        /// <remarks/>
+        Time,
+        
+        /// <remarks/>
+        UInt16,
+        
+        /// <remarks/>
+        UInt32,
+        
+        /// <remarks/>
+        UInt64,
+        
+        /// <remarks/>
+        VarNumeric,
+        
+        /// <remarks/>
+        AnsiStringFixedLength,
+        
+        /// <remarks/>
+        StringFixedLength,
+        
+        /// <remarks/>
+        Xml,
+        
+        /// <remarks/>
+        DateTime2,
+        
+        /// <remarks/>
+        DateTimeOffset,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data")]
+    public enum ParameterDirection {
+        
+        /// <remarks/>
+        Input,
+        
+        /// <remarks/>
+        Output,
+        
+        /// <remarks/>
+        InputOutput,
+        
+        /// <remarks/>
+        ReturnValue,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data")]
+    public enum DataRowVersion {
+        
+        /// <remarks/>
+        Original,
+        
+        /// <remarks/>
+        Current,
+        
+        /// <remarks/>
+        Proposed,
+        
+        /// <remarks/>
+        Default,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data.SqlClient")]
+    public partial class SqlParameter : DbParameter {
+        
+        private SqlCompareOptions compareInfoField;
+        
+        private bool compareInfoFieldSpecified;
+        
+        private bool forceColumnEncryptionField;
+        
+        private bool forceColumnEncryptionFieldSpecified;
+        
+        private int localeIdField;
+        
+        private bool localeIdFieldSpecified;
+        
+        private int offsetField;
+        
+        private bool offsetFieldSpecified;
+        
+        private byte precision1Field;
+        
+        private bool precision1FieldSpecified;
+        
+        private byte scale1Field;
+        
+        private bool scale1FieldSpecified;
+        
+        private SqlDbType sqlDbTypeField;
+        
+        private bool sqlDbTypeFieldSpecified;
+        
+        private object sqlValueField;
+        
+        private string typeNameField;
+        
+        private string udtTypeNameField;
+        
+        private string xmlSchemaCollectionDatabaseField;
+        
+        private string xmlSchemaCollectionNameField;
+        
+        private string xmlSchemaCollectionOwningSchemaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public SqlCompareOptions CompareInfo {
+            get {
+                return this.compareInfoField;
+            }
+            set {
+                this.compareInfoField = value;
+                this.RaisePropertyChanged("CompareInfo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CompareInfoSpecified {
+            get {
+                return this.compareInfoFieldSpecified;
+            }
+            set {
+                this.compareInfoFieldSpecified = value;
+                this.RaisePropertyChanged("CompareInfoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool ForceColumnEncryption {
+            get {
+                return this.forceColumnEncryptionField;
+            }
+            set {
+                this.forceColumnEncryptionField = value;
+                this.RaisePropertyChanged("ForceColumnEncryption");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ForceColumnEncryptionSpecified {
+            get {
+                return this.forceColumnEncryptionFieldSpecified;
+            }
+            set {
+                this.forceColumnEncryptionFieldSpecified = value;
+                this.RaisePropertyChanged("ForceColumnEncryptionSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public int LocaleId {
+            get {
+                return this.localeIdField;
+            }
+            set {
+                this.localeIdField = value;
+                this.RaisePropertyChanged("LocaleId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LocaleIdSpecified {
+            get {
+                return this.localeIdFieldSpecified;
+            }
+            set {
+                this.localeIdFieldSpecified = value;
+                this.RaisePropertyChanged("LocaleIdSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public int Offset {
+            get {
+                return this.offsetField;
+            }
+            set {
+                this.offsetField = value;
+                this.RaisePropertyChanged("Offset");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool OffsetSpecified {
+            get {
+                return this.offsetFieldSpecified;
+            }
+            set {
+                this.offsetFieldSpecified = value;
+                this.RaisePropertyChanged("OffsetSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Precision", Order=4)]
+        public byte Precision1 {
+            get {
+                return this.precision1Field;
+            }
+            set {
+                this.precision1Field = value;
+                this.RaisePropertyChanged("Precision1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool Precision1Specified {
+            get {
+                return this.precision1FieldSpecified;
+            }
+            set {
+                this.precision1FieldSpecified = value;
+                this.RaisePropertyChanged("Precision1Specified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Scale", Order=5)]
+        public byte Scale1 {
+            get {
+                return this.scale1Field;
+            }
+            set {
+                this.scale1Field = value;
+                this.RaisePropertyChanged("Scale1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool Scale1Specified {
+            get {
+                return this.scale1FieldSpecified;
+            }
+            set {
+                this.scale1FieldSpecified = value;
+                this.RaisePropertyChanged("Scale1Specified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public SqlDbType SqlDbType {
+            get {
+                return this.sqlDbTypeField;
+            }
+            set {
+                this.sqlDbTypeField = value;
+                this.RaisePropertyChanged("SqlDbType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SqlDbTypeSpecified {
+            get {
+                return this.sqlDbTypeFieldSpecified;
+            }
+            set {
+                this.sqlDbTypeFieldSpecified = value;
+                this.RaisePropertyChanged("SqlDbTypeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        public object SqlValue {
+            get {
+                return this.sqlValueField;
+            }
+            set {
+                this.sqlValueField = value;
+                this.RaisePropertyChanged("SqlValue");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        public string TypeName {
+            get {
+                return this.typeNameField;
+            }
+            set {
+                this.typeNameField = value;
+                this.RaisePropertyChanged("TypeName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
+        public string UdtTypeName {
+            get {
+                return this.udtTypeNameField;
+            }
+            set {
+                this.udtTypeNameField = value;
+                this.RaisePropertyChanged("UdtTypeName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
+        public string XmlSchemaCollectionDatabase {
+            get {
+                return this.xmlSchemaCollectionDatabaseField;
+            }
+            set {
+                this.xmlSchemaCollectionDatabaseField = value;
+                this.RaisePropertyChanged("XmlSchemaCollectionDatabase");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
+        public string XmlSchemaCollectionName {
+            get {
+                return this.xmlSchemaCollectionNameField;
+            }
+            set {
+                this.xmlSchemaCollectionNameField = value;
+                this.RaisePropertyChanged("XmlSchemaCollectionName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
+        public string XmlSchemaCollectionOwningSchema {
+            get {
+                return this.xmlSchemaCollectionOwningSchemaField;
+            }
+            set {
+                this.xmlSchemaCollectionOwningSchemaField = value;
+                this.RaisePropertyChanged("XmlSchemaCollectionOwningSchema");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.FlagsAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data.SqlTypes")]
+    public enum SqlCompareOptions {
+        
+        /// <remarks/>
+        None = 1,
+        
+        /// <remarks/>
+        IgnoreCase = 2,
+        
+        /// <remarks/>
+        IgnoreNonSpace = 4,
+        
+        /// <remarks/>
+        IgnoreKanaType = 8,
+        
+        /// <remarks/>
+        IgnoreWidth = 16,
+        
+        /// <remarks/>
+        BinarySort = 32,
+        
+        /// <remarks/>
+        BinarySort2 = 64,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data")]
+    public enum SqlDbType {
+        
+        /// <remarks/>
+        BigInt,
+        
+        /// <remarks/>
+        Binary,
+        
+        /// <remarks/>
+        Bit,
+        
+        /// <remarks/>
+        Char,
+        
+        /// <remarks/>
+        DateTime,
+        
+        /// <remarks/>
+        Decimal,
+        
+        /// <remarks/>
+        Float,
+        
+        /// <remarks/>
+        Image,
+        
+        /// <remarks/>
+        Int,
+        
+        /// <remarks/>
+        Money,
+        
+        /// <remarks/>
+        NChar,
+        
+        /// <remarks/>
+        NText,
+        
+        /// <remarks/>
+        NVarChar,
+        
+        /// <remarks/>
+        Real,
+        
+        /// <remarks/>
+        UniqueIdentifier,
+        
+        /// <remarks/>
+        SmallDateTime,
+        
+        /// <remarks/>
+        SmallInt,
+        
+        /// <remarks/>
+        SmallMoney,
+        
+        /// <remarks/>
+        Text,
+        
+        /// <remarks/>
+        Timestamp,
+        
+        /// <remarks/>
+        TinyInt,
+        
+        /// <remarks/>
+        VarBinary,
+        
+        /// <remarks/>
+        VarChar,
+        
+        /// <remarks/>
+        Variant,
+        
+        /// <remarks/>
+        Xml,
+        
+        /// <remarks/>
+        Udt,
+        
+        /// <remarks/>
+        Structured,
+        
+        /// <remarks/>
+        Date,
+        
+        /// <remarks/>
+        Time,
+        
+        /// <remarks/>
+        DateTime2,
+        
+        /// <remarks/>
+        DateTimeOffset,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4229,863 +5084,8 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/MHB.Logging")]
-    public partial class ExceptionLog : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string connectionStringField;
-        
-        private int idField;
-        
-        private bool idFieldSpecified;
-        
-        private System.DateTime logDateField;
-        
-        private bool logDateFieldSpecified;
-        
-        private string logInnerExceptionMessageField;
-        
-        private string logMessageField;
-        
-        private string logSourceField;
-        
-        private string logStackTraceField;
-        
-        private string methodNameField;
-        
-        private string sqlQueryField;
-        
-        private int userIDField;
-        
-        private bool userIDFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public string ConnectionString {
-            get {
-                return this.connectionStringField;
-            }
-            set {
-                this.connectionStringField = value;
-                this.RaisePropertyChanged("ConnectionString");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public int ID {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IDSpecified {
-            get {
-                return this.idFieldSpecified;
-            }
-            set {
-                this.idFieldSpecified = value;
-                this.RaisePropertyChanged("IDSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public System.DateTime LogDate {
-            get {
-                return this.logDateField;
-            }
-            set {
-                this.logDateField = value;
-                this.RaisePropertyChanged("LogDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool LogDateSpecified {
-            get {
-                return this.logDateFieldSpecified;
-            }
-            set {
-                this.logDateFieldSpecified = value;
-                this.RaisePropertyChanged("LogDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string LogInnerExceptionMessage {
-            get {
-                return this.logInnerExceptionMessageField;
-            }
-            set {
-                this.logInnerExceptionMessageField = value;
-                this.RaisePropertyChanged("LogInnerExceptionMessage");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public string LogMessage {
-            get {
-                return this.logMessageField;
-            }
-            set {
-                this.logMessageField = value;
-                this.RaisePropertyChanged("LogMessage");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public string LogSource {
-            get {
-                return this.logSourceField;
-            }
-            set {
-                this.logSourceField = value;
-                this.RaisePropertyChanged("LogSource");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public string LogStackTrace {
-            get {
-                return this.logStackTraceField;
-            }
-            set {
-                this.logStackTraceField = value;
-                this.RaisePropertyChanged("LogStackTrace");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
-        public string MethodName {
-            get {
-                return this.methodNameField;
-            }
-            set {
-                this.methodNameField = value;
-                this.RaisePropertyChanged("MethodName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
-        public string SqlQuery {
-            get {
-                return this.sqlQueryField;
-            }
-            set {
-                this.sqlQueryField = value;
-                this.RaisePropertyChanged("SqlQuery");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public int UserID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("UserID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool UserIDSpecified {
-            get {
-                return this.userIDFieldSpecified;
-            }
-            set {
-                this.userIDFieldSpecified = value;
-                this.RaisePropertyChanged("UserIDSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System")]
-    public partial class TupleOfdoubledouble : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private double m_Item1Field;
-        
-        private double m_Item2Field;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public double m_Item1 {
-            get {
-                return this.m_Item1Field;
-            }
-            set {
-                this.m_Item1Field = value;
-                this.RaisePropertyChanged("m_Item1");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public double m_Item2 {
-            get {
-                return this.m_Item2Field;
-            }
-            set {
-                this.m_Item2Field = value;
-                this.RaisePropertyChanged("m_Item2");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/MHB.Logging")]
-    public partial class ActionLog : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private LoggerHistoryAction actionField;
-        
-        private bool actionFieldSpecified;
-        
-        private string cityField;
-        
-        private string colorField;
-        
-        private string connectionStringField;
-        
-        private string countryCodeField;
-        
-        private int idField;
-        
-        private bool idFieldSpecified;
-        
-        private string ipField;
-        
-        private System.DateTime logDateField;
-        
-        private bool logDateFieldSpecified;
-        
-        private string messageField;
-        
-        private string regionField;
-        
-        private TupleOfdoubledouble relativeCoordinatesField;
-        
-        private string transactionMessageField;
-        
-        private string userEmailField;
-        
-        private int userIDField;
-        
-        private bool userIDFieldSpecified;
-        
-        private string userPasswordField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public LoggerHistoryAction Action {
-            get {
-                return this.actionField;
-            }
-            set {
-                this.actionField = value;
-                this.RaisePropertyChanged("Action");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ActionSpecified {
-            get {
-                return this.actionFieldSpecified;
-            }
-            set {
-                this.actionFieldSpecified = value;
-                this.RaisePropertyChanged("ActionSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string City {
-            get {
-                return this.cityField;
-            }
-            set {
-                this.cityField = value;
-                this.RaisePropertyChanged("City");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public string Color {
-            get {
-                return this.colorField;
-            }
-            set {
-                this.colorField = value;
-                this.RaisePropertyChanged("Color");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public string ConnectionString {
-            get {
-                return this.connectionStringField;
-            }
-            set {
-                this.connectionStringField = value;
-                this.RaisePropertyChanged("ConnectionString");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public string CountryCode {
-            get {
-                return this.countryCodeField;
-            }
-            set {
-                this.countryCodeField = value;
-                this.RaisePropertyChanged("CountryCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public int ID {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IDSpecified {
-            get {
-                return this.idFieldSpecified;
-            }
-            set {
-                this.idFieldSpecified = value;
-                this.RaisePropertyChanged("IDSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public string IP {
-            get {
-                return this.ipField;
-            }
-            set {
-                this.ipField = value;
-                this.RaisePropertyChanged("IP");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public System.DateTime LogDate {
-            get {
-                return this.logDateField;
-            }
-            set {
-                this.logDateField = value;
-                this.RaisePropertyChanged("LogDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool LogDateSpecified {
-            get {
-                return this.logDateFieldSpecified;
-            }
-            set {
-                this.logDateFieldSpecified = value;
-                this.RaisePropertyChanged("LogDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
-        public string Message {
-            get {
-                return this.messageField;
-            }
-            set {
-                this.messageField = value;
-                this.RaisePropertyChanged("Message");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
-        public string Region {
-            get {
-                return this.regionField;
-            }
-            set {
-                this.regionField = value;
-                this.RaisePropertyChanged("Region");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
-        public TupleOfdoubledouble RelativeCoordinates {
-            get {
-                return this.relativeCoordinatesField;
-            }
-            set {
-                this.relativeCoordinatesField = value;
-                this.RaisePropertyChanged("RelativeCoordinates");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
-        public string TransactionMessage {
-            get {
-                return this.transactionMessageField;
-            }
-            set {
-                this.transactionMessageField = value;
-                this.RaisePropertyChanged("TransactionMessage");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
-        public string UserEmail {
-            get {
-                return this.userEmailField;
-            }
-            set {
-                this.userEmailField = value;
-                this.RaisePropertyChanged("UserEmail");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
-        public int UserID {
-            get {
-                return this.userIDField;
-            }
-            set {
-                this.userIDField = value;
-                this.RaisePropertyChanged("UserID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool UserIDSpecified {
-            get {
-                return this.userIDFieldSpecified;
-            }
-            set {
-                this.userIDFieldSpecified = value;
-                this.RaisePropertyChanged("UserIDSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
-        public string UserPassword {
-            get {
-                return this.userPasswordField;
-            }
-            set {
-                this.userPasswordField = value;
-                this.RaisePropertyChanged("UserPassword");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Logger.HistoryAction", Namespace="http://schemas.datacontract.org/2004/07/MHB.Logging")]
-    public enum LoggerHistoryAction {
-        
-        /// <remarks/>
-        Login,
-        
-        /// <remarks/>
-        Register,
-        
-        /// <remarks/>
-        Update,
-        
-        /// <remarks/>
-        AddNew,
-        
-        /// <remarks/>
-        Delete,
-        
-        /// <remarks/>
-        Attach,
-        
-        /// <remarks/>
-        AttachDetails,
-        
-        /// <remarks/>
-        AddDetails,
-        
-        /// <remarks/>
-        DeleteDetails,
-        
-        /// <remarks/>
-        UpdateDetails,
-        
-        /// <remarks/>
-        AttachToDetails,
-        
-        /// <remarks/>
-        LogOut,
-        
-        /// <remarks/>
-        AnnualReportCharts,
-        
-        /// <remarks/>
-        AnnualReportPDFExcel,
-        
-        /// <remarks/>
-        RecoverPassword,
-        
-        /// <remarks/>
-        VideoTutorial,
-        
-        /// <remarks/>
-        ScreenShots,
-        
-        /// <remarks/>
-        ChangeCurrentLanguageEnglish,
-        
-        /// <remarks/>
-        ChangeCurrentLanguageDeutsch,
-        
-        /// <remarks/>
-        ChangeCurrentLanguageBulgarian,
-        
-        /// <remarks/>
-        ChangeCurrency,
-        
-        /// <remarks/>
-        ChangePassword,
-        
-        /// <remarks/>
-        DeleteDemoEntries,
-        
-        /// <remarks/>
-        StartDemo,
-        
-        /// <remarks/>
-        AddIncome,
-        
-        /// <remarks/>
-        DeleteIncome,
-        
-        /// <remarks/>
-        EditIncome,
-        
-        /// <remarks/>
-        FlagBill,
-        
-        /// <remarks/>
-        PerformSearch,
-        
-        /// <remarks/>
-        InitiateSearchWindow,
-        
-        /// <remarks/>
-        ChangeMonth,
-        
-        /// <remarks/>
-        CopyParentExpense,
-        
-        /// <remarks/>
-        AnnualCategoryCharts,
-        
-        /// <remarks/>
-        AddCategory,
-        
-        /// <remarks/>
-        UpdateCategory,
-        
-        /// <remarks/>
-        EditCategory,
-        
-        /// <remarks/>
-        DeleteCategory,
-        
-        /// <remarks/>
-        CancelEditCategory,
-        
-        /// <remarks/>
-        Help,
-        
-        /// <remarks/>
-        Events,
-        
-        /// <remarks/>
-        GetExchangeRates,
-        
-        /// <remarks/>
-        CopyUserCategory,
-        
-        /// <remarks/>
-        Statistics,
-        
-        /// <remarks/>
-        RebuildDbIndexes,
-        
-        /// <remarks/>
-        LoadTranslationsInCache,
-        
-        /// <remarks/>
-        CurrencyExchangeRatesCharts,
-        
-        /// <remarks/>
-        GenerateAPIKeySuccess,
-        
-        /// <remarks/>
-        GenerateAPIKeyInvalidCredentials,
-        
-        /// <remarks/>
-        API_DeleteParentExpenditure,
-        
-        /// <remarks/>
-        API_DeleteChildExpenditures,
-        
-        /// <remarks/>
-        API_AddParentExpenditure,
-        
-        /// <remarks/>
-        API_SearchUserExpenditures,
-        
-        /// <remarks/>
-        API_GetExpenditureDetails,
-        
-        /// <remarks/>
-        API_UpdateParentExpenses,
-        
-        /// <remarks/>
-        API_GetUsersAverageSumForCategory,
-        
-        /// <remarks/>
-        API_CopyParentExpense,
-        
-        /// <remarks/>
-        API_DeleteAttachment,
-        
-        /// <remarks/>
-        API_GetMaximumExpenditureForCategory,
-        
-        /// <remarks/>
-        API_GetUserIncome,
-        
-        /// <remarks/>
-        API_DuplicateExpenditures,
-        
-        /// <remarks/>
-        API_GetYearlyExpensesProMonth,
-        
-        /// <remarks/>
-        API_GetYearlyBudgetsProMonth,
-        
-        /// <remarks/>
-        API_GetYearlySavingsProMonth,
-        
-        /// <remarks/>
-        API_GetUserExpenditures,
-        
-        /// <remarks/>
-        API_GetExpenditures,
-        
-        /// <remarks/>
-        API_GetActionLogs,
-        
-        /// <remarks/>
-        API_GetExceptionLogs,
-        
-        /// <remarks/>
-        API_BlockUser,
-        
-        /// <remarks/>
-        API_BanIP,
-        
-        /// <remarks/>
-        API_GetSingleValue,
-        
-        /// <remarks/>
-        API_ExecuteQuery,
-        
-        /// <remarks/>
-        API_GetDataReader,
-        
-        /// <remarks/>
-        API_GetDataTable,
-        
-        /// <remarks/>
-        SendNotificationEmails,
-        
-        /// <remarks/>
-        AddCategoryComment,
-        
-        /// <remarks/>
-        VoteUpOnCategoryComment,
-        
-        /// <remarks/>
-        VoteDownOnCategoryComment,
-        
-        /// <remarks/>
-        DeleteCategoryComment,
-        
-        /// <remarks/>
-        DeleteProduct,
-        
-        /// <remarks/>
-        CancelEditProduct,
-        
-        /// <remarks/>
-        UpdateProduct,
-        
-        /// <remarks/>
-        DeleteSupplier,
-        
-        /// <remarks/>
-        CancelEditSupplier,
-        
-        /// <remarks/>
-        UpdateSupplier,
-        
-        /// <remarks/>
-        EditSupplier,
-        
-        /// <remarks/>
-        EditProduct,
-        
-        /// <remarks/>
-        GetExchangeRatesHistory,
-        
-        /// <remarks/>
-        ProductPriceStatistics,
-        
-        /// <remarks/>
-        NavigateToBillDate,
-        
-        /// <remarks/>
-        LoadUrlRewriterAddressesListIntoCache,
-        
-        /// <remarks/>
-        ChangeUserLanguage,
-        
-        /// <remarks/>
-        ChangeUserAutoLoginSettings,
-        
-        /// <remarks/>
-        SetTranslationInCache,
-        
-        /// <remarks/>
-        SessionStart,
-        
-        /// <remarks/>
-        ApplicationStart,
-        
-        /// <remarks/>
-        ApplicationEnd,
-        
-        /// <remarks/>
-        SessionEnd,
-        
-        /// <remarks/>
-        EndValidateLicense,
-        
-        /// <remarks/>
-        ValidateLicenseSuccessful,
-        
-        /// <remarks/>
-        DownloadMyHomeBillsInstaller,
-        
-        /// <remarks/>
-        DownloadPageOpened,
-        
-        /// <remarks/>
-        BlackListCheckCheckOK,
-        
-        /// <remarks/>
-        BlackListCheckCheck_BANNED,
-        
-        /// <remarks/>
-        EndHandleImportEmails,
-        
-        /// <remarks/>
-        BeginHandleImportEmails,
-        
-        /// <remarks/>
-        HandleImportEmailsAddedImportedChildExpense,
-    }
-    
-    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductParameter))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5285,7 +5285,7 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5295,7 +5295,7 @@ namespace MHB.Gadgets.MhbApiService {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Product))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5889,7 +5889,7 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Enums.MeasureType", Namespace="http://schemas.datacontract.org/2004/07/MHB.BL")]
     public enum EnumsMeasureType {
@@ -5908,7 +5908,7 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5918,7 +5918,7 @@ namespace MHB.Gadgets.MhbApiService {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExpenditureDetail))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6552,7 +6552,7 @@ namespace MHB.Gadgets.MhbApiService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2046.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
