@@ -27,7 +27,7 @@ Various statistics and reports are generated.
 Currently supported environment:
 - Windows 11
 - Visual Studio 2022
-- SQL Serves 2022
+- SQL Server 2022
 
 # History
 
